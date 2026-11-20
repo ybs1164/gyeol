@@ -1,0 +1,82 @@
+{
+  "version": "exact-test-v1",
+  "rule": "facing-25-v1",
+  "created": "2026-11-20T15:42:19.083Z",
+  "seed": 20261121,
+  "perRemaining": 400,
+  "remainingRange": [
+    4,
+    9
+  ],
+  "marginMaxRemaining": 7,
+  "nodeLimit": 3000000,
+  "labels": "outcome/margin are from green’s view (green − brown) with best play by both sides",
+  "exclusion": "Never train on these positions. Exclude all 8 board symmetries of each id (positionKey: side to move = +1).",
+  "bias": "Positions whose exact solve exceeded nodeLimit are dropped; see failed counts.",
+  "sources": [
+    {
+      "path": "tools/calibration/cognition-v1/games.jsonl",
+      "sha256": "e4e673b54d70e84e2c0f53791500a4b40f9f6b26b202d4a3b6e14c64c531ecb1"
+    },
+    {
+      "path": "tools/calibration/rating-distribution/20261115-162212/games-snapshot.jsonl",
+      "sha256": "69efde5de774f7b7e84c36f1a767a1afc817ddfcc63cd4e59ff915d8b7eaf065"
+    }
+  ],
+  "file": {
+    "path": "tools/learning/frozen/exact-test-v1.jsonl",
+    "rows": 2377,
+    "sha256": "f5de2206438fc8db5f1298ab276c758c6bdbafb3fd49e7082d1ad9447f6772c5"
+  },
+  "counts": {
+    "4": {
+      "sampled": 400,
+      "solved": 400,
+      "failed": 0,
+      "margin": 400,
+      "greenWins": 203,
+      "draws": 0
+    },
+    "5": {
+      "sampled": 400,
+      "solved": 400,
+      "failed": 0,
+      "margin": 400,
+      "greenWins": 217,
+      "draws": 0
+    },
+    "6": {
+      "sampled": 400,
+      "solved": 400,
+      "failed": 0,
+      "margin": 400,
+      "greenWins": 175,
+      "draws": 0
+    },
+    "7": {
+      "sampled": 400,
+      "solved": 396,
+      "failed": 4,
+      "margin": 396,
+      "greenWins": 223,
+      "draws": 0
+    },
+    "8": {
+      "sampled": 400,
+      "solved": 400,
+      "failed": 0,
+      "margin": 0,
+      "greenWins": 168,
+      "draws": 0
+    },
+    "9": {
+      "sampled": 400,
+      "solved": 381,
+      "failed": 19,
+      "margin": 0,
+      "greenWins": 220,
+      "draws": 0
+    }
+  },
+  "seconds": 1667
+}

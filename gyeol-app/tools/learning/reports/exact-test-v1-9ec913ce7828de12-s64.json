@@ -1,0 +1,279 @@
+{
+  "set": "exact-test-v1",
+  "setSha256": "f5de2206438fc8db5f1298ab276c758c6bdbafb3fd49e7082d1ad9447f6772c5",
+  "model": {
+    "path": "C:/Users/ybs11/Desktop/결/gyeol-app/apps/web/public/model/model.onnx",
+    "onnxSha256": "9ec913ce7828de126dd0d1dda3c048e3ac2bd057b4bfa914ff200dd1951537bd",
+    "info": {
+      "source": "best.pth.tar",
+      "rule": "facing",
+      "actionSize": 785,
+      "sha256": "900c6f08b6ce0aba85893a490a185a6b5c6ace474a57c7105b6a602d5dcec332",
+      "exported": "2026-10-21T15:00:55.602677+00:00",
+      "maxInferenceError": 0.0000015497207641601562,
+      "validationPositions": 194
+    }
+  },
+  "sims": 64,
+  "evaluator": "root-mean",
+  "created": "2026-11-20T16:02:34.523Z",
+  "seconds": 615,
+  "network": {
+    "all": {
+      "n": 2377,
+      "draws": 0,
+      "accuracy": 0.6281,
+      "brier": 0.3024,
+      "logLoss": 1.264,
+      "ece": 0.2795,
+      "marginN": 1596,
+      "marginMae": 7.1286,
+      "marginMaeZero": 7.3897,
+      "bins": [
+        {
+          "from": 0,
+          "to": 0.1,
+          "n": 836,
+          "predicted": 0.0204,
+          "observed": 0.3026
+        },
+        {
+          "from": 0.1,
+          "to": 0.2,
+          "n": 122,
+          "predicted": 0.1459,
+          "observed": 0.4836
+        },
+        {
+          "from": 0.2,
+          "to": 0.3,
+          "n": 75,
+          "predicted": 0.2461,
+          "observed": 0.5333
+        },
+        {
+          "from": 0.3,
+          "to": 0.4,
+          "n": 75,
+          "predicted": 0.3478,
+          "observed": 0.68
+        },
+        {
+          "from": 0.4,
+          "to": 0.5,
+          "n": 77,
+          "predicted": 0.454,
+          "observed": 0.5974
+        },
+        {
+          "from": 0.5,
+          "to": 0.6,
+          "n": 62,
+          "predicted": 0.5485,
+          "observed": 0.5323
+        },
+        {
+          "from": 0.6,
+          "to": 0.7,
+          "n": 60,
+          "predicted": 0.6478,
+          "observed": 0.6333
+        },
+        {
+          "from": 0.7,
+          "to": 0.8,
+          "n": 82,
+          "predicted": 0.7417,
+          "observed": 0.5
+        },
+        {
+          "from": 0.8,
+          "to": 0.9,
+          "n": 136,
+          "predicted": 0.856,
+          "observed": 0.4706
+        },
+        {
+          "from": 0.9,
+          "to": 1,
+          "n": 852,
+          "predicted": 0.982,
+          "observed": 0.6819
+        }
+      ]
+    },
+    "byRemaining": {
+      "4": {
+        "n": 400,
+        "accuracy": 0.7325,
+        "brier": 0.2377,
+        "ece": 0.2299,
+        "marginMae": 6.6312
+      },
+      "5": {
+        "n": 400,
+        "accuracy": 0.635,
+        "brier": 0.3019,
+        "ece": 0.3093,
+        "marginMae": 7.1224
+      },
+      "6": {
+        "n": 400,
+        "accuracy": 0.64,
+        "brier": 0.2999,
+        "ece": 0.3242,
+        "marginMae": 7.4286
+      },
+      "7": {
+        "n": 396,
+        "accuracy": 0.6187,
+        "brier": 0.2989,
+        "ece": 0.3244,
+        "marginMae": 7.3343
+      },
+      "8": {
+        "n": 400,
+        "accuracy": 0.5725,
+        "brier": 0.3443,
+        "ece": 0.3694,
+        "marginMae": null
+      },
+      "9": {
+        "n": 381,
+        "accuracy": 0.5669,
+        "brier": 0.3329,
+        "ece": 0.3478,
+        "marginMae": null
+      }
+    }
+  },
+  "search": {
+    "all": {
+      "n": 2377,
+      "draws": 0,
+      "accuracy": 0.7947,
+      "brier": 0.1373,
+      "logLoss": 0.4256,
+      "ece": 0.0455,
+      "marginN": 1596,
+      "marginMae": 4.2906,
+      "marginMaeZero": 7.3897,
+      "bins": [
+        {
+          "from": 0,
+          "to": 0.1,
+          "n": 326,
+          "predicted": 0.0353,
+          "observed": 0.0399
+        },
+        {
+          "from": 0.1,
+          "to": 0.2,
+          "n": 181,
+          "predicted": 0.1471,
+          "observed": 0.0773
+        },
+        {
+          "from": 0.2,
+          "to": 0.3,
+          "n": 160,
+          "predicted": 0.2481,
+          "observed": 0.1625
+        },
+        {
+          "from": 0.3,
+          "to": 0.4,
+          "n": 194,
+          "predicted": 0.3521,
+          "observed": 0.2526
+        },
+        {
+          "from": 0.4,
+          "to": 0.5,
+          "n": 320,
+          "predicted": 0.4501,
+          "observed": 0.4594
+        },
+        {
+          "from": 0.5,
+          "to": 0.6,
+          "n": 320,
+          "predicted": 0.5473,
+          "observed": 0.5438
+        },
+        {
+          "from": 0.6,
+          "to": 0.7,
+          "n": 194,
+          "predicted": 0.6446,
+          "observed": 0.7474
+        },
+        {
+          "from": 0.7,
+          "to": 0.8,
+          "n": 163,
+          "predicted": 0.7522,
+          "observed": 0.865
+        },
+        {
+          "from": 0.8,
+          "to": 0.9,
+          "n": 191,
+          "predicted": 0.8491,
+          "observed": 0.9215
+        },
+        {
+          "from": 0.9,
+          "to": 1,
+          "n": 328,
+          "predicted": 0.964,
+          "observed": 0.9787
+        }
+      ]
+    },
+    "byRemaining": {
+      "4": {
+        "n": 400,
+        "accuracy": 0.89,
+        "brier": 0.0894,
+        "ece": 0.0768,
+        "marginMae": 3.9046
+      },
+      "5": {
+        "n": 400,
+        "accuracy": 0.785,
+        "brier": 0.1304,
+        "ece": 0.072,
+        "marginMae": 4.327
+      },
+      "6": {
+        "n": 400,
+        "accuracy": 0.8125,
+        "brier": 0.1283,
+        "ece": 0.0943,
+        "marginMae": 4.5062
+      },
+      "7": {
+        "n": 396,
+        "accuracy": 0.7904,
+        "brier": 0.1409,
+        "ece": 0.0681,
+        "marginMae": 4.426
+      },
+      "8": {
+        "n": 400,
+        "accuracy": 0.745,
+        "brier": 0.1585,
+        "ece": 0.0975,
+        "marginMae": null
+      },
+      "9": {
+        "n": 381,
+        "accuracy": 0.7428,
+        "brier": 0.1784,
+        "ece": 0.1054,
+        "marginMae": null
+      }
+    }
+  }
+}
