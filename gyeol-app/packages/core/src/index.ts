@@ -10,3 +10,4 @@ export * from './record-types';
 export { RECORD_BANK_VERIFICATION } from './record-puzzle-bank';
 export * from './lessons';
 export * from './protocol';
+export * from './symmetry';
