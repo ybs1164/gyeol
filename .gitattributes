@@ -1,0 +1,4 @@
+# 얼린 시험 세트는 sha256으로 검증하므로 줄바꿈을 바꾸지 않는다
+gyeol-app/tools/learning/frozen/** -text
+# 서버(Linux)에서 실행하는 스크립트
+*.sh text eol=lf
