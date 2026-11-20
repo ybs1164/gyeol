@@ -24,6 +24,25 @@ node db-cli.mjs export-training --db /var/lib/gyeol/gyeol.sqlite --out /var/lib/
 - 사람 한 명이 둘 차례인 국면은 누적 `--player-cap`개까지. 사람 구분은 `state.json`의 비밀 salt로 만든 HMAC이다. 봇은 상한이 없다.
 - `out` 폴더(`state.json`, `seen-keys.txt`, 국면 파일)는 0600/0700으로 만들고 서버 밖으로 옮기지 않는다. 다시 실행하면 커서 뒤의 새 대국만 읽는다.
 
+## P2 재분석 라벨 (서버에서 실행)
+
+```bash
+npx tsx tools/learning/relabel.ts --in /var/lib/gyeol-training/export --out /var/lib/gyeol-training/labels \
+  [--model apps/web/public/model/model.onnx] [--sims 800] [--workers 2] [--budget-minutes 0] [--max 0]
+```
+
+| 단계 | 남은 타일 | 가치(둘 차례 기준) | 정책 | 타일 차이 |
+|---|---|---|---|---|
+| `exact` | ≤ 6 | 정확 승패 | 최선 차이를 내는 수 전부 균등 | 정확 |
+| `proven` | 7~9 | 정확 승패 | 깊은 탐색 방문 분포 | 7장만 정확 |
+| `search` | ≥ 10 또는 정확 탐색 한도 초과 | 추천 수의 Q | 깊은 탐색 방문 분포 | 없음 |
+
+- 라벨 로직은 `packages/ai/src/training-labels.ts`(`labelPosition`), 시험은 `packages/ai/test/training-labels.test.ts`.
+- 남은 타일이 적은 국면부터 처리한다. `--budget-minutes`가 지나면 새 국면을 시작하지 않고, 남은 국면은 다음 실행에서 이어 한다.
+- 라벨 한 줄: `key`(대칭 키), `tier`, `board`(정규 보드, 둘 차례 = +1), `remaining`, `value`, `margin`, `policy`(`[행동, 확률]`), `search`(`sims`, `q`, `mean`, `model` = ONNX sha256 앞 16자; 정확 단계는 `null`).
+- 같은 대칭 키는 한 번만 라벨한다. 작업자가 강제 종료되면 `.part-*.jsonl`이 남고, 다음 실행이 먼저 합친다(잘린 줄은 버림).
+- 탐색 라벨은 만든 모델에 묶인다. 모델이 바뀐 뒤 낡은 탐색 라벨을 다시 만드는 것은 P3/P5에서 정한다. 정확 라벨은 모델과 무관하다.
+
 ### 시험 세트 규칙
 
 - `frozen/`의 국면은 **학습에 절대 넣지 않는다.** 학습 데이터를 만들 때 각 국면의 8가지 대칭을 모두 제외한다. `id`는 `positionKey`(둘 차례를 +1로 바꾼 보드)다.

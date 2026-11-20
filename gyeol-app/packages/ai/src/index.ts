@@ -11,3 +11,4 @@ export * from './cognitive-persona';
 export * from './cognition';
 export * from './time-policy';
 export * from './cognition-wide';
+export * from './training-labels';
