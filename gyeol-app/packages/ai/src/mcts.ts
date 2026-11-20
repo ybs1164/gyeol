@@ -7,6 +7,8 @@ import { apply, legal, result, type Board } from '@gyeol/core';
 export interface Prediction {
   priors: ArrayLike<number>;
   value: number;
+  /** 타일 차이 출력이 있는 모델만: 둘 차례 기준 예상 최종 타일 차이(장) */
+  margin?: number;
 }
 
 /** 정규 보드(둘 차례 = +1) → Prediction */

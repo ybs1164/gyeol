@@ -70,7 +70,7 @@ def main():
     snapshot = opt.checkpoint.read_bytes()
     digest = hashlib.sha256(snapshot).hexdigest()
     net = GyeolNNet(GyeolGame(), net_args).cpu().eval()
-    net.load_state_dict(torch.load(io.BytesIO(snapshot), map_location='cpu', weights_only=True)['state_dict'])
+    net.load_compatible(torch.load(io.BytesIO(snapshot), map_location='cpu', weights_only=True)['state_dict'])
     torch.set_num_threads(1)
     with tempfile.TemporaryDirectory(prefix='gyeol-export-') as tmp:
         model = Path(tmp) / 'model.onnx'

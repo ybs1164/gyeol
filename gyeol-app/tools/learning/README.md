@@ -43,6 +43,23 @@ npx tsx tools/learning/relabel.ts --in /var/lib/gyeol-training/export --out /var
 - 같은 대칭 키는 한 번만 라벨한다. 작업자가 강제 종료되면 `.part-*.jsonl`이 남고, 다음 실행이 먼저 합친다(잘린 줄은 버림).
 - 탐색 라벨은 만든 모델에 묶인다. 모델이 바뀐 뒤 낡은 탐색 라벨을 다시 만드는 것은 P3/P5에서 정한다. 정확 라벨은 모델과 무관하다.
 
+## P3 학습 (gyeol_ai, 서버에서 실행)
+
+```bash
+cd gyeol_ai
+python train_distill.py --labels /var/lib/gyeol-training/labels --out /var/lib/gyeol-training/candidates/<이름> \
+  [--base facing/temp/best.pth.tar] [--replay facing/temp/trainExamples.examples] [--steps 3000] [--label-share 0.5]
+python export_facing_onnx.py --checkpoint <후보>/candidate.pth.tar --out <후보>/onnx
+cd ../gyeol-app && npx tsx tools/learning/score_model.ts --model <후보>/onnx/model.onnx
+```
+
+- 신경망에 **타일 차이 출력**(`m_fc1`, `m_fc2`, `facing/network.py`)을 추가했다. 예전 체크포인트는 이 출력만 새로 초기화해 그대로 불러온다(`load_compatible`). `forward`는 여전히 `(정책, 가치)`만 돌려주므로 자가대국·MCTS·기존 학습은 바뀌지 않는다.
+- ONNX 출력: `log_policy`, `value`, `margin`(둘 차례 기준, 장). 앱의 `createPredictor`는 `margin`이 있으면 `Prediction.margin`으로 읽고, 없으면 예전처럼 동작한다.
+- `train_distill.py`는 라벨과 자가대국을 배치마다 `--label-share` 비율로 섞어 기존 모델에서 이어 학습한다. 손실 = 정책 교차 엔트로피 + 가치 MSE + `--margin-weight` × 타일 차이 MSE(정답이 있는 행만). 기본 모델 파일은 덮어쓰지 않고 `<out>/candidate.pth.tar`, `<out>/report.json`을 쓴다.
+- 라벨 키를 Python에서 다시 계산해 TS 키와 다르면 멈춘다(대칭 코드 불일치 방지). 얼린 시험 세트 국면은 여기서도 뺀다.
+- 검증: 라벨의 5%(대칭 키로 고정), 자가대국의 가장 최근 반복(학습에서 제외). 시험: `python -m unittest facing.test_distill`.
+- `pilot_positions.ts`는 서버 DB가 작을 때 쓰는 파일럿 전용 도구다(봇 대국, 시험 세트가 뽑힌 대국은 통째로 제외).
+
 ### 시험 세트 규칙
 
 - `frozen/`의 국면은 **학습에 절대 넣지 않는다.** 학습 데이터를 만들 때 각 국면의 8가지 대칭을 모두 제외한다. `id`는 `positionKey`(둘 차례를 +1로 바꾼 보드)다.

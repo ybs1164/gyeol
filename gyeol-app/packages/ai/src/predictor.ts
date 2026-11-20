@@ -53,6 +53,9 @@ export async function createPredictor(ort: Ort, model: string | Uint8Array, cach
     const log = out.log_policy.data;
     const priors = Float32Array.from(legal(board, 1), (a) => Math.exp(log[a]));
     const value: Prediction = { priors, value: normalizeNetworkValue(Number(out.value.data[0])) };
+    // 타일 차이 출력(margin)은 새 모델에만 있다. 없으면 기존처럼 정책·가치만 쓴다.
+    const margin = out.margin ? Number(out.margin.data[0]) : NaN;
+    if (Number.isFinite(margin)) value.margin = Math.max(-25, Math.min(25, margin));
     cache.set(key, value);
     if (cache.size > cacheSize) cache.delete(cache.keys().next().value!);
     return value;
