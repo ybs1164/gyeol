@@ -1,0 +1,88 @@
+{
+  "checkedAt": "2026-11-15T16:09:42.334Z",
+  "native": false,
+  "layouts": [
+    {
+      "name": "onboarding-390x844",
+      "height": 48,
+      "width": 358,
+      "fontWeight": "400",
+      "outline": "none",
+      "border": "1px",
+      "shadow": "rgb(138, 90, 55) 0px 0px 0px 0.5px",
+      "overflow": false,
+      "visible": true
+    },
+    {
+      "name": "onboarding-390x420",
+      "height": 48,
+      "width": 358,
+      "fontWeight": "400",
+      "outline": "none",
+      "border": "1px",
+      "shadow": "rgb(138, 90, 55) 0px 0px 0px 0.5px",
+      "overflow": false,
+      "visible": true
+    },
+    {
+      "name": "onboarding-1440x1000",
+      "height": 48,
+      "width": 688,
+      "fontWeight": "400",
+      "outline": "none",
+      "border": "1px",
+      "shadow": "rgb(138, 90, 55) 0px 0px 0px 0.5px",
+      "overflow": false,
+      "visible": true
+    },
+    {
+      "name": "rename-390x844",
+      "height": 48,
+      "width": 304,
+      "fontWeight": "400",
+      "outline": "none",
+      "border": "1px",
+      "shadow": "rgb(138, 90, 55) 0px 0px 0px 0.5px",
+      "overflow": false,
+      "visible": true
+    },
+    {
+      "name": "rename-390x420",
+      "height": 48,
+      "width": 304,
+      "fontWeight": "400",
+      "outline": "none",
+      "border": "1px",
+      "shadow": "rgb(138, 90, 55) 0px 0px 0px 0.5px",
+      "overflow": false,
+      "visible": true
+    },
+    {
+      "name": "rename-1440x1000",
+      "height": 48,
+      "width": 362,
+      "fontWeight": "400",
+      "outline": "none",
+      "border": "1px",
+      "shadow": "rgb(138, 90, 55) 0px 0px 0px 0.5px",
+      "overflow": false,
+      "visible": true
+    }
+  ],
+  "connections": [
+    {
+      "id": "7352.34",
+      "url": "ws://127.0.0.1:53885/ws",
+      "welcome": true
+    }
+  ],
+  "errors": [],
+  "platform": {
+    "native": false,
+    "origin": "http://127.0.0.1:53885",
+    "server": ""
+  },
+  "savedName": "WebCheck222",
+  "aiFirstMove": true,
+  "puzzleTiles": 20
+}

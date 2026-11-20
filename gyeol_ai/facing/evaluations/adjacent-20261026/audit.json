@@ -1,0 +1,31 @@
+{
+  "model_sha256": "0b4f3d055d0d9858edcceb62e5ca920b8d080ebf8b38e04b1a9b2c71694aa1d4",
+  "passed": true,
+  "games": 32,
+  "moves": 737,
+  "summary": {
+    "games": 32,
+    "first_wins": 25,
+    "second_wins": 7,
+    "draws": 0,
+    "first_win_rate": 0.78125,
+    "wilson_95": [
+      0.6124466920955516,
+      0.8897630306846815
+    ],
+    "mean_margin": 2.75,
+    "unique_trajectories": 32,
+    "mean_passes": 0.03125
+  },
+  "orientation_counts": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+  ],
+  "same_settings_as_free_start": true
+}

@@ -1,0 +1,18 @@
+{
+  "source": "facing-free-start/temp/best.pth.tar",
+  "sha256": "28bf57afe3d262cd9d2dd7c9e329975c956285688812b76e151c31d5a5b69c22",
+  "snapshot_mtime": 1792982816.703688,
+  "matching_candidates": [
+    "candidate_ac99ee1a3511_1.pth.tar"
+  ],
+  "matching_training_records": [
+    {
+      "run_id": "ac99ee1a3511",
+      "iteration": 1,
+      "candidate": "candidate_ac99ee1a3511_1.pth.tar",
+      "accepted": true,
+      "new_wins": 23,
+      "previous_wins": 17
+    }
+  ]
+}

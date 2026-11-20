@@ -1,0 +1,840 @@
+{
+  "date": "2026-11-11T17:20:08.872Z",
+  "node": "v22.14.0",
+  "engine": 3,
+  "config": {
+    "mode": "standard",
+    "minimumSimulations": 12,
+    "contenderSimulations": 96,
+    "exactNodes": 100000,
+    "exactMilliseconds": 350
+  },
+  "model": "900c6f08b6ce0aba85893a490a185a6b5c6ace474a57c7105b6a602d5dcec332",
+  "endgame": {
+    "cases": 115,
+    "candidates": 1401,
+    "baselineOutcomeErrors": 455,
+    "newOutcomeErrors": 0,
+    "exact": 115,
+    "missed": 115,
+    "details": [
+      {
+        "puzzle": "rp-7c7c4cab5dfef352",
+        "milliseconds": 2,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-718ef4ca8b81ffa0",
+        "milliseconds": 83,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-4d5424800b7c6cec",
+        "milliseconds": 43,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-2513fb83fd57bde1",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-160d32b954ef008d",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-2982e1c73de850fc",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 9
+      },
+      {
+        "puzzle": "rp-d4ce482558f44723",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-e116ef5e66d448d0",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 6
+      },
+      {
+        "puzzle": "rp-40ca2752c9ddc26b",
+        "milliseconds": 51,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 15
+      },
+      {
+        "puzzle": "rp-4987305482855221",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-120d57c5ab099f60",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 9
+      },
+      {
+        "puzzle": "rp-ad021ece3824279a",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-de68059c8a731dbd",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-b90096253ca497bc",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 9
+      },
+      {
+        "puzzle": "rp-f1f877c9990bb1c7",
+        "milliseconds": 61,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 18
+      },
+      {
+        "puzzle": "rp-00873a859f75f1dc",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-46fe610d1ec77ab6",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-dceba7d840eb7d6a",
+        "milliseconds": 17,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 6
+      },
+      {
+        "puzzle": "rp-4d0b2230ab4d415f",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-71d0670711a31a50",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-e86f6ab230f784bd",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 9
+      },
+      {
+        "puzzle": "rp-40a5eca0b1ff923f",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-e55449389e8ebc3e",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 9
+      },
+      {
+        "puzzle": "rp-3d9bd286d1f72596",
+        "milliseconds": 56,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 18
+      },
+      {
+        "puzzle": "rp-ff4ef80911d98dde",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-15ac21fce3d2d37e",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-62a3907c81d202b3",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 6
+      },
+      {
+        "puzzle": "rp-41ad02eb9830326a",
+        "milliseconds": 38,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-60cfe3c8b3a0588c",
+        "milliseconds": 64,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 21
+      },
+      {
+        "puzzle": "rp-49021ccab6f3e8a0",
+        "milliseconds": 50,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 15
+      },
+      {
+        "puzzle": "rp-95f363004a43c902",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 9
+      },
+      {
+        "puzzle": "rp-5a16d66260815d22",
+        "milliseconds": 34,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-1d783ddc6598f319",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 6
+      },
+      {
+        "puzzle": "rp-66e169d477c2c837",
+        "milliseconds": 44,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 15
+      },
+      {
+        "puzzle": "rp-b64e604d9554597d",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 9
+      },
+      {
+        "puzzle": "rp-23476bab1cf4c00e",
+        "milliseconds": 53,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 15
+      },
+      {
+        "puzzle": "rp-e8d23aeb270b9ae3",
+        "milliseconds": 62,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 21
+      },
+      {
+        "puzzle": "rp-1dcdcfac01de2f60",
+        "milliseconds": 49,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 15
+      },
+      {
+        "puzzle": "rp-fab8615f516b799b",
+        "milliseconds": 38,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-305f1774484e7fec",
+        "milliseconds": 24,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 9
+      },
+      {
+        "puzzle": "rp-0d360ff2d022ac7d",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-c5665c5302490d3e",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-271b00b09324f7aa",
+        "milliseconds": 63,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 24
+      },
+      {
+        "puzzle": "rp-7f20fa8febe4564a",
+        "milliseconds": 22,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 9
+      },
+      {
+        "puzzle": "rp-98eb4d0169112516",
+        "milliseconds": 23,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 9
+      },
+      {
+        "puzzle": "rp-0f5537db06f05c45",
+        "milliseconds": 16,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 6
+      },
+      {
+        "puzzle": "rp-a18d365d48af6067",
+        "milliseconds": 32,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-b8d0827fe4f14ca6",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 6
+      },
+      {
+        "puzzle": "rp-024a64231af68c57",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 6
+      },
+      {
+        "puzzle": "rp-250cc476c1d14b9d",
+        "milliseconds": 49,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 18
+      },
+      {
+        "puzzle": "rp-eed0fb522ba4dd4f",
+        "milliseconds": 31,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-1f63893f0d0c7918",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-7b4962a66429daf1",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-549e2a4c9a9d0781",
+        "milliseconds": 42,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 15
+      },
+      {
+        "puzzle": "rp-e485b95a31ee717f",
+        "milliseconds": 18,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 6
+      },
+      {
+        "puzzle": "rp-c63488c3e24c708f",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 9
+      },
+      {
+        "puzzle": "rp-838815cb3303ebe4",
+        "milliseconds": 49,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 18
+      },
+      {
+        "puzzle": "rp-4372a5ca87155a39",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-8f2e4e99f37cd8d5",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-595a094355b13923",
+        "milliseconds": 25,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 9
+      },
+      {
+        "puzzle": "rp-cea2acc6bc81adf7",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-95d9867dee69da82",
+        "milliseconds": 39,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-159efb0602765b88",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-c0258720b7f3b81a",
+        "milliseconds": 50,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 18
+      },
+      {
+        "puzzle": "rp-0c5952a76ba0d506",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-751cb59e0c45f7da",
+        "milliseconds": 64,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 24
+      },
+      {
+        "puzzle": "rp-f164446840a902f4",
+        "milliseconds": 15,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 6
+      },
+      {
+        "puzzle": "rp-22ba94298c716146",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-5ee074bad140d182",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 9
+      },
+      {
+        "puzzle": "rp-189f6ec34c591e9a",
+        "milliseconds": 39,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 15
+      },
+      {
+        "puzzle": "rp-6bff82f840421d70",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-a441fad4340e2fe3",
+        "milliseconds": 31,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-9976e403dfe971a0",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-ec4518dde70165be",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-3ca9742f50517417",
+        "milliseconds": 58,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 21
+      },
+      {
+        "puzzle": "rp-bc2bf05b58a929a0",
+        "milliseconds": 32,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-b8a9f42adc489585",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 6
+      },
+      {
+        "puzzle": "rp-8a46fd2c1f1205b7",
+        "milliseconds": 31,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-51fb07fe1a14693a",
+        "milliseconds": 58,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 21
+      },
+      {
+        "puzzle": "rp-bc688f6decd75632",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 9
+      },
+      {
+        "puzzle": "rp-ca0523425e453cfd",
+        "milliseconds": 40,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 15
+      },
+      {
+        "puzzle": "rp-90e1097cf2a8c811",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-6885f8c642c1e9c7",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 6
+      },
+      {
+        "puzzle": "rp-589b77df42e1ef5e",
+        "milliseconds": 42,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 15
+      },
+      {
+        "puzzle": "rp-40dc5b12198897a0",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 6
+      },
+      {
+        "puzzle": "rp-fc88ccd7340a753d",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-122f4dd1d06e6029",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-d0f99fc956160af8",
+        "milliseconds": 49,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 18
+      },
+      {
+        "puzzle": "rp-48ba1414a41a37f1",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-7d8758bb855c2480",
+        "milliseconds": 46,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 18
+      },
+      {
+        "puzzle": "rp-adde3e4d0b535958",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 9
+      },
+      {
+        "puzzle": "rp-6d107af5ee168ee4",
+        "milliseconds": 49,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 18
+      },
+      {
+        "puzzle": "rp-16f2596c53ba42fa",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 6
+      },
+      {
+        "puzzle": "rp-6cbf9e574fc7d30a",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-86d83185507010d4",
+        "milliseconds": 41,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 15
+      },
+      {
+        "puzzle": "rp-438e10e4473699bd",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-8c4e1bc6a773dbcc",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-29b81321a017c62b",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 9
+      },
+      {
+        "puzzle": "rp-633f251becdcc77a",
+        "milliseconds": 39,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 15
+      },
+      {
+        "puzzle": "rp-7d37af3d8aea0f6b",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 6
+      },
+      {
+        "puzzle": "rp-1f4fc1df4c4c47f0",
+        "milliseconds": 24,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 9
+      },
+      {
+        "puzzle": "rp-64b677e989d6a4c4",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-5a76effeb6297b3c",
+        "milliseconds": 57,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 21
+      },
+      {
+        "puzzle": "rp-5aca5216a5b490c1",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-8b32ea5dce903fac",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-73dc1b433a43c823",
+        "milliseconds": 33,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-c5080c7813b082f1",
+        "milliseconds": 41,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 15
+      },
+      {
+        "puzzle": "rp-11e9e7c748c6ab81",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-f15d898a4ef3026c",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-16a2a1810e4e631d",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-28ae105c846e4297",
+        "milliseconds": 49,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 18
+      },
+      {
+        "puzzle": "rp-0302d27fe3a52fb0",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-29b7fc5fa7a35657",
+        "milliseconds": 23,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 9
+      },
+      {
+        "puzzle": "rp-efd8ee655c0e5745",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      },
+      {
+        "puzzle": "rp-9f0dea661df156c8",
+        "milliseconds": 0,
+        "status": "exact",
+        "grade": "blunder",
+        "candidates": 12
+      }
+    ],
+    "note": "선택된 후반 퍼즐 표본. 일반 대국 전체의 정확도를 대표하지 않는다."
+  },
+  "fullGame": {
+    "source": "game-a3ace324292b527a",
+    "moves": 23,
+    "firstResultMs": 4,
+    "firstMoveMs": 1945,
+    "totalMs": 41751,
+    "exact": 5,
+    "graded": 6,
+    "pending": 17,
+    "allPositions": true
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "passed": true,
+  "viewport": "390x900",
+  "cancelMs": 21,
+  "fullGraphVisibleMs": 6432,
+  "gradesVisibleMs": 6433,
+  "fullCompleteMs": 6435,
+  "timingNote": "One Chrome run including new worker/session setup, assets cached from earlier cases; not p95 or cold network download. The graph and move grades stay hidden behind the loading screen until analysis completes.",
+  "runtimeErrors": [],
+  "cases": [
+    "loading screen hides intermediate results",
+    "all move grades visible outside collapsed details",
+    "seven colors and vector icons in light and dark themes",
+    "grade icon on recentered placed tile and preview",
+    "provisional state shared by card, list, board, and graph",
+    "one persistent worker for graph and move analysis",
+    "proven win/loss within N plies",
+    "grade and graph cache reload without a worker",
+    "grade-only invalidation preserves cached graph",
+    "grading rules accessible by touch and keyboard",
+    "solved reason and actual/best outcomes",
+    "actual and recommended lines with opponent replies",
+    "issue filter and graph keyboard/pointer navigation",
+    "deep mode",
+    "cancel and partial resume",
+    "record changes cancel old work",
+    "model failure and retry",
+    "resignation and timeout do not override board evaluation",
+    "invalid record rejected",
+    "mobile and expanded desktop layout",
+    "320px Korean/English/Japanese/Chinese criteria and cards with no overflow or extra worker",
+    "selected-move refinement does not restore a stale move selection",
+    "named solid grade badges have at least 4.5:1 text contrast in light and dark themes",
+    "selected move and recommendation precede graph and move list",
+    "no tilde or diamond markers",
+    "grade guide and estimated score details are collapsed by default"
+  ],
+  "gradePalettes": {
+    "light": [
+      {
+        "grade": "best",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(124, 58, 237)",
+        "named": true,
+        "opacity": "1",
+        "contrast": 5.698586217871195
+      },
+      {
+        "grade": "excellent",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(3, 105, 161)",
+        "named": true,
+        "opacity": "1",
+        "contrast": 5.933638668604332
+      },
+      {
+        "grade": "good",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(21, 128, 61)",
+        "named": true,
+        "opacity": "1",
+        "contrast": 5.0155974781114745
+      },
+      {
+        "grade": "fair",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(71, 85, 105)",
+        "named": true,
+        "opacity": "1",
+        "contrast": 7.577663953533317
+      },
+      {
+        "grade": "inaccuracy",
+        "color": "rgb(66, 32, 6)",
+        "background": "rgb(250, 204, 21)",
+        "named": true,
+        "opacity": "1",
+        "contrast": 9.516912909311303
+      },
+      {
+        "grade": "mistake",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(194, 65, 12)",
+        "named": true,
+        "opacity": "1",
+        "contrast": 5.178415705888697
+      },
+      {
+        "grade": "blunder",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(190, 18, 60)",
+        "named": true,
+        "opacity": "1",
+        "contrast": 6.285164560662439
+      }
+    ],
+    "dark": [
+      {
+        "grade": "best",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(124, 58, 237)",
+        "named": true,
+        "opacity": "1",
+        "contrast": 5.698586217871195
+      },
+      {
+        "grade": "excellent",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(3, 105, 161)",
+        "named": true,
+        "opacity": "1",
+        "contrast": 5.933638668604332
+      },
+      {
+        "grade": "good",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(21, 128, 61)",
+        "named": true,
+        "opacity": "1",
+        "contrast": 5.0155974781114745
+      },
+      {
+        "grade": "fair",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(71, 85, 105)",
+        "named": true,
+        "opacity": "1",
+        "contrast": 7.577663953533317
+      },
+      {
+        "grade": "inaccuracy",
+        "color": "rgb(66, 32, 6)",
+        "background": "rgb(250, 204, 21)",
+        "named": true,
+        "opacity": "1",
+        "contrast": 9.516912909311303
+      },
+      {
+        "grade": "mistake",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(194, 65, 12)",
+        "named": true,
+        "opacity": "1",
+        "contrast": 5.178415705888697
+      },
+      {
+        "grade": "blunder",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(190, 18, 60)",
+        "named": true,
+        "opacity": "1",
+        "contrast": 6.285164560662439
+      }
+    ]
+  }
+}

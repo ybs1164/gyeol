@@ -1,0 +1,12117 @@
+{
+  "behaviorVersion": "cognition-v1",
+  "fingerprint": "7969a1a03820ed7dbd6f4f11cfe3c03fbcf1198fabab47086503593db050ccfc",
+  "calibratedAt": "2026-11-14T13:49:52.353Z",
+  "measurement": "Real ONNX, logical clocks; not a real-time server capacity or human-rating validation",
+  "games": 120,
+  "trainGames": 120,
+  "validationGames": 0,
+  "perBot": [
+    {
+      "id": "bot-11",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-12",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-13",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-14",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-15",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-16",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-17",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-18",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-19",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-20",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-21",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-22",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-23",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-24",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-25",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-26",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-27",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-28",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-29",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-30",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-31",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-32",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-33",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-34",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-35",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-36",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-37",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-38",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-39",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-40",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-41",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-42",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-43",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-44",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-45",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-46",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-47",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-48",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-49",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-50",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-51",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-52",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-53",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-54",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-55",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-56",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-57",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-58",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-59",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-60",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-61",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-62",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-63",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-64",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-65",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-66",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-67",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-68",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-69",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-70",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-71",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-72",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-73",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-74",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-75",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-76",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-77",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-78",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-79",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-80",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-81",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-82",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-83",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-84",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-85",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-86",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-87",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-88",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-89",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-90",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-91",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-92",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-93",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-94",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-95",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-96",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-97",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-98",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-99",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-100",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-101",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-102",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-103",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-104",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-105",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-106",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-107",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-108",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-109",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-110",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-111",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-112",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-113",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-114",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-115",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-116",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-117",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-118",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-119",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-120",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-121",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-122",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-123",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-124",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-125",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-126",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-127",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-128",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-129",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-130",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-131",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-132",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-133",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-134",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-135",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-136",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-137",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-138",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-139",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-140",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-141",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-142",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-143",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-144",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-145",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-146",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-147",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-148",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-149",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-150",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-151",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-152",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-153",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-154",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-155",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-156",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-157",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-158",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-159",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-160",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-161",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-162",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-163",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-164",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-165",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-166",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-167",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-168",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-169",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-170",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-171",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-172",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-173",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-174",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-175",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-176",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-177",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-178",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-179",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-180",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-181",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-182",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-183",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-184",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-185",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-186",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-187",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-188",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-189",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-190",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-191",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-192",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-193",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-194",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-195",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-196",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-197",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-198",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-199",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-200",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-201",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-202",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-203",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-204",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-205",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-206",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-207",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-208",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-209",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-210",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-211",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-212",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-213",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-214",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-215",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-216",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-217",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-218",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-219",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-220",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-221",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-222",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-223",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-224",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-225",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-226",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-227",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-228",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-229",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-230",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-231",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-232",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-233",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-234",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-235",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-236",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-237",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-238",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-239",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-240",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-241",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-242",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-243",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-244",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-245",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-246",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-247",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-248",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-249",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-250",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-251",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-252",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-253",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-254",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-255",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-256",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-257",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-258",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-259",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-260",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-261",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-262",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-263",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-264",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-265",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-266",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-267",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-268",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-269",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-270",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-271",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-272",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-273",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-274",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-275",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-276",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-277",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-278",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-279",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-280",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-281",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-282",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-01",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-283",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-284",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-285",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-286",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-287",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-288",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-289",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-290",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-291",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-292",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-293",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-294",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-295",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-296",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-297",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-298",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-299",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-300",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-301",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-302",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-303",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-304",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-305",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-306",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-307",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-308",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-309",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-310",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-311",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-312",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-313",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-314",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-315",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-316",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-317",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-318",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-319",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-320",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-321",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-322",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-323",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-324",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-325",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-326",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-327",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-328",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-329",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-330",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-331",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-332",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-333",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-334",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-335",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-336",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-337",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-338",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-339",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-340",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-341",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-342",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-343",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-344",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-345",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-346",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-347",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-348",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-349",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-350",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-351",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-352",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-353",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-354",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-355",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-356",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-357",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-358",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-359",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-360",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-361",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-362",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-363",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-364",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-365",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-366",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-367",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-368",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-369",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-370",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-371",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-372",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-02",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-373",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-374",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-375",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-376",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-377",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-378",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-379",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-380",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-381",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-382",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-383",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-384",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-385",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-386",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-387",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-388",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-389",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-390",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-391",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-392",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-393",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-394",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-395",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-396",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-397",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-398",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-399",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-400",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-401",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-402",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-403",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-404",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-405",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-406",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-407",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-408",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-409",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-410",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-411",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-412",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-413",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-414",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-415",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-416",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-417",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-418",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-419",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-420",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-421",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-422",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-423",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-424",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-425",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-426",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-427",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-428",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-429",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-430",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-431",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-432",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-433",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-434",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-435",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-436",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-437",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-438",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-439",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-440",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-441",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-442",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-443",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-444",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-445",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-446",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-447",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-448",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-449",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-450",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-451",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-452",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-453",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-454",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-455",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-456",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-457",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-458",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-459",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-460",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-461",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-462",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-03",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-463",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-464",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-465",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-466",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-467",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-468",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-469",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-470",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-471",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-472",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-473",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-474",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-475",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-476",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-477",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-478",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-479",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-480",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-481",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-482",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-483",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-484",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-485",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-486",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-487",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-488",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-489",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-490",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-491",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-492",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-493",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-494",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-495",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-496",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-497",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-498",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-499",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-500",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-501",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-502",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-503",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-504",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-505",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-506",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-507",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-04",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-508",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-509",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-510",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-511",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-512",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-513",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-514",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-515",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-516",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-517",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-518",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-519",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-520",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-521",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-522",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-523",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-524",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-525",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-526",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-527",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-528",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-529",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-530",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-531",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-532",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-533",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-534",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-535",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-536",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-537",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-538",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-539",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-540",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-541",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-542",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-543",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-544",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-545",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-546",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-547",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-548",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-549",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-550",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-551",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-05",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-552",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-553",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-554",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-555",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-556",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-557",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-558",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-559",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-560",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-561",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-562",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-563",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-564",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-565",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-566",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-567",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-568",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-569",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-570",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-571",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-572",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-573",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-574",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-575",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-576",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-577",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-578",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-579",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-580",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-581",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-582",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-583",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-584",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-585",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-586",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-587",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-588",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-589",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-590",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-591",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-592",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-593",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-594",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-595",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-596",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-597",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-598",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-599",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-600",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-601",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-602",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-603",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-604",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-605",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-606",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-607",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-608",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-609",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-610",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-611",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-612",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-613",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-614",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-615",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-616",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-617",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-618",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-619",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-620",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-621",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-622",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-623",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-624",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-625",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-626",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-627",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-628",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-629",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-630",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-631",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-632",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-633",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-634",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-635",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-636",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-637",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-638",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-639",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-640",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-641",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-06",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-642",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-643",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-644",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-645",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-646",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-647",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-648",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-649",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-650",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-651",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-652",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-653",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-654",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-655",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-656",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-657",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-658",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-659",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-660",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-661",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-662",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-663",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-664",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-665",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-666",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-667",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-668",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-669",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-670",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-671",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-672",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-673",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-674",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-675",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-676",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-677",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-678",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-679",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-680",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-681",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-682",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-683",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-684",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-685",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-686",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-687",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-688",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-689",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-690",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-691",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-692",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-693",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-694",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-695",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-696",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-697",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-698",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-699",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-700",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-701",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-702",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-703",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-704",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-705",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-706",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-707",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-708",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-709",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-710",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-711",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-712",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-713",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-714",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-715",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-716",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-717",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-718",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-719",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-720",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-721",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-722",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-723",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-724",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-725",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-726",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-727",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-728",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-729",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-730",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-731",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-07",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-732",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-733",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-734",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-735",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-736",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-737",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-738",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-739",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-740",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-741",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-742",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-743",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-744",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-745",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-746",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-747",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-748",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-749",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-750",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-751",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-752",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-753",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-754",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-755",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-756",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-757",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-758",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-759",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-760",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-761",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-762",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-763",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-764",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-765",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-766",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-767",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-768",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-769",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-770",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-771",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-772",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-773",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-774",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-775",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-776",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-777",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-778",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-779",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-780",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-781",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-782",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-783",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-784",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-785",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-786",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-787",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-788",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-789",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-790",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-791",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-792",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-793",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-794",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-795",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-796",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-797",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-798",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-799",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-800",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-801",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-802",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-803",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-804",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-805",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-806",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-807",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-808",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-809",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-810",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-811",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-812",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-813",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-814",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-815",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-816",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-817",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-818",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-819",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-820",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-08",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-821",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-822",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-823",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-824",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-825",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-826",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-827",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-828",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-829",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-830",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-831",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-832",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-833",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-834",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-835",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-836",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-837",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-838",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-839",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-840",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-841",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-842",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-843",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-844",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-845",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-846",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-847",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-848",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-849",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-850",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-851",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-852",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-853",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-854",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-855",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-856",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-857",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-858",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-859",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-860",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-861",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-862",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-863",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-864",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-865",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-866",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-867",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-868",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-869",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-870",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-871",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-872",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-873",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-874",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-875",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-876",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-877",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-878",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-879",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-880",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-881",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-882",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-883",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-884",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-885",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-886",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-887",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-888",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-889",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-890",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-891",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-892",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-893",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-894",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-895",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-896",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-897",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-898",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-899",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-900",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-901",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-902",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-903",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-904",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-905",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-906",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-907",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-908",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-909",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-910",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-09",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-911",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-912",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-913",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-914",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-915",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-916",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-917",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-918",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-919",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-920",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-921",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-922",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-923",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-924",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-925",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-926",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-927",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-928",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-929",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-930",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-931",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-932",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-933",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-934",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-935",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-936",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-937",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-938",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-939",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-940",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-941",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-942",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-943",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-944",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-945",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-946",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-947",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-948",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-949",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-950",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-951",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-952",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-953",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-954",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-955",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-956",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-957",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-958",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-959",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-960",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-961",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-962",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-963",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-964",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-965",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-966",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-967",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-968",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-969",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-970",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-971",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-972",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-973",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-974",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-975",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-976",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-977",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-978",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-979",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-980",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-981",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-982",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-983",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-984",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-985",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-986",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-987",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-988",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-989",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-990",
+      "train": [
+        1,
+        1
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 1
+    },
+    {
+      "id": "bot-991",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-992",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-993",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-994",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-995",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-996",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-997",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-998",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-999",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-1000",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    },
+    {
+      "id": "bot-10",
+      "train": [
+        0,
+        0
+      ],
+      "validation": [
+        0,
+        0
+      ],
+      "distinctOpponents": 0
+    }
+  ],
+  "greenAdvantageElo": 86.56679391812303,
+  "iterations": 21,
+  "stages": [
+    368,
+    180,
+    316,
+    1578
+  ],
+  "timeouts": 0,
+  "totalInferences": 105668,
+  "distinctScheduledPairs": 60,
+  "distribution": [
+    {
+      "targetTier": "bronze",
+      "count": 100,
+      "meanRating": 1500,
+      "ratingRange": [
+        1276.26,
+        1723.74
+      ]
+    },
+    {
+      "targetTier": "silver",
+      "count": 200,
+      "meanRating": 1500,
+      "ratingRange": [
+        1276.26,
+        1723.74
+      ]
+    },
+    {
+      "targetTier": "gold",
+      "count": 200,
+      "meanRating": 1500,
+      "ratingRange": [
+        1500,
+        1500
+      ]
+    },
+    {
+      "targetTier": "plat",
+      "count": 200,
+      "meanRating": 1500,
+      "ratingRange": [
+        1276.26,
+        1723.74
+      ]
+    },
+    {
+      "targetTier": "dia",
+      "count": 200,
+      "meanRating": 1500,
+      "ratingRange": [
+        1276.26,
+        1723.74
+      ]
+    },
+    {
+      "targetTier": "master",
+      "count": 100,
+      "meanRating": 1500,
+      "ratingRange": [
+        1500,
+        1500
+      ]
+    }
+  ],
+  "validationByMode": [
+    {
+      "mode": "bullet",
+      "games": 0,
+      "broadComparisonGames": 0,
+      "independentMirrorPairs": 0,
+      "higherProfileScore": null,
+      "lower95ClusterApprox": null,
+      "logLoss": null,
+      "brier": null,
+      "passed": false
+    },
+    {
+      "mode": "blitz",
+      "games": 0,
+      "broadComparisonGames": 0,
+      "independentMirrorPairs": 0,
+      "higherProfileScore": null,
+      "lower95ClusterApprox": null,
+      "logLoss": null,
+      "brier": null,
+      "passed": false
+    },
+    {
+      "mode": "rapid",
+      "games": 0,
+      "broadComparisonGames": 0,
+      "independentMirrorPairs": 0,
+      "higherProfileScore": null,
+      "lower95ClusterApprox": null,
+      "logLoss": null,
+      "brier": null,
+      "passed": false
+    }
+  ],
+  "complete": false,
+  "monotonicBands": false,
+  "publishEligible": false,
+  "uncertainty": "RD is diagonal information approximation, minimum 60 Elo; pair-cluster normal lower bounds are approximate. Fine adjacent ordering is not guaranteed."
+}

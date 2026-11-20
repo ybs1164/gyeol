@@ -1,0 +1,12 @@
+{
+  "checkpoint_sha256": "28bf57afe3d262cd9d2dd7c9e329975c956285688812b76e151c31d5a5b69c22",
+  "reference": "MCTS.MCTS",
+  "candidate": "opening_fast_mcts.OpeningFastMCTS",
+  "layout_ids": [
+    11,
+    13,
+    21
+  ],
+  "simulations": 100,
+  "all_Nsa_and_Qsa_exact": true
+}

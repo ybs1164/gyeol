@@ -1,0 +1,10 @@
+[Unit]
+Description=Hourly GYEOL SQLite backup
+
+[Timer]
+OnCalendar=hourly
+RandomizedDelaySec=2m
+Persistent=true
+
+[Install]
+WantedBy=timers.target

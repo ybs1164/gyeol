@@ -1,0 +1,18 @@
+export const GRADING_VERSION = 1;
+export const GRADES = ['best', 'excellent', 'good', 'fair', 'inaccuracy', 'mistake', 'blunder'] as const;
+export type MoveGrade = typeof GRADES[number];
+export type MoveBadge = 'missedWin' | 'missedChance' | 'missedDefense' | 'onlyMove' | 'convertedChance';
+export const GRADE_SYMBOLS: Record<MoveGrade, string> = {
+  best: '★', excellent: '!!', good: '!', fair: '○', inaccuracy: '?!', mistake: '?', blunder: '??',
+};
+
+/** 경계는 %p, 승률이 보정되기 전에는 형세 평가 차이다. */
+export function gradeMove(lossPp: number): MoveGrade {
+  if (!Number.isFinite(lossPp) || lossPp < 0) throw new Error('Invalid move loss');
+  return GRADES[[1, 3, 5, 10, 20, 35].findIndex(t => lossPp <= t)] ?? 'blunder';
+}
+
+export function exactGrade(best: number, played: number): MoveGrade {
+  if (best === played) return 'best';
+  return best === 1 && played === -1 ? 'blunder' : 'mistake';
+}

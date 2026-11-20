@@ -1,0 +1,369 @@
+{
+  "value": 0.38694578409194946,
+  "legal_moves": 36,
+  "openings": [
+    {
+      "action": 1536,
+      "description": "rotate (3,3)->↑  place (2,3)↑",
+      "prior": 0.001026918995194137,
+      "first_value": -0.287722110748291,
+      "reply_count": 72,
+      "capturing_replies": 6,
+      "max_reply_capture": 1
+    },
+    {
+      "action": 1537,
+      "description": "rotate (3,3)->↑  place (2,3)→",
+      "prior": 0.00035653222585096955,
+      "first_value": -0.3283747434616089,
+      "reply_count": 72,
+      "capturing_replies": 6,
+      "max_reply_capture": 1
+    },
+    {
+      "action": 1538,
+      "description": "rotate (3,3)->↑  place (2,3)↓",
+      "prior": 0.000333143281750381,
+      "first_value": -0.29733699560165405,
+      "reply_count": 72,
+      "capturing_replies": 6,
+      "max_reply_capture": 1
+    },
+    {
+      "action": 1539,
+      "description": "rotate (3,3)->↑  place (2,3)←",
+      "prior": 0.0009345132275484502,
+      "first_value": -0.3020189106464386,
+      "reply_count": 72,
+      "capturing_replies": 6,
+      "max_reply_capture": 1
+    },
+    {
+      "action": 1540,
+      "description": "rotate (3,3)->↑  place (3,4)↑",
+      "prior": 0.0037948840763419867,
+      "first_value": 0.43398258090019226,
+      "reply_count": 72,
+      "capturing_replies": 3,
+      "max_reply_capture": 1
+    },
+    {
+      "action": 1541,
+      "description": "rotate (3,3)->↑  place (3,4)→",
+      "prior": 0.003945291042327881,
+      "first_value": 0.3350110948085785,
+      "reply_count": 72,
+      "capturing_replies": 3,
+      "max_reply_capture": 1
+    },
+    {
+      "action": 1542,
+      "description": "rotate (3,3)->↑  place (3,4)↓",
+      "prior": 0.0024630019906908274,
+      "first_value": 0.28633037209510803,
+      "reply_count": 72,
+      "capturing_replies": 3,
+      "max_reply_capture": 1
+    },
+    {
+      "action": 1543,
+      "description": "rotate (3,3)->↑  place (3,4)←",
+      "prior": 0.0061124167405068874,
+      "first_value": 0.3548351228237152,
+      "reply_count": 72,
+      "capturing_replies": 0,
+      "max_reply_capture": 0
+    },
+    {
+      "action": 1544,
+      "description": "rotate (3,3)->↑  place (4,3)↑",
+      "prior": 0.0005099184927530587,
+      "first_value": -0.19919490814208984,
+      "reply_count": 72,
+      "capturing_replies": 6,
+      "max_reply_capture": 1
+    },
+    {
+      "action": 1545,
+      "description": "rotate (3,3)->↑  place (4,3)→",
+      "prior": 0.0002553348313085735,
+      "first_value": 0.0036279866471886635,
+      "reply_count": 72,
+      "capturing_replies": 6,
+      "max_reply_capture": 1
+    },
+    {
+      "action": 1546,
+      "description": "rotate (3,3)->↑  place (4,3)↓",
+      "prior": 0.00047547038411721587,
+      "first_value": 0.00828719511628151,
+      "reply_count": 72,
+      "capturing_replies": 6,
+      "max_reply_capture": 1
+    },
+    {
+      "action": 1547,
+      "description": "rotate (3,3)->↑  place (4,3)←",
+      "prior": 0.0003575946611817926,
+      "first_value": -0.10911507159471512,
+      "reply_count": 72,
+      "capturing_replies": 6,
+      "max_reply_capture": 1
+    },
+    {
+      "action": 1552,
+      "description": "rotate (3,3)->→  place (2,3)↑",
+      "prior": 0.00040266651194542646,
+      "first_value": -0.2530803680419922,
+      "reply_count": 72,
+      "capturing_replies": 6,
+      "max_reply_capture": 1
+    },
+    {
+      "action": 1553,
+      "description": "rotate (3,3)->→  place (2,3)→",
+      "prior": 0.0013408988015726209,
+      "first_value": -0.3210884630680084,
+      "reply_count": 72,
+      "capturing_replies": 6,
+      "max_reply_capture": 1
+    },
+    {
+      "action": 1554,
+      "description": "rotate (3,3)->→  place (2,3)↓",
+      "prior": 0.00017939554527401924,
+      "first_value": -0.3138516843318939,
+      "reply_count": 72,
+      "capturing_replies": 6,
+      "max_reply_capture": 1
+    },
+    {
+      "action": 1555,
+      "description": "rotate (3,3)->→  place (2,3)←",
+      "prior": 0.00041889664134941995,
+      "first_value": -0.29632997512817383,
+      "reply_count": 72,
+      "capturing_replies": 6,
+      "max_reply_capture": 1
+    },
+    {
+      "action": 1556,
+      "description": "rotate (3,3)->→  place (3,4)↑",
+      "prior": 0.0024251241702586412,
+      "first_value": 0.3740856647491455,
+      "reply_count": 72,
+      "capturing_replies": 3,
+      "max_reply_capture": 1
+    },
+    {
+      "action": 1557,
+      "description": "rotate (3,3)->→  place (3,4)→",
+      "prior": 0.8175408840179443,
+      "first_value": 0.2934170961380005,
+      "reply_count": 72,
+      "capturing_replies": 3,
+      "max_reply_capture": 1
+    },
+    {
+      "action": 1558,
+      "description": "rotate (3,3)->→  place (3,4)↓",
+      "prior": 0.0051246401853859425,
+      "first_value": 0.2961101531982422,
+      "reply_count": 72,
+      "capturing_replies": 3,
+      "max_reply_capture": 1
+    },
+    {
+      "action": 1559,
+      "description": "rotate (3,3)->→  place (3,4)←",
+      "prior": 0.13395418226718903,
+      "first_value": 0.3014968931674957,
+      "reply_count": 72,
+      "capturing_replies": 0,
+      "max_reply_capture": 0
+    },
+    {
+      "action": 1560,
+      "description": "rotate (3,3)->→  place (4,3)↑",
+      "prior": 0.00017386319814249873,
+      "first_value": -0.23500296473503113,
+      "reply_count": 72,
+      "capturing_replies": 6,
+      "max_reply_capture": 1
+    },
+    {
+      "action": 1561,
+      "description": "rotate (3,3)->→  place (4,3)→",
+      "prior": 0.0017332558054476976,
+      "first_value": -0.045632507652044296,
+      "reply_count": 72,
+      "capturing_replies": 6,
+      "max_reply_capture": 1
+    },
+    {
+      "action": 1562,
+      "description": "rotate (3,3)->→  place (4,3)↓",
+      "prior": 0.0006470165681093931,
+      "first_value": -0.025526724755764008,
+      "reply_count": 72,
+      "capturing_replies": 6,
+      "max_reply_capture": 1
+    },
+    {
+      "action": 1563,
+      "description": "rotate (3,3)->→  place (4,3)←",
+      "prior": 0.00029418079066090286,
+      "first_value": -0.1028585135936737,
+      "reply_count": 72,
+      "capturing_replies": 6,
+      "max_reply_capture": 1
+    },
+    {
+      "action": 1568,
+      "description": "rotate (3,3)->↓  place (2,3)↑",
+      "prior": 0.0004987964639440179,
+      "first_value": -0.19481754302978516,
+      "reply_count": 72,
+      "capturing_replies": 6,
+      "max_reply_capture": 1
+    },
+    {
+      "action": 1569,
+      "description": "rotate (3,3)->↓  place (2,3)→",
+      "prior": 0.00045902360579930246,
+      "first_value": -0.3091702461242676,
+      "reply_count": 72,
+      "capturing_replies": 6,
+      "max_reply_capture": 1
+    },
+    {
+      "action": 1570,
+      "description": "rotate (3,3)->↓  place (2,3)↓",
+      "prior": 0.00010311216465197504,
+      "first_value": -0.31799450516700745,
+      "reply_count": 72,
+      "capturing_replies": 6,
+      "max_reply_capture": 1
+    },
+    {
+      "action": 1571,
+      "description": "rotate (3,3)->↓  place (2,3)←",
+      "prior": 0.0003575496666599065,
+      "first_value": -0.2956291437149048,
+      "reply_count": 72,
+      "capturing_replies": 6,
+      "max_reply_capture": 1
+    },
+    {
+      "action": 1572,
+      "description": "rotate (3,3)->↓  place (3,4)↑",
+      "prior": 0.0014943935675546527,
+      "first_value": 0.4194484055042267,
+      "reply_count": 72,
+      "capturing_replies": 3,
+      "max_reply_capture": 1
+    },
+    {
+      "action": 1573,
+      "description": "rotate (3,3)->↓  place (3,4)→",
+      "prior": 0.0035560333635658026,
+      "first_value": 0.3234209716320038,
+      "reply_count": 72,
+      "capturing_replies": 3,
+      "max_reply_capture": 1
+    },
+    {
+      "action": 1574,
+      "description": "rotate (3,3)->↓  place (3,4)↓",
+      "prior": 0.0032161122653633356,
+      "first_value": 0.3203141987323761,
+      "reply_count": 72,
+      "capturing_replies": 3,
+      "max_reply_capture": 1
+    },
+    {
+      "action": 1575,
+      "description": "rotate (3,3)->↓  place (3,4)←",
+      "prior": 0.0030737477354705334,
+      "first_value": 0.345218300819397,
+      "reply_count": 72,
+      "capturing_replies": 0,
+      "max_reply_capture": 0
+    },
+    {
+      "action": 1576,
+      "description": "rotate (3,3)->↓  place (4,3)↑",
+      "prior": 0.0005912980996072292,
+      "first_value": -0.32500317692756653,
+      "reply_count": 72,
+      "capturing_replies": 6,
+      "max_reply_capture": 1
+    },
+    {
+      "action": 1577,
+      "description": "rotate (3,3)->↓  place (4,3)→",
+      "prior": 0.0003378799883648753,
+      "first_value": -0.14241349697113037,
+      "reply_count": 72,
+      "capturing_replies": 6,
+      "max_reply_capture": 1
+    },
+    {
+      "action": 1578,
+      "description": "rotate (3,3)->↓  place (4,3)↓",
+      "prior": 0.0012065160553902388,
+      "first_value": -0.1569119244813919,
+      "reply_count": 72,
+      "capturing_replies": 6,
+      "max_reply_capture": 1
+    },
+    {
+      "action": 1579,
+      "description": "rotate (3,3)->↓  place (4,3)←",
+      "prior": 0.00030544251785613596,
+      "first_value": -0.13891713321208954,
+      "reply_count": 72,
+      "capturing_replies": 6,
+      "max_reply_capture": 1
+    }
+  ],
+  "symmetry_values": [
+    0.38694578409194946,
+    0.24060839414596558,
+    0.01529112458229065,
+    0.2868175208568573,
+    0.01529112458229065,
+    0.2868175208568573,
+    0.38694578409194946,
+    0.24060839414596558
+  ],
+  "searches": [
+    {
+      "mean_q": 0.2873038251442139,
+      "best_q": 0.3001667261123657,
+      "best_action": 1557,
+      "best_visits": 94,
+      "visited": 2,
+      "sims": 100,
+      "description": "rotate (3,3)->→  place (3,4)→"
+    },
+    {
+      "mean_q": 0.23609642624780444,
+      "best_q": 0.2400253266096115,
+      "best_action": 1557,
+      "best_visits": 737,
+      "visited": 2,
+      "sims": 800,
+      "description": "rotate (3,3)->→  place (3,4)→"
+    },
+    {
+      "mean_q": 0.26571340888747946,
+      "best_q": 0.2688405513763428,
+      "best_action": 1557,
+      "best_visits": 2997,
+      "visited": 7,
+      "sims": 3200,
+      "description": "rotate (3,3)->→  place (3,4)→"
+    }
+  ]
+}

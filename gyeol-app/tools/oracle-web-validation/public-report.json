@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-11-15T15:45:46.082Z",
+  "appVersion": "0.4.0",
+  "browser": "headless Chrome",
+  "web": "https://gyeol.146.56.189.166.sslip.io",
+  "isolatedProfile": true,
+  "backend": "Oracle SQLite production",
+  "results": [
+    {
+      "name": "oracle-public",
+      "serverSetting": "",
+      "connections": [
+        {
+          "requestId": "24860.11",
+          "url": "wss://gyeol.146.56.189.166.sslip.io/ws",
+          "handshake": 101,
+          "welcome": true
+        }
+      ],
+      "networkErrors": [],
+      "exceptions": [],
+      "elapsedMs": 1913,
+      "profileText": "배치 · 1500",
+      "welcomeReceived": true,
+      "playStatus": null,
+      "startDisabled": false
+    }
+  ]
+}

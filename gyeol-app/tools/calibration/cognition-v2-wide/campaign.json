@@ -1,0 +1,10 @@
+{
+  "pid": 26528,
+  "updatedAt": "2026-11-15T09:56:19.149Z",
+  "state": "waiting-for-baseline-and-anchor-check",
+  "baselineFinished": 48971,
+  "baselinePlanned": 60000,
+  "anchorFinished": 224,
+  "anchorPlanned": 224,
+  "next": "60,000 wide-profile games; 100 fitting and 20 validation games per bot"
+}

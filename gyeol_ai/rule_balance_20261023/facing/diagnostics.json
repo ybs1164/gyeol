@@ -1,0 +1,126 @@
+{
+  "value": -0.39167943596839905,
+  "legal_moves": 9,
+  "openings": [
+    {
+      "action": 384,
+      "description": "rotate (3,3)->↑  place (2,3)↓",
+      "prior": 0.08748216927051544,
+      "first_value": -0.3610009253025055,
+      "reply_count": 18,
+      "capturing_replies": 0,
+      "max_reply_capture": 0
+    },
+    {
+      "action": 385,
+      "description": "rotate (3,3)->↑  place (3,4)←",
+      "prior": 0.06579895317554474,
+      "first_value": -0.3575330078601837,
+      "reply_count": 18,
+      "capturing_replies": 0,
+      "max_reply_capture": 0
+    },
+    {
+      "action": 386,
+      "description": "rotate (3,3)->↑  place (4,3)↑",
+      "prior": 0.09455404430627823,
+      "first_value": -0.6661691069602966,
+      "reply_count": 18,
+      "capturing_replies": 0,
+      "max_reply_capture": 0
+    },
+    {
+      "action": 388,
+      "description": "rotate (3,3)->→  place (2,3)↓",
+      "prior": 0.1207738146185875,
+      "first_value": -0.40485629439353943,
+      "reply_count": 18,
+      "capturing_replies": 0,
+      "max_reply_capture": 0
+    },
+    {
+      "action": 389,
+      "description": "rotate (3,3)->→  place (3,4)←",
+      "prior": 0.272475928068161,
+      "first_value": 0.11771927773952484,
+      "reply_count": 18,
+      "capturing_replies": 0,
+      "max_reply_capture": 0
+    },
+    {
+      "action": 390,
+      "description": "rotate (3,3)->→  place (4,3)↑",
+      "prior": 0.11253068596124649,
+      "first_value": -0.5702608823776245,
+      "reply_count": 18,
+      "capturing_replies": 0,
+      "max_reply_capture": 0
+    },
+    {
+      "action": 392,
+      "description": "rotate (3,3)->↓  place (2,3)↓",
+      "prior": 0.10589886456727982,
+      "first_value": -0.356433242559433,
+      "reply_count": 18,
+      "capturing_replies": 0,
+      "max_reply_capture": 0
+    },
+    {
+      "action": 393,
+      "description": "rotate (3,3)->↓  place (3,4)←",
+      "prior": 0.06012965738773346,
+      "first_value": -0.31800612807273865,
+      "reply_count": 18,
+      "capturing_replies": 0,
+      "max_reply_capture": 0
+    },
+    {
+      "action": 394,
+      "description": "rotate (3,3)->↓  place (4,3)↑",
+      "prior": 0.08035582304000854,
+      "first_value": -0.6365305781364441,
+      "reply_count": 18,
+      "capturing_replies": 0,
+      "max_reply_capture": 0
+    }
+  ],
+  "symmetry_values": [
+    -0.39167943596839905,
+    -0.1683976799249649,
+    -0.20936498045921326,
+    -0.3138580620288849,
+    -0.20936498045921326,
+    -0.3138580620288849,
+    -0.39167943596839905,
+    -0.1683976799249649
+  ],
+  "searches": [
+    {
+      "mean_q": -0.23059018287393784,
+      "best_q": -0.11916589736938477,
+      "best_action": 385,
+      "best_visits": 32,
+      "visited": 9,
+      "sims": 100,
+      "description": "rotate (3,3)->↑  place (3,4)←"
+    },
+    {
+      "mean_q": -0.3978756425228524,
+      "best_q": -0.34842824935913086,
+      "best_action": 385,
+      "best_visits": 590,
+      "visited": 9,
+      "sims": 800,
+      "description": "rotate (3,3)->↑  place (3,4)←"
+    },
+    {
+      "mean_q": -0.1063553988304724,
+      "best_q": -0.020853320136666298,
+      "best_action": 389,
+      "best_visits": 2468,
+      "visited": 9,
+      "sims": 3200,
+      "description": "rotate (3,3)->→  place (3,4)←"
+    }
+  ]
+}

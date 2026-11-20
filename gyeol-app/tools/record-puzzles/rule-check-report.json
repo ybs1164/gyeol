@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "puzzleSha256": "a695ff42dce2302a671b0698a2d8802479ef8e1e14e4c4bf068b461356e7d391",
+  "states": 3511,
+  "transitions": 26876,
+  "method": "All stored puzzle proof nodes cross-checked against independent Python facing rules: legal actions, child boards, terminal outcomes."
+}

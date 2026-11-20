@@ -1,0 +1,75 @@
+{
+  "checkedAt": "2026-11-15T14:43:06.184Z",
+  "appVersion": "0.4.0",
+  "browser": "headless Chrome",
+  "web": "fresh production build",
+  "isolatedProfile": true,
+  "localDatabase": "in-memory SQLite",
+  "results": [
+    {
+      "name": "current-default",
+      "serverSetting": "",
+      "connections": [
+        {
+          "requestId": "17328.11",
+          "url": "ws://127.0.0.1:58626/ws",
+          "handshake": 101,
+          "welcome": true
+        }
+      ],
+      "networkErrors": [],
+      "exceptions": [],
+      "elapsedMs": 1261,
+      "profileText": "배치 · 1500",
+      "welcomeReceived": true,
+      "playStatus": null,
+      "startDisabled": false
+    },
+    {
+      "name": "oracle-http",
+      "serverSetting": "http://146.56.189.166:8787",
+      "connections": [
+        {
+          "requestId": "17328.43",
+          "url": "ws://146.56.189.166:8787/ws",
+          "handshake": null,
+          "welcome": false
+        }
+      ],
+      "networkErrors": [],
+      "exceptions": [],
+      "elapsedMs": 20102,
+      "profileText": "오프라인",
+      "welcomeReceived": false,
+      "playStatus": null,
+      "startDisabled": false
+    },
+    {
+      "name": "oracle-https",
+      "serverSetting": "https://146.56.189.166",
+      "connections": [
+        {
+          "requestId": "17328.61",
+          "url": "wss://146.56.189.166/ws",
+          "handshake": null,
+          "welcome": false
+        },
+        {
+          "requestId": "17328.65",
+          "url": "wss://146.56.189.166/ws",
+          "handshake": null,
+          "welcome": false
+        }
+      ],
+      "networkErrors": [
+        "Error in connection establishment: net::ERR_SSL_PROTOCOL_ERROR"
+      ],
+      "exceptions": [],
+      "elapsedMs": 1013,
+      "profileText": "오프라인",
+      "welcomeReceived": false,
+      "playStatus": null,
+      "startDisabled": false
+    }
+  ]
+}

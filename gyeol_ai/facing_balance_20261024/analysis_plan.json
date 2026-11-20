@@ -1,0 +1,9 @@
+{
+  "recorded_utc": "2026-10-23T16:57:39.355920+00:00",
+  "games_by_sims": {
+    "100_temp6": 64,
+    "400_temp6": 32,
+    "800_temp0": 8
+  },
+  "note": "Bounded evaluation sample sizes selected for runtime before completion. Originally launched larger jobs will be stopped only at completed batch boundaries. Confidence intervals are descriptive for the frozen AI and evaluation policy."
+}

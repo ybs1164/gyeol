@@ -1,0 +1,6 @@
+{
+  "simulations": 100,
+  "exact_counts_and_q_match": true,
+  "action_size": 3137,
+  "compared_edges": 103
+}

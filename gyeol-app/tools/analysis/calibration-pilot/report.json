@@ -1,0 +1,2365 @@
+{
+  "reference": "060101a48c177fcf94a07a39e1250c5e66f06e7da113ee47ed9619becde40765",
+  "games": 128,
+  "selectedOnSelectionSplit": "mean",
+  "accepted": false,
+  "inferenceNormalization": "Clamp finite tanh values within 1e-6 of [-1,1]; reject larger deviations. Existing first 90 completed games passed the stricter range guard.",
+  "reason": "Pilot only. Require independent-game uncertainty, novel-position evaluation and sufficient validation games before deployment.",
+  "candidates": [
+    {
+      "field": "network",
+      "calibration": {
+        "version": "060101a48c17-network",
+        "model": "900c6f08b6ce0aba",
+        "rule": "facing-25-v1",
+        "evaluator": "network",
+        "simulations": 0,
+        "reference": "060101a48c177fcf94a07a39e1250c5e66f06e7da113ee47ed9619becde40765",
+        "accepted": false,
+        "coefficients": [
+          0.33789108860548284,
+          0.5131725106000239,
+          -0.7209463655527544
+        ],
+        "validationGames": 25,
+        "remainingRange": [
+          4,
+          23
+        ]
+      },
+      "fitGames": 78,
+      "selection": {
+        "raw": {
+          "games": 25,
+          "positions": 501,
+          "brier": 0.28048593429818497,
+          "logLoss": 0.875847001059124,
+          "bins": [
+            {
+              "from": 0,
+              "to": 0.1,
+              "n": 138,
+              "predicted": 0.030212092795441115,
+              "observed": 0.34057971014492755
+            },
+            {
+              "from": 0.1,
+              "to": 0.2,
+              "n": 46,
+              "predicted": 0.15215554185535596,
+              "observed": 0.41304347826086957
+            },
+            {
+              "from": 0.2,
+              "to": 0.3,
+              "n": 48,
+              "predicted": 0.25721980600307387,
+              "observed": 0.5208333333333334
+            },
+            {
+              "from": 0.3,
+              "to": 0.4,
+              "n": 47,
+              "predicted": 0.351907268642111,
+              "observed": 0.5319148936170213
+            },
+            {
+              "from": 0.4,
+              "to": 0.5,
+              "n": 132,
+              "predicted": 0.4525992854425126,
+              "observed": 0.5833333333333334
+            },
+            {
+              "from": 0.5,
+              "to": 0.6,
+              "n": 53,
+              "predicted": 0.5272459708141023,
+              "observed": 0.5283018867924528
+            },
+            {
+              "from": 0.6,
+              "to": 0.7,
+              "n": 13,
+              "predicted": 0.6416433384785285,
+              "observed": 0.8461538461538461
+            },
+            {
+              "from": 0.7,
+              "to": 0.8,
+              "n": 9,
+              "predicted": 0.7590996010435952,
+              "observed": 0.6666666666666666
+            },
+            {
+              "from": 0.8,
+              "to": 0.9,
+              "n": 5,
+              "predicted": 0.8199733793735504,
+              "observed": 0.6
+            },
+            {
+              "from": 0.9,
+              "to": 1,
+              "n": 10,
+              "predicted": 0.9621668875217437,
+              "observed": 1
+            }
+          ]
+        },
+        "calibrated": {
+          "games": 25,
+          "positions": 501,
+          "brier": 0.22362714698961664,
+          "logLoss": 0.6343976351905304,
+          "bins": [
+            {
+              "from": 0,
+              "to": 0.1,
+              "n": 8,
+              "predicted": 0.06848264270000282,
+              "observed": 0
+            },
+            {
+              "from": 0.1,
+              "to": 0.2,
+              "n": 10,
+              "predicted": 0.15006635465829038,
+              "observed": 0.1
+            },
+            {
+              "from": 0.2,
+              "to": 0.3,
+              "n": 23,
+              "predicted": 0.25465982406898396,
+              "observed": 0.2608695652173913
+            },
+            {
+              "from": 0.3,
+              "to": 0.4,
+              "n": 47,
+              "predicted": 0.36148144016752237,
+              "observed": 0.3404255319148936
+            },
+            {
+              "from": 0.4,
+              "to": 0.5,
+              "n": 171,
+              "predicted": 0.46493166539375747,
+              "observed": 0.4502923976608187
+            },
+            {
+              "from": 0.5,
+              "to": 0.6,
+              "n": 167,
+              "predicted": 0.5400876649906866,
+              "observed": 0.5688622754491018
+            },
+            {
+              "from": 0.6,
+              "to": 0.7,
+              "n": 38,
+              "predicted": 0.6376242209893991,
+              "observed": 0.631578947368421
+            },
+            {
+              "from": 0.7,
+              "to": 0.8,
+              "n": 26,
+              "predicted": 0.7317413153236062,
+              "observed": 0.8076923076923077
+            },
+            {
+              "from": 0.8,
+              "to": 0.9,
+              "n": 9,
+              "predicted": 0.8633900672842064,
+              "observed": 1
+            },
+            {
+              "from": 0.9,
+              "to": 1,
+              "n": 2,
+              "predicted": 0.9219832187299613,
+              "observed": 1
+            }
+          ]
+        },
+        "constant": {
+          "games": 25,
+          "positions": 501,
+          "brier": 0.24999949248737696,
+          "logLoss": 0.693146165534574,
+          "bins": [
+            {
+              "from": 0,
+              "to": 0.1,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.1,
+              "to": 0.2,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.2,
+              "to": 0.3,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.3,
+              "to": 0.4,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.4,
+              "to": 0.5,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.5,
+              "to": 0.6,
+              "n": 501,
+              "predicted": 0.5003203074951995,
+              "observed": 0.500998003992016
+            },
+            {
+              "from": 0.6,
+              "to": 0.7,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.7,
+              "to": 0.8,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.8,
+              "to": 0.9,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.9,
+              "to": 1,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            }
+          ]
+        }
+      },
+      "finalTest": {
+        "raw": {
+          "games": 25,
+          "positions": 500,
+          "brier": 0.2741724346135864,
+          "logLoss": 0.874759064280572,
+          "bins": [
+            {
+              "from": 0,
+              "to": 0.1,
+              "n": 126,
+              "predicted": 0.021989882959411258,
+              "observed": 0.31746031746031744
+            },
+            {
+              "from": 0.1,
+              "to": 0.2,
+              "n": 34,
+              "predicted": 0.14558721815838532,
+              "observed": 0.47058823529411764
+            },
+            {
+              "from": 0.2,
+              "to": 0.3,
+              "n": 43,
+              "predicted": 0.24371548724728961,
+              "observed": 0.6511627906976745
+            },
+            {
+              "from": 0.3,
+              "to": 0.4,
+              "n": 43,
+              "predicted": 0.3539365323823552,
+              "observed": 0.5348837209302325
+            },
+            {
+              "from": 0.4,
+              "to": 0.5,
+              "n": 128,
+              "predicted": 0.4547678431631539,
+              "observed": 0.453125
+            },
+            {
+              "from": 0.5,
+              "to": 0.6,
+              "n": 62,
+              "predicted": 0.5317480743274979,
+              "observed": 0.6129032258064516
+            },
+            {
+              "from": 0.6,
+              "to": 0.7,
+              "n": 21,
+              "predicted": 0.6362091207078525,
+              "observed": 0.5714285714285714
+            },
+            {
+              "from": 0.7,
+              "to": 0.8,
+              "n": 15,
+              "predicted": 0.7392875303824743,
+              "observed": 0.6666666666666666
+            },
+            {
+              "from": 0.8,
+              "to": 0.9,
+              "n": 9,
+              "predicted": 0.8520897924900055,
+              "observed": 0.7777777777777778
+            },
+            {
+              "from": 0.9,
+              "to": 1,
+              "n": 19,
+              "predicted": 0.9720457855023836,
+              "observed": 0.9473684210526315
+            }
+          ]
+        },
+        "calibrated": {
+          "games": 25,
+          "positions": 500,
+          "brier": 0.2249798015928877,
+          "logLoss": 0.6351775509883688,
+          "bins": [
+            {
+              "from": 0,
+              "to": 0.1,
+              "n": 9,
+              "predicted": 0.07180873888501453,
+              "observed": 0
+            },
+            {
+              "from": 0.1,
+              "to": 0.2,
+              "n": 18,
+              "predicted": 0.13373330503443487,
+              "observed": 0.05555555555555555
+            },
+            {
+              "from": 0.2,
+              "to": 0.3,
+              "n": 40,
+              "predicted": 0.2583072417255034,
+              "observed": 0.275
+            },
+            {
+              "from": 0.3,
+              "to": 0.4,
+              "n": 29,
+              "predicted": 0.3472376027624113,
+              "observed": 0.4482758620689655
+            },
+            {
+              "from": 0.4,
+              "to": 0.5,
+              "n": 142,
+              "predicted": 0.46775159898113616,
+              "observed": 0.5
+            },
+            {
+              "from": 0.5,
+              "to": 0.6,
+              "n": 151,
+              "predicted": 0.5422534287749867,
+              "observed": 0.5231788079470199
+            },
+            {
+              "from": 0.6,
+              "to": 0.7,
+              "n": 61,
+              "predicted": 0.6455108276375806,
+              "observed": 0.5737704918032787
+            },
+            {
+              "from": 0.7,
+              "to": 0.8,
+              "n": 30,
+              "predicted": 0.7442995991457177,
+              "observed": 0.7
+            },
+            {
+              "from": 0.8,
+              "to": 0.9,
+              "n": 12,
+              "predicted": 0.8493862149955879,
+              "observed": 0.9166666666666666
+            },
+            {
+              "from": 0.9,
+              "to": 1,
+              "n": 8,
+              "predicted": 0.9413686468080441,
+              "observed": 1
+            }
+          ]
+        },
+        "constant": {
+          "games": 25,
+          "positions": 500,
+          "brier": 0.25000010259689165,
+          "logLoss": 0.6931473857537702,
+          "bins": [
+            {
+              "from": 0,
+              "to": 0.1,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.1,
+              "to": 0.2,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.2,
+              "to": 0.3,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.3,
+              "to": 0.4,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.4,
+              "to": 0.5,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.5,
+              "to": 0.6,
+              "n": 500,
+              "predicted": 0.5003203074951995,
+              "observed": 0.5
+            },
+            {
+              "from": 0.6,
+              "to": 0.7,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.7,
+              "to": 0.8,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.8,
+              "to": 0.9,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.9,
+              "to": 1,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            }
+          ]
+        }
+      },
+      "novelPositionTest": {
+        "definition": "Canonical board not present in fitting or selection games; no augmentation was generated.",
+        "raw": {
+          "games": 25,
+          "positions": 434,
+          "brier": 0.27610346268725267,
+          "logLoss": 0.8950593897006429,
+          "bins": [
+            {
+              "from": 0,
+              "to": 0.1,
+              "n": 126,
+              "predicted": 0.021989882959411258,
+              "observed": 0.31746031746031744
+            },
+            {
+              "from": 0.1,
+              "to": 0.2,
+              "n": 34,
+              "predicted": 0.14558721815838532,
+              "observed": 0.47058823529411764
+            },
+            {
+              "from": 0.2,
+              "to": 0.3,
+              "n": 43,
+              "predicted": 0.24371548724728961,
+              "observed": 0.6511627906976745
+            },
+            {
+              "from": 0.3,
+              "to": 0.4,
+              "n": 42,
+              "predicted": 0.3537860340660527,
+              "observed": 0.5476190476190477
+            },
+            {
+              "from": 0.4,
+              "to": 0.5,
+              "n": 80,
+              "predicted": 0.45257159569373473,
+              "observed": 0.45
+            },
+            {
+              "from": 0.5,
+              "to": 0.6,
+              "n": 45,
+              "predicted": 0.5390707917032866,
+              "observed": 0.6222222222222222
+            },
+            {
+              "from": 0.6,
+              "to": 0.7,
+              "n": 21,
+              "predicted": 0.6362091207078525,
+              "observed": 0.5714285714285714
+            },
+            {
+              "from": 0.7,
+              "to": 0.8,
+              "n": 15,
+              "predicted": 0.7392875303824743,
+              "observed": 0.6666666666666666
+            },
+            {
+              "from": 0.8,
+              "to": 0.9,
+              "n": 9,
+              "predicted": 0.8520897924900055,
+              "observed": 0.7777777777777778
+            },
+            {
+              "from": 0.9,
+              "to": 1,
+              "n": 19,
+              "predicted": 0.9720457855023836,
+              "observed": 0.9473684210526315
+            }
+          ]
+        },
+        "calibrated": {
+          "games": 25,
+          "positions": 434,
+          "brier": 0.21985538651826197,
+          "logLoss": 0.6234318138148172,
+          "bins": [
+            {
+              "from": 0,
+              "to": 0.1,
+              "n": 9,
+              "predicted": 0.07180873888501453,
+              "observed": 0
+            },
+            {
+              "from": 0.1,
+              "to": 0.2,
+              "n": 18,
+              "predicted": 0.13373330503443487,
+              "observed": 0.05555555555555555
+            },
+            {
+              "from": 0.2,
+              "to": 0.3,
+              "n": 40,
+              "predicted": 0.2583072417255034,
+              "observed": 0.275
+            },
+            {
+              "from": 0.3,
+              "to": 0.4,
+              "n": 29,
+              "predicted": 0.3472376027624113,
+              "observed": 0.4482758620689655
+            },
+            {
+              "from": 0.4,
+              "to": 0.5,
+              "n": 82,
+              "predicted": 0.46149326544578434,
+              "observed": 0.5365853658536586
+            },
+            {
+              "from": 0.5,
+              "to": 0.6,
+              "n": 145,
+              "predicted": 0.5433422940141854,
+              "observed": 0.5103448275862069
+            },
+            {
+              "from": 0.6,
+              "to": 0.7,
+              "n": 61,
+              "predicted": 0.6455108276375806,
+              "observed": 0.5737704918032787
+            },
+            {
+              "from": 0.7,
+              "to": 0.8,
+              "n": 30,
+              "predicted": 0.7442995991457177,
+              "observed": 0.7
+            },
+            {
+              "from": 0.8,
+              "to": 0.9,
+              "n": 12,
+              "predicted": 0.8493862149955879,
+              "observed": 0.9166666666666666
+            },
+            {
+              "from": 0.9,
+              "to": 1,
+              "n": 8,
+              "predicted": 0.9413686468080441,
+              "observed": 1
+            }
+          ]
+        },
+        "constant": {
+          "games": 25,
+          "positions": 434,
+          "brier": 0.2499985952675024,
+          "logLoss": 0.6931443710945796,
+          "bins": [
+            {
+              "from": 0,
+              "to": 0.1,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.1,
+              "to": 0.2,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.2,
+              "to": 0.3,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.3,
+              "to": 0.4,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.4,
+              "to": 0.5,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.5,
+              "to": 0.6,
+              "n": 434,
+              "predicted": 0.5003203074951992,
+              "observed": 0.5023041474654378
+            },
+            {
+              "from": 0.6,
+              "to": 0.7,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.7,
+              "to": 0.8,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.8,
+              "to": 0.9,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.9,
+              "to": 1,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            }
+          ]
+        }
+      },
+      "finalTestConfidence": {
+        "method": "500 bootstrap resamples of whole independent games",
+        "brier95": [
+          0.19401789241071926,
+          0.2552244657305978
+        ],
+        "logLoss95": [
+          0.5672232281326355,
+          0.70257905254245
+        ],
+        "calibrationGap95": [
+          [
+            -0.08211124926102528,
+            -0.06253385685992296
+          ],
+          [
+            -0.14162320109622029,
+            0.06774240745240175
+          ],
+          [
+            -0.1850150546348519,
+            0.2173026865077183
+          ],
+          [
+            -0.16753823154374248,
+            0.3671547433848185
+          ],
+          [
+            -0.051796322173635154,
+            0.10856688597473357
+          ],
+          [
+            -0.09223131482655843,
+            0.0577402506101765
+          ],
+          [
+            -0.26987684156330527,
+            0.09218195014159555
+          ],
+          [
+            -0.31314101538822847,
+            0.18135292761016128
+          ],
+          [
+            -0.12121009232414372,
+            0.15888854052192988
+          ],
+          [
+            0.04731599083389204,
+            0.0902464395591619
+          ]
+        ]
+      }
+    },
+    {
+      "field": "q",
+      "calibration": {
+        "version": "060101a48c17-q",
+        "model": "900c6f08b6ce0aba",
+        "rule": "facing-25-v1",
+        "evaluator": "root-q",
+        "simulations": 64,
+        "reference": "060101a48c177fcf94a07a39e1250c5e66f06e7da113ee47ed9619becde40765",
+        "accepted": false,
+        "coefficients": [
+          0.9607194019425015,
+          -0.24744866232217685,
+          0.06796598040209523
+        ],
+        "validationGames": 25,
+        "remainingRange": [
+          4,
+          23
+        ]
+      },
+      "fitGames": 78,
+      "selection": {
+        "raw": {
+          "games": 25,
+          "positions": 501,
+          "brier": 0.204772343073949,
+          "logLoss": 0.5866619044652613,
+          "bins": [
+            {
+              "from": 0,
+              "to": 0.1,
+              "n": 10,
+              "predicted": 0.029165797886428212,
+              "observed": 0
+            },
+            {
+              "from": 0.1,
+              "to": 0.2,
+              "n": 13,
+              "predicted": 0.15234616279576463,
+              "observed": 0
+            },
+            {
+              "from": 0.2,
+              "to": 0.3,
+              "n": 21,
+              "predicted": 0.257823490490395,
+              "observed": 0.047619047619047616
+            },
+            {
+              "from": 0.3,
+              "to": 0.4,
+              "n": 34,
+              "predicted": 0.36056853333355,
+              "observed": 0.2647058823529412
+            },
+            {
+              "from": 0.4,
+              "to": 0.5,
+              "n": 82,
+              "predicted": 0.4620878149558271,
+              "observed": 0.4146341463414634
+            },
+            {
+              "from": 0.5,
+              "to": 0.6,
+              "n": 170,
+              "predicted": 0.5415300873682094,
+              "observed": 0.49411764705882355
+            },
+            {
+              "from": 0.6,
+              "to": 0.7,
+              "n": 82,
+              "predicted": 0.6427353750906052,
+              "observed": 0.6097560975609756
+            },
+            {
+              "from": 0.7,
+              "to": 0.8,
+              "n": 47,
+              "predicted": 0.7439299373807509,
+              "observed": 0.6808510638297872
+            },
+            {
+              "from": 0.8,
+              "to": 0.9,
+              "n": 20,
+              "predicted": 0.848063868442033,
+              "observed": 0.95
+            },
+            {
+              "from": 0.9,
+              "to": 1,
+              "n": 22,
+              "predicted": 0.9605300333263631,
+              "observed": 1
+            }
+          ]
+        },
+        "calibrated": {
+          "games": 25,
+          "positions": 501,
+          "brier": 0.2025490595454475,
+          "logLoss": 0.5822438348030898,
+          "bins": [
+            {
+              "from": 0,
+              "to": 0.1,
+              "n": 11,
+              "predicted": 0.031490100098327124,
+              "observed": 0
+            },
+            {
+              "from": 0.1,
+              "to": 0.2,
+              "n": 16,
+              "predicted": 0.14160851207437783,
+              "observed": 0
+            },
+            {
+              "from": 0.2,
+              "to": 0.3,
+              "n": 30,
+              "predicted": 0.2511513804469282,
+              "observed": 0.1
+            },
+            {
+              "from": 0.3,
+              "to": 0.4,
+              "n": 57,
+              "predicted": 0.35832598892322876,
+              "observed": 0.38596491228070173
+            },
+            {
+              "from": 0.4,
+              "to": 0.5,
+              "n": 161,
+              "predicted": 0.45600214062146766,
+              "observed": 0.45962732919254656
+            },
+            {
+              "from": 0.5,
+              "to": 0.6,
+              "n": 114,
+              "predicted": 0.5440019566568355,
+              "observed": 0.5701754385964912
+            },
+            {
+              "from": 0.6,
+              "to": 0.7,
+              "n": 54,
+              "predicted": 0.6446704004095974,
+              "observed": 0.6296296296296297
+            },
+            {
+              "from": 0.7,
+              "to": 0.8,
+              "n": 26,
+              "predicted": 0.7387333072971316,
+              "observed": 0.8076923076923077
+            },
+            {
+              "from": 0.8,
+              "to": 0.9,
+              "n": 16,
+              "predicted": 0.8492413279205947,
+              "observed": 1
+            },
+            {
+              "from": 0.9,
+              "to": 1,
+              "n": 16,
+              "predicted": 0.9691213949579124,
+              "observed": 1
+            }
+          ]
+        },
+        "constant": {
+          "games": 25,
+          "positions": 501,
+          "brier": 0.24999949248737696,
+          "logLoss": 0.693146165534574,
+          "bins": [
+            {
+              "from": 0,
+              "to": 0.1,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.1,
+              "to": 0.2,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.2,
+              "to": 0.3,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.3,
+              "to": 0.4,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.4,
+              "to": 0.5,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.5,
+              "to": 0.6,
+              "n": 501,
+              "predicted": 0.5003203074951995,
+              "observed": 0.500998003992016
+            },
+            {
+              "from": 0.6,
+              "to": 0.7,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.7,
+              "to": 0.8,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.8,
+              "to": 0.9,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.9,
+              "to": 1,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            }
+          ]
+        }
+      },
+      "finalTest": {
+        "raw": {
+          "games": 25,
+          "positions": 500,
+          "brier": 0.21660999084531746,
+          "logLoss": 0.6152993837927345,
+          "bins": [
+            {
+              "from": 0,
+              "to": 0.1,
+              "n": 17,
+              "predicted": 0.046745492204842205,
+              "observed": 0.058823529411764705
+            },
+            {
+              "from": 0.1,
+              "to": 0.2,
+              "n": 19,
+              "predicted": 0.1482482895979932,
+              "observed": 0.15789473684210525
+            },
+            {
+              "from": 0.2,
+              "to": 0.3,
+              "n": 21,
+              "predicted": 0.24793824150672789,
+              "observed": 0.19047619047619047
+            },
+            {
+              "from": 0.3,
+              "to": 0.4,
+              "n": 43,
+              "predicted": 0.35553620463860264,
+              "observed": 0.37209302325581395
+            },
+            {
+              "from": 0.4,
+              "to": 0.5,
+              "n": 80,
+              "predicted": 0.4633605827280893,
+              "observed": 0.4
+            },
+            {
+              "from": 0.5,
+              "to": 0.6,
+              "n": 143,
+              "predicted": 0.5431892516626989,
+              "observed": 0.5454545454545454
+            },
+            {
+              "from": 0.6,
+              "to": 0.7,
+              "n": 68,
+              "predicted": 0.6501652479212606,
+              "observed": 0.5
+            },
+            {
+              "from": 0.7,
+              "to": 0.8,
+              "n": 48,
+              "predicted": 0.7481427087427727,
+              "observed": 0.625
+            },
+            {
+              "from": 0.8,
+              "to": 0.9,
+              "n": 27,
+              "predicted": 0.8435086000396275,
+              "observed": 0.8148148148148148
+            },
+            {
+              "from": 0.9,
+              "to": 1,
+              "n": 34,
+              "predicted": 0.9590391663805758,
+              "observed": 0.8823529411764706
+            }
+          ]
+        },
+        "calibrated": {
+          "games": 25,
+          "positions": 500,
+          "brier": 0.21387302050572254,
+          "logLoss": 0.6083535127861083,
+          "bins": [
+            {
+              "from": 0,
+              "to": 0.1,
+              "n": 21,
+              "predicted": 0.04914328324283197,
+              "observed": 0.047619047619047616
+            },
+            {
+              "from": 0.1,
+              "to": 0.2,
+              "n": 23,
+              "predicted": 0.15368328116205096,
+              "observed": 0.17391304347826086
+            },
+            {
+              "from": 0.2,
+              "to": 0.3,
+              "n": 30,
+              "predicted": 0.2543778789795444,
+              "observed": 0.26666666666666666
+            },
+            {
+              "from": 0.3,
+              "to": 0.4,
+              "n": 54,
+              "predicted": 0.34830132109796885,
+              "observed": 0.35185185185185186
+            },
+            {
+              "from": 0.4,
+              "to": 0.5,
+              "n": 144,
+              "predicted": 0.452582819839806,
+              "observed": 0.4930555555555556
+            },
+            {
+              "from": 0.5,
+              "to": 0.6,
+              "n": 92,
+              "predicted": 0.5406988794058109,
+              "observed": 0.5108695652173914
+            },
+            {
+              "from": 0.6,
+              "to": 0.7,
+              "n": 52,
+              "predicted": 0.640322025712364,
+              "observed": 0.6538461538461539
+            },
+            {
+              "from": 0.7,
+              "to": 0.8,
+              "n": 39,
+              "predicted": 0.7421681597367341,
+              "observed": 0.6410256410256411
+            },
+            {
+              "from": 0.8,
+              "to": 0.9,
+              "n": 20,
+              "predicted": 0.8542854612819916,
+              "observed": 0.85
+            },
+            {
+              "from": 0.9,
+              "to": 1,
+              "n": 25,
+              "predicted": 0.9635780427274195,
+              "observed": 0.96
+            }
+          ]
+        },
+        "constant": {
+          "games": 25,
+          "positions": 500,
+          "brier": 0.25000010259689165,
+          "logLoss": 0.6931473857537702,
+          "bins": [
+            {
+              "from": 0,
+              "to": 0.1,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.1,
+              "to": 0.2,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.2,
+              "to": 0.3,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.3,
+              "to": 0.4,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.4,
+              "to": 0.5,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.5,
+              "to": 0.6,
+              "n": 500,
+              "predicted": 0.5003203074951995,
+              "observed": 0.5
+            },
+            {
+              "from": 0.6,
+              "to": 0.7,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.7,
+              "to": 0.8,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.8,
+              "to": 0.9,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.9,
+              "to": 1,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            }
+          ]
+        }
+      },
+      "novelPositionTest": {
+        "definition": "Canonical board not present in fitting or selection games; no augmentation was generated.",
+        "raw": {
+          "games": 25,
+          "positions": 434,
+          "brier": 0.21003983628851214,
+          "logLoss": 0.5998532958428292,
+          "bins": [
+            {
+              "from": 0,
+              "to": 0.1,
+              "n": 17,
+              "predicted": 0.046745492204842205,
+              "observed": 0.058823529411764705
+            },
+            {
+              "from": 0.1,
+              "to": 0.2,
+              "n": 19,
+              "predicted": 0.1482482895979932,
+              "observed": 0.15789473684210525
+            },
+            {
+              "from": 0.2,
+              "to": 0.3,
+              "n": 21,
+              "predicted": 0.24793824150672789,
+              "observed": 0.19047619047619047
+            },
+            {
+              "from": 0.3,
+              "to": 0.4,
+              "n": 43,
+              "predicted": 0.35553620463860264,
+              "observed": 0.37209302325581395
+            },
+            {
+              "from": 0.4,
+              "to": 0.5,
+              "n": 73,
+              "predicted": 0.46134977823965423,
+              "observed": 0.4246575342465753
+            },
+            {
+              "from": 0.5,
+              "to": 0.6,
+              "n": 85,
+              "predicted": 0.5525583121000645,
+              "observed": 0.5647058823529412
+            },
+            {
+              "from": 0.6,
+              "to": 0.7,
+              "n": 67,
+              "predicted": 0.6498634137488892,
+              "observed": 0.4925373134328358
+            },
+            {
+              "from": 0.7,
+              "to": 0.8,
+              "n": 48,
+              "predicted": 0.7481427087427727,
+              "observed": 0.625
+            },
+            {
+              "from": 0.8,
+              "to": 0.9,
+              "n": 27,
+              "predicted": 0.8435086000396275,
+              "observed": 0.8148148148148148
+            },
+            {
+              "from": 0.9,
+              "to": 1,
+              "n": 34,
+              "predicted": 0.9590391663805758,
+              "observed": 0.8823529411764706
+            }
+          ]
+        },
+        "calibrated": {
+          "games": 25,
+          "positions": 434,
+          "brier": 0.20718681796069466,
+          "logLoss": 0.592513079321266,
+          "bins": [
+            {
+              "from": 0,
+              "to": 0.1,
+              "n": 21,
+              "predicted": 0.04914328324283197,
+              "observed": 0.047619047619047616
+            },
+            {
+              "from": 0.1,
+              "to": 0.2,
+              "n": 23,
+              "predicted": 0.15368328116205096,
+              "observed": 0.17391304347826086
+            },
+            {
+              "from": 0.2,
+              "to": 0.3,
+              "n": 30,
+              "predicted": 0.2543778789795444,
+              "observed": 0.26666666666666666
+            },
+            {
+              "from": 0.3,
+              "to": 0.4,
+              "n": 54,
+              "predicted": 0.34830132109796885,
+              "observed": 0.35185185185185186
+            },
+            {
+              "from": 0.4,
+              "to": 0.5,
+              "n": 97,
+              "predicted": 0.4491255437125927,
+              "observed": 0.5051546391752577
+            },
+            {
+              "from": 0.5,
+              "to": 0.6,
+              "n": 74,
+              "predicted": 0.5468931474463101,
+              "observed": 0.5135135135135135
+            },
+            {
+              "from": 0.6,
+              "to": 0.7,
+              "n": 51,
+              "predicted": 0.6407860352625908,
+              "observed": 0.6470588235294118
+            },
+            {
+              "from": 0.7,
+              "to": 0.8,
+              "n": 39,
+              "predicted": 0.7421681597367341,
+              "observed": 0.6410256410256411
+            },
+            {
+              "from": 0.8,
+              "to": 0.9,
+              "n": 20,
+              "predicted": 0.8542854612819916,
+              "observed": 0.85
+            },
+            {
+              "from": 0.9,
+              "to": 1,
+              "n": 25,
+              "predicted": 0.9635780427274195,
+              "observed": 0.96
+            }
+          ]
+        },
+        "constant": {
+          "games": 25,
+          "positions": 434,
+          "brier": 0.2499985952675024,
+          "logLoss": 0.6931443710945796,
+          "bins": [
+            {
+              "from": 0,
+              "to": 0.1,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.1,
+              "to": 0.2,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.2,
+              "to": 0.3,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.3,
+              "to": 0.4,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.4,
+              "to": 0.5,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.5,
+              "to": 0.6,
+              "n": 434,
+              "predicted": 0.5003203074951992,
+              "observed": 0.5023041474654378
+            },
+            {
+              "from": 0.6,
+              "to": 0.7,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.7,
+              "to": 0.8,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.8,
+              "to": 0.9,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.9,
+              "to": 1,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            }
+          ]
+        }
+      },
+      "finalTestConfidence": {
+        "method": "500 bootstrap resamples of whole independent games",
+        "brier95": [
+          0.17195693727522787,
+          0.25426207245264604
+        ],
+        "logLoss95": [
+          0.5104215187119995,
+          0.6990326839378431
+        ],
+        "calibrationGap95": [
+          [
+            -0.07354823162951979,
+            0.09304198767047674
+          ],
+          [
+            -0.15269128005853214,
+            0.30361612436545343
+          ],
+          [
+            -0.16887009195872393,
+            0.2527633393643509
+          ],
+          [
+            -0.196135618959407,
+            0.2126123141441525
+          ],
+          [
+            -0.06847315978764885,
+            0.13332136487085172
+          ],
+          [
+            -0.1569194009174785,
+            0.11807145470987852
+          ],
+          [
+            -0.16914765070281348,
+            0.20179220472151832
+          ],
+          [
+            -0.2914374171569109,
+            0.09852939537134553
+          ],
+          [
+            -0.1846326723762317,
+            0.14893765749103893
+          ],
+          [
+            -0.14416706849221506,
+            0.04761941284196354
+          ]
+        ]
+      }
+    },
+    {
+      "field": "mean",
+      "calibration": {
+        "version": "060101a48c17-mean",
+        "model": "900c6f08b6ce0aba",
+        "rule": "facing-25-v1",
+        "evaluator": "root-mean",
+        "simulations": 64,
+        "reference": "060101a48c177fcf94a07a39e1250c5e66f06e7da113ee47ed9619becde40765",
+        "accepted": false,
+        "coefficients": [
+          0.946615520845872,
+          0.03512146982360116,
+          -0.028249349063403234
+        ],
+        "validationGames": 25,
+        "remainingRange": [
+          4,
+          23
+        ]
+      },
+      "fitGames": 78,
+      "selection": {
+        "raw": {
+          "games": 25,
+          "positions": 501,
+          "brier": 0.2020508816445473,
+          "logLoss": 0.5813700379832849,
+          "bins": [
+            {
+              "from": 0,
+              "to": 0.1,
+              "n": 16,
+              "predicted": 0.04438804312655795,
+              "observed": 0
+            },
+            {
+              "from": 0.1,
+              "to": 0.2,
+              "n": 16,
+              "predicted": 0.1559339394340881,
+              "observed": 0.0625
+            },
+            {
+              "from": 0.2,
+              "to": 0.3,
+              "n": 38,
+              "predicted": 0.2620566482175959,
+              "observed": 0.18421052631578946
+            },
+            {
+              "from": 0.3,
+              "to": 0.4,
+              "n": 64,
+              "predicted": 0.35609756104689416,
+              "observed": 0.359375
+            },
+            {
+              "from": 0.4,
+              "to": 0.5,
+              "n": 141,
+              "predicted": 0.4608940772089764,
+              "observed": 0.46099290780141844
+            },
+            {
+              "from": 0.5,
+              "to": 0.6,
+              "n": 124,
+              "predicted": 0.5419544976600235,
+              "observed": 0.5806451612903226
+            },
+            {
+              "from": 0.6,
+              "to": 0.7,
+              "n": 46,
+              "predicted": 0.6514743358933685,
+              "observed": 0.6956521739130435
+            },
+            {
+              "from": 0.7,
+              "to": 0.8,
+              "n": 26,
+              "predicted": 0.7476528218433647,
+              "observed": 0.8076923076923077
+            },
+            {
+              "from": 0.8,
+              "to": 0.9,
+              "n": 13,
+              "predicted": 0.8473968480692912,
+              "observed": 1
+            },
+            {
+              "from": 0.9,
+              "to": 1,
+              "n": 17,
+              "predicted": 0.9502162731114131,
+              "observed": 1
+            }
+          ]
+        },
+        "calibrated": {
+          "games": 25,
+          "positions": 501,
+          "brier": 0.20246506408269618,
+          "logLoss": 0.5830369473983411,
+          "bins": [
+            {
+              "from": 0,
+              "to": 0.1,
+              "n": 13,
+              "predicted": 0.04073893903566766,
+              "observed": 0
+            },
+            {
+              "from": 0.1,
+              "to": 0.2,
+              "n": 16,
+              "predicted": 0.15523236456888784,
+              "observed": 0.0625
+            },
+            {
+              "from": 0.2,
+              "to": 0.3,
+              "n": 30,
+              "predicted": 0.26182892213870673,
+              "observed": 0.16666666666666666
+            },
+            {
+              "from": 0.3,
+              "to": 0.4,
+              "n": 63,
+              "predicted": 0.3546581714709222,
+              "observed": 0.38095238095238093
+            },
+            {
+              "from": 0.4,
+              "to": 0.5,
+              "n": 138,
+              "predicted": 0.4601111762718389,
+              "observed": 0.41304347826086957
+            },
+            {
+              "from": 0.5,
+              "to": 0.6,
+              "n": 136,
+              "predicted": 0.5404548223463724,
+              "observed": 0.5882352941176471
+            },
+            {
+              "from": 0.6,
+              "to": 0.7,
+              "n": 50,
+              "predicted": 0.650205413758647,
+              "observed": 0.66
+            },
+            {
+              "from": 0.7,
+              "to": 0.8,
+              "n": 25,
+              "predicted": 0.7461155431359132,
+              "observed": 0.84
+            },
+            {
+              "from": 0.8,
+              "to": 0.9,
+              "n": 14,
+              "predicted": 0.8454370832932264,
+              "observed": 1
+            },
+            {
+              "from": 0.9,
+              "to": 1,
+              "n": 16,
+              "predicted": 0.9487452623598503,
+              "observed": 1
+            }
+          ]
+        },
+        "constant": {
+          "games": 25,
+          "positions": 501,
+          "brier": 0.24999949248737696,
+          "logLoss": 0.693146165534574,
+          "bins": [
+            {
+              "from": 0,
+              "to": 0.1,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.1,
+              "to": 0.2,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.2,
+              "to": 0.3,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.3,
+              "to": 0.4,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.4,
+              "to": 0.5,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.5,
+              "to": 0.6,
+              "n": 501,
+              "predicted": 0.5003203074951995,
+              "observed": 0.500998003992016
+            },
+            {
+              "from": 0.6,
+              "to": 0.7,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.7,
+              "to": 0.8,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.8,
+              "to": 0.9,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.9,
+              "to": 1,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            }
+          ]
+        }
+      },
+      "finalTest": {
+        "raw": {
+          "games": 25,
+          "positions": 500,
+          "brier": 0.21491700613172277,
+          "logLoss": 0.6101801455908489,
+          "bins": [
+            {
+              "from": 0,
+              "to": 0.1,
+              "n": 26,
+              "predicted": 0.04553652259319911,
+              "observed": 0.07692307692307693
+            },
+            {
+              "from": 0.1,
+              "to": 0.2,
+              "n": 23,
+              "predicted": 0.1567730218516901,
+              "observed": 0.17391304347826086
+            },
+            {
+              "from": 0.2,
+              "to": 0.3,
+              "n": 39,
+              "predicted": 0.2574856316104459,
+              "observed": 0.28205128205128205
+            },
+            {
+              "from": 0.3,
+              "to": 0.4,
+              "n": 59,
+              "predicted": 0.3539380302928561,
+              "observed": 0.4745762711864407
+            },
+            {
+              "from": 0.4,
+              "to": 0.5,
+              "n": 117,
+              "predicted": 0.46039804671175966,
+              "observed": 0.452991452991453
+            },
+            {
+              "from": 0.5,
+              "to": 0.6,
+              "n": 106,
+              "predicted": 0.5413303152565174,
+              "observed": 0.5283018867924528
+            },
+            {
+              "from": 0.6,
+              "to": 0.7,
+              "n": 46,
+              "predicted": 0.6470773479358707,
+              "observed": 0.6739130434782609
+            },
+            {
+              "from": 0.7,
+              "to": 0.8,
+              "n": 36,
+              "predicted": 0.7443406915431112,
+              "observed": 0.6111111111111112
+            },
+            {
+              "from": 0.8,
+              "to": 0.9,
+              "n": 25,
+              "predicted": 0.8464216492316937,
+              "observed": 0.8
+            },
+            {
+              "from": 0.9,
+              "to": 1,
+              "n": 23,
+              "predicted": 0.9634704274935885,
+              "observed": 1
+            }
+          ]
+        },
+        "calibrated": {
+          "games": 25,
+          "positions": 500,
+          "brier": 0.2144167927152088,
+          "logLoss": 0.6089458587561076,
+          "bins": [
+            {
+              "from": 0,
+              "to": 0.1,
+              "n": 22,
+              "predicted": 0.044391767555670224,
+              "observed": 0
+            },
+            {
+              "from": 0.1,
+              "to": 0.2,
+              "n": 21,
+              "predicted": 0.15092074273376632,
+              "observed": 0.23809523809523808
+            },
+            {
+              "from": 0.2,
+              "to": 0.3,
+              "n": 37,
+              "predicted": 0.2589449113590192,
+              "observed": 0.2702702702702703
+            },
+            {
+              "from": 0.3,
+              "to": 0.4,
+              "n": 52,
+              "predicted": 0.3491070422258508,
+              "observed": 0.34615384615384615
+            },
+            {
+              "from": 0.4,
+              "to": 0.5,
+              "n": 127,
+              "predicted": 0.45992460383852213,
+              "observed": 0.49606299212598426
+            },
+            {
+              "from": 0.5,
+              "to": 0.6,
+              "n": 109,
+              "predicted": 0.5427891133210402,
+              "observed": 0.5321100917431193
+            },
+            {
+              "from": 0.6,
+              "to": 0.7,
+              "n": 49,
+              "predicted": 0.6469657006573429,
+              "observed": 0.6530612244897959
+            },
+            {
+              "from": 0.7,
+              "to": 0.8,
+              "n": 36,
+              "predicted": 0.7433734827549059,
+              "observed": 0.6111111111111112
+            },
+            {
+              "from": 0.8,
+              "to": 0.9,
+              "n": 24,
+              "predicted": 0.8419121777203843,
+              "observed": 0.7916666666666666
+            },
+            {
+              "from": 0.9,
+              "to": 1,
+              "n": 23,
+              "predicted": 0.9594074390774265,
+              "observed": 1
+            }
+          ]
+        },
+        "constant": {
+          "games": 25,
+          "positions": 500,
+          "brier": 0.25000010259689165,
+          "logLoss": 0.6931473857537702,
+          "bins": [
+            {
+              "from": 0,
+              "to": 0.1,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.1,
+              "to": 0.2,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.2,
+              "to": 0.3,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.3,
+              "to": 0.4,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.4,
+              "to": 0.5,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.5,
+              "to": 0.6,
+              "n": 500,
+              "predicted": 0.5003203074951995,
+              "observed": 0.5
+            },
+            {
+              "from": 0.6,
+              "to": 0.7,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.7,
+              "to": 0.8,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.8,
+              "to": 0.9,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.9,
+              "to": 1,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            }
+          ]
+        }
+      },
+      "novelPositionTest": {
+        "definition": "Canonical board not present in fitting or selection games; no augmentation was generated.",
+        "raw": {
+          "games": 25,
+          "positions": 434,
+          "brier": 0.20828379510343897,
+          "logLoss": 0.5943283552025855,
+          "bins": [
+            {
+              "from": 0,
+              "to": 0.1,
+              "n": 26,
+              "predicted": 0.04553652259319911,
+              "observed": 0.07692307692307693
+            },
+            {
+              "from": 0.1,
+              "to": 0.2,
+              "n": 23,
+              "predicted": 0.1567730218516901,
+              "observed": 0.17391304347826086
+            },
+            {
+              "from": 0.2,
+              "to": 0.3,
+              "n": 39,
+              "predicted": 0.2574856316104459,
+              "observed": 0.28205128205128205
+            },
+            {
+              "from": 0.3,
+              "to": 0.4,
+              "n": 59,
+              "predicted": 0.3539380302928561,
+              "observed": 0.4745762711864407
+            },
+            {
+              "from": 0.4,
+              "to": 0.5,
+              "n": 78,
+              "predicted": 0.4547575850540963,
+              "observed": 0.46153846153846156
+            },
+            {
+              "from": 0.5,
+              "to": 0.6,
+              "n": 80,
+              "predicted": 0.5460440840994997,
+              "observed": 0.525
+            },
+            {
+              "from": 0.6,
+              "to": 0.7,
+              "n": 45,
+              "predicted": 0.648080453747675,
+              "observed": 0.6666666666666666
+            },
+            {
+              "from": 0.7,
+              "to": 0.8,
+              "n": 36,
+              "predicted": 0.7443406915431112,
+              "observed": 0.6111111111111112
+            },
+            {
+              "from": 0.8,
+              "to": 0.9,
+              "n": 25,
+              "predicted": 0.8464216492316937,
+              "observed": 0.8
+            },
+            {
+              "from": 0.9,
+              "to": 1,
+              "n": 23,
+              "predicted": 0.9634704274935885,
+              "observed": 1
+            }
+          ]
+        },
+        "calibrated": {
+          "games": 25,
+          "positions": 434,
+          "brier": 0.20771972791271998,
+          "logLoss": 0.5929791115290507,
+          "bins": [
+            {
+              "from": 0,
+              "to": 0.1,
+              "n": 22,
+              "predicted": 0.044391767555670224,
+              "observed": 0
+            },
+            {
+              "from": 0.1,
+              "to": 0.2,
+              "n": 21,
+              "predicted": 0.15092074273376632,
+              "observed": 0.23809523809523808
+            },
+            {
+              "from": 0.2,
+              "to": 0.3,
+              "n": 37,
+              "predicted": 0.2589449113590192,
+              "observed": 0.2702702702702703
+            },
+            {
+              "from": 0.3,
+              "to": 0.4,
+              "n": 52,
+              "predicted": 0.3491070422258508,
+              "observed": 0.34615384615384615
+            },
+            {
+              "from": 0.4,
+              "to": 0.5,
+              "n": 89,
+              "predicted": 0.45317728772956856,
+              "observed": 0.5168539325842697
+            },
+            {
+              "from": 0.5,
+              "to": 0.6,
+              "n": 82,
+              "predicted": 0.5476952432073509,
+              "observed": 0.5365853658536586
+            },
+            {
+              "from": 0.6,
+              "to": 0.7,
+              "n": 48,
+              "predicted": 0.6479232873845183,
+              "observed": 0.6458333333333334
+            },
+            {
+              "from": 0.7,
+              "to": 0.8,
+              "n": 36,
+              "predicted": 0.7433734827549059,
+              "observed": 0.6111111111111112
+            },
+            {
+              "from": 0.8,
+              "to": 0.9,
+              "n": 24,
+              "predicted": 0.8419121777203843,
+              "observed": 0.7916666666666666
+            },
+            {
+              "from": 0.9,
+              "to": 1,
+              "n": 23,
+              "predicted": 0.9594074390774265,
+              "observed": 1
+            }
+          ]
+        },
+        "constant": {
+          "games": 25,
+          "positions": 434,
+          "brier": 0.2499985952675024,
+          "logLoss": 0.6931443710945796,
+          "bins": [
+            {
+              "from": 0,
+              "to": 0.1,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.1,
+              "to": 0.2,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.2,
+              "to": 0.3,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.3,
+              "to": 0.4,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.4,
+              "to": 0.5,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.5,
+              "to": 0.6,
+              "n": 434,
+              "predicted": 0.5003203074951992,
+              "observed": 0.5023041474654378
+            },
+            {
+              "from": 0.6,
+              "to": 0.7,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.7,
+              "to": 0.8,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.8,
+              "to": 0.9,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            },
+            {
+              "from": 0.9,
+              "to": 1,
+              "n": 0,
+              "predicted": null,
+              "observed": null
+            }
+          ]
+        }
+      },
+      "finalTestConfidence": {
+        "method": "500 bootstrap resamples of whole independent games",
+        "brier95": [
+          0.17105439150629234,
+          0.2559794479991631
+        ],
+        "logLoss95": [
+          0.5074505061869603,
+          0.702544284288504
+        ],
+        "calibrationGap95": [
+          [
+            -0.06974757855932472,
+            -0.025038058112553253
+          ],
+          [
+            -0.11173743688516616,
+            0.3700239233208482
+          ],
+          [
+            -0.15078348247348258,
+            0.21074895187742537
+          ],
+          [
+            -0.22818229256734598,
+            0.22649216133534655
+          ],
+          [
+            -0.10602271203768326,
+            0.14932328583138757
+          ],
+          [
+            -0.11211007186044586,
+            0.12473965900322329
+          ],
+          [
+            -0.1790318063060278,
+            0.20902017762070763
+          ],
+          [
+            -0.3447650313797079,
+            0.06877318118069967
+          ],
+          [
+            -0.25548988007627954,
+            0.12162213967329485
+          ],
+          [
+            0.015365103225614055,
+            0.06959399801088553
+          ]
+        ]
+      }
+    }
+  ]
+}

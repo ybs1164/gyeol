@@ -1,0 +1,205 @@
+{
+  "metric": "Mean over games of the maximum number of tiles flipped in a single regular turn; combine both players",
+  "settings": {
+    "games": 32,
+    "sims": 100,
+    "seed": 2026102617,
+    "random_plies": 6,
+    "cpuct": 1.5,
+    "root_noise": false,
+    "search": "OpeningFastMCTS"
+  },
+  "models": [
+    {
+      "kind": "original",
+      "model_sha256": "fd65121de8f9dc70c323152d3a59d859ddb81d9f7dbaefda623bded6d4263fc3",
+      "games": 32,
+      "mean_game_maximum": 4.3125,
+      "minimum_game_maximum": 2,
+      "maximum_game_maximum": 8,
+      "median_game_maximum": 4.0,
+      "maximum_counts": {
+        "2": 3,
+        "3": 9,
+        "4": 6,
+        "5": 8,
+        "6": 2,
+        "7": 3,
+        "8": 1
+      },
+      "per_game_maxima": [
+        7,
+        5,
+        5,
+        5,
+        3,
+        4,
+        7,
+        3,
+        5,
+        3,
+        3,
+        6,
+        3,
+        7,
+        5,
+        5,
+        4,
+        2,
+        5,
+        4,
+        4,
+        5,
+        3,
+        3,
+        3,
+        6,
+        4,
+        4,
+        3,
+        2,
+        2,
+        8
+      ],
+      "bootstrap_95": [
+        3.84375,
+        4.8125
+      ]
+    },
+    {
+      "kind": "facing",
+      "model_sha256": "0b4f3d055d0d9858edcceb62e5ca920b8d080ebf8b38e04b1a9b2c71694aa1d4",
+      "games": 32,
+      "mean_game_maximum": 3.625,
+      "minimum_game_maximum": 1,
+      "maximum_game_maximum": 14,
+      "median_game_maximum": 3.0,
+      "maximum_counts": {
+        "1": 4,
+        "2": 6,
+        "3": 11,
+        "4": 2,
+        "5": 6,
+        "6": 1,
+        "9": 1,
+        "14": 1
+      },
+      "per_game_maxima": [
+        3,
+        5,
+        5,
+        2,
+        3,
+        4,
+        3,
+        5,
+        2,
+        3,
+        3,
+        3,
+        3,
+        2,
+        1,
+        6,
+        1,
+        1,
+        3,
+        2,
+        2,
+        3,
+        14,
+        5,
+        5,
+        5,
+        3,
+        3,
+        9,
+        1,
+        4,
+        2
+      ],
+      "bootstrap_95": [
+        2.9054687500000007,
+        4.46875
+      ]
+    },
+    {
+      "kind": "facing-free-start",
+      "model_sha256": "28bf57afe3d262cd9d2dd7c9e329975c956285688812b76e151c31d5a5b69c22",
+      "games": 32,
+      "mean_game_maximum": 3.8125,
+      "minimum_game_maximum": 1,
+      "maximum_game_maximum": 7,
+      "median_game_maximum": 4.0,
+      "maximum_counts": {
+        "1": 1,
+        "2": 7,
+        "3": 5,
+        "4": 10,
+        "5": 4,
+        "6": 3,
+        "7": 2
+      },
+      "per_game_maxima": [
+        2,
+        2,
+        3,
+        4,
+        7,
+        5,
+        4,
+        4,
+        4,
+        5,
+        6,
+        6,
+        6,
+        3,
+        4,
+        2,
+        7,
+        4,
+        4,
+        3,
+        5,
+        1,
+        2,
+        2,
+        3,
+        2,
+        4,
+        4,
+        4,
+        2,
+        5,
+        3
+      ],
+      "bootstrap_95": [
+        3.375,
+        4.25
+      ]
+    }
+  ],
+  "difference": {
+    "facing_minus_original": -0.6875,
+    "bootstrap_95": [
+      -1.65625,
+      0.34375
+    ]
+  },
+  "bootstrap": {
+    "samples": 10000,
+    "seed": 2026102642,
+    "unit": "whole games resampled within orientation; paired game indices"
+  },
+  "layout_id": 11,
+  "extreme_capture_validation": [
+    {
+      "game_index": 22,
+      "turn": 23,
+      "player": 1,
+      "flipped": 14,
+      "verified_by_explicit_capture_path": true
+    }
+  ]
+}

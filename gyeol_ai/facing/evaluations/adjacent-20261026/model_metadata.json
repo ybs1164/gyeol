@@ -1,0 +1,59 @@
+{
+  "source": "C:\\Users\\ybs11\\Desktop\\결\\gyeol_ai\\facing\\temp\\best.pth.tar",
+  "sha256": "0b4f3d055d0d9858edcceb62e5ca920b8d080ebf8b38e04b1a9b2c71694aa1d4",
+  "captured_utc": "2026-10-26T03:08:27.463536+00:00",
+  "training_log_rows": 53,
+  "matching_training_records": [
+    {
+      "run_id": "1b82d310b2f7",
+      "iteration": 8,
+      "candidate": "candidate_1b82d310b2f7_8.pth.tar",
+      "accepted": true,
+      "new_wins": 25,
+      "previous_wins": 15,
+      "unique_games": 40,
+      "validation_suite": {
+        "random_-1": {
+          "examples": 3696,
+          "previous": [
+            2.994533324138427,
+            0.7812266494288589,
+            0.7302489177489178
+          ],
+          "candidate": [
+            2.9967053566144144,
+            0.8112018799885011,
+            0.7359307359307359
+          ]
+        },
+        "random_1": {
+          "examples": 3840,
+          "previous": [
+            2.8045663833618164,
+            0.47881546020507815,
+            0.8125
+          ],
+          "candidate": [
+            2.812498188018799,
+            0.47737802664438883,
+            0.8114583333333333
+          ]
+        },
+        "self": {
+          "examples": 11192,
+          "previous": [
+            3.0023009250469084,
+            0.8093149840959573,
+            0.7122944960686205
+          ],
+          "candidate": [
+            3.008190992135845,
+            0.8536002382028947,
+            0.7012151536812009
+          ]
+        }
+      },
+      "validation_suite_games": 100
+    }
+  ]
+}

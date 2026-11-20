@@ -1,0 +1,254 @@
+[
+  {
+    "action": 1536,
+    "description": "rotate (3,3)->↑  place (2,3)↑",
+    "first_margin": 1,
+    "replies": 72,
+    "capturing_replies": 6
+  },
+  {
+    "action": 1537,
+    "description": "rotate (3,3)->↑  place (2,3)→",
+    "first_margin": 1,
+    "replies": 72,
+    "capturing_replies": 6
+  },
+  {
+    "action": 1538,
+    "description": "rotate (3,3)->↑  place (2,3)↓",
+    "first_margin": 1,
+    "replies": 72,
+    "capturing_replies": 6
+  },
+  {
+    "action": 1539,
+    "description": "rotate (3,3)->↑  place (2,3)←",
+    "first_margin": 1,
+    "replies": 72,
+    "capturing_replies": 6
+  },
+  {
+    "action": 1552,
+    "description": "rotate (3,3)->→  place (2,3)↑",
+    "first_margin": 1,
+    "replies": 72,
+    "capturing_replies": 6
+  },
+  {
+    "action": 1553,
+    "description": "rotate (3,3)->→  place (2,3)→",
+    "first_margin": 1,
+    "replies": 72,
+    "capturing_replies": 6
+  },
+  {
+    "action": 1554,
+    "description": "rotate (3,3)->→  place (2,3)↓",
+    "first_margin": 1,
+    "replies": 72,
+    "capturing_replies": 6
+  },
+  {
+    "action": 1555,
+    "description": "rotate (3,3)->→  place (2,3)←",
+    "first_margin": 1,
+    "replies": 72,
+    "capturing_replies": 6
+  },
+  {
+    "action": 1568,
+    "description": "rotate (3,3)->↓  place (2,3)↑",
+    "first_margin": 1,
+    "replies": 72,
+    "capturing_replies": 6
+  },
+  {
+    "action": 1569,
+    "description": "rotate (3,3)->↓  place (2,3)→",
+    "first_margin": 1,
+    "replies": 72,
+    "capturing_replies": 6
+  },
+  {
+    "action": 1570,
+    "description": "rotate (3,3)->↓  place (2,3)↓",
+    "first_margin": 1,
+    "replies": 72,
+    "capturing_replies": 6
+  },
+  {
+    "action": 1571,
+    "description": "rotate (3,3)->↓  place (2,3)←",
+    "first_margin": 1,
+    "replies": 72,
+    "capturing_replies": 6
+  },
+  {
+    "action": 1540,
+    "description": "rotate (3,3)->↑  place (3,4)↑",
+    "first_margin": 1,
+    "replies": 72,
+    "capturing_replies": 3
+  },
+  {
+    "action": 1541,
+    "description": "rotate (3,3)->↑  place (3,4)→",
+    "first_margin": 1,
+    "replies": 72,
+    "capturing_replies": 3
+  },
+  {
+    "action": 1542,
+    "description": "rotate (3,3)->↑  place (3,4)↓",
+    "first_margin": 1,
+    "replies": 72,
+    "capturing_replies": 3
+  },
+  {
+    "action": 1543,
+    "description": "rotate (3,3)->↑  place (3,4)←",
+    "first_margin": 1,
+    "replies": 72,
+    "capturing_replies": 0
+  },
+  {
+    "action": 1556,
+    "description": "rotate (3,3)->→  place (3,4)↑",
+    "first_margin": 1,
+    "replies": 72,
+    "capturing_replies": 3
+  },
+  {
+    "action": 1557,
+    "description": "rotate (3,3)->→  place (3,4)→",
+    "first_margin": 1,
+    "replies": 72,
+    "capturing_replies": 3
+  },
+  {
+    "action": 1558,
+    "description": "rotate (3,3)->→  place (3,4)↓",
+    "first_margin": 1,
+    "replies": 72,
+    "capturing_replies": 3
+  },
+  {
+    "action": 1559,
+    "description": "rotate (3,3)->→  place (3,4)←",
+    "first_margin": 1,
+    "replies": 72,
+    "capturing_replies": 0
+  },
+  {
+    "action": 1572,
+    "description": "rotate (3,3)->↓  place (3,4)↑",
+    "first_margin": 1,
+    "replies": 72,
+    "capturing_replies": 3
+  },
+  {
+    "action": 1573,
+    "description": "rotate (3,3)->↓  place (3,4)→",
+    "first_margin": 1,
+    "replies": 72,
+    "capturing_replies": 3
+  },
+  {
+    "action": 1574,
+    "description": "rotate (3,3)->↓  place (3,4)↓",
+    "first_margin": 1,
+    "replies": 72,
+    "capturing_replies": 3
+  },
+  {
+    "action": 1575,
+    "description": "rotate (3,3)->↓  place (3,4)←",
+    "first_margin": 1,
+    "replies": 72,
+    "capturing_replies": 0
+  },
+  {
+    "action": 1544,
+    "description": "rotate (3,3)->↑  place (4,3)↑",
+    "first_margin": 1,
+    "replies": 72,
+    "capturing_replies": 6
+  },
+  {
+    "action": 1545,
+    "description": "rotate (3,3)->↑  place (4,3)→",
+    "first_margin": 1,
+    "replies": 72,
+    "capturing_replies": 6
+  },
+  {
+    "action": 1546,
+    "description": "rotate (3,3)->↑  place (4,3)↓",
+    "first_margin": 1,
+    "replies": 72,
+    "capturing_replies": 6
+  },
+  {
+    "action": 1547,
+    "description": "rotate (3,3)->↑  place (4,3)←",
+    "first_margin": 1,
+    "replies": 72,
+    "capturing_replies": 6
+  },
+  {
+    "action": 1560,
+    "description": "rotate (3,3)->→  place (4,3)↑",
+    "first_margin": 1,
+    "replies": 72,
+    "capturing_replies": 6
+  },
+  {
+    "action": 1561,
+    "description": "rotate (3,3)->→  place (4,3)→",
+    "first_margin": 1,
+    "replies": 72,
+    "capturing_replies": 6
+  },
+  {
+    "action": 1562,
+    "description": "rotate (3,3)->→  place (4,3)↓",
+    "first_margin": 1,
+    "replies": 72,
+    "capturing_replies": 6
+  },
+  {
+    "action": 1563,
+    "description": "rotate (3,3)->→  place (4,3)←",
+    "first_margin": 1,
+    "replies": 72,
+    "capturing_replies": 6
+  },
+  {
+    "action": 1576,
+    "description": "rotate (3,3)->↓  place (4,3)↑",
+    "first_margin": 1,
+    "replies": 72,
+    "capturing_replies": 6
+  },
+  {
+    "action": 1577,
+    "description": "rotate (3,3)->↓  place (4,3)→",
+    "first_margin": 1,
+    "replies": 72,
+    "capturing_replies": 6
+  },
+  {
+    "action": 1578,
+    "description": "rotate (3,3)->↓  place (4,3)↓",
+    "first_margin": 1,
+    "replies": 72,
+    "capturing_replies": 6
+  },
+  {
+    "action": 1579,
+    "description": "rotate (3,3)->↓  place (4,3)←",
+    "first_margin": 1,
+    "replies": 72,
+    "capturing_replies": 6
+  }
+]

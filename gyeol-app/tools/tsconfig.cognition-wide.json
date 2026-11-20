@@ -1,0 +1,5 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": { "types": ["node"] },
+  "include": ["calibrate_cognitive_bots_v2.ts", "cognitive-batch-lib.ts", "benchmark_cognitive_wide.ts", "run_wide_campaign.ts", "play_cognitive_wide.ts"]
+}

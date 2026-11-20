@@ -1,0 +1,14 @@
+{
+  "games": 1000,
+  "first_wins": 522,
+  "second_wins": 478,
+  "draws": 0,
+  "first_win_rate": 0.522,
+  "wilson_95": [
+    0.4910146833982431,
+    0.5528169330639557
+  ],
+  "mean_margin": 0.152,
+  "unique_trajectories": 1000,
+  "mean_passes": 0.392
+}

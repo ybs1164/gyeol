@@ -1,0 +1,146 @@
+import { readFileSync } from 'node:fs';
+import { describe, expect, test } from 'vitest';
+import { ExactEndgame, PASS, apply, initial, legal, margin, result, type Board, type Player, type RecordPuzzleData } from '@gyeol/core';
+import { analyzeGame, createSearchSession, exactGrade, gradeMove, greenValue, opportunityBadges, replayAnalysis, search, type GameAnalysis, type Predict } from '../src';
+
+const puzzles = JSON.parse(readFileSync(new URL('../../../tools/record-puzzles/verified.json', import.meta.url), 'utf8')) as RecordPuzzleData[];
+const fixture = puzzles.find(p => p.board.filter(Boolean).length === 23 && p.proof[0][1].some(([, v]) => v < 0))!;
+const uniform: Predict = async board => ({ priors: legal(board, 1).map(() => 1), value: 0 });
+const noNetwork: Predict = async () => { throw new Error('Exact analysis must not use network'); };
+const brute = (board: Board, player: Player): number => result(board, player) ? margin(board) * player
+  : Math.max(...legal(board, player).map(a => -brute(apply(board, player, a).board, -player as Player)));
+
+describe('복기 분석', () => {
+  test('등급 경계와 승패 전환을 구별한다', () => {
+    expect([0, 1, 1.01, 3, 3.01, 5, 5.01, 10, 10.01, 20, 20.01, 35, 35.01, 100].map(gradeMove)).toEqual([
+      'best', 'best', 'excellent', 'excellent', 'good', 'good', 'fair', 'fair', 'inaccuracy', 'inaccuracy', 'mistake', 'mistake', 'blunder', 'blunder',
+    ]);
+    expect(() => gradeMove(NaN)).toThrow();
+    expect(exactGrade(1, 1)).toBe('best'); expect(exactGrade(-1, -1)).toBe('best');
+    expect(exactGrade(1, -1)).toBe('blunder'); expect(exactGrade(1, 0)).toBe('mistake'); expect(exactGrade(0, -1)).toBe('mistake');
+  });
+
+  test('종국·무승부 루트 및 한 번 탐색도 안전하며 미방문 값은 null이다', async () => {
+    const draw = Array(49).fill(0);
+    const end = await search(draw, 10, noNetwork);
+    expect(end.value).toBe(0); expect(end.simulations).toBe(0); expect(end.candidates).toEqual([]);
+    const first = await search(initial(), 1, uniform, { random: () => 0 });
+    expect(first.simulations).toBe(1); expect(first.value).toBe(0);
+    expect(first.candidates.every(c => c.value === null && c.visits === 0)).toBe(true);
+    await expect(search(initial(), 0, uniform)).rejects.toThrow();
+    const analysis = await analyzeGame([], noNetwork, { start: { board: draw, player: -1 } });
+    expect(analysis.positions).toEqual([{ green: 0.5, status: 'exact' }]);
+  });
+
+  test('추가 탐색은 트리를 이어 쓰며 처음부터 같은 예산으로 탐색한 결과와 일치한다', async () => {
+    const session = createSearchSession();
+    await search(initial(), 16, uniform, { session, random: () => 0 });
+    const extended = await search(initial(), 64, uniform, { session, random: () => 0 });
+    const fresh = await search(initial(), 64, uniform, { random: () => 0 });
+    expect(extended).toEqual(fresh); expect(session.simulations).toBe(64);
+    const chosen = extended.candidates.find(c => c.action === extended.action)!;
+    expect(extended.value).toBe(chosen.value);
+    await expect(search(apply(initial(), 1, legal(initial(), 1)[0]).board, 65, uniform, { session })).rejects.toThrow('root mismatch');
+  });
+
+  test('후반 모든 후보를 독립 전수 탐색과 비교하고 놓친 승리를 표시한다', async () => {
+    const values = legal(fixture.board, fixture.player).map(a => [a, -brute(apply(fixture.board, fixture.player, a).board, -fixture.player as Player)]);
+    const losing = values.find(([, v]) => v < 0)![0];
+    const a = await analyzeGame([losing], noNetwork, { start: fixture, exactMs: 10000, exactNodes: 1_000_000 });
+    const m = a.moves[0]!;
+    expect(m.status).toBe('exact'); expect(m.grade).toBe('blunder'); expect(m.badges).toContain('missedWin');
+    expect(m.candidates.map(c => [c.action, c.margin])).toEqual(values);
+    expect(m.bestActions).toEqual(values.filter(([, v]) => v > 0).map(([action]) => action));
+    expect(m.lossPp).toBe(100);
+    for (const c of m.candidates) {
+      let board = fixture.board, player = fixture.player;
+      for (const action of c.pv) {
+        expect(legal(board, player)).toContain(action);
+        board = apply(board, player, action).board; player = -player as Player;
+      }
+    }
+  });
+
+  test('타일 차이가 다른 승리 수는 모두 최선이다', async () => {
+    const winning = fixture.proof[0][1].find(([, v]) => v > 0)![0];
+    const a = await analyzeGame([winning], noNetwork, { start: fixture, exactMs: 10000 });
+    expect(a.moves[0]!.grade).toBe('best'); expect(a.moves[0]!.lossPp).toBe(0);
+  });
+
+  test('유일한 방어의 발견과 누락을 증명 결과에서 구분한다', async () => {
+    const p = puzzles.find(p => p.board.filter(Boolean).length >= 22 && p.proof[0][1].filter(([, v]) => v >= 0).length === 1)!;
+    const win = p.proof[0][1].find(([, v]) => v > 0)![0];
+    const lose = p.proof[0][1].find(([, v]) => v < 0)![0];
+    const missed = await analyzeGame([lose], noNetwork, { start: p, exactMs: 10000 });
+    const found = await analyzeGame([win], noNetwork, { start: p, exactMs: 10000 });
+    expect(missed.moves[0]!.badges).toContain('missedDefense');
+    expect(found.moves[0]!.badges).toContain('onlyMove');
+  });
+
+  test('강제 패스는 등급을 매기거나 놓친 기회로 처리하지 않는다', async () => {
+    const [key] = puzzles.flatMap(p => p.proof).find(([, values]) => values.length === 1 && values[0][0] === PASS)!;
+    const board = [...key].map(v => Number(v) - 5);
+    const a = await analyzeGame([PASS], noNetwork, { start: { board, player: 1 }, exactMs: 10000 });
+    expect(a.moves[0]!.forced).toBe(true); expect(a.moves[0]!.grade).toBeNull(); expect(a.moves[0]!.badges).toEqual([]);
+  });
+
+  test('정확 탐색의 비동기 실행·동기 실행이 일치하고 취소를 전파한다', async () => {
+    const sync = new ExactEndgame().values(fixture.board, fixture.player);
+    let checkpoints = 0;
+    const asyncValues = await new ExactEndgame().valuesAsync(fixture.board, fixture.player, async () => { checkpoints++; });
+    expect(asyncValues).toEqual(sync); expect(checkpoints).toBeGreaterThan(0);
+    await expect(new ExactEndgame().valuesAsync(fixture.board, fixture.player, async () => { throw new Error('cancel'); })).rejects.toThrow('cancel');
+  });
+
+  test('색을 바꾸면 형세만 반전되고 착수 등급과 손실은 같다', async () => {
+    const played = fixture.source.playedMove;
+    const a = await analyzeGame([played], noNetwork, { start: fixture, exactMs: 10000 });
+    const b = await analyzeGame([played], noNetwork, { start: { board: fixture.board.map(v => -v), player: -fixture.player as Player }, exactMs: 10000 });
+    expect(a.moves[0]!.grade).toBe(b.moves[0]!.grade); expect(a.moves[0]!.lossPp).toBe(b.moves[0]!.lossPp);
+    expect(a.positions[0]!.green + b.positions[0]!.green).toBeCloseTo(1);
+    expect(greenValue(0.6, 1)).toBeCloseTo(0.8); expect(greenValue(0.6, -1)).toBeCloseTo(0.2);
+  });
+
+  test('부분 결과에서 재개할 때 완료 수를 다시 분석하지 않는다', async () => {
+    const first = fixture.source.playedMove;
+    const child = apply(fixture.board, fixture.player, first).board;
+    const moves = [first, legal(child, -fixture.player as Player)[0]];
+    let partial: GameAnalysis | undefined;
+    await expect(analyzeGame(moves, noNetwork, {
+      start: fixture, exactMs: 10000,
+      onProgress: a => { partial = a; }, checkpoint: async () => { if (partial) throw new Error('cancel'); },
+    })).rejects.toThrow('cancel');
+    expect(partial!.moves.filter(Boolean)).toHaveLength(1);
+    const resumed = await analyzeGame(moves, noNetwork, { start: fixture, resume: partial, exactMs: 10000 });
+    expect(resumed.moves[0]).toEqual(partial!.moves[0]); expect(resumed.moves.every(Boolean)).toBe(true);
+    expect(resumed.positions.every(Boolean)).toBe(true);
+  });
+
+  test('탐색 한도 초과를 exact로 표시하지 않고 실제 착수를 포함한다', async () => {
+    const a = await analyzeGame([fixture.source.playedMove], uniform, { start: fixture, exactNodes: 0, baseSims: 2 });
+    const m = a.moves[0]!;
+    expect(m.status).not.toBe('exact');
+    expect(m.candidates.find(c => c.action === m.played)).toBeTruthy();
+  });
+
+  test('불법 수·종국 뒤 착수는 거부한다', () => {
+    expect(() => replayAnalysis([PASS])).toThrow('Invalid game record');
+    expect(() => replayAnalysis([1], { board: Array(49).fill(0), player: 1 })).toThrow('Invalid game record');
+  });
+
+  test('초기 평가를 50으로 고정하지 않고 중단된 마지막 판은 보드로 평가한다', async () => {
+    const bias: Predict = async board => ({ priors: legal(board, 1).map(() => 1), value: 0.8 });
+    const a = await analyzeGame([], bias, { start: { board: initial(), player: -1 } });
+    expect(a.positions[0]!.green).not.toBe(0); expect(a.positions[0]!.green).not.toBe(1);
+    expect(a.positions[0]!.status).toBe('estimated');
+    expect(a.positions[0]!.green).not.toBe(0.5);
+  });
+
+  test('상대 실수 활용 실패는 이전 평가도 착수자 관점으로 비교한다', async () => {
+    const losing = fixture.proof[0][1].find(([, v]) => v < 0)![0];
+    const a = await analyzeGame([losing], noNetwork, { start: fixture, exactMs: 10000 });
+    const m = { ...a.moves[0]!, player: -1 as const };
+    expect(opportunityBadges(m, { green: 0.7, status: 'stable' }, { green: 0.2, status: 'exact' })).toContain('convertedChance');
+    expect(opportunityBadges(m, { green: 0.1, status: 'stable' }, { green: 0.2, status: 'exact' })).not.toContain('convertedChance');
+  });
+});

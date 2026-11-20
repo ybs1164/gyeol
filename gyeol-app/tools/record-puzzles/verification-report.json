@@ -1,0 +1,11 @@
+{
+  "verifiedAt": "2026-11-11T16:00:04.048Z",
+  "sourceGames": 690,
+  "candidates": 149,
+  "verified": 149,
+  "excludedByBudget": [],
+  "independentlyCheckedStates": 3119902,
+  "sourceSha256": "8afc83b71be72ac6815a30a624ce2a518bd5b7f2a977bed98d7067c3ac0d2c89",
+  "puzzleSha256": "a695ff42dce2302a671b0698a2d8802479ef8e1e14e4c4bf068b461356e7d391",
+  "method": "Independent exhaustive terminal minimax; every stored action value, every playable winning branch, every wrong-move reply, and original recorded prefix checked; no heuristic leaves."
+}

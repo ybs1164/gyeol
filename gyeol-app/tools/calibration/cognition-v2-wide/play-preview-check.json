@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-11-15T08:10:48.162Z",
+  "http": 200,
+  "actualOnnx": true,
+  "actualClock": true,
+  "engine": "cognition-v2-wide",
+  "gameId": "cLdVoIvpuzPe",
+  "botName": "물결49",
+  "plies": 4,
+  "durationMs": 8139,
+  "result": "passed"
+}

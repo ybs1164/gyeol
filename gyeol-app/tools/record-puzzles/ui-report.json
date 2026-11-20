@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "cases": [
+    "wrong move and strongest reply",
+    "winning replay has no duplicate points",
+    "first-try win updates puzzle rating",
+    "daily full-game win and pinned resume",
+    "legacy daily record preserved"
+  ],
+  "replayTurns": 2,
+  "winningTurns": 2,
+  "runtimeErrors": []
+}

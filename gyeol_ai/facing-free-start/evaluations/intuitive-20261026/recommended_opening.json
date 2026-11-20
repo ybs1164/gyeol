@@ -1,0 +1,119 @@
+{
+  "rule": "facing-free-start",
+  "layout_id": 8,
+  "name": "한 칸 띄워 마주보기",
+  "model_sha256": "28bf57afe3d262cd9d2dd7c9e329975c956285688812b76e151c31d5a5b69c22",
+  "first_player": "green",
+  "player_to_move": 1,
+  "green": {
+    "relative_position": [
+      0,
+      0
+    ],
+    "direction": "E"
+  },
+  "brown": {
+    "relative_position": [
+      0,
+      2
+    ],
+    "direction": "W"
+  },
+  "setup_actions": [
+    946,
+    956
+  ],
+  "board": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      2,
+      0,
+      -4,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "confirmation_settings": {
+    "games": 32,
+    "sims": 100,
+    "seed": 2026102617,
+    "ids": [
+      8,
+      11
+    ],
+    "random_plies": 6,
+    "cpuct": 1.5,
+    "root_noise": false,
+    "rule": "facing-free-start",
+    "search": "OpeningFastMCTS"
+  },
+  "confirmation_summary": {
+    "games": 32,
+    "first_wins": 14,
+    "second_wins": 18,
+    "draws": 0,
+    "first_win_rate": 0.4375,
+    "wilson_95": [
+      0.2816508596944317,
+      0.6067469796877387
+    ],
+    "mean_margin": -0.4375,
+    "unique_trajectories": 32,
+    "mean_passes": 0.46875
+  }
+}

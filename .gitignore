@@ -1,0 +1,21 @@
+# 이 저장소에는 앱(gyeol-app)과 학습 코드(gyeol_ai)만 넣는다.
+# 이 폴더의 나머지(인쇄물·판매 자료·렌더링·백업 등)는 공개 저장소에 올리지 않는다.
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/gyeol-app/
+!/gyeol_ai/
+
+# 학습 산출물: 체크포인트·리플레이·캐시는 서버에서 따로 옮긴다
+gyeol_ai/**/temp/
+*.pth.tar
+*.examples
+__pycache__/
+*.pyc
+*.log
+
+# 로컬 설정
+.claude/settings.local.json
+.vscode/
+.idea/

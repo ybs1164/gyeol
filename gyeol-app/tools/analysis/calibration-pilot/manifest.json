@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "model": "900c6f08b6ce0aba85893a490a185a6b5c6ace474a57c7105b6a602d5dcec332",
+  "onnx": "9ec913ce7828de126dd0d1dda3c048e3ac2bd057b4bfa914ff200dd1951537bd",
+  "rule": "facing-25-v1",
+  "seed": 2026111300,
+  "simulations": 64,
+  "cpuct": 1.5,
+  "policy": "visits^(1/T); T=1 for plies 0..5, T=0.35 afterwards; exact margin max at <=3 remaining",
+  "evaluation": [
+    "network",
+    "root-q",
+    "root-mean"
+  ],
+  "split": "game-index modulo 5: 0/1/2 fit, 3 select, 4 final-test",
+  "reference": "060101a48c177fcf94a07a39e1250c5e66f06e7da113ee47ed9619becde40765"
+}

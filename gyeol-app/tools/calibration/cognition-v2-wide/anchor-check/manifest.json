@@ -1,0 +1,277 @@
+{
+  "fingerprint": "0a7666c08f5c15a623a453273ceab6f0270558e8e09cba8c1c02f75691778671",
+  "planned": 224,
+  "representatives": [
+    {
+      "id": "bot-11",
+      "name": "새싹02",
+      "cognition": {
+        "version": "cognition-v2-wide",
+        "skillPosition": 0,
+        "targetRating": 974,
+        "targetTier": "bronze",
+        "startMs": [
+          2400,
+          5500,
+          9000
+        ],
+        "rampMs": [
+          1200,
+          2750,
+          4500
+        ],
+        "candidateWidth": 1,
+        "workRate": 0.65,
+        "simulationRate": 8,
+        "earlyCommitGap": 0.12,
+        "minimumThinkMs": 1200,
+        "decisionWindowMs": 1200,
+        "attentionFraction": 0.04,
+        "maxSimulations": 0
+      }
+    },
+    {
+      "id": "bot-276",
+      "name": "솔숲28",
+      "cognition": {
+        "version": "cognition-v2-wide",
+        "skillPosition": 0.2652652652652653,
+        "targetRating": 1301.0720720720722,
+        "targetTier": "silver",
+        "startMs": [
+          1596.7837837837835,
+          3791.9594594594587,
+          6486.599099099098
+        ],
+        "rampMs": [
+          798.3918918918918,
+          1895.9797297297293,
+          3243.299549549549
+        ],
+        "candidateWidth": 2.0107207207207214,
+        "workRate": 1.2733733733733734,
+        "simulationRate": 12.06432432432433,
+        "earlyCommitGap": 0.09347347347347347,
+        "minimumThinkMs": 1040.8408408408409,
+        "decisionWindowMs": 1905.896396396397,
+        "attentionFraction": 0.4451944459036563,
+        "maxSimulations": 0
+      }
+    },
+    {
+      "id": "bot-436",
+      "name": "솔숲44",
+      "cognition": {
+        "version": "cognition-v2-wide",
+        "skillPosition": 0.42742742742742745,
+        "targetRating": 1501.0180180180182,
+        "targetTier": "gold",
+        "startMs": [
+          996.4369369369363,
+          2291.8558558558543,
+          3987.7837837837815
+        ],
+        "rampMs": [
+          498.21846846846813,
+          1145.9279279279272,
+          1993.8918918918907
+        ],
+        "candidateWidth": 4.020360360360364,
+        "workRate": 1.6544544544544544,
+        "simulationRate": 24.407207207207286,
+        "earlyCommitGap": 0.07725725725725725,
+        "minimumThinkMs": 943.5435435435436,
+        "decisionWindowMs": 3009.162162162164,
+        "attentionFraction": 0.5924993665850918,
+        "maxSimulations": 33
+      }
+    },
+    {
+      "id": "bot-515",
+      "name": "돌담52",
+      "cognition": {
+        "version": "cognition-v2-wide",
+        "skillPosition": 0.5085085085085085,
+        "targetRating": 1600.9909909909911,
+        "targetTier": "plat",
+        "startMs": [
+          648.3483483483482,
+          1496.3663663663658,
+          2792.7327327327316
+        ],
+        "rampMs": [
+          324.1741741741741,
+          748.1831831831829,
+          1396.3663663663658
+        ],
+        "candidateWidth": 6.013213213213215,
+        "workRate": 1.844994994994995,
+        "simulationRate": 64.42282282282288,
+        "earlyCommitGap": 0.06914914914914916,
+        "minimumThinkMs": 894.8948948948948,
+        "decisionWindowMs": 3906.6066066066073,
+        "attentionFraction": 0.6585361384235282,
+        "maxSimulations": 131
+      }
+    },
+    {
+      "id": "bot-635",
+      "name": "돌담64",
+      "cognition": {
+        "version": "cognition-v2-wide",
+        "skillPosition": 0.6296296296296297,
+        "targetRating": 1750.3333333333335,
+        "targetTier": "dia",
+        "startMs": [
+          399.6666666666665,
+          949.1111111111107,
+          1698.4444444444437
+        ],
+        "rampMs": [
+          199.83333333333326,
+          474.5555555555554,
+          849.2222222222218
+        ],
+        "candidateWidth": 8.008888888888892,
+        "workRate": 2.1296296296296298,
+        "simulationRate": 128.14222222222227,
+        "earlyCommitGap": 0.05703703703703704,
+        "minimumThinkMs": 822.2222222222222,
+        "decisionWindowMs": 4902.444444444445,
+        "attentionFraction": 0.7506840772026858,
+        "maxSimulations": 513
+      }
+    },
+    {
+      "id": "bot-755",
+      "name": "돌담76",
+      "cognition": {
+        "version": "cognition-v2-wide",
+        "skillPosition": 0.7517517517517518,
+        "targetRating": 1900.9099099099099,
+        "targetTier": "master",
+        "startMs": [
+          250,
+          550,
+          1000
+        ],
+        "rampMs": [
+          125,
+          275,
+          500
+        ],
+        "candidateWidth": 12,
+        "workRate": 2.4166166166166168,
+        "simulationRate": 192.37937611878976,
+        "earlyCommitGap": 0.04482482482482482,
+        "minimumThinkMs": 748.9489489489489,
+        "decisionWindowMs": 6005.92775185609,
+        "attentionFraction": 0.8374796778280207,
+        "maxSimulations": 1027
+      }
+    },
+    {
+      "id": "bot-10",
+      "name": "한결",
+      "cognition": {
+        "version": "cognition-v2-wide",
+        "skillPosition": 1,
+        "targetRating": 2207,
+        "targetTier": "master",
+        "startMs": [
+          250,
+          550,
+          1000
+        ],
+        "rampMs": [
+          125,
+          275,
+          500
+        ],
+        "candidateWidth": 12,
+        "workRate": 3,
+        "simulationRate": 320,
+        "earlyCommitGap": 0.020000000000000004,
+        "minimumThinkMs": 600,
+        "decisionWindowMs": 8000,
+        "attentionFraction": 1,
+        "maxSimulations": 2048
+      }
+    }
+  ],
+  "anchors": [
+    {
+      "persona": {
+        "id": "anchor-01",
+        "name": "첫걸음",
+        "mistake": 0.99,
+        "sims": 0
+      },
+      "rating": 974
+    },
+    {
+      "persona": {
+        "id": "anchor-03",
+        "name": "아침",
+        "mistake": 0.75,
+        "sims": 0
+      },
+      "rating": 1136
+    },
+    {
+      "persona": {
+        "id": "anchor-05",
+        "name": "이슬",
+        "mistake": 0.35,
+        "sims": 0
+      },
+      "rating": 1313
+    },
+    {
+      "persona": {
+        "id": "anchor-07",
+        "name": "돌담",
+        "mistake": 0.18,
+        "sims": 8
+      },
+      "rating": 1483
+    },
+    {
+      "persona": {
+        "id": "anchor-08",
+        "name": "솔숲",
+        "mistake": 0.1,
+        "sims": 16
+      },
+      "rating": 1622
+    },
+    {
+      "persona": {
+        "id": "anchor-09",
+        "name": "너울",
+        "mistake": 0.06,
+        "sims": 32
+      },
+      "rating": 1753
+    },
+    {
+      "persona": {
+        "id": "anchor-10",
+        "name": "노을",
+        "mistake": 0.03,
+        "sims": 64
+      },
+      "rating": 1954
+    },
+    {
+      "persona": {
+        "id": "anchor-12",
+        "name": "한결",
+        "mistake": 0,
+        "sims": 512
+      },
+      "rating": 2207
+    }
+  ],
+  "clock": "Logical 3-minute clock for new AI; original legacy anchor behavior is unchanged"
+}

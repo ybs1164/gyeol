@@ -1,0 +1,28 @@
+{
+  "recorded_utc": "2026-10-23T17:56:54.057358+00:00",
+  "model": "original free-start",
+  "screening": "all 168 D4-unique layouts, rank by max absolute value across 8 symmetries",
+  "pilot": {
+    "ids": [
+      25,
+      17,
+      10,
+      16,
+      32,
+      11,
+      31,
+      103
+    ],
+    "games_per_layout": 8,
+    "sims": 100,
+    "seed": 2026102400
+  },
+  "confirmation": {
+    "layouts": 4,
+    "games_per_layout": 32,
+    "sims": 100,
+    "seed": 2026112400,
+    "selection": "sort pilot by abs(first_win_rate-0.5), then abs(mean_margin), then neural balance_score"
+  },
+  "notes": "Keep frozen model throughout; do not pool pilot and confirmation. Confirmation tests a shortlist, not all 168 layouts."
+}

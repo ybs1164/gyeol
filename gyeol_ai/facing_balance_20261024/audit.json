@@ -1,0 +1,489 @@
+{
+  "created_utc": "2026-10-23T17:16:35.491255+00:00",
+  "model_sha256": "0a20d8ce2e3245b7b4f64f3d492ba51f10394284913f0aeeb95645cc076d85ea",
+  "experiments": {
+    "selfplay_100_temp6.json": {
+      "games": 64,
+      "moves": 1475,
+      "orientation_counts": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "passed": true
+    },
+    "selfplay_400_temp6.json": {
+      "games": 32,
+      "moves": 738,
+      "orientation_counts": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "passed": true
+    },
+    "selfplay_800_temp0.json": {
+      "games": 8,
+      "moves": 188,
+      "orientation_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "passed": true
+    }
+  },
+  "details": {
+    "selfplay_100_temp6.json": {
+      "full_boards": 64,
+      "margin_counts": {
+        "7": 6,
+        "3": 20,
+        "1": 11,
+        "-7": 1,
+        "-1": 5,
+        "5": 12,
+        "9": 5,
+        "-3": 2,
+        "15": 1,
+        "-5": 1
+      },
+      "margin_standard_error": 0.45177600921253,
+      "mean_first_placement_advantage": 0.90625,
+      "mean_first_net_captures": 1.1875,
+      "opening_groups": {
+        "000000000000000000000000000000000000000000000002fd040000000000000000000000000000000000000000000000": {
+          "games": 62,
+          "first_wins": 53,
+          "second_wins": 9
+        },
+        "000000000000000000000000000000000000000000000002fc040000000000000000000000000000000000000000000000": {
+          "games": 2,
+          "first_wins": 2,
+          "second_wins": 0
+        }
+      },
+      "orientation_summaries": {
+        "0": {
+          "games": 8,
+          "first_wins": 8,
+          "second_wins": 0,
+          "draws": 0,
+          "first_win_rate": 1.0,
+          "wilson_95": [
+            0.6755843804891231,
+            1.0
+          ],
+          "mean_margin": 5.5,
+          "unique_trajectories": 8,
+          "mean_passes": 0.125
+        },
+        "1": {
+          "games": 8,
+          "first_wins": 7,
+          "second_wins": 1,
+          "draws": 0,
+          "first_win_rate": 0.875,
+          "wilson_95": [
+            0.5291051942301386,
+            0.9775830911367038
+          ],
+          "mean_margin": 3.5,
+          "unique_trajectories": 8,
+          "mean_passes": 0.125
+        },
+        "2": {
+          "games": 8,
+          "first_wins": 7,
+          "second_wins": 1,
+          "draws": 0,
+          "first_win_rate": 0.875,
+          "wilson_95": [
+            0.5291051942301386,
+            0.9775830911367038
+          ],
+          "mean_margin": 4.5,
+          "unique_trajectories": 8,
+          "mean_passes": 0.0
+        },
+        "3": {
+          "games": 8,
+          "first_wins": 7,
+          "second_wins": 1,
+          "draws": 0,
+          "first_win_rate": 0.875,
+          "wilson_95": [
+            0.5291051942301386,
+            0.9775830911367038
+          ],
+          "mean_margin": 2.25,
+          "unique_trajectories": 8,
+          "mean_passes": 0.0
+        },
+        "4": {
+          "games": 8,
+          "first_wins": 8,
+          "second_wins": 0,
+          "draws": 0,
+          "first_win_rate": 1.0,
+          "wilson_95": [
+            0.6755843804891231,
+            1.0
+          ],
+          "mean_margin": 4.0,
+          "unique_trajectories": 8,
+          "mean_passes": 0.0
+        },
+        "5": {
+          "games": 8,
+          "first_wins": 5,
+          "second_wins": 3,
+          "draws": 0,
+          "first_win_rate": 0.625,
+          "wilson_95": [
+            0.30573785458380187,
+            0.863158240538479
+          ],
+          "mean_margin": 0.5,
+          "unique_trajectories": 8,
+          "mean_passes": 0.125
+        },
+        "6": {
+          "games": 8,
+          "first_wins": 6,
+          "second_wins": 2,
+          "draws": 0,
+          "first_win_rate": 0.75,
+          "wilson_95": [
+            0.40926987910258916,
+            0.9285223111419724
+          ],
+          "mean_margin": 3.0,
+          "unique_trajectories": 8,
+          "mean_passes": 0.0
+        },
+        "7": {
+          "games": 8,
+          "first_wins": 7,
+          "second_wins": 1,
+          "draws": 0,
+          "first_win_rate": 0.875,
+          "wilson_95": [
+            0.5291051942301386,
+            0.9775830911367038
+          ],
+          "mean_margin": 3.0,
+          "unique_trajectories": 8,
+          "mean_passes": 0.0
+        }
+      }
+    },
+    "selfplay_400_temp6.json": {
+      "full_boards": 32,
+      "margin_counts": {
+        "3": 6,
+        "15": 1,
+        "5": 11,
+        "1": 5,
+        "9": 2,
+        "-5": 1,
+        "13": 1,
+        "-1": 2,
+        "-9": 1,
+        "7": 2
+      },
+      "margin_standard_error": 0.7974726964686021,
+      "mean_first_placement_advantage": 0.9375,
+      "mean_first_net_captures": 1.4375,
+      "opening_groups": {
+        "000000000000000000000000000000000000000000000002fd040000000000000000000000000000000000000000000000": {
+          "games": 32,
+          "first_wins": 28,
+          "second_wins": 4
+        }
+      },
+      "orientation_summaries": {
+        "0": {
+          "games": 4,
+          "first_wins": 4,
+          "second_wins": 0,
+          "draws": 0,
+          "first_win_rate": 1.0,
+          "wilson_95": [
+            0.5100999795960008,
+            1.0
+          ],
+          "mean_margin": 6.0,
+          "unique_trajectories": 4,
+          "mean_passes": 0.0
+        },
+        "1": {
+          "games": 4,
+          "first_wins": 3,
+          "second_wins": 1,
+          "draws": 0,
+          "first_win_rate": 0.75,
+          "wilson_95": [
+            0.3006360524426366,
+            0.9544139373553637
+          ],
+          "mean_margin": 5.5,
+          "unique_trajectories": 4,
+          "mean_passes": 0.0
+        },
+        "2": {
+          "games": 4,
+          "first_wins": 4,
+          "second_wins": 0,
+          "draws": 0,
+          "first_win_rate": 1.0,
+          "wilson_95": [
+            0.5100999795960008,
+            1.0
+          ],
+          "mean_margin": 4.0,
+          "unique_trajectories": 4,
+          "mean_passes": 0.0
+        },
+        "3": {
+          "games": 4,
+          "first_wins": 3,
+          "second_wins": 1,
+          "draws": 0,
+          "first_win_rate": 0.75,
+          "wilson_95": [
+            0.3006360524426366,
+            0.9544139373553637
+          ],
+          "mean_margin": 3.0,
+          "unique_trajectories": 4,
+          "mean_passes": 0.0
+        },
+        "4": {
+          "games": 4,
+          "first_wins": 4,
+          "second_wins": 0,
+          "draws": 0,
+          "first_win_rate": 1.0,
+          "wilson_95": [
+            0.5100999795960008,
+            1.0
+          ],
+          "mean_margin": 6.5,
+          "unique_trajectories": 4,
+          "mean_passes": 0.0
+        },
+        "5": {
+          "games": 4,
+          "first_wins": 3,
+          "second_wins": 1,
+          "draws": 0,
+          "first_win_rate": 0.75,
+          "wilson_95": [
+            0.3006360524426366,
+            0.9544139373553637
+          ],
+          "mean_margin": 0.5,
+          "unique_trajectories": 4,
+          "mean_passes": 0.25
+        },
+        "6": {
+          "games": 4,
+          "first_wins": 3,
+          "second_wins": 1,
+          "draws": 0,
+          "first_win_rate": 0.75,
+          "wilson_95": [
+            0.3006360524426366,
+            0.9544139373553637
+          ],
+          "mean_margin": 3.0,
+          "unique_trajectories": 4,
+          "mean_passes": 0.0
+        },
+        "7": {
+          "games": 4,
+          "first_wins": 4,
+          "second_wins": 0,
+          "draws": 0,
+          "first_win_rate": 1.0,
+          "wilson_95": [
+            0.5100999795960008,
+            1.0
+          ],
+          "mean_margin": 2.0,
+          "unique_trajectories": 4,
+          "mean_passes": 0.25
+        }
+      }
+    },
+    "selfplay_800_temp0.json": {
+      "full_boards": 8,
+      "margin_counts": {
+        "5": 4,
+        "7": 2,
+        "1": 2
+      },
+      "margin_standard_error": 0.823754471047914,
+      "mean_first_placement_advantage": 1.5,
+      "mean_first_net_captures": 1.5,
+      "opening_groups": {
+        "000000000000000000000000000000000000000000000002fd040000000000000000000000000000000000000000000000": {
+          "games": 8,
+          "first_wins": 8,
+          "second_wins": 0
+        }
+      },
+      "orientation_summaries": {
+        "0": {
+          "games": 1,
+          "first_wins": 1,
+          "second_wins": 0,
+          "draws": 0,
+          "first_win_rate": 1.0,
+          "wilson_95": [
+            0.20654329147389294,
+            1.0
+          ],
+          "mean_margin": 5.0,
+          "unique_trajectories": 1,
+          "mean_passes": 0.0
+        },
+        "1": {
+          "games": 1,
+          "first_wins": 1,
+          "second_wins": 0,
+          "draws": 0,
+          "first_win_rate": 1.0,
+          "wilson_95": [
+            0.20654329147389294,
+            1.0
+          ],
+          "mean_margin": 5.0,
+          "unique_trajectories": 1,
+          "mean_passes": 2.0
+        },
+        "2": {
+          "games": 1,
+          "first_wins": 1,
+          "second_wins": 0,
+          "draws": 0,
+          "first_win_rate": 1.0,
+          "wilson_95": [
+            0.20654329147389294,
+            1.0
+          ],
+          "mean_margin": 7.0,
+          "unique_trajectories": 1,
+          "mean_passes": 0.0
+        },
+        "3": {
+          "games": 1,
+          "first_wins": 1,
+          "second_wins": 0,
+          "draws": 0,
+          "first_win_rate": 1.0,
+          "wilson_95": [
+            0.20654329147389294,
+            1.0
+          ],
+          "mean_margin": 1.0,
+          "unique_trajectories": 1,
+          "mean_passes": 0.0
+        },
+        "4": {
+          "games": 1,
+          "first_wins": 1,
+          "second_wins": 0,
+          "draws": 0,
+          "first_win_rate": 1.0,
+          "wilson_95": [
+            0.20654329147389294,
+            1.0
+          ],
+          "mean_margin": 7.0,
+          "unique_trajectories": 1,
+          "mean_passes": 0.0
+        },
+        "5": {
+          "games": 1,
+          "first_wins": 1,
+          "second_wins": 0,
+          "draws": 0,
+          "first_win_rate": 1.0,
+          "wilson_95": [
+            0.20654329147389294,
+            1.0
+          ],
+          "mean_margin": 1.0,
+          "unique_trajectories": 1,
+          "mean_passes": 0.0
+        },
+        "6": {
+          "games": 1,
+          "first_wins": 1,
+          "second_wins": 0,
+          "draws": 0,
+          "first_win_rate": 1.0,
+          "wilson_95": [
+            0.20654329147389294,
+            1.0
+          ],
+          "mean_margin": 5.0,
+          "unique_trajectories": 1,
+          "mean_passes": 0.0
+        },
+        "7": {
+          "games": 1,
+          "first_wins": 1,
+          "second_wins": 0,
+          "draws": 0,
+          "first_win_rate": 1.0,
+          "wilson_95": [
+            0.20654329147389294,
+            1.0
+          ],
+          "mean_margin": 5.0,
+          "unique_trajectories": 1,
+          "mean_passes": 2.0
+        }
+      }
+    }
+  },
+  "verified_opening_reply_pairs": 162,
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.3.5",
+    "torch": "2.11.0+cpu"
+  },
+  "source_sha256": {
+    "evaluate_rule_balance.py": "d7c5875dc755d802544a6fdc6d81d228da68fc74254cdad251612ed7df48ad03",
+    "report_facing_balance.py": "d2da554c9d60d88973771953feb560379be187d574fbc10264ed680993e21448",
+    "report_rule_balance.py": "a9d5f129c58970f7b25f9ed6f895d977b73897f49ec95c60ff102921cb383c60",
+    "MCTS.py": "d86907be4e3e56108dfbe33210259f9549397f44f714bcc6bc9b9a917c541469",
+    "facing/rules.py": "a426d4328a1a8ce81e60369310ec69bdd4fd06536affd60aff764034e7143756",
+    "facing/network.py": "6893c1f78d4373b2416297ef4165b90e5dc75c4d80e3dca1f33c943972defdeb",
+    "gyeol/GyeolLogic.py": "8e1324a5c75e815080c6606f2b3ad966df8e7040d84259f34732c061a42e1b53",
+    "gyeol/GyeolGame.py": "414c94c5bd05abcf3136c7e1b869065071c0fb8c3856ae38db711dd50893c8ae",
+    "gyeol/pytorch/NNet.py": "05ee2e7295b1a9af26fcdae85c1de91d46bc4f8175eb4a9ea87b38df764f8a07",
+    "gyeol/pytorch/GyeolNNet.py": "d9a3ffe1fb3e978b70a02b37982626d6c69018c3ec1d4f4d03c544848ca74c8a",
+    "validate_fair_opening_batch.py": "ef74e4a2abac6f34247385e6ae3cf872a8ddc293cdd25c38180f686348c5e85b",
+    "validate_fair_opening.py": "b86a2e3f4ecad0d3003c02a3e3093fbfa3ca1345b9cdd32edf0a9d1ca621e043",
+    "find_fair_opening.py": "aca2856a069dcee63f3c5ca0080a18124837808f0e6155e3346d52b0e90e2916"
+  }
+}

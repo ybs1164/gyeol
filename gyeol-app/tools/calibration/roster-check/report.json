@@ -1,0 +1,62 @@
+{
+  "checkedAt": "2026-11-11T12:59:04.099Z",
+  "games": 1000,
+  "distinctBots": 1000,
+  "perBotGames": 2,
+  "method": "Held-out games between individual per-move mixtures, 200 roster positions apart; colors balanced per bot",
+  "bands": [
+    {
+      "lowerRanks": [
+        1,
+        200
+      ],
+      "higherBy": 200,
+      "games": 200,
+      "wins": 164,
+      "draws": 0,
+      "score": 0.82,
+      "lower95": 0.7608840628376158,
+      "passed": true
+    },
+    {
+      "lowerRanks": [
+        201,
+        400
+      ],
+      "higherBy": 200,
+      "games": 200,
+      "wins": 162,
+      "draws": 0,
+      "score": 0.81,
+      "lower95": 0.7499864142552061,
+      "passed": true
+    },
+    {
+      "lowerRanks": [
+        401,
+        600
+      ],
+      "higherBy": 200,
+      "games": 200,
+      "wins": 164,
+      "draws": 0,
+      "score": 0.82,
+      "lower95": 0.7608840628376158,
+      "passed": true
+    },
+    {
+      "lowerRanks": [
+        601,
+        800
+      ],
+      "higherBy": 200,
+      "games": 200,
+      "wins": 149,
+      "draws": 0,
+      "score": 0.745,
+      "lower95": 0.6803694869280502,
+      "passed": true
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,77 @@
+{
+  "generatedAt": "2026-11-11T14:53:20.548Z",
+  "scale": {
+    "version": 2,
+    "sourceCalibratedAt": "2026-11-11T12:28:09.291Z",
+    "aiMin": 974,
+    "aiMax": 2207,
+    "stageFloors": [
+      974,
+      1136,
+      1313,
+      1483,
+      1622,
+      1753,
+      1954,
+      2207
+    ],
+    "puzzleMin": 974,
+    "puzzleMax": 2350,
+    "start": 1000,
+    "targetAccuracy": 0.65
+  },
+  "puzzles": 3200,
+  "legacyPuzzles": 2800,
+  "beginnerPuzzles": 400,
+  "method": "Puzzle complexity percentiles within overlapping ranges aligned to measured AI anchors; estimated task difficulty, not measured human or AI puzzle success rates",
+  "stages": [
+    {
+      "n": 1,
+      "lo": 974,
+      "hi": 1136,
+      "count": 400
+    },
+    {
+      "n": 2,
+      "lo": 1136,
+      "hi": 1313,
+      "count": 436
+    },
+    {
+      "n": 3,
+      "lo": 1313,
+      "hi": 1483,
+      "count": 591
+    },
+    {
+      "n": 4,
+      "lo": 1483,
+      "hi": 1622,
+      "count": 484
+    },
+    {
+      "n": 5,
+      "lo": 1622,
+      "hi": 1753,
+      "count": 256
+    },
+    {
+      "n": 6,
+      "lo": 1753,
+      "hi": 1954,
+      "count": 397
+    },
+    {
+      "n": 7,
+      "lo": 1954,
+      "hi": 2207,
+      "count": 498
+    },
+    {
+      "n": 8,
+      "lo": 2207,
+      "hi": 2350,
+      "count": 138
+    }
+  ]
+}

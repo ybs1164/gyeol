@@ -1,0 +1,127 @@
+{
+  "snapshotAt": "2026-11-15T16:22:21.719472+09:00",
+  "snapshotSha256": "2f7895d79bf23f264fb41cfcc11a2a4ab67ab560aecbc829635d18e743dd8041",
+  "completedGames": 42358,
+  "trainGamesUsed": 42358,
+  "heldOutGamesExcluded": 0,
+  "plannedGames": 60000,
+  "perBotTrainGames": [
+    84,
+    86
+  ],
+  "connectedComponents": 1,
+  "method": "Individual regularized Bradley-Terry, fitted color effect, 500 Elo prior; mean fixed to 1500",
+  "optimizer": {
+    "success": true,
+    "iterations": 48,
+    "maxGradient": 0.0006124237583327585
+  },
+  "greenAdvantageElo": 45.21463957131866,
+  "interim": {
+    "n": 1000,
+    "mean": 1500.0,
+    "sd": 88.48922567278872,
+    "median": 1509.490140759857,
+    "min": 1267.9806366380658,
+    "max": 1703.1945977915511,
+    "quantiles": {
+      "p05": 1346.069448002324,
+      "p25": 1439.1718546024192,
+      "p75": 1556.450434183722,
+      "p95": 1637.843844449126
+    },
+    "skewness": -0.19344000652546975,
+    "excess_kurtosis": -0.5211423479140374,
+    "shapiro_W": 0.988471028593744,
+    "shapiro_p": 4.484214685843924e-07,
+    "fitted_normal_KS_distance": 0.04993463344562399,
+    "within_1sd": 0.651,
+    "within_2sd": 0.962
+  },
+  "existingDisplayed": {
+    "n": 1000,
+    "mean": 1590.5,
+    "sd": 356.29254890328536,
+    "median": 1590.5,
+    "min": 974.0,
+    "max": 2207.0,
+    "quantiles": {
+      "p05": 1035.6485,
+      "p25": 1282.25,
+      "p75": 1898.75,
+      "p95": 2145.3514999999998
+    },
+    "skewness": 0.0,
+    "excess_kurtosis": -1.200000087056773,
+    "shapiro_W": 0.9548090288822652,
+    "shapiro_p": 5.388686052261393e-17,
+    "fitted_normal_KS_distance": 0.05771002557002669,
+    "within_1sd": 0.578,
+    "within_2sd": 1.0
+  },
+  "targetTierGroups": [
+    {
+      "targetTier": "bronze",
+      "count": 100,
+      "mean": 1377.5417214195443,
+      "median": 1381.7194241554785,
+      "min": 1267.9806366380658,
+      "max": 1454.545590393636
+    },
+    {
+      "targetTier": "silver",
+      "count": 200,
+      "mean": 1416.243521056697,
+      "median": 1429.8859337204826,
+      "min": 1287.6065494437198,
+      "max": 1533.495017887565
+    },
+    {
+      "targetTier": "gold",
+      "count": 200,
+      "mean": 1476.7342162334128,
+      "median": 1471.2184738156907,
+      "min": 1360.5190799051725,
+      "max": 1604.5800840487939
+    },
+    {
+      "targetTier": "plat",
+      "count": 200,
+      "mean": 1537.0217006285059,
+      "median": 1535.7673463258325,
+      "min": 1475.5763072953057,
+      "max": 1626.3972833106468
+    },
+    {
+      "targetTier": "dia",
+      "count": 200,
+      "mean": 1569.6916931349851,
+      "median": 1553.3569489885763,
+      "min": 1473.009575355276,
+      "max": 1703.1945977915511
+    },
+    {
+      "targetTier": "master",
+      "count": 100,
+      "mean": 1623.076016473255,
+      "median": 1619.957993505945,
+      "min": 1569.4729812338182,
+      "max": 1700.356578689898
+    }
+  ],
+  "interimRatingTierCounts": {
+    "bronze": 10,
+    "silver": 454,
+    "gold": 382,
+    "plat": 154,
+    "dia": 0,
+    "master": 0
+  },
+  "limitations": [
+    "Batch is ongoing; these are interim estimates and do not replace displayed ratings.",
+    "Mean 1500 is an identification convention, not empirical evidence of a bell curve.",
+    "Normality tests are descriptive: a fixed roster and ratings estimated from shared opponents are not independent samples.",
+    "Logical clock games, not server-capacity or human-rating validation.",
+    "RD is a diagonal information approximation, not a full covariance confidence interval."
+  ]
+}

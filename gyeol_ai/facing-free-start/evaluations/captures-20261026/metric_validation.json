@@ -1,0 +1,16 @@
+[
+  {
+    "id": 18,
+    "game_index": 0,
+    "capture_turns": 13,
+    "captured_tiles": 21,
+    "matches_verbose_capture_paths": true
+  },
+  {
+    "id": 3,
+    "game_index": 0,
+    "capture_turns": 11,
+    "captured_tiles": 19,
+    "matches_verbose_capture_paths": true
+  }
+]

@@ -1,0 +1,283 @@
+{
+  "created_utc": "2026-10-23T18:19:45.337298+00:00",
+  "sha256": "f7fc6c1126ff8dec71793561ddc968eb22d0c3642e362a79f97be2fd2ee7590a",
+  "scope": "Original free-start; 168 neural screens, 8 pilot layouts, 4 independently confirmed layouts",
+  "confirmation_ids": [
+    31,
+    25,
+    10,
+    103
+  ],
+  "recommendations": [
+    {
+      "id": 31,
+      "summary": {
+        "games": 32,
+        "first_wins": 16,
+        "second_wins": 16,
+        "draws": 0,
+        "first_win_rate": 0.5,
+        "wilson_95": [
+          0.33630614316859386,
+          0.6636938568314061
+        ],
+        "mean_margin": -0.25,
+        "unique_trajectories": 32,
+        "mean_passes": 0.40625
+      },
+      "board": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          -3,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "layout": {
+        "second_offset": [
+          -3,
+          0
+        ],
+        "second_direction": "↓",
+        "diagram": "B↓\n ·\n ·\nG↑"
+      }
+    },
+    {
+      "id": 10,
+      "summary": {
+        "games": 32,
+        "first_wins": 16,
+        "second_wins": 16,
+        "draws": 0,
+        "first_win_rate": 0.5,
+        "wilson_95": [
+          0.33630614316859386,
+          0.6636938568314061
+        ],
+        "mean_margin": 0.5,
+        "unique_trajectories": 32,
+        "mean_passes": 0.46875
+      },
+      "board": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "layout": {
+        "second_offset": [
+          -2,
+          0
+        ],
+        "second_direction": "↑",
+        "diagram": "B↑\n ·\nG↑"
+      }
+    },
+    {
+      "id": 25,
+      "summary": {
+        "games": 32,
+        "first_wins": 19,
+        "second_wins": 13,
+        "draws": 0,
+        "first_win_rate": 0.59375,
+        "wilson_95": [
+          0.4225972657298823,
+          0.744805975196862
+        ],
+        "mean_margin": 1.0,
+        "unique_trajectories": 32,
+        "mean_passes": 0.40625
+      },
+      "board": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          -3,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "layout": {
+        "second_offset": [
+          0,
+          3
+        ],
+        "second_direction": "↓",
+        "diagram": "G↑  ·  · B↓"
+      }
+    }
+  ]
+}

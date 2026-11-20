@@ -1,0 +1,27 @@
+import { BANK_CURVES } from './puzzle-bank';
+import { PUZZLE_SCALE } from './puzzle-scale';
+import { tileCount, type Board } from './rules';
+
+/** 최다 뒤집기 문제의 탐색량·정답 수·헷갈리는 경로를 함께 센다. */
+export function flipComplexity(board: Board, counts: Map<number, number>): number {
+  const values = [...counts.values()];
+  const best = Math.max(...values);
+  const sols = values.filter((n) => n === best).length;
+  const near = values.filter((n) => n === best - 1).length;
+  return Math.log2(counts.size / sols) + 0.55 * (best - 2) + 0.5 * Math.log2(1 + near) + 0.04 * (tileCount(board) - 5);
+}
+
+/** 문제 은행의 복잡도 백분위를 사용한 추정치. 대국 승률과 같은 실측값은 아니다. */
+export function estimatePuzzleDifficulty(kind: 'flip' | 'reply' | 'finish', raw: number): number {
+  const curve = BANK_CURVES[kind];
+  if (!curve.length || !Number.isFinite(raw)) return PUZZLE_SCALE.start;
+  if (raw <= curve[0][0]) return curve[0][1];
+  for (let i = 1; i < curve.length; i++) {
+    const [x, rating] = curve[i];
+    if (raw <= x) {
+      const [prev, before] = curve[i - 1];
+      return Math.round(before + ((raw - prev) / (x - prev || 1)) * (rating - before));
+    }
+  }
+  return curve[curve.length - 1][1];
+}

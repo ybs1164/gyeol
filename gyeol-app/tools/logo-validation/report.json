@@ -1,0 +1,58 @@
+[
+  {
+    "name": "onboarding-light",
+    "width": 390,
+    "height": 844,
+    "images": [
+      {
+        "src": "/tiles/hero.svg",
+        "width": 150,
+        "height": 150,
+        "fit": "contain"
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "name": "lobby-light",
+    "width": 390,
+    "height": 844,
+    "images": [
+      {
+        "src": "/tiles/front.svg",
+        "width": 34,
+        "height": 34,
+        "fit": "contain"
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "name": "lobby-dark",
+    "width": 390,
+    "height": 844,
+    "images": [
+      {
+        "src": "/tiles/front.svg",
+        "width": 34,
+        "height": 34,
+        "fit": "contain"
+      }
+    ],
+    "overflow": false
+  },
+  {
+    "name": "desktop",
+    "width": 1440,
+    "height": 900,
+    "images": [
+      {
+        "src": "/tiles/front.svg",
+        "width": 30,
+        "height": 30,
+        "fit": "contain"
+      }
+    ],
+    "overflow": false
+  }
+]

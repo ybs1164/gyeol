@@ -1,0 +1,14 @@
+﻿{
+    "version":  "0.4.2",
+    "versionCode":  5,
+    "appId":  "io.github.ybs1164.gyeol",
+    "file":  "dist/GYEOL-0.4.2.apk",
+    "bytes":  6251791,
+    "sha256":  "980f1a8cbc22f684b4d1c9ea31b78f19d842be0fef7d2d62c7a7dfafd63b6b52",
+    "signatureVerified":  true,
+    "sameSignerAs041":  true,
+    "webAssetsMatch":  true,
+    "matchedAssets":  23,
+    "includesMoveGradingV3":  true,
+    "builtAt":  "2026-11-16T11:31:58.8515435+09:00"
+}

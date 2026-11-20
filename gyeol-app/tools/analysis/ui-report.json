@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "viewport": "390x900",
+  "cancelMs": 78,
+  "runtimeErrors": [],
+  "cases": [
+    "real ONNX worker and exact endgame",
+    "blunder and missed win",
+    "all moves and issue filter",
+    "recommended and played continuation boards",
+    "graph pointer and keyboard navigation and perspective",
+    "persistent cache reload and separate deep mode",
+    "immediate cancel and partial resume",
+    "record change cancels old worker",
+    "model failure and retry",
+    "resignation and timeout winner do not override contrary board evaluation",
+    "invalid record rejected",
+    "mobile layout has no horizontal overflow"
+  ]
+}

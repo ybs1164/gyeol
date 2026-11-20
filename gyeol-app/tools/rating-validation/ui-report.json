@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-11-15T13:16:26.411Z",
+  "passed": true,
+  "viewport": [
+    390,
+    844
+  ],
+  "languages": [
+    "ko",
+    "en"
+  ],
+  "checks": [
+    "truncated-history-week-unknown",
+    "retained-peak-and-lowest",
+    "flat-chart-without-invented-baseline",
+    "restriction-result-message",
+    "mobile-layout"
+  ],
+  "errors": []
+}

@@ -1,0 +1,533 @@
+{
+  "model": "temp\\best.pth.tar",
+  "sha256": "bb91af8a50a8ce3d7fdf404aa4143a3a35d7af3643b649195102bbf0fd9e6c9e",
+  "value": 0.5933635830879211,
+  "symmetry_values": [
+    0.5933635830879211,
+    0.5784304141998291,
+    0.6617030501365662,
+    0.665361762046814,
+    0.6617030501365662,
+    0.665361762046814,
+    0.5933635830879211,
+    0.5784304141998291
+  ],
+  "openings": [
+    {
+      "action": 1536,
+      "description": "rotate (3,3)->↑  place (2,3)↑",
+      "prior": 0.0006386976456269622,
+      "first_value": -0.47726672887802124,
+      "first_tiles": 2,
+      "second_tiles": 1
+    },
+    {
+      "action": 1537,
+      "description": "rotate (3,3)->↑  place (2,3)→",
+      "prior": 0.00011830717994598672,
+      "first_value": -0.5467779040336609,
+      "first_tiles": 2,
+      "second_tiles": 1
+    },
+    {
+      "action": 1538,
+      "description": "rotate (3,3)->↑  place (2,3)↓",
+      "prior": 0.0002273802674608305,
+      "first_value": -0.5155404210090637,
+      "first_tiles": 2,
+      "second_tiles": 1
+    },
+    {
+      "action": 1539,
+      "description": "rotate (3,3)->↑  place (2,3)←",
+      "prior": 9.026931365951896e-05,
+      "first_value": -0.29297664761543274,
+      "first_tiles": 2,
+      "second_tiles": 1
+    },
+    {
+      "action": 1540,
+      "description": "rotate (3,3)->↑  place (3,4)↑",
+      "prior": 0.0004635424120351672,
+      "first_value": 0.5178619027137756,
+      "first_tiles": 2,
+      "second_tiles": 1
+    },
+    {
+      "action": 1541,
+      "description": "rotate (3,3)->↑  place (3,4)→",
+      "prior": 0.0010456854943186045,
+      "first_value": 0.48137399554252625,
+      "first_tiles": 2,
+      "second_tiles": 1
+    },
+    {
+      "action": 1542,
+      "description": "rotate (3,3)->↑  place (3,4)↓",
+      "prior": 0.00031453228439204395,
+      "first_value": 0.5268341302871704,
+      "first_tiles": 2,
+      "second_tiles": 1
+    },
+    {
+      "action": 1543,
+      "description": "rotate (3,3)->↑  place (3,4)←",
+      "prior": 0.0005215066485106945,
+      "first_value": 0.4794200658798218,
+      "first_tiles": 2,
+      "second_tiles": 1
+    },
+    {
+      "action": 1544,
+      "description": "rotate (3,3)->↑  place (4,3)↑",
+      "prior": 5.3060368372825906e-05,
+      "first_value": -0.45570099353790283,
+      "first_tiles": 2,
+      "second_tiles": 1
+    },
+    {
+      "action": 1545,
+      "description": "rotate (3,3)->↑  place (4,3)→",
+      "prior": 2.2246333173825406e-05,
+      "first_value": -0.4616278111934662,
+      "first_tiles": 2,
+      "second_tiles": 1
+    },
+    {
+      "action": 1546,
+      "description": "rotate (3,3)->↑  place (4,3)↓",
+      "prior": 0.00024311221204698086,
+      "first_value": -0.5225066542625427,
+      "first_tiles": 2,
+      "second_tiles": 1
+    },
+    {
+      "action": 1547,
+      "description": "rotate (3,3)->↑  place (4,3)←",
+      "prior": 1.0868217941606417e-05,
+      "first_value": -0.4315313398838043,
+      "first_tiles": 2,
+      "second_tiles": 1
+    },
+    {
+      "action": 1552,
+      "description": "rotate (3,3)->→  place (2,3)↑",
+      "prior": 0.00043755589285865426,
+      "first_value": -0.6286937594413757,
+      "first_tiles": 2,
+      "second_tiles": 1
+    },
+    {
+      "action": 1553,
+      "description": "rotate (3,3)->→  place (2,3)→",
+      "prior": 0.00015668341075070202,
+      "first_value": -0.5918828845024109,
+      "first_tiles": 2,
+      "second_tiles": 1
+    },
+    {
+      "action": 1554,
+      "description": "rotate (3,3)->→  place (2,3)↓",
+      "prior": 2.749162376858294e-05,
+      "first_value": -0.5421948432922363,
+      "first_tiles": 2,
+      "second_tiles": 1
+    },
+    {
+      "action": 1555,
+      "description": "rotate (3,3)->→  place (2,3)←",
+      "prior": 8.91757463250542e-06,
+      "first_value": -0.4639143943786621,
+      "first_tiles": 2,
+      "second_tiles": 1
+    },
+    {
+      "action": 1556,
+      "description": "rotate (3,3)->→  place (3,4)↑",
+      "prior": 0.01542054396122694,
+      "first_value": 0.5647333264350891,
+      "first_tiles": 2,
+      "second_tiles": 1
+    },
+    {
+      "action": 1557,
+      "description": "rotate (3,3)->→  place (3,4)→",
+      "prior": 0.7565758228302002,
+      "first_value": 0.5209521651268005,
+      "first_tiles": 2,
+      "second_tiles": 1
+    },
+    {
+      "action": 1558,
+      "description": "rotate (3,3)->→  place (3,4)↓",
+      "prior": 0.016819780692458153,
+      "first_value": 0.5961447358131409,
+      "first_tiles": 2,
+      "second_tiles": 1
+    },
+    {
+      "action": 1559,
+      "description": "rotate (3,3)->→  place (3,4)←",
+      "prior": 0.20278729498386383,
+      "first_value": 0.5346003770828247,
+      "first_tiles": 2,
+      "second_tiles": 1
+    },
+    {
+      "action": 1560,
+      "description": "rotate (3,3)->→  place (4,3)↑",
+      "prior": 0.00012306352437008172,
+      "first_value": -0.575505793094635,
+      "first_tiles": 2,
+      "second_tiles": 1
+    },
+    {
+      "action": 1561,
+      "description": "rotate (3,3)->→  place (4,3)→",
+      "prior": 0.000386558793252334,
+      "first_value": -0.4968261420726776,
+      "first_tiles": 2,
+      "second_tiles": 1
+    },
+    {
+      "action": 1562,
+      "description": "rotate (3,3)->→  place (4,3)↓",
+      "prior": 7.72697021602653e-05,
+      "first_value": -0.5499852299690247,
+      "first_tiles": 2,
+      "second_tiles": 1
+    },
+    {
+      "action": 1563,
+      "description": "rotate (3,3)->→  place (4,3)←",
+      "prior": 3.675044354167767e-05,
+      "first_value": -0.4316713213920593,
+      "first_tiles": 2,
+      "second_tiles": 1
+    },
+    {
+      "action": 1568,
+      "description": "rotate (3,3)->↓  place (2,3)↑",
+      "prior": 0.0007534476462751627,
+      "first_value": -0.4761495888233185,
+      "first_tiles": 2,
+      "second_tiles": 1
+    },
+    {
+      "action": 1569,
+      "description": "rotate (3,3)->↓  place (2,3)→",
+      "prior": 1.6734604287194088e-05,
+      "first_value": -0.5404101014137268,
+      "first_tiles": 2,
+      "second_tiles": 1
+    },
+    {
+      "action": 1570,
+      "description": "rotate (3,3)->↓  place (2,3)↓",
+      "prior": 1.1809924217232037e-05,
+      "first_value": -0.4302278161048889,
+      "first_tiles": 2,
+      "second_tiles": 1
+    },
+    {
+      "action": 1571,
+      "description": "rotate (3,3)->↓  place (2,3)←",
+      "prior": 8.529061119588732e-07,
+      "first_value": -0.3640446960926056,
+      "first_tiles": 2,
+      "second_tiles": 1
+    },
+    {
+      "action": 1572,
+      "description": "rotate (3,3)->↓  place (3,4)↑",
+      "prior": 0.0001169315364677459,
+      "first_value": 0.5074849724769592,
+      "first_tiles": 2,
+      "second_tiles": 1
+    },
+    {
+      "action": 1573,
+      "description": "rotate (3,3)->↓  place (3,4)→",
+      "prior": 0.0005039773532189429,
+      "first_value": 0.4881252646446228,
+      "first_tiles": 2,
+      "second_tiles": 1
+    },
+    {
+      "action": 1574,
+      "description": "rotate (3,3)->↓  place (3,4)↓",
+      "prior": 0.0008390843868255615,
+      "first_value": 0.5279892683029175,
+      "first_tiles": 2,
+      "second_tiles": 1
+    },
+    {
+      "action": 1575,
+      "description": "rotate (3,3)->↓  place (3,4)←",
+      "prior": 0.0003200325008947402,
+      "first_value": 0.5837114453315735,
+      "first_tiles": 2,
+      "second_tiles": 1
+    },
+    {
+      "action": 1576,
+      "description": "rotate (3,3)->↓  place (4,3)↑",
+      "prior": 0.0001198602985823527,
+      "first_value": -0.5785925984382629,
+      "first_tiles": 2,
+      "second_tiles": 1
+    },
+    {
+      "action": 1577,
+      "description": "rotate (3,3)->↓  place (4,3)→",
+      "prior": 3.937114524887875e-05,
+      "first_value": -0.48762425780296326,
+      "first_tiles": 2,
+      "second_tiles": 1
+    },
+    {
+      "action": 1578,
+      "description": "rotate (3,3)->↓  place (4,3)↓",
+      "prior": 0.0006028020870871842,
+      "first_value": -0.5583535432815552,
+      "first_tiles": 2,
+      "second_tiles": 1
+    },
+    {
+      "action": 1579,
+      "description": "rotate (3,3)->↓  place (4,3)←",
+      "prior": 6.819736154284328e-05,
+      "first_value": -0.42611613869667053,
+      "first_tiles": 2,
+      "second_tiles": 1
+    }
+  ],
+  "searches": [
+    {
+      "sims": 100,
+      "mean_q": 0.6608403680300472,
+      "top": [
+        {
+          "action": 1557,
+          "description": "rotate (3,3)->→  place (3,4)→",
+          "visits": 79,
+          "q": 0.6613601446151733
+        },
+        {
+          "action": 1559,
+          "description": "rotate (3,3)->→  place (3,4)←",
+          "visits": 20,
+          "q": 0.6587872505187988
+        }
+      ]
+    },
+    {
+      "sims": 800,
+      "mean_q": 0.6262327490819709,
+      "top": [
+        {
+          "action": 1557,
+          "description": "rotate (3,3)->→  place (3,4)→",
+          "visits": 617,
+          "q": 0.6263288259506226
+        },
+        {
+          "action": 1559,
+          "description": "rotate (3,3)->→  place (3,4)←",
+          "visits": 143,
+          "q": 0.6165781617164612
+        },
+        {
+          "action": 1558,
+          "description": "rotate (3,3)->→  place (3,4)↓",
+          "visits": 39,
+          "q": 0.6601129174232483
+        }
+      ]
+    },
+    {
+      "sims": 3200,
+      "mean_q": 0.5983769793963574,
+      "top": [
+        {
+          "action": 1557,
+          "description": "rotate (3,3)->→  place (3,4)→",
+          "visits": 1577,
+          "q": 0.5846661925315857
+        },
+        {
+          "action": 1558,
+          "description": "rotate (3,3)->→  place (3,4)↓",
+          "visits": 936,
+          "q": 0.6224551796913147
+        },
+        {
+          "action": 1559,
+          "description": "rotate (3,3)->→  place (3,4)←",
+          "visits": 444,
+          "q": 0.5855442881584167
+        },
+        {
+          "action": 1556,
+          "description": "rotate (3,3)->→  place (3,4)↑",
+          "visits": 242,
+          "q": 0.6181390881538391
+        }
+      ]
+    }
+  ],
+  "replay_iterations": [
+    {
+      "games": 100,
+      "first_wins": 85,
+      "second_wins": 15,
+      "draws": 0
+    },
+    {
+      "games": 100,
+      "first_wins": 76,
+      "second_wins": 24,
+      "draws": 0
+    },
+    {
+      "games": 100,
+      "first_wins": 86,
+      "second_wins": 14,
+      "draws": 0
+    },
+    {
+      "games": 100,
+      "first_wins": 81,
+      "second_wins": 19,
+      "draws": 0
+    },
+    {
+      "games": 100,
+      "first_wins": 74,
+      "second_wins": 26,
+      "draws": 0
+    },
+    {
+      "games": 100,
+      "first_wins": 81,
+      "second_wins": 19,
+      "draws": 0
+    },
+    {
+      "games": 100,
+      "first_wins": 86,
+      "second_wins": 14,
+      "draws": 0
+    },
+    {
+      "games": 100,
+      "first_wins": 84,
+      "second_wins": 16,
+      "draws": 0
+    },
+    {
+      "games": 100,
+      "first_wins": 79,
+      "second_wins": 21,
+      "draws": 0
+    },
+    {
+      "games": 100,
+      "first_wins": 81,
+      "second_wins": 19,
+      "draws": 0
+    }
+  ],
+  "recent_arena": [
+    {
+      "run": "924bbe857e86",
+      "iteration": 12,
+      "games": 40,
+      "first_wins": 40,
+      "second_wins": 0,
+      "draws": 0,
+      "unique_games": 2
+    },
+    {
+      "run": "25662f99b5d4",
+      "iteration": 1,
+      "games": 40,
+      "first_wins": 40,
+      "second_wins": 0,
+      "draws": 0,
+      "unique_games": 2
+    },
+    {
+      "run": "25662f99b5d4",
+      "iteration": 2,
+      "games": 40,
+      "first_wins": 0,
+      "second_wins": 40,
+      "draws": 0,
+      "unique_games": 2
+    },
+    {
+      "run": "25662f99b5d4",
+      "iteration": 3,
+      "games": 40,
+      "first_wins": 20,
+      "second_wins": 20,
+      "draws": 0,
+      "unique_games": 3
+    },
+    {
+      "run": "25662f99b5d4",
+      "iteration": 4,
+      "games": 40,
+      "first_wins": 40,
+      "second_wins": 0,
+      "draws": 0,
+      "unique_games": 2
+    },
+    {
+      "run": "25662f99b5d4",
+      "iteration": 5,
+      "games": 40,
+      "first_wins": 40,
+      "second_wins": 0,
+      "draws": 0,
+      "unique_games": 2
+    },
+    {
+      "run": "25662f99b5d4",
+      "iteration": 6,
+      "games": 40,
+      "first_wins": 20,
+      "second_wins": 20,
+      "draws": 0,
+      "unique_games": 3
+    },
+    {
+      "run": "25662f99b5d4",
+      "iteration": 7,
+      "games": 40,
+      "first_wins": 40,
+      "second_wins": 0,
+      "draws": 0,
+      "unique_games": 2
+    },
+    {
+      "run": "25662f99b5d4",
+      "iteration": 8,
+      "games": 40,
+      "first_wins": 40,
+      "second_wins": 0,
+      "draws": 0,
+      "unique_games": 3
+    },
+    {
+      "run": "25662f99b5d4",
+      "iteration": 9,
+      "games": 40,
+      "first_wins": 40,
+      "second_wins": 0,
+      "draws": 0,
+      "unique_games": 2
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "face": {
+    "height": 100,
+    "width": 100
+  },
+  "side": {
+    "height": 100,
+    "width": 100
+  },
+  "samples": 81,
+  "overflowTimes": [],
+  "animationCount": 5
+}

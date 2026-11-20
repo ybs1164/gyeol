@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "runtimeErrors": [],
+  "measurements": [
+    {
+      "width": 390,
+      "rowHeights": [
+        24,
+        24
+      ]
+    },
+    {
+      "width": 1360,
+      "rowHeights": [
+        24,
+        24
+      ]
+    }
+  ],
+  "cases": [
+    "two equal columns and independent 1/1/2 numbering",
+    "no team colors or flipped-count text",
+    "row height at most 26px",
+    "before/after replay selection",
+    "brown-first and pass numbering",
+    "compact mobile local-game preview",
+    "import/copy UI and route removed",
+    "mobile and desktop have no horizontal overflow"
+  ]
+}

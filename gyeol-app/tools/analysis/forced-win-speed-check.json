@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-14T13:57:53.469Z",
+  "note": "Two alternating pairs on one fixed game. Prepared model, prediction cache cleared each run. Not p95; isolates additional win-distance work.",
+  "cases": [
+    {
+      "distanceEnabled": false,
+      "totalMs": 17092,
+      "distanceMs": 0,
+      "executions": 973,
+      "simulations": 1216,
+      "exact": 5,
+      "exactDistances": 0
+    },
+    {
+      "distanceEnabled": true,
+      "totalMs": 17016,
+      "distanceMs": 38,
+      "executions": 925,
+      "simulations": 1152,
+      "exact": 6,
+      "exactDistances": 4
+    },
+    {
+      "distanceEnabled": false,
+      "totalMs": 16438,
+      "distanceMs": 0,
+      "executions": 925,
+      "simulations": 1152,
+      "exact": 6,
+      "exactDistances": 0
+    },
+    {
+      "distanceEnabled": true,
+      "totalMs": 12827,
+      "distanceMs": 35,
+      "executions": 925,
+      "simulations": 1152,
+      "exact": 6,
+      "exactDistances": 5
+    }
+  ]
+}

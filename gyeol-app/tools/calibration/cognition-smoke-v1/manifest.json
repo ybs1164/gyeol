@@ -1,0 +1,28 @@
+{
+  "fingerprint": "7215d622df1723942bc9c2db6d5ff56301495c1fd1fd44ac266035e6e76ca0ff",
+  "behaviorVersion": "cognition-v1",
+  "modelHash": "9ec913ce7828de126dd0d1dda3c048e3ac2bd057b4bfa914ff200dd1951537bd",
+  "rounds": 6,
+  "validationRounds": 10,
+  "limit": 48,
+  "plannedGames": 48,
+  "botCount": 1000,
+  "createdAt": "2026-11-14T13:50:33.659Z",
+  "sourceFiles": [
+    "tools/calibrate_cognitive_bots.ts",
+    "tools/cognitive-batch-lib.ts",
+    "packages/server/src/brain.ts",
+    "packages/core/src/rules.ts",
+    "packages/core/src/protocol.ts",
+    "packages/ai/src/cognitive-persona.ts",
+    "packages/ai/src/cognition.ts",
+    "packages/ai/src/time-policy.ts",
+    "packages/ai/src/mcts.ts",
+    "packages/ai/src/predictor.ts",
+    "package-lock.json"
+  ],
+  "clock": "Deterministic logical thinking time, real ONNX computation; no wall-time waiting or load simulation",
+  "node": "v22.14.0",
+  "logicalProcessors": 8,
+  "memoryBytes": 16969424896
+}

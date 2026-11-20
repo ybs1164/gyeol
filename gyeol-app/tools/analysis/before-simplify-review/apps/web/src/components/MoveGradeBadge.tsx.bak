@@ -1,0 +1,30 @@
+import { GRADES, GRADE_SYMBOLS, gradeMove, type MoveAnalysis, type MoveGrade } from '@gyeol/ai';
+import { PASS } from '@gyeol/core';
+import { t } from '../i18n';
+import { MoveGradeIcon } from './MoveGradeIcon';
+
+export const displayGrade = (move: MoveAnalysis) => move.forced ? 'forced' : move.grade ?? gradeMove(move.lossPp);
+export const moveLabel = (move: MoveAnalysis) => move.forced
+  ? t(move.played === PASS ? 'review.forcedPass' : 'review.forced')
+  : `${GRADE_SYMBOLS[displayGrade(move) as MoveGrade]} ${t(`review.${displayGrade(move)}`)}${move.grade ? '' : ` · ${t('review.provisional')}`}`;
+
+export function MoveGradeBadge({ move, grade, iconOnly = false }: { move?: MoveAnalysis | null; grade?: MoveGrade; iconOnly?: boolean }) {
+  const kind = move ? displayGrade(move) : grade ?? 'pending';
+  const provisional = !!move && !move.forced && !move.grade;
+  const label = move ? moveLabel(move) : t(`review.${kind === 'pending' ? 'notAnalyzed' : kind}`);
+  const missed = move?.badges.find(b => b.startsWith('missed'));
+  const title = label + (missed ? ` · ${t(`review.${missed}`)}` : '');
+  return <span className={`move-grade grade-${kind}${provisional ? ' provisional' : ''}${iconOnly ? ' icon-only' : ''}`}
+    data-grade={kind} title={title} aria-label={title} role={iconOnly ? 'img' : undefined}>
+    <span className="grade-symbol" aria-hidden="true"><MoveGradeIcon grade={kind} /></span>
+    {!iconOnly && <span className="grade-name">{kind === 'pending' ? t('review.notAnalyzed') : t(`review.${kind}`)}</span>}
+    {provisional && <span className="grade-provisional" aria-hidden="true">~</span>}
+    {missed && !iconOnly && <span aria-hidden="true">◇</span>}
+  </span>;
+}
+
+export function MoveGradeLegend() {
+  return <div className="grade-legend" aria-label={t('review.legend')}>
+    {GRADES.map(grade => <MoveGradeBadge key={grade} grade={grade} />)}
+  </div>;
+}

@@ -1,0 +1,447 @@
+{
+  "date": "2026-11-16T03:12:08.380Z",
+  "model": "900c6f08b6ce0aba85893a490a185a6b5c6ace474a57c7105b6a602d5dcec332",
+  "reference": {
+    "path": "tools/analysis/grading-v3/report.json",
+    "sha256": "ba929737d1a4910c1c41600c883aacb6327dbc83aa8da4d1465a940265314909",
+    "budgets": [
+      12,
+      24,
+      96
+    ],
+    "candidateSimulationMultipliers": [
+      1,
+      4,
+      8
+    ]
+  },
+  "limits": "Twelve existing selected positions, eight with estimated search references. Higher-budget search is not ground truth. The six-grade table is an illustrative proposal, not fitted, shipped, or validated. This does not establish tactical-error precision/recall or mobile latency.",
+  "estimated": {
+    "count": 8,
+    "rawMatchesReference": 1,
+    "rawMajorFalseAlarms": 2,
+    "meanAbsoluteRawLossDifference": 12.686843916863204,
+    "sevenGradeLowToDoubleRetained": 4,
+    "sixGradeLowToDoubleRetained": 5,
+    "sevenGradeLowToReferenceRetained": 5,
+    "sixGradeLowToReferenceRetained": 5
+  },
+  "rows": [
+    {
+      "id": "game-8dbfebe414dc9fb4",
+      "ply": 4,
+      "phase": "early",
+      "player": 1,
+      "raw": {
+        "loss": 21.805569529533386,
+        "grade": "mistake",
+        "ms": 128
+      },
+      "search": [
+        {
+          "status": "estimated",
+          "grade": "best",
+          "loss": 0
+        },
+        {
+          "status": "estimated",
+          "grade": "excellent",
+          "loss": 2.8562843231729946
+        },
+        {
+          "status": "stable",
+          "grade": "best",
+          "loss": 0
+        }
+      ],
+      "proposedSix": [
+        "best",
+        "good",
+        "best"
+      ],
+      "rawMatchesReference": false,
+      "rawLossDifference": 21.805569529533386,
+      "rawMajorFalseAlarm": true
+    },
+    {
+      "id": "game-8dbfebe414dc9fb4",
+      "ply": 12,
+      "phase": "middle",
+      "player": 1,
+      "raw": {
+        "loss": 1.5838772058486938,
+        "grade": "excellent",
+        "ms": 94
+      },
+      "search": [
+        {
+          "status": "estimated",
+          "grade": "best",
+          "loss": 0
+        },
+        {
+          "status": "estimated",
+          "grade": "inaccuracy",
+          "loss": 12.652860349205564
+        },
+        {
+          "status": "estimated",
+          "grade": "good",
+          "loss": 4.702734591148728
+        }
+      ],
+      "proposedSix": [
+        "best",
+        "inaccuracy",
+        "good"
+      ],
+      "rawMatchesReference": false,
+      "rawLossDifference": 3.118857385300034,
+      "rawMajorFalseAlarm": false
+    },
+    {
+      "id": "game-e36901b8c4b51c44",
+      "ply": 21,
+      "phase": "late",
+      "player": 1,
+      "raw": {
+        "loss": 0.07131993770599365,
+        "grade": "best",
+        "ms": 61
+      },
+      "search": [
+        {
+          "status": "exact",
+          "grade": "best",
+          "loss": 0
+        },
+        {
+          "status": "exact",
+          "grade": "best",
+          "loss": 0
+        },
+        {
+          "status": "exact",
+          "grade": "best",
+          "loss": 0
+        }
+      ],
+      "proposedSix": null,
+      "rawMatchesReference": null,
+      "rawLossDifference": null,
+      "rawMajorFalseAlarm": null
+    },
+    {
+      "id": "game-fb345d826ed8df16",
+      "ply": 4,
+      "phase": "early",
+      "player": -1,
+      "raw": {
+        "loss": 7.298955321311951,
+        "grade": "fair",
+        "ms": 82
+      },
+      "search": [
+        {
+          "status": "estimated",
+          "grade": "fair",
+          "loss": 8.490094566451651
+        },
+        {
+          "status": "estimated",
+          "grade": "fair",
+          "loss": 7.853854028337063
+        },
+        {
+          "status": "estimated",
+          "grade": "best",
+          "loss": 0
+        }
+      ],
+      "proposedSix": [
+        "fair",
+        "fair",
+        "best"
+      ],
+      "rawMatchesReference": false,
+      "rawLossDifference": 7.298955321311951,
+      "rawMajorFalseAlarm": false
+    },
+    {
+      "id": "game-e36901b8c4b51c44",
+      "ply": 12,
+      "phase": "middle",
+      "player": -1,
+      "raw": {
+        "loss": 9.937411546707153,
+        "grade": "fair",
+        "ms": 67
+      },
+      "search": [
+        {
+          "status": "estimated",
+          "grade": "best",
+          "loss": 0
+        },
+        {
+          "status": "estimated",
+          "grade": "excellent",
+          "loss": 1.907940884477595
+        },
+        {
+          "status": "estimated",
+          "grade": "best",
+          "loss": 0
+        }
+      ],
+      "proposedSix": [
+        "best",
+        "best",
+        "best"
+      ],
+      "rawMatchesReference": false,
+      "rawLossDifference": 9.937411546707153,
+      "rawMajorFalseAlarm": false
+    },
+    {
+      "id": "game-fef35faa8e8ba7a3",
+      "ply": 21,
+      "phase": "late",
+      "player": -1,
+      "raw": {
+        "loss": 0.0018477439880371094,
+        "grade": "best",
+        "ms": 60
+      },
+      "search": [
+        {
+          "status": "exact",
+          "grade": "best",
+          "loss": 0
+        },
+        {
+          "status": "exact",
+          "grade": "best",
+          "loss": 0
+        },
+        {
+          "status": "exact",
+          "grade": "best",
+          "loss": 0
+        }
+      ],
+      "proposedSix": null,
+      "rawMatchesReference": null,
+      "rawLossDifference": null,
+      "rawMajorFalseAlarm": null
+    },
+    {
+      "id": "game-fdc53651118b5807",
+      "ply": 4,
+      "phase": "early",
+      "player": 1,
+      "raw": {
+        "loss": 3.523293510079384,
+        "grade": "good",
+        "ms": 62
+      },
+      "search": [
+        {
+          "status": "estimated",
+          "grade": "best",
+          "loss": 0
+        },
+        {
+          "status": "estimated",
+          "grade": "best",
+          "loss": 0
+        },
+        {
+          "status": "stable",
+          "grade": "best",
+          "loss": 0
+        }
+      ],
+      "proposedSix": [
+        "best",
+        "best",
+        "best"
+      ],
+      "rawMatchesReference": false,
+      "rawLossDifference": 3.523293510079384,
+      "rawMajorFalseAlarm": false
+    },
+    {
+      "id": "game-fdc53651118b5807",
+      "ply": 12,
+      "phase": "middle",
+      "player": 1,
+      "raw": {
+        "loss": 0,
+        "grade": "best",
+        "ms": 106
+      },
+      "search": [
+        {
+          "status": "estimated",
+          "grade": "best",
+          "loss": 0
+        },
+        {
+          "status": "estimated",
+          "grade": "best",
+          "loss": 0
+        },
+        {
+          "status": "estimated",
+          "grade": "good",
+          "loss": 4.913844990833534
+        }
+      ],
+      "proposedSix": [
+        "best",
+        "best",
+        "good"
+      ],
+      "rawMatchesReference": false,
+      "rawLossDifference": 4.913844990833534,
+      "rawMajorFalseAlarm": false
+    },
+    {
+      "id": "game-fb345d826ed8df16",
+      "ply": 21,
+      "phase": "late",
+      "player": 1,
+      "raw": {
+        "loss": 0.5121201276779175,
+        "grade": "best",
+        "ms": 40
+      },
+      "search": [
+        {
+          "status": "exact",
+          "grade": "best",
+          "loss": 0
+        },
+        {
+          "status": "exact",
+          "grade": "best",
+          "loss": 0
+        },
+        {
+          "status": "exact",
+          "grade": "best",
+          "loss": 0
+        }
+      ],
+      "proposedSix": null,
+      "rawMatchesReference": null,
+      "rawLossDifference": null,
+      "rawMajorFalseAlarm": null
+    },
+    {
+      "id": "game-1048ceb2f03ebffd",
+      "ply": 4,
+      "phase": "early",
+      "player": -1,
+      "raw": {
+        "loss": 18.731136992573738,
+        "grade": "inaccuracy",
+        "ms": 69
+      },
+      "search": [
+        {
+          "status": "estimated",
+          "grade": "inaccuracy",
+          "loss": 11.899490684388853
+        },
+        {
+          "status": "estimated",
+          "grade": "inaccuracy",
+          "loss": 10.664093092507423
+        },
+        {
+          "status": "estimated",
+          "grade": "inaccuracy",
+          "loss": 10.986744409514904
+        }
+      ],
+      "proposedSix": [
+        "inaccuracy",
+        "inaccuracy",
+        "inaccuracy"
+      ],
+      "rawMatchesReference": true,
+      "rawLossDifference": 7.7443925830588345,
+      "rawMajorFalseAlarm": false
+    },
+    {
+      "id": "game-fb345d826ed8df16",
+      "ply": 12,
+      "phase": "middle",
+      "player": -1,
+      "raw": {
+        "loss": 54.57826852798462,
+        "grade": "blunder",
+        "ms": 60
+      },
+      "search": [
+        {
+          "status": "estimated",
+          "grade": "inaccuracy",
+          "loss": 11.418615892173973
+        },
+        {
+          "status": "estimated",
+          "grade": "fair",
+          "loss": 9.852124802994034
+        },
+        {
+          "status": "estimated",
+          "grade": "inaccuracy",
+          "loss": 11.42584205990326
+        }
+      ],
+      "proposedSix": [
+        "inaccuracy",
+        "fair",
+        "inaccuracy"
+      ],
+      "rawMatchesReference": false,
+      "rawLossDifference": 43.15242646808136,
+      "rawMajorFalseAlarm": true
+    },
+    {
+      "id": "game-1048ceb2f03ebffd",
+      "ply": 21,
+      "phase": "late",
+      "player": 1,
+      "raw": {
+        "loss": 0.0008374452590942383,
+        "grade": "best",
+        "ms": 45
+      },
+      "search": [
+        {
+          "status": "exact",
+          "grade": "best",
+          "loss": 0
+        },
+        {
+          "status": "exact",
+          "grade": "best",
+          "loss": 0
+        },
+        {
+          "status": "exact",
+          "grade": "best",
+          "loss": 0
+        }
+      ],
+      "proposedSix": null,
+      "rawMatchesReference": null,
+      "rawLossDifference": null,
+      "rawMajorFalseAlarm": null
+    }
+  ]
+}

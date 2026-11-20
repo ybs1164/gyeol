@@ -1,0 +1,84 @@
+{
+  "created_utc": "2026-10-22T16:22:16.294292+00:00",
+  "experiments": {
+    "original/selfplay_100_temp6.json": {
+      "games": 128,
+      "moves": 2952,
+      "orientation_counts": [
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16
+      ],
+      "passed": true
+    },
+    "original/selfplay_200_temp6.json": {
+      "games": 64,
+      "moves": 1474,
+      "orientation_counts": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "passed": true
+    },
+    "facing/selfplay_100_temp6.json": {
+      "games": 128,
+      "moves": 2991,
+      "orientation_counts": [
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16
+      ],
+      "passed": true
+    },
+    "facing/selfplay_200_temp6.json": {
+      "games": 64,
+      "moves": 1500,
+      "orientation_counts": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "passed": true
+    }
+  },
+  "environment": {
+    "python": "3.13.2",
+    "numpy": "2.3.5",
+    "torch": "2.11.0+cpu"
+  },
+  "source_sha256": {
+    "evaluate_rule_balance.py": "d7c5875dc755d802544a6fdc6d81d228da68fc74254cdad251612ed7df48ad03",
+    "report_rule_balance.py": "a9d5f129c58970f7b25f9ed6f895d977b73897f49ec95c60ff102921cb383c60",
+    "MCTS.py": "d86907be4e3e56108dfbe33210259f9549397f44f714bcc6bc9b9a917c541469",
+    "facing/rules.py": "a426d4328a1a8ce81e60369310ec69bdd4fd06536affd60aff764034e7143756",
+    "facing/network.py": "6893c1f78d4373b2416297ef4165b90e5dc75c4d80e3dca1f33c943972defdeb",
+    "gyeol/GyeolLogic.py": "8e1324a5c75e815080c6606f2b3ad966df8e7040d84259f34732c061a42e1b53",
+    "gyeol/GyeolGame.py": "414c94c5bd05abcf3136c7e1b869065071c0fb8c3856ae38db711dd50893c8ae",
+    "gyeol/pytorch/NNet.py": "05ee2e7295b1a9af26fcdae85c1de91d46bc4f8175eb4a9ea87b38df764f8a07",
+    "gyeol/pytorch/GyeolNNet.py": "d9a3ffe1fb3e978b70a02b37982626d6c69018c3ec1d4f4d03c544848ca74c8a",
+    "validate_fair_opening_batch.py": "ef74e4a2abac6f34247385e6ae3cf872a8ddc293cdd25c38180f686348c5e85b",
+    "validate_fair_opening.py": "b86a2e3f4ecad0d3003c02a3e3093fbfa3ca1345b9cdd32edf0a9d1ca621e043",
+    "find_fair_opening.py": "aca2856a069dcee63f3c5ca0080a18124837808f0e6155e3346d52b0e90e2916"
+  }
+}

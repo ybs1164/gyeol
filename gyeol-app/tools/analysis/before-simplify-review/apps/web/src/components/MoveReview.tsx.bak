@@ -1,0 +1,27 @@
+import { type MoveAnalysis } from '@gyeol/ai';
+import { formatMove, type Board, type Player } from '@gyeol/core';
+import { t } from '../i18n';
+import { MoveGradeBadge, displayGrade } from './MoveGradeBadge';
+export { moveLabel } from './MoveGradeBadge';
+
+export const isIssue = (move: MoveAnalysis) => ['inaccuracy', 'mistake', 'blunder'].includes(displayGrade(move)) || move.badges.some(b => b.startsWith('missed'));
+
+export function MoveReview({ move, before, onLine }: { move: MoveAnalysis; before: { board: Board; player: Player }; onLine: (kind: 'actual' | 'best') => void }) {
+  const played = move.candidates.find(c => c.action === move.played)!;
+  const best = Math.max(...move.candidates.map(c => c.value));
+  const keyBadge = ['missedDefense', 'missedWin', 'missedChance', 'onlyMove', 'convertedChance'].find(b => move.badges.some(badge => badge === b));
+  return <section className="move-review" aria-label={t('rp.moveN', { n: move.ply, color: '' })}>
+    <p className="small"><code>{formatMove(before.board, before.player, move.played)}</code></p>
+    <div className="review-row"><MoveGradeBadge move={move} /><span className="small muted">{t(`review.${move.status}`)}</span></div>
+    {keyBadge && <p className="review-badge">{t(`review.${keyBadge}`)}</p>}
+    {!move.forced && <p className="small">{t('review.loss', { n: Math.round(move.lossPp) })}</p>}
+    <div className="actions"><button className="btn" onClick={() => onLine('actual')}>{t('review.actual')}</button><button className="btn" onClick={() => onLine('best')}>{t('review.recommend')}</button></div>
+    <details><summary>{t('review.evidence')}</summary>
+      {!move.forced && <p className="small muted">{t('review.comparison', { actual: Math.round((played.value + 1) * 50), best: Math.round((best + 1) * 50) })}</p>}
+      {!move.forced && !move.grade && <p className="small muted">{t('review.uncertain')}</p>}
+      {move.status === 'exact' && <p className="small muted">{t('review.sameOutcome')}</p>}
+      {move.badges.filter(b => b !== keyBadge).map(b => <p className="small muted" key={b}>{t(`review.${b}`)}</p>)}
+      <p className="small muted">{t('review.recommend')}: {move.bestActions.map(a => formatMove(before.board, before.player, a)).filter((label, i, all) => all.indexOf(label) === i).join(' · ')}</p>
+    </details>
+  </section>;
+}

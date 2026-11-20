@@ -1,0 +1,10 @@
+{
+  "sourceGames": 690,
+  "candidates": 149,
+  "maxRemaining": 5,
+  "skipped": {
+    "not-clear-or-not-selective": 1526,
+    "symmetric-duplicate": 10,
+    "recorded-move-not-winning": 6
+  }
+}

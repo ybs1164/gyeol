@@ -1,0 +1,17 @@
+{
+  "roster": 1000,
+  "games": 60000,
+  "train": 50000,
+  "validation": 10000,
+  "balanced": true,
+  "perBotTrain": 100,
+  "perBotValidation": 20,
+  "uniqueProfiles": 1000,
+  "distinctMirrorConditions": 30000,
+  "modes": {
+    "blitz": 56000,
+    "bullet": 2000,
+    "rapid": 2000
+  },
+  "auditedAt": "2026-11-14T13:52:35.311Z"
+}

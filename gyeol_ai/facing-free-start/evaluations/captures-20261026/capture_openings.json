@@ -1,0 +1,190 @@
+[
+  {
+    "id": 18,
+    "green_direction": "W",
+    "brown_offset": [
+      0,
+      1
+    ],
+    "brown_direction": "N",
+    "setup_actions": [
+      948,
+      949
+    ],
+    "board": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        4,
+        -1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "summary": {
+      "games": 32,
+      "turns": 753,
+      "capture_turns": 362,
+      "capture_turn_rate": 0.4807436918990704,
+      "capture_per_placement": 0.49184782608695654,
+      "mean_game_capture_rate": 0.4809216485507246,
+      "game_capture_rate_standard_error": 0.010414438261131318,
+      "mean_capture_turns": 11.3125,
+      "mean_captured_tiles": 16.625,
+      "mean_first_capture_turn": 5.125,
+      "games_without_capture": 0,
+      "mean_first_six_capture_turns": 0.96875,
+      "mean_longest_capture_streak": 5.34375,
+      "first_win_rate": 0.34375
+    }
+  },
+  {
+    "id": 11,
+    "green_direction": "E",
+    "brown_offset": [
+      0,
+      1
+    ],
+    "brown_direction": "W",
+    "setup_actions": [
+      946,
+      952
+    ],
+    "board": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        -4,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "summary": {
+      "games": 32,
+      "turns": 752,
+      "capture_turns": 361,
+      "capture_turn_rate": 0.4800531914893617,
+      "capture_per_placement": 0.4904891304347826,
+      "mean_game_capture_rate": 0.48029891304347827,
+      "game_capture_rate_standard_error": 0.011563227339875422,
+      "mean_capture_turns": 11.28125,
+      "mean_captured_tiles": 16.5625,
+      "mean_first_capture_turn": 5.1875,
+      "games_without_capture": 0,
+      "mean_first_six_capture_turns": 0.90625,
+      "mean_longest_capture_streak": 4.5,
+      "first_win_rate": 0.25
+    }
+  }
+]

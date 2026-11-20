@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-19T16:35:09.790Z",
+  "games": [
+    "master-vs-master",
+    "game-a3ace324292b527a",
+    "game-4dc041d5b6999a15",
+    "game-f6e0208f1093fd2f",
+    "game-4cd150c3043cc1af",
+    "game-e1704ada96d643c3",
+    "game-6788fca06b66184b",
+    "game-ffe631586730e6a4"
+  ],
+  "note": "Node, one model session, inference cache cleared per game. Gaps are against deep (정밀) grades of the same build.",
+  "rows": [
+    {
+      "variant": "focus8",
+      "secondsPerGame": 6.2,
+      "accuracyGap": 14.6,
+      "bestAgreement": 69.6,
+      "meanLossGap": 8.3,
+      "exactMoves": 40
+    },
+    {
+      "variant": "exact8+focus8",
+      "secondsPerGame": 6.5,
+      "accuracyGap": 11.8,
+      "bestAgreement": 67.9,
+      "meanLossGap": 8,
+      "exactMoves": 60
+    },
+    {
+      "variant": "exact8+focus16",
+      "secondsPerGame": 12.4,
+      "accuracyGap": 9.3,
+      "bestAgreement": 68.5,
+      "meanLossGap": 6.3,
+      "exactMoves": 60
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "orientation": 0,
+    "games": 8,
+    "first_wins": 7,
+    "mean_margin": 3.25
+  },
+  {
+    "orientation": 1,
+    "games": 8,
+    "first_wins": 5,
+    "mean_margin": 1.0
+  },
+  {
+    "orientation": 2,
+    "games": 8,
+    "first_wins": 5,
+    "mean_margin": 0.25
+  },
+  {
+    "orientation": 3,
+    "games": 8,
+    "first_wins": 5,
+    "mean_margin": -0.25
+  },
+  {
+    "orientation": 4,
+    "games": 8,
+    "first_wins": 5,
+    "mean_margin": 3.0
+  },
+  {
+    "orientation": 5,
+    "games": 8,
+    "first_wins": 5,
+    "mean_margin": 0.25
+  },
+  {
+    "orientation": 6,
+    "games": 8,
+    "first_wins": 6,
+    "mean_margin": 1.0
+  },
+  {
+    "orientation": 7,
+    "games": 8,
+    "first_wins": 7,
+    "mean_margin": 4.5
+  }
+]

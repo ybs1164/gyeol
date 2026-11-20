@@ -1,0 +1,5 @@
+{
+  "games": 64,
+  "identical_setup_boards": true,
+  "difference": "regular-turn selection only: sampled first six vs maximum visits throughout"
+}

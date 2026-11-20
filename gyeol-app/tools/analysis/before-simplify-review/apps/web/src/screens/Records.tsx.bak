@@ -1,0 +1,254 @@
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { analysisSummary, emptyWinAnalysis, replayAnalysis, type AnalysisMode, type GameAnalysis, type MoveAnalysis, type WinAnalysis } from '@gyeol/ai';
+import { PASS, decode, formatMove, idx, initial, type Player } from '@gyeol/core';
+import { MoveList, movesFromActions } from '../components/GameLayout';
+import { moveDescription } from '../components/MovePreview';
+import { MoveGradeBadge, MoveGradeLegend } from '../components/MoveGradeBadge';
+import { Board } from '../components/Board';
+import { Score } from '../components/Score';
+import { AnalysisGraph } from '../components/AnalysisGraph';
+import { MoveReview, isIssue } from '../components/MoveReview';
+import { advance, startPosition, type Position } from '../game/track';
+import { WinAnalysisClient } from '../ai/win-probability-client';
+import { PROBABILITY_CALIBRATIONS } from '../ai/probability-calibrations';
+import { MODEL_VERSION } from '../ai/analysis-version';
+import { analysisKey, winAnalysisKey, loadWinAnalysis, loadAnalysis, saveAnalysis } from '../lib/analysis-storage';
+import { records, type GameRecord } from '../lib/storage';
+import { sideName } from '../lib/skins';
+import { forcedWinLabel } from '../lib/win-label';
+import { useLayout } from '../lib/layout';
+import { useShortcuts } from '../lib/keys';
+import { Icon } from '../components/Icon';
+import { t } from '../i18n';
+import type { Go } from '../App';
+
+function outcome(r: GameRecord): { text: string; cls: string } {
+  if (r.me === null) return { text: r.winner ? t('rec.sideWin', { color: sideName(r.winner) }) : t('rec.draw'), cls: '' };
+  if (r.winner === 0) return { text: t('rec.draw'), cls: '' };
+  return r.winner === r.me ? { text: t('rec.win'), cls: 'strong' } : { text: t('rec.lose'), cls: 'muted' };
+}
+
+export function Replay({ id, go }: { id: string; go: Go }) { return <ReplayGame key={id} id={id} go={go} />; }
+
+function ReplayGame({ id, go }: { id: string; go: Go }) {
+  const record = useMemo(() => records.get(id), [id]);
+  const replay = useMemo(() => {
+    if (!record) return { positions: [] as Position[], invalid: false };
+    try {
+      if (record.ruleVersion && record.ruleVersion !== 'facing-25-v1') throw new Error('Unknown rules');
+      const start = { board: record.initialBoard ?? initial(), player: record.initialPlayer ?? 1 };
+      replayAnalysis(record.moves, start);
+      const positions = [startPosition(start.board, start.player)];
+      for (const a of record.moves) positions.push(advance(positions[positions.length - 1], a));
+      return { positions, invalid: false };
+    } catch { return { positions: [] as Position[], invalid: true }; }
+  }, [record]);
+  const { positions } = replay;
+  const n = record?.moves.length ?? 0;
+  const [at, setAt] = useState(n);
+  const [pendingPly, setPendingPly] = useState<number | null>(null);
+  const [mode, setMode] = useState<AnalysisMode>('standard');
+  const [analysis, setAnalysis] = useState<GameAnalysis | null>(null);
+  const [win, setWin] = useState<WinAnalysis | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [analyzing, setAnalyzing] = useState(false);
+  const [task, setTask] = useState<'graph' | 'grades' | null>(null);
+  const [error, setError] = useState(false);
+  const [filter, setFilter] = useState<'all' | 'mine' | 'issues'>('all');
+  const [perspective, setPerspective] = useState<Player>(record?.me ?? 1);
+  const [line, setLine] = useState<{ ply: number; kind: 'actual' | 'best'; step: number } | null>(null);
+  const job = useRef<{ cancel: () => void } | null>(null);
+  const client = useMemo(() => new WinAnalysisClient(), []);
+  const generation = useRef(0);
+  const autoPaused = useRef(false);
+  const loadedCache = useRef('');
+  const cacheKey = useMemo(() => record ? analysisKey(record, mode) : '', [record, mode]);
+  const graphKey = useMemo(() => record ? winAnalysisKey(record, mode) : '', [record, mode]);
+  const layout = useLayout();
+
+  useEffect(() => {
+    const token = ++generation.current;
+    loadedCache.current = '';
+    autoPaused.current = false; setAnalyzing(false); setTask(null);
+    setLoading(true); setAnalysis(null); setWin(null); setError(false); setLine(null);
+    if (!record || replay.invalid) { setLoading(false); return; }
+    void Promise.all([loadAnalysis(cacheKey, n, mode), loadWinAnalysis(graphKey, n, mode)]).then(([saved, graph]) => {
+      if (token !== generation.current) return;
+      loadedCache.current = cacheKey;
+      setAnalysis(saved); setWin(graph); setLoading(false);
+    });
+    return () => { generation.current++; job.current?.cancel(); job.current = null; };
+  }, [cacheKey, graphKey, mode, n, record, replay.invalid]);
+  useEffect(() => () => client.dispose(), [client]);
+
+  const analyze = async (refresh = false) => {
+    if (!record || analyzing) return;
+    const token = ++generation.current;
+    autoPaused.current = false;
+    setAnalyzing(true); setError(false);
+    const start = { board: record.initialBoard ?? initial(), player: record.initialPlayer ?? 1 };
+    let grades = refresh ? undefined : analysis ?? undefined;
+    try {
+      if (refresh || !win?.complete) {
+        setTask('graph');
+        const resume = refresh ? undefined : win ?? undefined;
+        if (!resume) setWin(emptyWinAnalysis(record.moves, { start, mode, model: MODEL_VERSION, calibrations: PROBABILITY_CALIBRATIONS }));
+        const active = client.graph({ task: 'graph', moves: record.moves, mode, start, resume, includeGrades: !grades?.complete, gradeResume: grades }, partial => {
+          if (token !== generation.current) return;
+          setTask('graph'); setWin(partial); void saveAnalysis(graphKey, partial);
+        }, partial => {
+          if (token !== generation.current) return;
+          grades = partial;
+          setTask('grades'); setAnalysis(partial); void saveAnalysis(cacheKey, partial);
+        });
+        job.current = active;
+        const result = await active.result;
+        if (token !== generation.current) return;
+        setWin(result); void saveAnalysis(graphKey, result);
+      }
+      if (!grades?.complete) {
+        setTask('grades');
+        const active = client.grades({ task: 'grades', moves: record.moves, mode, start, resume: grades }, partial => {
+          if (token !== generation.current) return;
+          setAnalysis(partial); void saveAnalysis(cacheKey, partial);
+        });
+        job.current = active;
+        const result = await active.result;
+        if (token !== generation.current) return;
+        setAnalysis(result); void saveAnalysis(cacheKey, result);
+      }
+    } catch (e) {
+      if (token === generation.current && !(e instanceof DOMException && e.name === 'AbortError')) setError(true);
+    } finally {
+      if (token === generation.current) { setAnalyzing(false); setTask(null); job.current = null; }
+    }
+  };
+  useEffect(() => {
+    if (loadedCache.current === cacheKey && !loading && !analyzing && !error && !autoPaused.current && record && !replay.invalid && (!win?.complete || !analysis?.complete)) void analyze();
+  }, [loading, analyzing, error, cacheKey, graphKey, win?.complete, analysis?.complete]);
+  const cancel = () => { autoPaused.current = true; generation.current++; job.current?.cancel(); job.current = null; setAnalyzing(false); setTask(null); };
+  const jump = (i: number) => { setAt(Math.max(0, Math.min(n, i))); setLine(null); setPendingPly(null); };
+  const selectMove = (ply: number) => { jump(ply - 1); setPendingPly(ply); };
+  // 단축키: ← → 한 수, Home · End 처음 · 끝 (그래프와 슬라이더에 포커스가 있으면 그쪽이 처리)
+  useShortcuts({
+    ArrowLeft: () => jump(at - 1),
+    ArrowRight: () => jump(at + 1),
+    Home: () => jump(0),
+    End: () => jump(n),
+  });
+
+  if (!record || replay.invalid) return <div className="screen"><div className="topbar"><button className="icon-btn" onClick={() => go('me')} aria-label={t('nav.back')}><Icon name="back" /></button></div><p className="muted">{t(replay.invalid ? 'review.invalid' : 'err.not_found')}</p></div>;
+
+  const o = outcome(record);
+  const selected = analysis?.moves[(line?.ply ?? pendingPly ?? at) - 1] ?? null;
+  const candidate = line && selected ? [...selected.candidates].sort((a, b) => b.value - a.value || (b.margin ?? 0) - (a.margin ?? 0)).find(c => line.kind === 'actual' ? c.action === selected.played : selected.bestActions.includes(c.action)) : null;
+  const pv = candidate?.pv ?? [];
+  let pos = positions[at];
+  if (line) {
+    pos = positions[line.ply - 1];
+    for (const a of pv.slice(0, line.step)) pos = advance(pos, a);
+  }
+  const nextAction = line ? pv[line.step] : pendingPly ? record.moves[pendingPly - 1] : undefined;
+  const sm = nextAction !== undefined && nextAction !== PASS ? decode(nextAction) : null;
+  const point = win?.positions[at];
+  const forcedLabel = forcedWinLabel(point, perspective);
+  const value = point ? Math.round((perspective === 1 ? point.green : 1 - point.green) * 100) : '—';
+  const done = win?.positions.filter(p => p && (win.stage === 'preview' || p.source !== 'network')).length ?? 0;
+  const complete = win?.complete;
+  const rows = record.moves.map((_, i) => ({ ply: i + 1, player: positions[i].player, move: analysis?.moves[i] ?? null })).filter(r => filter === 'all' || (filter === 'mine' ? r.player === record.me : r.move && isIssue(r.move)));
+  const issues = analysis?.moves.filter((m): m is MoveAnalysis => !!m && isIssue(m)) ?? [];
+  const previous = [...issues].reverse().find(m => m.ply < at);
+  const next = issues.find(m => m.ply > at);
+  const startLine = (kind: 'actual' | 'best') => {
+    if (!selected) return;
+    setAt(selected.ply - 1); setPendingPly(null); setLine({ ply: selected.ply, kind, step: 0 });
+  };
+
+  const head = <div className="topbar"><button className="icon-btn" onClick={() => go('me')} aria-label={t('nav.back')}><Icon name="back" /></button><h2>{t('rp.title')}</h2><span className={`small ${o.cls}`}>{o.text}</span></div>;
+  const boardView = <>
+    <Score board={pos.board} turn={at < n || line ? pos.player : null} />
+    <p className="status">{t('rp.move', { i: at, n })}{!line && at > 0 && record.moves[at - 1] === PASS && ` · ${t('rp.pass')}`}</p>
+    {pendingPly && <p className="small">{t('notation.before', { n: Math.floor((pendingPly - 1) / 2) + 1 })} · <code>{formatMove(pos.board, pos.player, nextAction!)}</code></p>}
+    <Board pos={{ ...pos, animate: false }} interactive={false} showLast={nextAction === undefined} showCoordinates
+      moveGrade={!line ? selected : null}
+      marks={sm ? [idx(sm.r, sm.c)] : []}
+      ghost={sm ? { cell: idx(sm.pr, sm.pc), player: pos.player, dir: sm.placeDir } : null} />
+    {pendingPly && <><p className="small">{moveDescription(pos.player, nextAction!)}</p><button className="btn" onClick={() => jump(pendingPly)}>{t('notation.apply')}</button></>}
+    {!line && !pendingPly && at > 0 && <p className="small">{t('notation.after', { n: Math.floor((at - 1) / 2) + 1 })} · <code>{formatMove(positions[at - 1].board, positions[at - 1].player, record.moves[at - 1])}</code></p>}
+  </>;
+  const lineView = line && <section className="line-review" aria-live="polite">
+      <p className="small">{t('review.line', { kind: t(line.kind === 'actual' ? 'review.actual' : 'review.recommend'), step: line.step, total: pv.length })}</p>
+      {nextAction !== undefined && <p className="small"><code>{formatMove(pos.board, pos.player, nextAction)}</code> · {moveDescription(pos.player, nextAction)}</p>}
+      {sm && <p className="small">{t('review.nextAction', { dir: t(`dirTo.${sm.newDir}`) })}</p>}
+      {nextAction === PASS && <p className="small">{t('rp.suggestPass')}</p>}
+      <p className="small muted">{t('review.lineHelp')}</p>
+      <div className="actions"><button className="btn" disabled={line.step === 0} onClick={() => setLine({ ...line, step: line.step - 1 })}>{t('review.linePrev')}</button><button className="btn" disabled={line.step >= pv.length} onClick={() => setLine({ ...line, step: line.step + 1 })}>{t('review.lineNext')}</button></div>
+      <button className="text-btn" onClick={() => jump(line.ply)}>{t('review.closeLine')}</button>
+    </section>;
+  const controls = <>
+    <div className="actions replay-controls">
+      <button className="btn" onClick={() => jump(0)} disabled={at === 0 && !line} aria-label={t('review.first')}>⏮</button>
+      <button className="btn" onClick={() => jump(at - 1)} disabled={at === 0 && !line} aria-label={t('review.prev')}>◀</button>
+      <button className="btn" onClick={() => jump(at + 1)} disabled={at === n && !line} aria-label={t('review.next')}>▶</button>
+      <button className="btn" onClick={() => jump(n)} disabled={at === n && !line} aria-label={t('review.last')}>⏭</button>
+    </div>
+    <input className="range" aria-label={t('rp.title')} type="range" min={0} max={n} value={at} onChange={e => jump(Number(e.target.value))} />
+  </>;
+  const analysisView = <>
+    <section className="win-panel" aria-label={t('win.title')}>
+      <div className="review-row"><strong>{t('win.title')}</strong><div className="perspective-picker">{([1, -1] as const).map(p => <button className="text-btn" key={p} aria-pressed={perspective === p} onClick={() => setPerspective(p)}>{sideName(p)}</button>)}</div></div>
+      <div className="win-reading" aria-live="polite">
+        <span className="win-number">{forcedLabel ?? (point?.status === 'exact' ? (point.provenOutcome ? t('rec.sideWin', { color: sideName(point.provenOutcome) }) : t('rec.draw')) : value === '—' ? '—' : `${value}%`)}</span>
+        <span className="win-state">{!point ? t('review.notAnalyzed') : point.status === 'exact' ? t(point.source === 'terminal' ? 'win.finished' : 'win.proven') : point.calibrated ? t('win.calibrated') : t('win.estimated')}</span>
+      </div>
+      {win ? <AnalysisGraph label={t('win.title')} analysis={{ positions: win.positions, moves: analysis?.moves }} at={at} perspective={perspective} jump={jump} /> : <div className="win-placeholder">{t('win.empty')}</div>}
+      {loading ? <p className="small muted" role="status">{t('review.loading')}</p> : <div className="win-actions">
+        {analyzing ? <><span className="small" role="status"><span className="spin" /> {task === 'grades' ? t('review.progress', { done: analysis?.moves.filter(Boolean).length ?? 0, total: n }) : win?.metrics.previewMs !== null ? t('win.refining') : t('win.progress', { done, total: n + 1 })}</span><button className="text-btn" onClick={cancel}>{t('review.cancel')}</button></> : <button className={`btn ${!win ? 'primary' : ''}`} onClick={() => void analyze(!!complete && !!analysis?.complete)}>{t(complete && analysis?.complete ? 'win.refresh' : win?.positions.some(Boolean) ? 'review.resume' : 'win.analyze')}</button>}
+      </div>}
+      {analyzing && task === 'graph' && <progress max={n + 1} value={win?.stage === 'preview' ? done : undefined} aria-label={t('win.analyze')} />}
+      {win?.positions.some(p => p && p.status !== 'exact' && !p.calibrated) && <p className="win-footnote">{t('win.validation')}</p>}
+      {forcedLabel && <p className="win-footnote">{t('win.moveCountHelp')}</p>}
+      {record.endReason && record.endReason !== 'normal' && <p className="small muted">{t('review.resultNote', { result: o.text })}</p>}
+      {error && <p className="feedback no" role="alert">{t('review.error')}</p>}
+    </section>
+    <section className="move-overview" aria-label={t('review.all')}>
+      <div className="review-row"><strong>{t('review.all')}</strong><span className="small muted">{analysis?.moves.filter(Boolean).length ?? 0} / {n}</span></div>
+      <MoveGradeLegend />
+      <p className="small muted grade-help">{t('review.autoGrades')}</p>
+      <div className="actions review-filters">{(['all', 'mine', 'issues'] as const).filter(f => f !== 'mine' || record.me !== null).map(f => <button className="text-btn" aria-pressed={filter === f} key={f} onClick={() => setFilter(f)}>{t(`review.${f}`)}</button>)}</div>
+      <div className="move-list"><MoveList moves={movesFromActions(record.moves, record.initialPlayer ?? 1, record.initialBoard ?? initial())}
+        selectedIndex={(pendingPly ?? at) - 1} visibleIndices={rows.map(r => r.ply - 1)} onSelect={i => selectMove(i + 1)}
+        renderDetail={i => <MoveGradeBadge move={analysis?.moves[i]} />} /></div>
+      {rows.length === 0 && <p className="small muted">{t('review.empty')}</p>}
+      <div className="actions"><button className="text-btn" disabled={!previous} onClick={() => previous && jump(previous.ply)}>{t('review.previousIssue')}</button><button className="text-btn" disabled={!next} onClick={() => next && jump(next.ply)}>{t('review.nextIssue')}</button></div>
+    </section>
+    {(line?.ply ?? pendingPly ?? at) > 0 && <section className="win-selected">
+      {selected ? <MoveReview move={selected} before={positions[selected.ply - 1]} onLine={startLine} /> : <p className="small muted">{t('review.notAnalyzed')}</p>}
+    </section>}
+    <details className="win-details"><summary><span>{t('win.details')}</span><Icon name="chevron" /></summary>
+      <div className="actions analysis-modes">{(['standard', 'deep'] as const).map(m => <button className="btn" key={m} aria-pressed={mode === m} disabled={analyzing || loading} onClick={() => setMode(m)}>{t(`review.${m}`)}</button>)}</div>
+      {analysis && <div className="analysis-summary">{([1, -1] as const).map(p => {
+        const s = analysisSummary(analysis, p);
+        return <div key={p}><strong>{sideName(p)}</strong><p className="small">{t('review.stats', { best: s.best, mistakes: s.mistakes, missed: s.missed })}</p><p className="small muted">{t('review.coverage', { done: s.graded, total: positions.slice(0, n).filter((pos, i) => pos.player === p && !analysis.moves[i]?.forced).length })}</p></div>;
+      })}</div>}
+      <p className="small muted">{t('review.lossHelp')}</p>
+    </details>
+  </>;
+
+  // 넓은 창: 판과 이동 버튼은 왼쪽에 고정, 수순 비교 · 분석은 오른쪽 패널에서만 스크롤
+  if (layout === 'expanded') return <div className="screen replay-screen game-wide">
+    {head}
+    <div className="gw-body">
+      <div className="gw-board rp-board">{boardView}{controls}<p className="kbd-hint">{t('keys.replay')}</p></div>
+      <div className="gw-side">{lineView}{analysisView}</div>
+    </div>
+  </div>;
+
+  return <div className="screen replay-screen">
+    {head}
+    {boardView}
+    {lineView}
+    {controls}
+    {analysisView}
+  </div>;
+}

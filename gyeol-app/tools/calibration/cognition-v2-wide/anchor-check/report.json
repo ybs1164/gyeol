@@ -1,0 +1,75 @@
+{
+  "fingerprint": "0a7666c08f5c15a623a453273ceab6f0270558e8e09cba8c1c02f75691778671",
+  "complete": true,
+  "passed": true,
+  "games": 224,
+  "profiles": [
+    {
+      "id": "bot-11",
+      "targetRating": 974,
+      "targetTier": "bronze",
+      "games": 32,
+      "wins": 8,
+      "draws": 0,
+      "estimatedAnchorRating": 1197.6394056320264
+    },
+    {
+      "id": "bot-276",
+      "targetRating": 1301.0720720720722,
+      "targetTier": "silver",
+      "games": 32,
+      "wins": 18,
+      "draws": 0,
+      "estimatedAnchorRating": 1630.3655655149744
+    },
+    {
+      "id": "bot-436",
+      "targetRating": 1501.0180180180182,
+      "targetTier": "gold",
+      "games": 32,
+      "wins": 17,
+      "draws": 0,
+      "estimatedAnchorRating": 1588.3443971858726
+    },
+    {
+      "id": "bot-515",
+      "targetRating": 1600.9909909909911,
+      "targetTier": "plat",
+      "games": 32,
+      "wins": 21,
+      "draws": 0,
+      "estimatedAnchorRating": 1760.6666525682629
+    },
+    {
+      "id": "bot-635",
+      "targetRating": 1750.3333333333335,
+      "targetTier": "dia",
+      "games": 32,
+      "wins": 26,
+      "draws": 0,
+      "estimatedAnchorRating": 2013.6814888978106
+    },
+    {
+      "id": "bot-755",
+      "targetRating": 1900.9099099099099,
+      "targetTier": "master",
+      "games": 32,
+      "wins": 28,
+      "draws": 0,
+      "estimatedAnchorRating": 2142.888620211632
+    },
+    {
+      "id": "bot-10",
+      "targetRating": 2207,
+      "targetTier": "master",
+      "games": 32,
+      "wins": 30,
+      "draws": 0,
+      "estimatedAnchorRating": 2315.6529703060714
+    }
+  ],
+  "endpointSpan": 1118.013564674045,
+  "colorEffect": -45.93440852308399,
+  "method": "Ratings of new profiles fitted against the fixed, previously measured 8 legacy anchors; approximate and affected by anchor uncertainty",
+  "gate": "Complete 224 games, 32 games per representative, endpoint span at least 700 Elo; does not certify exact target ratings or 1,000 independent orderings"
+}

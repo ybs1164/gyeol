@@ -1,0 +1,48 @@
+{
+  "captured_utc": "2026-10-22T16:01:08.812090+00:00",
+  "note": "Historical holdout outcomes from changing training models; not current frozen-model match results. Never pool these with the new evaluation.",
+  "rules": {
+    "facing": {
+      "source": "facing\\temp\\validation_suite_v2.examples",
+      "sha256": "bfadb00fcdcf4e25ea0a0246dc9a3f9ea3fd524b030a6d96d383e39e9517b2d4",
+      "summary": {
+        "self": {
+          "games": 60,
+          "first_wins": 26,
+          "second_wins": 34
+        },
+        "random_1": {
+          "games": 20,
+          "first_wins": 1,
+          "second_wins": 19
+        },
+        "random_-1": {
+          "games": 20,
+          "first_wins": 20,
+          "second_wins": 0
+        }
+      }
+    },
+    "original": {
+      "source": "temp\\validation_suite_v2.examples",
+      "sha256": "acc0bed61592788ae2c9f7e28f04ad6d08a67cd51ca76a82d42b49b023f4497f",
+      "summary": {
+        "self": {
+          "games": 60,
+          "first_wins": 51,
+          "second_wins": 9
+        },
+        "random_1": {
+          "games": 20,
+          "first_wins": 0,
+          "second_wins": 20
+        },
+        "random_-1": {
+          "games": 20,
+          "first_wins": 20,
+          "second_wins": 0
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "calibratedAt": "2026-11-11T11:40:58.481Z",
+  "method": "Bradley-Terry MLE (Elo scale), mean anchored to 1500",
+  "games": 1126,
+  "greenWinRate": 0.444,
+  "greenAdvantageElo": -52,
+  "avgPlies": 23.5,
+  "bots": [
+    {
+      "id": "bot-01",
+      "name": "새싹",
+      "mistake": 0.55,
+      "sims": 0,
+      "rating": 1069,
+      "rd": 40,
+      "games": 156,
+      "wins": 34,
+      "losses": 122,
+      "draws": 0
+    },
+    {
+      "id": "bot-02",
+      "name": "이슬",
+      "mistake": 0.35,
+      "sims": 0,
+      "rating": 1201,
+      "rd": 40,
+      "games": 210,
+      "wins": 83,
+      "losses": 127,
+      "draws": 0
+    },
+    {
+      "id": "bot-03",
+      "name": "바람",
+      "mistake": 0.15,
+      "sims": 0,
+      "rating": 1267,
+      "rd": 40,
+      "games": 244,
+      "wins": 105,
+      "losses": 139,
+      "draws": 0
+    },
+    {
+      "id": "bot-04",
+      "name": "물결",
+      "mistake": 0.3,
+      "sims": 8,
+      "rating": 1359,
+      "rd": 40,
+      "games": 258,
+      "wins": 124,
+      "losses": 134,
+      "draws": 0
+    },
+    {
+      "id": "bot-05",
+      "name": "돌담",
+      "mistake": 0.18,
+      "sims": 8,
+      "rating": 1420,
+      "rd": 40,
+      "games": 258,
+      "wins": 118,
+      "losses": 140,
+      "draws": 0
+    },
+    {
+      "id": "bot-06",
+      "name": "솔숲",
+      "mistake": 0.1,
+      "sims": 16,
+      "rating": 1516,
+      "rd": 40,
+      "games": 258,
+      "wins": 123,
+      "losses": 135,
+      "draws": 0
+    },
+    {
+      "id": "bot-07",
+      "name": "너울",
+      "mistake": 0.06,
+      "sims": 32,
+      "rating": 1635,
+      "rd": 40,
+      "games": 258,
+      "wins": 133,
+      "losses": 125,
+      "draws": 0
+    },
+    {
+      "id": "bot-08",
+      "name": "노을",
+      "mistake": 0.03,
+      "sims": 64,
+      "rating": 1812,
+      "rd": 40,
+      "games": 244,
+      "wins": 162,
+      "losses": 82,
+      "draws": 0
+    },
+    {
+      "id": "bot-09",
+      "name": "벼리",
+      "mistake": 0.01,
+      "sims": 128,
+      "rating": 1858,
+      "rd": 40,
+      "games": 210,
+      "wins": 141,
+      "losses": 69,
+      "draws": 0
+    },
+    {
+      "id": "bot-10",
+      "name": "한결",
+      "mistake": 0,
+      "sims": 200,
+      "rating": 1863,
+      "rd": 40,
+      "games": 156,
+      "wins": 103,
+      "losses": 53,
+      "draws": 0
+    }
+  ]
+}

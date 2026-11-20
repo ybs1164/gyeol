@@ -1,0 +1,887 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GYEOL 디자인 목업</title>
+<style>
+/* 원칙: 단색 면 + 얇은 선. 그림자·빛·그라데이션 없음.
+   입체감은 타일 3D 모델처럼 "아래 두께 띠(단색)" 하나로만 낸다. */
+:root {
+  --bg: #f5f1e8; --surface: #fffcf6; --soft: #ede7da; --ink: #2a2620; --muted: #8c8577; --line: #e3dccd;
+  --green: #3f8f47; --green-d: #2d6b34; --brown: #a8532f; --brown-d: #7a3a20;
+  --arrow: #f3ecdd; --side: #d9c8a6; --danger: #c0482c; --danger-d: #8f3520; --page: #e8e3d8;
+  --t-bronze: #9a6a3c; --t-silver: #8b9096; --t-gold: #c09424; --t-plat: #3c867e; --t-dia: #4467ad; --t-master: #3a3530;
+  --r: 16px;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg: #1c1a17; --surface: #262420; --soft: #312e29; --ink: #f0ebe1; --muted: #9a9387; --line: #3a3732;
+    --green: #47974f; --green-d: #2f6a35; --brown: #b35d37; --brown-d: #7e3e22; --danger: #d4603f; --page: #131210;
+    --t-master: #d8d2c6; color-scheme: dark;
+  }
+}
+:root[data-theme='dark'] {
+  --bg: #1c1a17; --surface: #262420; --soft: #312e29; --ink: #f0ebe1; --muted: #9a9387; --line: #3a3732;
+  --green: #47974f; --green-d: #2f6a35; --brown: #b35d37; --brown-d: #7e3e22; --danger: #d4603f; --page: #131210;
+  --t-master: #d8d2c6; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--page); color: var(--ink);
+  font-family: 'Pretendard', -apple-system, 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+button, input { font: inherit; color: inherit; }
+button { cursor: pointer; }
+
+/* ---------- 목업 페이지 ---------- */
+.page-head { max-width: 1600px; margin: 0 auto; padding: 32px 16px 8px; display: flex; flex-wrap: wrap; gap: 16px; align-items: end; justify-content: space-between; }
+.page-head h1 { margin: 0; font-size: 20px; font-weight: 700; }
+.page-head p { margin: 6px 0 0; font-size: 14px; color: var(--muted); max-width: 760px; line-height: 1.6; }
+.toggle { display: flex; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: var(--surface); }
+.toggle button { border: 0; background: none; padding: 8px 14px; font-size: 13px; color: var(--muted); }
+.toggle button[aria-pressed='true'] { background: var(--ink); color: var(--bg); }
+.flow { max-width: 1600px; margin: 0 auto; padding: 20px 16px 0; }
+.flow h2 { margin: 0; font-size: 14px; font-weight: 700; display: flex; align-items: center; gap: 10px; }
+.flow h2 span { font-weight: 400; color: var(--muted); }
+.frames { max-width: 1600px; margin: 0 auto; padding: 14px 16px 28px; display: flex; flex-wrap: wrap; gap: 24px; }
+.frame-wrap { display: flex; flex-direction: column; gap: 10px; }
+.frame-cap { font-size: 13px; color: var(--muted); }
+.frame-cap b { color: var(--ink); font-weight: 700; margin-right: 6px; }
+.phone {
+  width: 360px; max-width: calc(100vw - 32px); height: 760px; background: var(--bg);
+  border: 1px solid var(--line); border-radius: 30px; overflow: hidden; display: flex; flex-direction: column;
+}
+.phone.tall { height: auto; min-height: 760px; }
+.body { flex: 1; display: flex; flex-direction: column; gap: 16px; padding: 20px 16px; min-height: 0; }
+.notes { max-width: 1600px; margin: 8px auto 64px; padding: 0 16px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; }
+.note { border: 1px solid var(--line); border-radius: 14px; background: var(--surface); padding: 16px; }
+.note h3 { margin: 0 0 8px; font-size: 14px; font-weight: 700; }
+.note ul { margin: 0; padding-left: 18px; font-size: 13px; line-height: 1.7; color: var(--muted); }
+.note b { color: var(--ink); }
+.note table { border-collapse: collapse; font-size: 13px; width: 100%; }
+.note td { padding: 5px 0; border-top: 1px solid var(--line); color: var(--muted); }
+.note td:first-child { color: var(--ink); width: 120px; }
+.note .shots { display: flex; gap: 8px; margin-top: 10px; }
+.note .shots img { width: 64px; height: 64px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); }
+
+/* ---------- 앱 공통 ---------- */
+.ico { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.topbar { display: grid; grid-template-columns: 40px 1fr 40px; align-items: center; height: 40px; flex: none; }
+.topbar h2 { margin: 0; font-size: 16px; font-weight: 700; text-align: center; }
+.topbar .meta { justify-self: end; font-size: 13px; color: var(--muted); white-space: nowrap; }
+.icon-btn { width: 40px; height: 40px; border: 0; background: none; padding: 0; display: grid; place-items: center; border-radius: 12px; margin-left: -8px; }
+.icon-btn svg { width: 22px; height: 22px; }
+.label { margin: 0 0 8px 2px; font-size: 13px; font-weight: 700; color: var(--muted); }
+.muted { color: var(--muted); }
+
+/* 버튼: 타일처럼 아래에 단색 두께 띠 */
+.btn {
+  display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; height: 54px; flex: none;
+  border: 1.5px solid var(--line); border-bottom-width: 4px; border-radius: 14px;
+  background: var(--surface); color: var(--ink); font-size: 16px; font-weight: 700;
+}
+.btn.primary { background: var(--green); border-color: var(--green-d); color: #fffaf0; }
+.btn.dark { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+.btn.sm { height: 46px; font-size: 15px; }
+.btn.pressed { transform: translateY(2px); border-bottom-width: 2px; height: 52px; }
+.btn svg { width: 18px; height: 18px; }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.textlink { border: 0; background: none; padding: 4px; font-size: 14px; color: var(--muted); text-decoration: underline; text-underline-offset: 3px; align-self: center; }
+
+.card { border: 1.5px solid var(--line); border-radius: 18px; background: var(--surface); }
+.group { border: 1.5px solid var(--line); border-radius: 18px; background: var(--surface); overflow: hidden; }
+.item { display: flex; align-items: center; gap: 12px; width: 100%; padding: 12px 14px; border: 0; border-top: 1.5px solid var(--line); background: none; text-align: left; }
+.item:first-child { border-top: 0; }
+.item .txt { flex: 1; min-width: 0; }
+.item .txt b { display: block; font-size: 15px; font-weight: 700; white-space: nowrap; }
+.item .txt small { display: block; margin-top: 2px; font-size: 13px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.item .chev { width: 16px; height: 16px; color: var(--muted); flex: none; }
+.pill { font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 999px; border: 1.5px solid var(--line); color: var(--muted); white-space: nowrap; }
+.pill.go { background: var(--green); border-color: var(--green); color: #fffaf0; }
+.dot { width: 10px; height: 10px; border-radius: 3px; flex: none; display: inline-block; }
+.dot.g { background: var(--green); } .dot.b { background: var(--brown); }
+
+/* 미니 타일: 초록 면 + 아래 두께 띠 (목록 아이콘, 티어 배지 공통) */
+.mini {
+  --c: var(--green); --cd: var(--green-d); --s: 36px;
+  width: var(--s); height: var(--s); flex: none; border-radius: 26%;
+  background: var(--c); border-bottom: calc(var(--s) * 0.11) solid var(--cd);
+  display: grid; place-items: center; color: #fffaf0;
+}
+.mini svg { width: 56%; height: 56%; }
+.mini b { font-size: calc(var(--s) * 0.42); font-weight: 800; line-height: 1; }
+.mini.bronze { --c: var(--t-bronze); --cd: color-mix(in srgb, var(--t-bronze) 70%, #000); }
+.mini.silver { --c: var(--t-silver); --cd: color-mix(in srgb, var(--t-silver) 70%, #000); }
+.mini.gold { --c: var(--t-gold); --cd: color-mix(in srgb, var(--t-gold) 72%, #000); }
+.mini.plat { --c: var(--t-plat); --cd: color-mix(in srgb, var(--t-plat) 70%, #000); }
+.mini.dia { --c: var(--t-dia); --cd: color-mix(in srgb, var(--t-dia) 70%, #000); }
+.mini.master { --c: var(--t-master); --cd: color-mix(in srgb, var(--t-master) 70%, #000); color: var(--bg); }
+.mini.place { --c: transparent; --cd: var(--line); border: 2px dashed var(--muted); color: var(--muted); }
+
+/* 로고 = 초록 타일 하나 (3D 모델 렌더) */
+.logo { display: block; width: var(--s, 40px); height: var(--s, 40px); }
+
+.track { height: 8px; border-radius: 4px; background: var(--soft); overflow: hidden; }
+.track i { display: block; height: 100%; background: var(--green); border-radius: 4px; }
+
+/* 탭 바 */
+.tabbar { flex: none; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1.5px solid var(--line); background: var(--surface); padding: 6px 0 10px; }
+.tabbar button { border: 0; background: none; display: flex; flex-direction: column; align-items: center; gap: 3px; font-size: 11px; font-weight: 600; color: var(--muted); padding: 6px 0; }
+.tabbar button svg { width: 23px; height: 23px; }
+.tabbar button[aria-current='page'] { color: var(--green); }
+
+/* ---------- 로딩: 타일이 90도씩 돈다 ---------- */
+.spin3d { display: block; width: var(--s, 150px); height: auto; }
+.spin3d .rot { transform-origin: 0 0; animation: turn 3.2s infinite; }
+@keyframes turn {
+  0%   { transform: rotate(0deg);   animation-timing-function: cubic-bezier(.45, 0, .25, 1.25); }
+  16%  { transform: rotate(90deg);  }
+  25%  { transform: rotate(90deg);  animation-timing-function: cubic-bezier(.45, 0, .25, 1.25); }
+  41%  { transform: rotate(180deg); }
+  50%  { transform: rotate(180deg); animation-timing-function: cubic-bezier(.45, 0, .25, 1.25); }
+  66%  { transform: rotate(270deg); }
+  75%  { transform: rotate(270deg); animation-timing-function: cubic-bezier(.45, 0, .25, 1.25); }
+  91%  { transform: rotate(360deg); }
+  100% { transform: rotate(360deg); }
+}
+.spin3d .side { fill: var(--side); }
+.spin3d .face { fill: var(--green); }
+.spin3d .ring { fill: var(--green-d); }
+.spin3d .arw { fill: var(--arrow); }
+
+/* ---------- 온보딩 ---------- */
+.splash { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; }
+.splash img { width: 200px; height: 200px; }
+.splash h1 { margin: 0; font-size: 32px; letter-spacing: 0.28em; margin-right: -0.28em; font-weight: 800; }
+.splash .ko { font-size: 14px; color: var(--muted); }
+.splash-foot { text-align: center; font-size: 12px; color: var(--muted); padding-bottom: 28px; }
+.intro { padding-top: 20px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 6px; }
+.intro img { width: 150px; height: 150px; margin-bottom: 4px; }
+.intro h1 { margin: 0; font-size: 26px; font-weight: 800; letter-spacing: 0.2em; margin-right: -0.2em; }
+.intro p { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.6; }
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field span { font-size: 14px; font-weight: 700; }
+.input { width: 100%; height: 54px; border: 1.5px solid var(--line); border-radius: 14px; background: var(--surface); padding: 0 16px; font-size: 17px; font-weight: 600; }
+.input.focus { border-color: var(--green); outline: 1.5px solid var(--green); }
+.field small { font-size: 12px; color: var(--muted); display: flex; justify-content: space-between; }
+.or { display: flex; align-items: center; gap: 10px; font-size: 12px; color: var(--muted); }
+.or::before, .or::after { content: ''; flex: 1; height: 1.5px; background: var(--line); }
+.fine { font-size: 12px; color: var(--muted); text-align: center; line-height: 1.6; margin: 0; }
+
+/* ---------- 로비 ---------- */
+.lobby-head { display: flex; align-items: center; gap: 10px; }
+.lobby-head .logo { --s: 34px; }
+.lobby-head h2 { margin: 0; font-size: 22px; font-weight: 800; flex: 1; }
+.hello { margin: -6px 0 0 2px; font-size: 15px; color: var(--muted); }
+.hello b { color: var(--ink); }
+.profile { padding: 14px; display: flex; flex-direction: column; gap: 12px; }
+.profile-top { display: flex; align-items: center; gap: 12px; }
+.profile-top .mini { --s: 46px; }
+.profile-top .who { flex: 1; min-width: 0; }
+.profile-top .who b { font-size: 17px; font-weight: 800; display: flex; align-items: center; gap: 6px; }
+.profile-top .who b svg { width: 15px; height: 15px; color: var(--muted); }
+.profile-top .who small { display: block; font-size: 13px; color: var(--muted); margin-top: 2px; }
+.wl { text-align: right; font-size: 12px; color: var(--muted); line-height: 1.5; }
+.wl strong { color: var(--ink); font-size: 15px; font-weight: 800; }
+.next .cap { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+.next .cap b { color: var(--ink); }
+.modes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 7px; }
+.mode {
+  border: 1.5px solid var(--line); border-bottom-width: 4px; background: var(--surface); border-radius: 14px;
+  padding: 11px 2px 8px; display: flex; flex-direction: column; align-items: center; gap: 2px;
+}
+.mode b { font-size: 19px; font-weight: 800; }
+.mode small { font-size: 11px; color: var(--muted); font-weight: 600; }
+.mode[aria-pressed='true'] { background: var(--green); border-color: var(--green-d); color: #fffaf0; }
+.mode[aria-pressed='true'] small { color: inherit; opacity: 0.8; }
+.mode-desc { margin: 0 2px; font-size: 13px; color: var(--muted); }
+.pvp { display: flex; flex-direction: column; gap: 10px; }
+.ongoing { display: flex; align-items: center; gap: 10px; padding: 11px 14px; font-size: 14px; font-weight: 600; }
+.ongoing .grow { flex: 1; }
+.ongoing small { font-weight: 400; color: var(--muted); font-size: 12px; }
+
+.body.scroll { overflow-y: auto; scrollbar-width: none; }
+.body.scroll::-webkit-scrollbar { display: none; }
+.cta { flex: none; padding: 10px 16px 12px; border-top: 1.5px solid var(--line); background: var(--bg); }
+.cta { display: flex; flex-direction: column; gap: 10px; }
+.dailies { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; }
+.daily {
+  flex: none; width: 190px; display: flex; align-items: center; gap: 10px; padding: 7px 10px 7px 7px; text-align: left;
+  border: 1.5px solid var(--line); border-bottom-width: 4px; border-radius: 14px; background: var(--surface);
+}
+.daily .txt { min-width: 0; }
+.daily b { display: block; font-size: 14px; font-weight: 800; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.daily small { display: block; font-size: 12px; color: var(--muted); margin-top: 1px; }
+.mboard { position: relative; flex: none; width: 76px; height: 76px; border-radius: 10px; background: var(--bg); border: 1.5px solid var(--line); overflow: hidden; }
+.mboard i { position: absolute; width: 18%; height: 18%; border-radius: 18%; display: grid; place-items: center; }
+.mboard i svg { width: 92%; height: 92%; } .mboard i path { fill: var(--arrow); }
+.mboard i.g { background: var(--green); } .mboard i.b { background: var(--brown); }
+.mboard i.last { outline: 1.5px solid var(--ink); outline-offset: 1px; }
+.daily-row { padding: 9px 14px 9px 9px; }
+.daily-row .mboard { width: 64px; height: 64px; }
+.modes.big { grid-template-columns: 1fr 1fr; gap: 10px; }
+.modes.big .mode { padding: 22px 4px 18px; border-radius: 18px; border-bottom-width: 5px; }
+.modes.big .mode b { font-size: 30px; }
+.modes.big .mode small { font-size: 13px; }
+.mi { display: inline-grid; place-items: center; flex: none; }
+.mi svg { width: 100%; height: 100%; }
+.mode .mi { width: 30px; height: 30px; margin-bottom: 6px; color: var(--green); }
+.mode[aria-pressed='true'] .mi { color: #fffaf0; }
+.btn .mi { width: 19px; height: 19px; }
+.item small .mi, .log small .mi { width: 13px; height: 13px; vertical-align: -2px; margin-right: 4px; }
+.seg .mi { width: 13px; height: 13px; vertical-align: -2px; margin-right: 3px; }
+.seg button { display: inline-flex; align-items: center; justify-content: center; }
+/* 결과 팝업 */
+.phone.has-pop { position: relative; }
+.scrim { position: absolute; inset: 0; background: rgba(28, 24, 18, 0.5); display: grid; place-items: center; padding: 24px; }
+.popup { width: 100%; background: var(--surface); border: 1.5px solid var(--line); border-bottom-width: 5px; border-radius: 24px; padding: 18px 18px 14px; display: flex; flex-direction: column; align-items: stretch; gap: 12px; text-align: center; }
+.popup img { width: 96px; height: 96px; align-self: center; margin-top: -4px; }
+.popup h3 { margin: -6px 0 0; font-size: 28px; font-weight: 800; }
+.score-line { display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 22px; font-variant-numeric: tabular-nums; }
+.score-line b { font-weight: 800; }
+.popup .delta { text-align: left; }
+/* 레이팅 */
+.rating-link { display: flex; align-items: center; gap: 10px; width: 100%; padding: 0 14px; height: 56px; text-align: left; }
+.rating-link .k { flex: 1; font-size: 15px; font-weight: 700; }
+.rating-link .v { display: flex; align-items: baseline; gap: 6px; }
+.rating-link .v b { font-size: 18px; font-weight: 800; font-variant-numeric: tabular-nums; }
+.rating-link .chev { width: 16px; height: 16px; color: var(--muted); }
+.rating-hero { display: flex; align-items: center; gap: 14px; }
+.rating-hero .mini { --s: 56px; }
+.rating-hero b { display: block; font-size: 38px; font-weight: 800; line-height: 1; font-variant-numeric: tabular-nums; }
+.rating-hero small { font-size: 14px; color: var(--muted); }
+.stats.three { grid-template-columns: repeat(3, 1fr); }
+.ladder .row-v { gap: 12px; min-height: 46px; }
+.ladder .row-v.cur { background: var(--soft); }
+.btn.play { height: 58px; font-size: 18px; font-weight: 800; gap: 10px; }
+.tagx { font-size: 13px; font-weight: 700; padding: 3px 9px; border-radius: 999px; background: var(--green-d); }
+
+/* ---------- 설정 ---------- */
+.row-v { display: flex; align-items: center; gap: 10px; width: 100%; min-height: 52px; padding: 0 14px; border: 0; border-top: 1.5px solid var(--line); background: none; text-align: left; font-size: 15px; font-weight: 600; }
+.row-v:first-child { border-top: 0; }
+.row-v .k { flex: 1; }
+.row-v .v { color: var(--muted); font-weight: 500; font-size: 14px; }
+.row-v .chev { width: 16px; height: 16px; color: var(--muted); }
+.switch { width: 48px; height: 28px; border-radius: 14px; background: var(--soft); border: 1.5px solid var(--line); position: relative; flex: none; }
+.switch::after { content: ''; position: absolute; top: 2px; left: 2px; width: 21px; height: 21px; border-radius: 50%; background: var(--surface); border: 1.5px solid var(--line); }
+.switch.on { background: var(--green); border-color: var(--green-d); }
+.switch.on::after { left: 21px; border-color: var(--green-d); }
+.skins { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.skin { border: 1.5px solid var(--line); border-bottom-width: 4px; border-radius: 14px; background: var(--surface); padding: 12px; display: flex; flex-direction: column; gap: 10px; text-align: left; }
+.skin[aria-pressed='true'] { border-color: var(--green); outline: 1.5px solid var(--green); }
+.skin .pair { display: flex; gap: 5px; }
+.skin .pair .mini { --s: 26px; }
+.skin b { font-size: 13px; font-weight: 700; }
+.server { display: flex; gap: 8px; padding: 12px 14px; }
+.server .input { height: 46px; font-size: 15px; flex: 1; min-width: 0; }
+.server .btn { width: auto; padding: 0 14px; height: 46px; font-size: 14px; }
+.okline { display: flex; align-items: center; gap: 6px; padding: 0 14px 12px; font-size: 13px; font-weight: 700; color: var(--green); }
+
+/* ---------- 매칭 ---------- */
+.matching { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px; text-align: center; }
+.hop { width: 120px; height: 120px; animation: hop 1.1s ease-in-out infinite; }
+@keyframes hop { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-14px) rotate(-6deg); } }
+.wait-time { font-size: 34px; font-weight: 800; font-variant-numeric: tabular-nums; }
+.matching h3 { margin: 0; font-size: 21px; font-weight: 800; }
+.matching p { margin: 4px 0 0; font-size: 14px; color: var(--muted); }
+.kv { width: 100%; display: grid; grid-template-columns: 1fr 1fr 1fr; }
+.kv div { padding: 12px 4px; text-align: center; border-left: 1.5px solid var(--line); }
+.kv div:first-child { border-left: 0; }
+.kv b { display: block; font-size: 18px; font-weight: 800; font-variant-numeric: tabular-nums; }
+.kv span { font-size: 12px; color: var(--muted); }
+
+/* ---------- 온라인 대국 ---------- */
+.player { display: flex; align-items: center; gap: 10px; padding: 9px 10px; }
+.player .mini { --s: 32px; }
+.player .who { flex: 1; min-width: 0; }
+.player .who b { display: block; font-size: 15px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.player .who small { font-size: 12px; color: var(--muted); display: flex; align-items: center; gap: 5px; }
+.player .tiles { font-size: 21px; font-weight: 800; font-variant-numeric: tabular-nums; min-width: 26px; text-align: right; }
+.clock {
+  min-width: 76px; height: 40px; border-radius: 11px; border: 1.5px solid var(--line); border-bottom-width: 3px;
+  display: grid; place-items: center; font-size: 18px; font-weight: 800; font-variant-numeric: tabular-nums; color: var(--muted);
+}
+.clock.on { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+.clock.on.low { background: var(--danger); border-color: var(--danger-d); color: #fffaf0; }
+.clock.low { border-color: var(--danger); color: var(--danger); }
+.player { padding: 4px 2px; }
+.tile.last { outline: 2.5px solid var(--ink); outline-offset: 2px; border-radius: 14%; }
+.status { margin: 0; text-align: center; font-size: 14px; color: var(--muted); min-height: 20px; }
+.status b { color: var(--ink); }
+
+/* 판 */
+.board { position: relative; width: 100%; aspect-ratio: 1; border-radius: 20px; background: var(--surface); border: 1.5px solid var(--line); overflow: hidden; flex: none; }
+.grid { position: absolute; inset: 0; }
+.grid circle { fill: var(--line); }
+.slot { position: absolute; width: calc(100% / 7); height: calc(100% / 7); padding: 0.5%; display: grid; place-items: center; }
+.tile { height: 100%; aspect-ratio: 100 / 112; position: relative; }
+.tile svg { display: block; width: 100%; height: 100%; }
+.tile.sel { outline: 2.5px solid var(--ink); outline-offset: 2px; border-radius: 14%; }
+.t3 .side { fill: var(--side); }
+.t3 .face { fill: var(--c); }
+.t3 .ring { fill: var(--cd); }
+.t3 .arw { fill: var(--arrow); }
+.t3 .mk { fill: var(--arrow); }
+.t3.g { --c: var(--green); --cd: var(--green-d); } .t3.b { --c: var(--brown); --cd: var(--brown-d); }
+.t3 .tgt { fill: none; stroke: var(--c); stroke-width: 3.5; stroke-dasharray: 9 7; }
+.t3 .ghost { opacity: 0.4; }
+.chevbtn { position: absolute; width: calc(100% / 7); height: calc(100% / 7); display: grid; place-items: center; z-index: 2; }
+.chevbtn span { width: 50%; height: 50%; border-radius: 50%; background: var(--surface); border: 2px solid var(--ink); display: grid; place-items: center; }
+.chevbtn.on span { background: var(--ink); }
+.chevbtn svg { width: 54%; height: 54%; } .chevbtn path { fill: var(--ink); } .chevbtn.on path { fill: var(--surface); }
+.game-actions { display: flex; gap: 8px; margin-top: auto; }
+.game-actions .btn { height: 46px; font-size: 14px; flex: 1; width: auto; }
+
+/* 결과 */
+.result { padding: 18px 16px 16px; display: flex; flex-direction: column; gap: 14px; }
+.result-top { display: flex; align-items: center; gap: 12px; }
+.result-top img { width: 52px; height: 52px; }
+.result h3 { margin: 0; font-size: 24px; font-weight: 800; }
+.result .sub { font-size: 13px; color: var(--muted); }
+.delta { display: flex; align-items: center; gap: 12px; }
+.delta .mini { --s: 40px; }
+.delta .nums { flex: 1; }
+.delta .nums b { font-size: 22px; font-weight: 800; font-variant-numeric: tabular-nums; }
+.delta .nums small { display: block; font-size: 12px; color: var(--muted); }
+.plus { font-size: 15px; font-weight: 800; color: var(--green); font-variant-numeric: tabular-nums; }
+.minus { font-size: 15px; font-weight: 800; color: var(--danger); font-variant-numeric: tabular-nums; }
+
+/* ---------- 내 정보 ---------- */
+.page-title { margin: 4px 0 0; font-size: 22px; font-weight: 800; }
+.me-head { display: flex; align-items: center; gap: 14px; }
+.me-head .mini { --s: 62px; }
+.me-head b { font-size: 20px; font-weight: 800; display: block; }
+.me-head small { font-size: 13px; color: var(--muted); }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); }
+.stats div { padding: 12px 2px; text-align: center; border-left: 1.5px solid var(--line); }
+.stats div:first-child { border-left: 0; }
+.stats b { display: block; font-size: 18px; font-weight: 800; font-variant-numeric: tabular-nums; }
+.stats span { font-size: 11px; color: var(--muted); }
+.chart { padding: 12px 12px 8px; }
+.chart svg { width: 100%; height: 76px; display: block; }
+.chart .ln { fill: none; stroke: var(--green); stroke-width: 2.5; vector-effect: non-scaling-stroke; stroke-linejoin: round; stroke-linecap: round; }
+.chart .gl { stroke: var(--line); stroke-dasharray: 3 3; vector-effect: non-scaling-stroke; }
+.chart .cap { display: flex; justify-content: space-between; font-size: 11px; color: var(--muted); margin-top: 4px; }
+.seg { display: flex; padding: 3px; gap: 3px; border-radius: 13px; background: var(--soft); }
+.seg button { flex: 1; height: 34px; border: 0; border-radius: 10px; background: none; font-size: 13px; font-weight: 600; color: var(--muted); }
+.seg button[aria-pressed='true'] { background: var(--surface); color: var(--ink); font-weight: 800; outline: 1.5px solid var(--line); }
+.log .item { padding: 11px 14px; gap: 10px; }
+.res { width: 30px; height: 30px; border-radius: 9px; display: grid; place-items: center; font-size: 13px; font-weight: 800; flex: none; }
+.res.w { background: var(--green); color: #fffaf0; border-bottom: 3px solid var(--green-d); }
+.res.l { border: 1.5px solid var(--line); border-bottom-width: 3px; color: var(--muted); }
+.res.d { background: var(--soft); color: var(--muted); }
+.log .mini { --s: 18px; display: inline-grid; vertical-align: -3px; margin-right: 5px; border-bottom-width: 2px; }
+.log .mini b { font-size: 9px; }
+</style>
+</head>
+<body>
+<header class="page-head">
+  <div>
+    <h1>GYEOL · 서비스 흐름 목업 v5 (타일 3D 모델 기반)</h1>
+    <p>단색 면과 아래 두께 띠만, 그림자·빛·그라데이션 없음.</p>
+  </div>
+  <div class="toggle" role="group" aria-label="테마">
+    <button data-t="light">라이트</button>
+    <button data-t="dark">다크</button>
+  </div>
+</header>
+
+<!-- ================= 온보딩 ================= -->
+<div class="flow"><h2>온보딩 <span>로고 → 로그인·시작</span></h2></div>
+<main class="frames">
+  <div class="frame-wrap">
+    <div class="frame-cap"><b>1 로고</b>3D 타일 렌더 + 워드마크</div>
+    <div class="phone">
+      <div class="splash">
+        <img src="mockup-assets/tile_green_hero.png" alt="" />
+        <h1>GYEOL</h1>
+        <div class="ko">결</div>
+      </div>
+      <div class="splash-foot">v0.4</div>
+    </div>
+  </div>
+
+  <div class="frame-wrap">
+    <div class="frame-cap"><b>2 로그인·시작</b>처음 한 번만 · 닉네임 정하기</div>
+    <div class="phone">
+      <div class="body">
+        <div class="intro">
+          <img src="mockup-assets/tile_green_hero.png" alt="" />
+          <h1>GYEOL</h1>
+        </div>
+        <div style="flex:1"></div>
+        <label class="field">
+          <span>닉네임</span>
+          <input class="input focus" value="결바람" />
+        </label>
+        <button class="btn primary">시작</button>
+        <div class="or">또는</div>
+        <button class="btn">Google 계정으로 계속</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- ================= 메인 ================= -->
+<div class="flow"><h2>메인 <span>하단 탭: 내 정보 · 로비 · 설정</span></h2></div>
+<main class="frames">
+  <!-- 3. 로비 -->
+  <div class="frame-wrap">
+    <div class="frame-cap"><b>3 로비</b>내 차례 데일리 대국 · 혼자 하기 · 플레이 버튼 고정</div>
+    <div class="phone">
+      <div class="body scroll">
+        <div class="lobby-head">
+          <img class="logo" src="mockup-assets/tile_green_front.png" alt="GYEOL" />
+          <h2>로비</h2>
+        </div>
+
+        <div class="card profile">
+          <div class="profile-top">
+            <span class="mini gold"><b>G</b></span>
+            <div class="who">
+              <b>결바람 <svg viewBox="0 0 24 24" class="ico"><path d="M4 20h4L19 9l-4-4L4 16v4zM13.5 6.5l4 4"/></svg></b>
+              <small>골드 · 1532</small>
+            </div>
+            <div class="wl"><strong>12승 8패</strong><br>승률 60%</div>
+          </div>
+        </div>
+
+        <section>
+          <p class="label">온라인 대국</p>
+          <div class="group">
+            <button class="item daily-row"><span class="mboard" id="mini-1"></span><span class="txt"><b>vs 산들</b><small><i class="mi" data-i="daily"></i>1일 · 18시간 남음</small></span><svg class="chev ico" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+            <button class="item daily-row"><span class="mboard" id="mini-2"></span><span class="txt"><b>vs 바위결</b><small><i class="mi" data-i="daily"></i>1일 · 3시간 남음</small></span><svg class="chev ico" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+          </div>
+        </section>
+
+        <section>
+          <p class="label">혼자 하기</p>
+          <div class="group">
+            <button class="item">
+              <span class="mini"><svg viewBox="0 0 24 24" class="ico"><rect x="5" y="7" width="14" height="11" rx="2.5"/><path d="M12 7V4M9.5 12h.01M14.5 12h.01M9.5 15h5"/></svg></span>
+              <span class="txt"><b>AI와 대국</b><small>입문 · 보통 · 어려움 · 최강</small></span>
+              <svg class="chev ico" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>
+            </button>
+            <button class="item">
+              <span class="mini"><svg viewBox="0 0 24 24" class="ico"><rect x="4" y="5" width="16" height="15" rx="2.5"/><path d="M4 10h16M9 3v4M15 3v4"/></svg></span>
+              <span class="txt"><b>오늘의 퍼즐</b><small>한 수로 가장 많이 뒤집기</small></span>
+              <span class="pill">3일 연속</span>
+              <svg class="chev ico" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>
+            </button>
+            <button class="item">
+              <span class="mini"><svg viewBox="0 0 24 24" class="ico"><path d="M7 7h11l-3-3M17 17H6l3 3"/></svg></span>
+              <span class="txt"><b>둘이서 대국</b><small>한 기기로 번갈아 두기</small></span>
+              <svg class="chev ico" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>
+            </button>
+            <button class="item">
+              <span class="mini"><svg viewBox="0 0 24 24" class="ico"><path d="M5 5.5A1.5 1.5 0 0 1 6.5 4H19v14H6.5A1.5 1.5 0 0 0 5 19.5v-14zM5 19.5A1.5 1.5 0 0 0 6.5 21H19"/></svg></span>
+              <span class="txt"><b>규칙 배우기</b><small>6단계 직접 두기 · 3분</small></span>
+              <svg class="chev ico" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+        </section>
+      </div>
+      <div class="cta">
+        <button class="btn primary play">플레이</button>
+      </div>
+      <nav class="tabbar" data-tab="1"></nav>
+    </div>
+  </div>
+
+  <!-- 4. 플레이 -->
+  <div class="frame-wrap">
+    <div class="frame-cap"><b>4 플레이</b>플레이를 누르면 열리는 화면 · 시간 모드 + 친구</div>
+    <div class="phone">
+      <div class="body">
+        <div class="topbar">
+          <button class="icon-btn" aria-label="뒤로"><svg viewBox="0 0 24 24" class="ico"><path d="M15 6l-6 6 6 6"/></svg></button>
+          <h2>플레이</h2><span></span>
+        </div>
+        <section>
+          <p class="label">랭크 대국</p>
+          <div class="modes big">
+            <button class="mode" aria-pressed="false"><i class="mi" data-i="bullet"></i><b>1분</b><small>불릿</small></button>
+            <button class="mode" aria-pressed="true"><i class="mi" data-i="blitz"></i><b>3분</b><small>블리츠</small></button>
+            <button class="mode" aria-pressed="false"><i class="mi" data-i="rapid"></i><b>5분</b><small>래피드</small></button>
+            <button class="mode" aria-pressed="false"><i class="mi" data-i="daily"></i><b>1일</b><small>데일리</small></button>
+          </div>
+        </section>
+        <section>
+          <p class="label">친구와</p>
+          <div class="row2">
+            <button class="btn sm"><i class="mi" data-i="invite"></i>친구 초대</button>
+            <button class="btn sm"><i class="mi" data-i="code"></i>코드로 참가</button>
+          </div>
+        </section>
+        <div style="flex:1"></div>
+        <button class="btn primary play">매칭 시작</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. 매칭 중 -->
+  <div class="frame-wrap">
+    <div class="frame-cap"><b>5 매칭 중</b>타일이 90도씩 회전 · 기다린 시간만</div>
+    <div class="phone">
+      <div class="body">
+        <div class="matching">
+          <div class="spin-slot" style="--s:130px"></div>
+          <div class="wait-time">0:12</div>
+        </div>
+        <button class="btn">취소</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. 온라인 대국 -->
+  <div class="frame-wrap">
+    <div class="frame-cap"><b>6 온라인 대국</b>마지막에 놓인 타일만 표시</div>
+    <div class="phone">
+      <div class="body" style="gap:10px">
+        <div class="topbar">
+          <button class="icon-btn" aria-label="나가기"><svg viewBox="0 0 24 24" class="ico"><path d="M15 6l-6 6 6 6"/></svg></button>
+        </div>
+        <div style="flex:1"></div>
+        <div class="player">
+          <span class="mini silver"><b>S</b></span>
+          <div class="who"><b>모래알</b><small><span class="dot b"></span>실버 · 1478</small></div>
+          <span class="clock">1:42</span>
+        </div>
+        <div class="board" id="board-play"></div>
+        <div class="player">
+          <span class="mini gold"><b>G</b></span>
+          <div class="who"><b>결바람</b><small><span class="dot g"></span>골드 · 1532</small></div>
+          <span class="clock low">0:24</span>
+        </div>
+        <div style="flex:1.4"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. 대국 종료 (팝업) -->
+  <div class="frame-wrap">
+    <div class="frame-cap"><b>7 대국 종료</b>대국 화면 그대로 + 결과 팝업</div>
+    <div class="phone has-pop">
+      <div class="body" style="gap:10px">
+        <div class="topbar">
+          <button class="icon-btn" aria-label="나가기"><svg viewBox="0 0 24 24" class="ico"><path d="M15 6l-6 6 6 6"/></svg></button>
+        </div>
+        <div style="flex:1"></div>
+        <div class="player">
+          <span class="mini silver"><b>S</b></span>
+          <div class="who"><b>모래알</b><small><span class="dot b"></span>실버 · 1478</small></div>
+          <span class="clock">0:51</span>
+        </div>
+        <div class="board" id="board-end"></div>
+        <div class="player">
+          <span class="mini gold"><b>G</b></span>
+          <div class="who"><b>결바람</b><small><span class="dot g"></span>골드 · 1532</small></div>
+          <span class="clock">0:09</span>
+        </div>
+        <div style="flex:1.4"></div>
+      </div>
+      <div class="scrim">
+        <div class="popup">
+          <img src="mockup-assets/tile_green_hero.png" alt="" />
+          <h3>승리</h3>
+          <div class="score-line"><span class="dot g"></span><b>14</b><span class="muted">:</span><b>11</b><span class="dot b"></span></div>
+          <div class="delta">
+            <span class="mini gold"><b>G</b></span>
+            <div class="nums"><b>1548</b> <span class="plus">+16</span><small>플래티넘까지 52</small></div>
+          </div>
+          <div class="track"><i style="width:74%"></i></div>
+          <div class="row2">
+            <button class="btn primary">한 판 더</button>
+            <button class="btn">복기</button>
+          </div>
+          <button class="textlink">로비로</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8. 내 정보 -->
+  <div class="frame-wrap">
+    <div class="frame-cap"><b>8 내 정보</b>프로필 · 전적 · 대국 로그 (레이팅은 별도 화면)</div>
+    <div class="phone tall">
+      <div class="body">
+        <h2 class="page-title">내 정보</h2>
+        <div class="me-head">
+          <span class="mini gold"><b>G</b></span>
+          <div style="flex:1"><b>결바람</b><small>골드</small></div>
+        </div>
+        <div class="card stats">
+          <div><b>21</b><span>대국</span></div>
+          <div><b>13</b><span>승</span></div>
+          <div><b>8</b><span>패</span></div>
+          <div><b>62%</b><span>승률</span></div>
+        </div>
+        <button class="card rating-link">
+          <span class="k">레이팅</span>
+          <span class="v"><b>1548</b><span class="plus">+23</span></span>
+          <svg class="chev ico" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>
+        </button>
+        <div class="seg">
+          <button aria-pressed="true">전체</button><button><i class="mi" data-i="bullet"></i>1분</button><button><i class="mi" data-i="blitz"></i>3분</button><button><i class="mi" data-i="rapid"></i>5분</button><button><i class="mi" data-i="daily"></i>1일</button>
+        </div>
+        <div class="group log">
+          <div class="item"><span class="res w">승</span><span class="txt"><b><span class="mini silver"><b>S</b></span>모래알</b><small><i class="mi" data-i="blitz"></i>3분 · 14 : 11 · 방금</small></span><span class="plus">+16</span></div>
+          <div class="item"><span class="res l">패</span><span class="txt"><b><span class="mini plat"><b>P</b></span>바위결</b><small><i class="mi" data-i="bullet"></i>1분 · 시간 초과 · 2시간 전</small></span><span class="minus">−9</span></div>
+          <div class="item"><span class="res w">승</span><span class="txt"><b><span class="mini gold"><b>G</b></span>산들</b><small><i class="mi" data-i="daily"></i>1일 · 15 : 10 · 어제</small></span><span class="plus">+12</span></div>
+          <div class="item"><span class="res d">무</span><span class="txt"><b><span class="mini gold"><b>G</b></span>나무늘보</b><small><i class="mi" data-i="rapid"></i>5분 · 12 : 12 · 11월 9일</small></span><span class="muted" style="font-size:15px;font-weight:800">0</span></div>
+          <div class="item"><span class="res w">승</span><span class="txt"><b>AI · 어려움</b><small>혼자 하기 · 15 : 10 · 11월 8일</small></span><span class="muted" style="font-size:12px">레이팅 없음</span></div>
+        </div>
+      </div>
+      <nav class="tabbar" data-tab="0"></nav>
+    </div>
+  </div>
+
+  <!-- 9. 레이팅 -->
+  <div class="frame-wrap">
+    <div class="frame-cap"><b>9 레이팅</b>내 정보 → 레이팅</div>
+    <div class="phone tall">
+      <div class="body">
+        <div class="topbar">
+          <button class="icon-btn" aria-label="뒤로"><svg viewBox="0 0 24 24" class="ico"><path d="M15 6l-6 6 6 6"/></svg></button>
+          <h2>레이팅</h2><span></span>
+        </div>
+        <div class="rating-hero">
+          <span class="mini gold"><b>G</b></span>
+          <div><b>1548</b><small>골드</small></div>
+        </div>
+        <div class="next">
+          <div class="cap"><span>플래티넘 1600</span><b>52</b></div>
+          <div class="track"><i style="width:74%"></i></div>
+        </div>
+        <div class="seg">
+          <button>7일</button><button aria-pressed="true">30일</button><button>전체</button>
+        </div>
+        <div class="card chart">
+          <svg viewBox="0 0 100 40" preserveAspectRatio="none">
+            <line class="gl" x1="0" y1="20" x2="100" y2="20"/>
+            <polyline class="ln" points="0,30 8,27 16,31 24,24 32,22 40,25 48,19 56,21 64,15 72,17 80,12 88,14 100,9"/>
+          </svg>
+          <div class="cap"><span>10월 12일</span><span>오늘</span></div>
+        </div>
+        <div class="card stats three">
+          <div><b>1561</b><span>최고</span></div>
+          <div><b>1402</b><span>최저</span></div>
+          <div><b class="plus" style="font-size:18px">+23</b><span>7일 변화</span></div>
+        </div>
+        <section>
+          <p class="label">티어</p>
+          <div class="group ladder">
+            <div class="row-v"><span class="mini master" style="--s:22px"></span><span class="k">마스터</span><span class="v">1900~</span></div>
+            <div class="row-v"><span class="mini dia" style="--s:22px"></span><span class="k">다이아</span><span class="v">1750~</span></div>
+            <div class="row-v"><span class="mini plat" style="--s:22px"></span><span class="k">플래티넘</span><span class="v">1600~</span></div>
+            <div class="row-v cur"><span class="mini gold" style="--s:22px"></span><span class="k">골드</span><span class="pill go">현재</span><span class="v">1500~</span></div>
+            <div class="row-v"><span class="mini silver" style="--s:22px"></span><span class="k">실버</span><span class="v">1300~</span></div>
+            <div class="row-v"><span class="mini bronze" style="--s:22px"></span><span class="k">브론즈</span><span class="v">~1299</span></div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- 10. 설정 -->
+  <div class="frame-wrap">
+    <div class="frame-cap"><b>10 설정</b>계정 · 타일 색 · 게임 · 일반 · 정보</div>
+    <div class="phone tall">
+      <div class="body">
+        <h2 class="page-title">설정</h2>
+
+        <section>
+          <p class="label">계정</p>
+          <div class="group">
+            <button class="row-v"><span class="k">닉네임</span><span class="v">결바람</span><svg class="chev ico" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+            <button class="row-v"><span class="k">계정 연결</span><span class="v">게스트</span><svg class="chev ico" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+          </div>
+        </section>
+
+        <section>
+          <p class="label">타일 색</p>
+          <div class="skins">
+            <button class="skin" aria-pressed="true"><span class="pair"><span class="mini" style="--c:#3f8f47;--cd:#2d6b34"></span><span class="mini" style="--c:#a8532f;--cd:#7a3a20"></span></span><b>원목 (기본)</b></button>
+            <button class="skin" aria-pressed="false"><span class="pair"><span class="mini" style="--c:#2f6e6b;--cd:#1f4e4c"></span><span class="mini" style="--c:#c0573a;--cd:#8c3e29"></span></span><b>딥 틸 · 테라코타</b></button>
+            <button class="skin" aria-pressed="false"><span class="pair"><span class="mini" style="--c:#4f9893;--cd:#386e6a"></span><span class="mini" style="--c:#d9735a;--cd:#a35441"></span></span><b>시글라스 · 산호</b></button>
+            <button class="skin" aria-pressed="false"><span class="pair"><span class="mini" style="--c:#2f6db5;--cd:#204f85"></span><span class="mini" style="--c:#d9822b;--cd:#a2601e"></span></span><b>파랑 · 주황</b></button>
+          </div>
+        </section>
+
+        <section>
+          <p class="label">게임</p>
+          <div class="group">
+            <div class="row-v"><span class="k">소리</span><span class="switch on"></span></div>
+            <div class="row-v"><span class="k">진동</span><span class="switch"></span></div>
+          </div>
+        </section>
+
+        <section>
+          <p class="label">일반</p>
+          <div class="group">
+            <button class="row-v"><span class="k">언어</span><span class="v">한국어</span><svg class="chev ico" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+            <button class="row-v"><span class="k">화면 모드</span><span class="v">기기 설정</span><svg class="chev ico" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+          </div>
+        </section>
+
+        <section>
+          <p class="label">정보</p>
+          <div class="group">
+            <div class="row-v"><span class="k">버전</span><span class="v">0.4.0</span></div>
+            <button class="row-v"><span class="k">오픈소스 라이선스</span><svg class="chev ico" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+          </div>
+        </section>
+      </div>
+      <nav class="tabbar" data-tab="2"></nav>
+    </div>
+  </div>
+</main>
+
+
+<section class="notes">
+  <div class="note"><h3>타일 3D 모델 활용</h3><ul>
+    <li><b>로고·아이콘</b>: 초록 타일 하나. 실제 모델(20×20×4mm, 홈 파인 제비꼬리 화살표)을 Blender Workbench "Flat"으로 렌더해 면마다 단색</li>
+    <li><b>판 위 타일</b>: 같은 모델의 화살표·테두리 홈 좌표를 그대로 SVG로 옮기고, 아래에 나무 옆면 띠(두께 비율 그대로)</li>
+    <li><b>캐주얼 요소</b>: 버튼·시간 모드·티어 배지·목록 아이콘도 타일처럼 아래 띠 하나. 눌리면 띠가 얇아지며 내려감</li>
+    <li>렌더 스크립트: tools/render_tile_flat.py</li>
+  </ul>
+  <div class="shots"><img src="mockup-assets/tile_green_front.png" alt=""><img src="mockup-assets/tile_green_hero.png" alt=""><img src="mockup-assets/tile_brown_front.png" alt=""><img src="mockup-assets/tile_brown_hero.png" alt=""></div>
+  </div>
+  <div class="note"><h3>티어 (레이팅 구간)</h3>
+    <table>
+      <tr><td><span class="mini place" style="--s:20px;display:inline-grid;vertical-align:-5px;margin-right:6px"></span>배치</td><td>첫 5판으로 시작 레이팅 결정</td></tr>
+      <tr><td><span class="mini bronze" style="--s:20px;display:inline-grid;vertical-align:-5px;margin-right:6px"></span>브론즈</td><td>~1299</td></tr>
+      <tr><td><span class="mini silver" style="--s:20px;display:inline-grid;vertical-align:-5px;margin-right:6px"></span>실버</td><td>1300–1499</td></tr>
+      <tr><td><span class="mini gold" style="--s:20px;display:inline-grid;vertical-align:-5px;margin-right:6px"></span>골드</td><td>1500–1599</td></tr>
+      <tr><td><span class="mini plat" style="--s:20px;display:inline-grid;vertical-align:-5px;margin-right:6px"></span>플래티넘</td><td>1600–1749</td></tr>
+      <tr><td><span class="mini dia" style="--s:20px;display:inline-grid;vertical-align:-5px;margin-right:6px"></span>다이아</td><td>1750–1899</td></tr>
+      <tr><td><span class="mini master" style="--s:20px;display:inline-grid;vertical-align:-5px;margin-right:6px"></span>마스터</td><td>1900~</td></tr>
+    </table>
+  </div>
+  <div class="note"><h3>온라인 시간 모드 · 흐름</h3><ul>
+    <li><b>1분·3분·5분</b>: 각자 한 판 전체 시간, 0이 되면 패배</li>
+    <li><b>1일</b>: 한 수에 24시간, 여러 판 동시 진행</li>
+    <li>매칭은 같은 모드끼리. MVP는 레이팅·티어 하나를 모든 모드가 공유</li>
+    <li>온보딩 = 로고 + 시작. 로그인은 MVP에서 게스트, Google 연결은 2차</li>
+    <li>탭: 로비 · 내 정보 · 설정 (랭킹 탭은 MVP 제외)</li>
+  </ul></div>
+  <div class="note"><h3>v6 변경</h3><ul>
+    <li><b>하단 탭</b>: 내 정보 · 로비 · 설정 (로비가 가운데)</li>
+    <li><b>로비</b>: 온라인 대국 = 내 차례 데일리 대국(판 미리보기). 아래 고정 버튼은 "플레이"만</li>
+    <li><b>플레이 화면</b>: 1분·3분·5분·1일 선택 + 친구 초대·코드로 참가 → 매칭 시작</li>
+    <li><b>모드 아이콘</b>: 1분 불릿 = 총알, 3분 블리츠 = 번개, 5분 래피드 = 스톱워치, 1일 데일리 = 해. 플레이 카드·데일리 대국·기록 필터·기록 줄에 공통. 설정 탭은 해와 겹치지 않게 톱니바퀴로</li>
+    <li><b>대국</b>: 시계 왼쪽 타일 수 삭제</li>
+    <li><b>대국 종료</b>: 상대·나 정보 유지, 결과는 팝업(점수, 레이팅 변동, 한 판 더·복기)</li>
+    <li><b>레이팅</b>: 내 정보에서 분리한 별도 화면(현재·다음 티어·그래프·최고/최저·티어표)</li>
+  </ul></div>
+</section>
+
+<script>
+// 타일 형상: arrow_geom.py (swallow) 좌표를 100단위로 옮긴 것. 오른쪽을 가리킴.
+const INNER = 'M81.28 51.35 L81.56 50.94 L81.74 50.49 L81.80 50.00 L81.74 49.51 L81.56 49.06 L81.28 48.65 L60.98 26.33 L60.34 25.86 L59.56 25.67 L58.78 25.81 L58.11 26.24 L57.66 26.89 L57.50 27.67 L57.50 33.50 L57.36 34.54 L56.96 35.50 L56.33 36.33 L55.50 36.96 L54.54 37.36 L53.50 37.50 L21.66 37.50 L20.93 37.64 L20.30 38.03 L19.86 38.63 L19.67 39.35 L19.75 40.09 L20.10 40.75 L25.50 47.50 L25.98 48.26 L26.28 49.11 L26.38 50.00 L26.28 50.89 L25.98 51.74 L25.50 52.50 L20.10 59.25 L19.75 59.91 L19.67 60.65 L19.86 61.37 L20.30 61.97 L20.93 62.36 L21.66 62.50 L53.50 62.50 L54.54 62.64 L55.50 63.04 L56.33 63.67 L56.96 64.50 L57.36 65.46 L57.50 66.50 L57.50 72.33 L57.66 73.11 L58.11 73.76 L58.78 74.19 L59.56 74.33 L60.34 74.14 L60.98 73.67 Z';
+const OUTER = 'M83.50 53.36 L84.20 52.36 L84.65 51.22 L84.80 50.00 L84.65 48.78 L84.20 47.64 L83.50 46.64 L63.20 24.31 L61.60 23.13 L59.66 22.68 L57.70 23.01 L56.02 24.08 L54.90 25.72 L54.50 27.67 L54.50 33.50 L54.47 33.76 L54.37 34.00 L54.21 34.21 L54.00 34.37 L53.76 34.47 L53.50 34.50 L21.66 34.50 L19.83 34.85 L18.26 35.84 L17.15 37.33 L16.67 39.13 L16.89 40.98 L17.76 42.62 L23.16 49.38 L23.28 49.57 L23.35 49.78 L23.38 50.00 L23.35 50.22 L23.28 50.43 L23.16 50.62 L17.76 57.38 L16.89 59.02 L16.67 60.87 L17.15 62.67 L18.26 64.16 L19.83 65.15 L21.66 65.50 L53.50 65.50 L53.76 65.53 L54.00 65.63 L54.21 65.79 L54.37 66.00 L54.47 66.24 L54.50 66.50 L54.50 72.33 L54.90 74.28 L56.02 75.92 L57.70 76.99 L59.66 77.32 L61.60 76.87 L63.20 75.69 Z';
+// 로딩 타일: 옆면을 몇 겹 쌓아 두께를 만들고, 모든 겹이 각자 중심에서 같이 돈다
+const spinTile = () => {
+  const layer = (dy, inner) => `<g transform="translate(50 ${50 + dy})"><g class="rot">${inner}</g></g>`;
+  const side = '<rect class="side" x="-50" y="-50" width="100" height="100" rx="10"/>';
+  const top = `<g transform="translate(-50 -50)"><rect class="face" x="0" y="0" width="100" height="100" rx="10"/><g><path class="ring" d="${OUTER}"/><path class="arw" d="${INNER}"/></g></g>`;
+  return `<svg class="spin3d" viewBox="-22 -22 144 158">${[12, 9, 6, 3].map((d) => layer(d, side)).join('')}${layer(0, top)}</svg>`;
+};
+document.querySelectorAll('.spin-slot').forEach((el) => (el.innerHTML = spinTile()));
+
+// 방향: 0 위, 1 오른쪽, 2 아래, 3 왼쪽 (모델은 오른쪽이 기본)
+const arrow = (d) => `<g transform="rotate(${d * 90 - 90} 50 50)"><path class="ring" d="${OUTER}"/><path class="arw" d="${INNER}"/></g>`;
+const tileSVG = (p, d, last) =>
+  `<svg class="t3 ${p}" viewBox="0 0 100 112"><rect class="side" x="0" y="12" width="100" height="100" rx="10"/><rect class="face" x="0" y="0" width="100" height="100" rx="10"/>${arrow(d)}${last ? '<circle class="mk" cx="87" cy="13" r="5"/>' : ''}</svg>`;
+const targetSVG = (p, d) =>
+  `<svg class="t3 ${p}" viewBox="0 0 100 112"><rect class="tgt" x="2" y="2" width="96" height="96" rx="10"/><g class="ghost">${arrow(d)}</g></svg>`;
+
+const CHEV = '<svg viewBox="0 0 20 20" style="transform:rotate(DEGdeg)"><path d="M10 3 L17 14 L3 14 Z"/></svg>';
+const at = (r, c) => `transform:translate(${c * 100}%, ${r * 100}%)`;
+function draw(id, tiles, extra = {}) {
+  const el = document.getElementById(id);
+  let dots = '';
+  for (let r = 0; r < 7; r++) for (let c = 0; c < 7; c++) dots += `<circle cx="${(c + 0.5) * 100 / 7}" cy="${(r + 0.5) * 100 / 7}" r="0.6"/>`;
+  let html = `<svg class="grid" viewBox="0 0 100 100" preserveAspectRatio="none">${dots}</svg>`;
+  for (let [r, c, p, d] of tiles) {
+    const sel = extra.sel && extra.sel[0] === r && extra.sel[1] === c;
+    if (sel) d = extra.dir;
+    const last = extra.last && extra.last[0] === r && extra.last[1] === c;
+    html += `<div class="slot" style="${at(r, c)}"><div class="tile ${sel ? 'sel' : ''} ${last ? 'last' : ''}">${tileSVG(p, d, false)}</div></div>`;
+  }
+  for (const [r, c, p, d] of extra.targets || []) html += `<div class="slot" style="${at(r, c)}"><div class="tile">${targetSVG(p, d)}</div></div>`;
+  if (extra.sel) {
+    const D = [[-1, 0], [0, 1], [1, 0], [0, -1]];
+    for (const d of extra.dirs) {
+      const r = extra.sel[0] + D[d][0] * 0.56, c = extra.sel[1] + D[d][1] * 0.56;
+      html += `<div class="chevbtn ${d === extra.dir ? 'on' : ''}" style="left:0;top:0;${at(r, c)}"><span>${CHEV.replace('DEG', d * 90)}</span></div>`;
+    }
+  }
+  el.innerHTML = html;
+}
+draw('board-play', [
+  [1, 2, 'b', 2], [1, 3, 'g', 1], [2, 1, 'g', 0], [2, 2, 'g', 1], [2, 3, 'b', 3], [2, 4, 'b', 2],
+  [3, 2, 'b', 0], [3, 3, 'g', 3], [3, 4, 'g', 0], [4, 3, 'b', 1], [4, 4, 'g', 2],
+], { last: [4, 3] });
+draw('board-end', [
+  [1, 1, 'g', 1], [1, 2, 'b', 2], [1, 3, 'g', 1], [1, 4, 'g', 2], [1, 5, 'b', 3],
+  [2, 1, 'g', 0], [2, 2, 'g', 1], [2, 3, 'b', 3], [2, 4, 'g', 2], [2, 5, 'b', 2],
+  [3, 1, 'b', 1], [3, 2, 'g', 0], [3, 3, 'g', 3], [3, 4, 'g', 0], [3, 5, 'b', 0],
+  [4, 1, 'b', 2], [4, 2, 'g', 3], [4, 3, 'b', 1], [4, 4, 'g', 2], [4, 5, 'b', 1],
+  [5, 1, 'g', 0], [5, 2, 'b', 0], [5, 3, 'g', 1], [5, 4, 'b', 3], [5, 5, 'g', 2],
+], { last: [5, 5] });
+
+// 데일리 대국 미리보기: 5x5 칸 안에 지금 판 그대로 (마지막에 놓인 타일 표시)
+function drawMini(id, cells, last) {
+  const el = document.getElementById(id);
+  // 실제 판처럼 타일 묶음을 가운데로
+  const rs = cells.map((x) => x[0]), cs = cells.map((x) => x[1]);
+  const dr = (5 - (Math.max(...rs) - Math.min(...rs) + 1)) / 2 - Math.min(...rs);
+  const dc = (5 - (Math.max(...cs) - Math.min(...cs) + 1)) / 2 - Math.min(...cs);
+  el.innerHTML = cells
+    .map(([r, c, p, d]) => {
+      const isLast = last && last[0] === r && last[1] === c;
+      return `<i class="${p} ${isLast ? 'last' : ''}" style="left:${2 + (c + dc) * 19.5}%;top:${2 + (r + dr) * 19.5}%"><svg viewBox="0 0 100 100"><path transform="rotate(${d * 90 - 90} 50 50)" d="${INNER}"/></svg></i>`;
+    })
+    .join('');
+}
+drawMini('mini-1', [[0, 1, 'b', 2], [0, 2, 'g', 1], [1, 0, 'g', 0], [1, 1, 'g', 1], [1, 2, 'b', 3], [1, 3, 'b', 2], [2, 1, 'b', 0], [2, 2, 'g', 3], [2, 3, 'g', 0], [3, 2, 'b', 1], [3, 3, 'g', 2], [3, 4, 'b', 3], [4, 3, 'g', 0]], [3, 4]);
+drawMini('mini-2', [[1, 1, 'g', 1], [1, 2, 'b', 2], [2, 1, 'b', 0], [2, 2, 'g', 3], [2, 3, 'b', 0], [3, 2, 'g', 1]], [2, 3]);
+
+// 게임 모드 아이콘 (24 그리드, 선 1.8)
+const MODE_ICONS = {
+  bullet: '<g transform="rotate(45 12 12)"><path d="M8.6 21.5V11.5c0-3.8 1.4-6.9 3.4-9 2 2.1 3.4 5.2 3.4 9v10z"/><path d="M8.6 17h6.8"/></g>',
+  blitz: '<path d="M13.5 2.5L5 13.5h6.2L10 21.5l9-11.5h-6.4z"/>',
+  rapid: '<circle cx="12" cy="13.5" r="7.5"/><path d="M12 13.5V9.5M9.5 2.5h5M12 2.5V6M18.2 7.3l1.6-1.6"/>',
+  daily: '<circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/>',
+  invite: '<circle cx="9.5" cy="8.5" r="3.5"/><path d="M3 20c.7-3.4 3.2-5.5 6.5-5.5s5.8 2.1 6.5 5.5M18.5 8v6M15.5 11h6"/>',
+  code: '<path d="M9.5 3.5L7.5 20.5M16.5 3.5l-2 17M4 9h16.5M3.5 15H20"/>',
+};
+document.querySelectorAll('.mi').forEach((el) => (el.innerHTML = `<svg viewBox="0 0 24 24" class="ico">${MODE_ICONS[el.dataset.i]}</svg>`));
+
+// 탭 바
+const TABS = [
+  ['내 정보', '<circle cx="12" cy="8.5" r="3.5"/><path d="M5 20c.8-3.5 3.6-5.5 7-5.5s6.2 2 7 5.5"/>'],
+  ['로비', '<path d="M4 11l8-7 8 7v8.5a1.5 1.5 0 0 1-1.5 1.5H15v-6H9v6H5.5A1.5 1.5 0 0 1 4 19.5V11z"/>'],
+  ['설정', '<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/>'],
+];
+document.querySelectorAll('.tabbar').forEach((bar) => {
+  const cur = +bar.dataset.tab;
+  bar.innerHTML = TABS.map(([name, ico], k) => `<button ${k === cur ? 'aria-current="page"' : ''}><svg viewBox="0 0 24 24" class="ico">${ico}</svg>${name}</button>`).join('');
+});
+
+// 테마 전환
+const root = document.documentElement;
+const btns = document.querySelectorAll('.toggle button');
+function setTheme(t) {
+  root.dataset.theme = t;
+  btns.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.t === t)));
+}
+btns.forEach((b) => b.addEventListener('click', () => setTheme(b.dataset.t)));
+setTheme(matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+</script>
+</body>
+</html>

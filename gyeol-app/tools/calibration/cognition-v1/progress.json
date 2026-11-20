@@ -1,0 +1,12 @@
+{
+  "state": "failed",
+  "pid": 8776,
+  "workers": 6,
+  "finished": 52216,
+  "planned": 60000,
+  "elapsedSeconds": 78406.761,
+  "gamesPerMinute": 39.95777864105367,
+  "estimatedRemainingSeconds": 11688.337437260609,
+  "updatedAt": "2026-11-15T11:40:17.565Z",
+  "fingerprint": "a526561863f88c88a7a35f0a513f4c7214eced9c01219780af0e022e28b32fdc"
+}

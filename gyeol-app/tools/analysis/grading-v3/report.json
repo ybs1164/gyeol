@@ -1,0 +1,1708 @@
+{
+  "date": "2026-11-16T02:05:31.712Z",
+  "analysisVersion": 5,
+  "gradingVersion": 3,
+  "node": "v22.14.0",
+  "model": "900c6f08b6ce0aba85893a490a185a6b5c6ace474a57c7105b6a602d5dcec332",
+  "conditions": "Prepared Node/WASM model; inference cache cleared per game and detailed budget. Desktop only. Quick timing disables exact proofs for deterministic rule comparison. Legacy timing is incremental parent evaluation cost, not a full old-engine benchmark.",
+  "selection": "Evenly spaced original game families; D4 board symmetries and color-equivalent complete trajectories grouped before hash-based development/heldout splitting. Thresholds were not tuned. Detailed phases and colors chosen without looking at grades; positions shared with development under any symmetry excluded from detailed cases. No new-game generalization claim.",
+  "quick": {
+    "games": 30,
+    "moves": 667,
+    "p50Ms": 23772,
+    "p95Ms": 41149,
+    "overwrittenBestCorrected": 2,
+    "eligible": 662,
+    "distribution": {
+      "old": {
+        "best": 244,
+        "excellent": 55,
+        "good": 2,
+        "fair": 156,
+        "inaccuracy": 88,
+        "mistake": 60,
+        "blunder": 57
+      },
+      "next": {
+        "best": 246,
+        "excellent": 55,
+        "good": 51,
+        "fair": 105,
+        "inaccuracy": 88,
+        "mistake": 60,
+        "blunder": 57
+      }
+    }
+  },
+  "detailed": {
+    "cases": 12,
+    "stable": 0,
+    "retained": 0,
+    "retention": null,
+    "target": 0.95,
+    "coverage": 0,
+    "truePositives": 0,
+    "falsePositives": 0,
+    "falseNegatives": 0,
+    "note": "The stability denominator excludes solved endgames. No stable estimated move at the low budget in this sample: the 95% retention target cannot be evaluated. No reference major mistake in these 12 played moves: major-error precision/recall cannot be evaluated. Provisional decisions are abstentions. Higher-budget search is not a mathematical proof. User comprehension and Android device validation remain separate.",
+    "estimated": 8,
+    "solved": 4,
+    "provisional": 8,
+    "provisionalDisplayRetained": 4,
+    "solvedRetained": 4,
+    "referenceMajorIssues": 0,
+    "targetValidated": false
+  },
+  "games": [
+    {
+      "id": "game-a3ace324292b527a",
+      "split": "development",
+      "moves": 23,
+      "quickMs": 30936,
+      "quickExecutions": 435,
+      "legacyExtraParentExecutions": 1,
+      "legacyExtraParentMs": 392,
+      "old": {
+        "best": 5,
+        "excellent": 2,
+        "good": 0,
+        "fair": 7,
+        "inaccuracy": 5,
+        "mistake": 4,
+        "blunder": 0
+      },
+      "next": {
+        "best": 5,
+        "excellent": 2,
+        "good": 3,
+        "fair": 4,
+        "inaccuracy": 5,
+        "mistake": 4,
+        "blunder": 0
+      },
+      "changes": 3,
+      "overwrittenBest": 0
+    },
+    {
+      "id": "game-e36901b8c4b51c44",
+      "split": "heldout",
+      "moves": 23,
+      "quickMs": 41933,
+      "quickExecutions": 435,
+      "legacyExtraParentExecutions": 1,
+      "legacyExtraParentMs": 82,
+      "old": {
+        "best": 6,
+        "excellent": 0,
+        "good": 0,
+        "fair": 6,
+        "inaccuracy": 5,
+        "mistake": 4,
+        "blunder": 2
+      },
+      "next": {
+        "best": 6,
+        "excellent": 0,
+        "good": 1,
+        "fair": 5,
+        "inaccuracy": 5,
+        "mistake": 4,
+        "blunder": 2
+      },
+      "changes": 1,
+      "overwrittenBest": 0
+    },
+    {
+      "id": "game-0213f5e983b2b61c",
+      "split": "development",
+      "moves": 23,
+      "quickMs": 24757,
+      "quickExecutions": 426,
+      "legacyExtraParentExecutions": 1,
+      "legacyExtraParentMs": 83,
+      "old": {
+        "best": 11,
+        "excellent": 1,
+        "good": 0,
+        "fair": 5,
+        "inaccuracy": 4,
+        "mistake": 1,
+        "blunder": 1
+      },
+      "next": {
+        "best": 11,
+        "excellent": 1,
+        "good": 1,
+        "fair": 4,
+        "inaccuracy": 4,
+        "mistake": 1,
+        "blunder": 1
+      },
+      "changes": 1,
+      "overwrittenBest": 0
+    },
+    {
+      "id": "game-0d5c31bf7872abfa",
+      "split": "development",
+      "moves": 23,
+      "quickMs": 28064,
+      "quickExecutions": 393,
+      "legacyExtraParentExecutions": 1,
+      "legacyExtraParentMs": 74,
+      "old": {
+        "best": 12,
+        "excellent": 3,
+        "good": 0,
+        "fair": 3,
+        "inaccuracy": 2,
+        "mistake": 3,
+        "blunder": 0
+      },
+      "next": {
+        "best": 12,
+        "excellent": 3,
+        "good": 2,
+        "fair": 1,
+        "inaccuracy": 2,
+        "mistake": 3,
+        "blunder": 0
+      },
+      "changes": 2,
+      "overwrittenBest": 0
+    },
+    {
+      "id": "game-7005ae2e7b26b16d",
+      "split": "development",
+      "moves": 23,
+      "quickMs": 41149,
+      "quickExecutions": 432,
+      "legacyExtraParentExecutions": 1,
+      "legacyExtraParentMs": 153,
+      "old": {
+        "best": 5,
+        "excellent": 2,
+        "good": 1,
+        "fair": 7,
+        "inaccuracy": 2,
+        "mistake": 1,
+        "blunder": 5
+      },
+      "next": {
+        "best": 6,
+        "excellent": 2,
+        "good": 0,
+        "fair": 7,
+        "inaccuracy": 2,
+        "mistake": 1,
+        "blunder": 5
+      },
+      "changes": 1,
+      "overwrittenBest": 1
+    },
+    {
+      "id": "game-fb345d826ed8df16",
+      "split": "heldout",
+      "moves": 23,
+      "quickMs": 33698,
+      "quickExecutions": 438,
+      "legacyExtraParentExecutions": 1,
+      "legacyExtraParentMs": 61,
+      "old": {
+        "best": 8,
+        "excellent": 3,
+        "good": 0,
+        "fair": 6,
+        "inaccuracy": 2,
+        "mistake": 1,
+        "blunder": 3
+      },
+      "next": {
+        "best": 8,
+        "excellent": 3,
+        "good": 1,
+        "fair": 5,
+        "inaccuracy": 2,
+        "mistake": 1,
+        "blunder": 3
+      },
+      "changes": 1,
+      "overwrittenBest": 0
+    },
+    {
+      "id": "game-1048ceb2f03ebffd",
+      "split": "heldout",
+      "moves": 23,
+      "quickMs": 30529,
+      "quickExecutions": 381,
+      "legacyExtraParentExecutions": 1,
+      "legacyExtraParentMs": 80,
+      "old": {
+        "best": 9,
+        "excellent": 2,
+        "good": 0,
+        "fair": 4,
+        "inaccuracy": 3,
+        "mistake": 1,
+        "blunder": 4
+      },
+      "next": {
+        "best": 9,
+        "excellent": 2,
+        "good": 3,
+        "fair": 1,
+        "inaccuracy": 3,
+        "mistake": 1,
+        "blunder": 4
+      },
+      "changes": 3,
+      "overwrittenBest": 0
+    },
+    {
+      "id": "game-8808c9fdef050554",
+      "split": "development",
+      "moves": 24,
+      "quickMs": 30237,
+      "quickExecutions": 448,
+      "legacyExtraParentExecutions": 1,
+      "legacyExtraParentMs": 74,
+      "old": {
+        "best": 10,
+        "excellent": 1,
+        "good": 0,
+        "fair": 6,
+        "inaccuracy": 2,
+        "mistake": 0,
+        "blunder": 4
+      },
+      "next": {
+        "best": 10,
+        "excellent": 1,
+        "good": 1,
+        "fair": 5,
+        "inaccuracy": 2,
+        "mistake": 0,
+        "blunder": 4
+      },
+      "changes": 1,
+      "overwrittenBest": 0
+    },
+    {
+      "id": "game-bead5548bfdfbec4",
+      "split": "development",
+      "moves": 23,
+      "quickMs": 23772,
+      "quickExecutions": 432,
+      "legacyExtraParentExecutions": 1,
+      "legacyExtraParentMs": 60,
+      "old": {
+        "best": 6,
+        "excellent": 2,
+        "good": 0,
+        "fair": 7,
+        "inaccuracy": 4,
+        "mistake": 2,
+        "blunder": 2
+      },
+      "next": {
+        "best": 6,
+        "excellent": 2,
+        "good": 0,
+        "fair": 7,
+        "inaccuracy": 4,
+        "mistake": 2,
+        "blunder": 2
+      },
+      "changes": 0,
+      "overwrittenBest": 0
+    },
+    {
+      "id": "game-432cc1075e1eb138",
+      "split": "development",
+      "moves": 24,
+      "quickMs": 26556,
+      "quickExecutions": 436,
+      "legacyExtraParentExecutions": 1,
+      "legacyExtraParentMs": 62,
+      "old": {
+        "best": 6,
+        "excellent": 6,
+        "good": 0,
+        "fair": 6,
+        "inaccuracy": 3,
+        "mistake": 2,
+        "blunder": 0
+      },
+      "next": {
+        "best": 6,
+        "excellent": 6,
+        "good": 3,
+        "fair": 3,
+        "inaccuracy": 3,
+        "mistake": 2,
+        "blunder": 0
+      },
+      "changes": 3,
+      "overwrittenBest": 0
+    },
+    {
+      "id": "game-33116614b6e761d3",
+      "split": "development",
+      "moves": 23,
+      "quickMs": 22501,
+      "quickExecutions": 435,
+      "legacyExtraParentExecutions": 1,
+      "legacyExtraParentMs": 134,
+      "old": {
+        "best": 7,
+        "excellent": 4,
+        "good": 0,
+        "fair": 4,
+        "inaccuracy": 5,
+        "mistake": 3,
+        "blunder": 0
+      },
+      "next": {
+        "best": 7,
+        "excellent": 4,
+        "good": 2,
+        "fair": 2,
+        "inaccuracy": 5,
+        "mistake": 3,
+        "blunder": 0
+      },
+      "changes": 2,
+      "overwrittenBest": 0
+    },
+    {
+      "id": "game-d5578f8db26e4aec",
+      "split": "development",
+      "moves": 24,
+      "quickMs": 25498,
+      "quickExecutions": 433,
+      "legacyExtraParentExecutions": 1,
+      "legacyExtraParentMs": 67,
+      "old": {
+        "best": 10,
+        "excellent": 3,
+        "good": 0,
+        "fair": 5,
+        "inaccuracy": 3,
+        "mistake": 1,
+        "blunder": 1
+      },
+      "next": {
+        "best": 10,
+        "excellent": 3,
+        "good": 1,
+        "fair": 4,
+        "inaccuracy": 3,
+        "mistake": 1,
+        "blunder": 1
+      },
+      "changes": 1,
+      "overwrittenBest": 0
+    },
+    {
+      "id": "game-61df464577826ae3",
+      "split": "heldout",
+      "moves": 23,
+      "quickMs": 33557,
+      "quickExecutions": 405,
+      "legacyExtraParentExecutions": 1,
+      "legacyExtraParentMs": 55,
+      "old": {
+        "best": 9,
+        "excellent": 2,
+        "good": 0,
+        "fair": 4,
+        "inaccuracy": 3,
+        "mistake": 4,
+        "blunder": 1
+      },
+      "next": {
+        "best": 9,
+        "excellent": 2,
+        "good": 1,
+        "fair": 3,
+        "inaccuracy": 3,
+        "mistake": 4,
+        "blunder": 1
+      },
+      "changes": 1,
+      "overwrittenBest": 0
+    },
+    {
+      "id": "game-76f2d4ba58be5f63",
+      "split": "development",
+      "moves": 22,
+      "quickMs": 26629,
+      "quickExecutions": 417,
+      "legacyExtraParentExecutions": 1,
+      "legacyExtraParentMs": 189,
+      "old": {
+        "best": 9,
+        "excellent": 0,
+        "good": 0,
+        "fair": 6,
+        "inaccuracy": 3,
+        "mistake": 0,
+        "blunder": 4
+      },
+      "next": {
+        "best": 9,
+        "excellent": 0,
+        "good": 2,
+        "fair": 4,
+        "inaccuracy": 3,
+        "mistake": 0,
+        "blunder": 4
+      },
+      "changes": 2,
+      "overwrittenBest": 0
+    },
+    {
+      "id": "game-8dbfebe414dc9fb4",
+      "split": "heldout",
+      "moves": 22,
+      "quickMs": 22615,
+      "quickExecutions": 387,
+      "legacyExtraParentExecutions": 1,
+      "legacyExtraParentMs": 184,
+      "old": {
+        "best": 10,
+        "excellent": 1,
+        "good": 0,
+        "fair": 4,
+        "inaccuracy": 3,
+        "mistake": 3,
+        "blunder": 1
+      },
+      "next": {
+        "best": 10,
+        "excellent": 1,
+        "good": 1,
+        "fair": 3,
+        "inaccuracy": 3,
+        "mistake": 3,
+        "blunder": 1
+      },
+      "changes": 1,
+      "overwrittenBest": 0
+    },
+    {
+      "id": "game-fdc53651118b5807",
+      "split": "heldout",
+      "moves": 22,
+      "quickMs": 19753,
+      "quickExecutions": 429,
+      "legacyExtraParentExecutions": 1,
+      "legacyExtraParentMs": 530,
+      "old": {
+        "best": 6,
+        "excellent": 2,
+        "good": 0,
+        "fair": 9,
+        "inaccuracy": 2,
+        "mistake": 3,
+        "blunder": 0
+      },
+      "next": {
+        "best": 6,
+        "excellent": 2,
+        "good": 4,
+        "fair": 5,
+        "inaccuracy": 2,
+        "mistake": 3,
+        "blunder": 0
+      },
+      "changes": 4,
+      "overwrittenBest": 0
+    },
+    {
+      "id": "game-35fe45a12151b489",
+      "split": "development",
+      "moves": 23,
+      "quickMs": 25658,
+      "quickExecutions": 400,
+      "legacyExtraParentExecutions": 1,
+      "legacyExtraParentMs": 43,
+      "old": {
+        "best": 8,
+        "excellent": 3,
+        "good": 0,
+        "fair": 7,
+        "inaccuracy": 3,
+        "mistake": 1,
+        "blunder": 0
+      },
+      "next": {
+        "best": 8,
+        "excellent": 3,
+        "good": 4,
+        "fair": 3,
+        "inaccuracy": 3,
+        "mistake": 1,
+        "blunder": 0
+      },
+      "changes": 4,
+      "overwrittenBest": 0
+    },
+    {
+      "id": "game-fef35faa8e8ba7a3",
+      "split": "heldout",
+      "moves": 23,
+      "quickMs": 15156,
+      "quickExecutions": 400,
+      "legacyExtraParentExecutions": 1,
+      "legacyExtraParentMs": 46,
+      "old": {
+        "best": 9,
+        "excellent": 2,
+        "good": 0,
+        "fair": 7,
+        "inaccuracy": 0,
+        "mistake": 3,
+        "blunder": 1
+      },
+      "next": {
+        "best": 9,
+        "excellent": 2,
+        "good": 3,
+        "fair": 4,
+        "inaccuracy": 0,
+        "mistake": 3,
+        "blunder": 1
+      },
+      "changes": 3,
+      "overwrittenBest": 0
+    },
+    {
+      "id": "game-0b4a940b83c8b22d",
+      "split": "development",
+      "moves": 22,
+      "quickMs": 16571,
+      "quickExecutions": 381,
+      "legacyExtraParentExecutions": 1,
+      "legacyExtraParentMs": 41,
+      "old": {
+        "best": 6,
+        "excellent": 3,
+        "good": 0,
+        "fair": 6,
+        "inaccuracy": 3,
+        "mistake": 2,
+        "blunder": 2
+      },
+      "next": {
+        "best": 6,
+        "excellent": 3,
+        "good": 3,
+        "fair": 3,
+        "inaccuracy": 3,
+        "mistake": 2,
+        "blunder": 2
+      },
+      "changes": 3,
+      "overwrittenBest": 0
+    },
+    {
+      "id": "game-60d5e65ec5749a67",
+      "split": "heldout",
+      "moves": 21,
+      "quickMs": 19936,
+      "quickExecutions": 447,
+      "legacyExtraParentExecutions": 1,
+      "legacyExtraParentMs": 40,
+      "old": {
+        "best": 5,
+        "excellent": 1,
+        "good": 1,
+        "fair": 5,
+        "inaccuracy": 1,
+        "mistake": 3,
+        "blunder": 5
+      },
+      "next": {
+        "best": 6,
+        "excellent": 1,
+        "good": 2,
+        "fair": 3,
+        "inaccuracy": 1,
+        "mistake": 3,
+        "blunder": 5
+      },
+      "changes": 3,
+      "overwrittenBest": 1
+    },
+    {
+      "id": "game-033a9983c70d42df",
+      "split": "development",
+      "moves": 21,
+      "quickMs": 15001,
+      "quickExecutions": 402,
+      "legacyExtraParentExecutions": 1,
+      "legacyExtraParentMs": 43,
+      "old": {
+        "best": 10,
+        "excellent": 2,
+        "good": 0,
+        "fair": 4,
+        "inaccuracy": 3,
+        "mistake": 2,
+        "blunder": 0
+      },
+      "next": {
+        "best": 10,
+        "excellent": 2,
+        "good": 0,
+        "fair": 4,
+        "inaccuracy": 3,
+        "mistake": 2,
+        "blunder": 0
+      },
+      "changes": 0,
+      "overwrittenBest": 0
+    },
+    {
+      "id": "game-3fbc14f96cb60910",
+      "split": "development",
+      "moves": 21,
+      "quickMs": 15620,
+      "quickExecutions": 384,
+      "legacyExtraParentExecutions": 1,
+      "legacyExtraParentMs": 41,
+      "old": {
+        "best": 5,
+        "excellent": 2,
+        "good": 0,
+        "fair": 4,
+        "inaccuracy": 4,
+        "mistake": 3,
+        "blunder": 3
+      },
+      "next": {
+        "best": 5,
+        "excellent": 2,
+        "good": 0,
+        "fair": 4,
+        "inaccuracy": 4,
+        "mistake": 3,
+        "blunder": 3
+      },
+      "changes": 0,
+      "overwrittenBest": 0
+    },
+    {
+      "id": "game-61b25f509ff6bcdf",
+      "split": "development",
+      "moves": 21,
+      "quickMs": 20060,
+      "quickExecutions": 366,
+      "legacyExtraParentExecutions": 1,
+      "legacyExtraParentMs": 48,
+      "old": {
+        "best": 7,
+        "excellent": 4,
+        "good": 0,
+        "fair": 5,
+        "inaccuracy": 3,
+        "mistake": 2,
+        "blunder": 0
+      },
+      "next": {
+        "best": 7,
+        "excellent": 4,
+        "good": 2,
+        "fair": 3,
+        "inaccuracy": 3,
+        "mistake": 2,
+        "blunder": 0
+      },
+      "changes": 2,
+      "overwrittenBest": 0
+    },
+    {
+      "id": "game-606042f30abf811c",
+      "split": "development",
+      "moves": 21,
+      "quickMs": 18097,
+      "quickExecutions": 378,
+      "legacyExtraParentExecutions": 1,
+      "legacyExtraParentMs": 61,
+      "old": {
+        "best": 13,
+        "excellent": 0,
+        "good": 0,
+        "fair": 3,
+        "inaccuracy": 2,
+        "mistake": 1,
+        "blunder": 2
+      },
+      "next": {
+        "best": 13,
+        "excellent": 0,
+        "good": 2,
+        "fair": 1,
+        "inaccuracy": 2,
+        "mistake": 1,
+        "blunder": 2
+      },
+      "changes": 2,
+      "overwrittenBest": 0
+    },
+    {
+      "id": "game-c153a0baa06b6884",
+      "split": "heldout",
+      "moves": 21,
+      "quickMs": 16202,
+      "quickExecutions": 354,
+      "legacyExtraParentExecutions": 1,
+      "legacyExtraParentMs": 84,
+      "old": {
+        "best": 7,
+        "excellent": 0,
+        "good": 0,
+        "fair": 8,
+        "inaccuracy": 4,
+        "mistake": 1,
+        "blunder": 1
+      },
+      "next": {
+        "best": 7,
+        "excellent": 0,
+        "good": 3,
+        "fair": 5,
+        "inaccuracy": 4,
+        "mistake": 1,
+        "blunder": 1
+      },
+      "changes": 3,
+      "overwrittenBest": 0
+    },
+    {
+      "id": "game-94f9fa9885e4a2da",
+      "split": "development",
+      "moves": 21,
+      "quickMs": 16857,
+      "quickExecutions": 411,
+      "legacyExtraParentExecutions": 1,
+      "legacyExtraParentMs": 43,
+      "old": {
+        "best": 11,
+        "excellent": 0,
+        "good": 0,
+        "fair": 3,
+        "inaccuracy": 2,
+        "mistake": 3,
+        "blunder": 2
+      },
+      "next": {
+        "best": 11,
+        "excellent": 0,
+        "good": 1,
+        "fair": 2,
+        "inaccuracy": 2,
+        "mistake": 3,
+        "blunder": 2
+      },
+      "changes": 1,
+      "overwrittenBest": 0
+    },
+    {
+      "id": "game-03badacd424e070a",
+      "split": "development",
+      "moves": 21,
+      "quickMs": 21076,
+      "quickExecutions": 363,
+      "legacyExtraParentExecutions": 1,
+      "legacyExtraParentMs": 80,
+      "old": {
+        "best": 8,
+        "excellent": 0,
+        "good": 0,
+        "fair": 6,
+        "inaccuracy": 1,
+        "mistake": 4,
+        "blunder": 2
+      },
+      "next": {
+        "best": 8,
+        "excellent": 0,
+        "good": 4,
+        "fair": 2,
+        "inaccuracy": 1,
+        "mistake": 4,
+        "blunder": 2
+      },
+      "changes": 4,
+      "overwrittenBest": 0
+    },
+    {
+      "id": "game-f5201c7620f364e4",
+      "split": "heldout",
+      "moves": 21,
+      "quickMs": 29300,
+      "quickExecutions": 441,
+      "legacyExtraParentExecutions": 1,
+      "legacyExtraParentMs": 50,
+      "old": {
+        "best": 9,
+        "excellent": 0,
+        "good": 0,
+        "fair": 4,
+        "inaccuracy": 4,
+        "mistake": 0,
+        "blunder": 4
+      },
+      "next": {
+        "best": 9,
+        "excellent": 0,
+        "good": 0,
+        "fair": 4,
+        "inaccuracy": 4,
+        "mistake": 0,
+        "blunder": 4
+      },
+      "changes": 0,
+      "overwrittenBest": 0
+    },
+    {
+      "id": "game-e0acbcb27c16e11a",
+      "split": "heldout",
+      "moves": 21,
+      "quickMs": 20844,
+      "quickExecutions": 396,
+      "legacyExtraParentExecutions": 1,
+      "legacyExtraParentMs": 57,
+      "old": {
+        "best": 9,
+        "excellent": 2,
+        "good": 0,
+        "fair": 2,
+        "inaccuracy": 3,
+        "mistake": 2,
+        "blunder": 3
+      },
+      "next": {
+        "best": 9,
+        "excellent": 2,
+        "good": 1,
+        "fair": 1,
+        "inaccuracy": 3,
+        "mistake": 2,
+        "blunder": 3
+      },
+      "changes": 1,
+      "overwrittenBest": 0
+    },
+    {
+      "id": "game-c744689076a0fa09",
+      "split": "development",
+      "moves": 21,
+      "quickMs": 27200,
+      "quickExecutions": 429,
+      "legacyExtraParentExecutions": 1,
+      "legacyExtraParentMs": 49,
+      "old": {
+        "best": 8,
+        "excellent": 2,
+        "good": 0,
+        "fair": 3,
+        "inaccuracy": 4,
+        "mistake": 0,
+        "blunder": 4
+      },
+      "next": {
+        "best": 8,
+        "excellent": 2,
+        "good": 0,
+        "fair": 3,
+        "inaccuracy": 4,
+        "mistake": 0,
+        "blunder": 4
+      },
+      "changes": 0,
+      "overwrittenBest": 0
+    }
+  ],
+  "positions": [
+    {
+      "id": "game-8dbfebe414dc9fb4",
+      "ply": 4,
+      "player": 1,
+      "tiles": 6,
+      "phase": "early",
+      "budgets": [
+        12,
+        24,
+        96
+      ],
+      "ms": [
+        54606,
+        59519,
+        201818
+      ],
+      "runs": [
+        {
+          "status": "estimated",
+          "grade": null,
+          "displayGrade": "best",
+          "reason": "loss",
+          "lossPoints": 0,
+          "bestActions": [
+            390,
+            394
+          ]
+        },
+        {
+          "status": "estimated",
+          "grade": null,
+          "displayGrade": "excellent",
+          "reason": "loss",
+          "lossPoints": 2.8562843231729946,
+          "bestActions": [
+            398
+          ]
+        },
+        {
+          "status": "stable",
+          "grade": "best",
+          "displayGrade": "best",
+          "reason": "loss",
+          "lossPoints": 0,
+          "bestActions": [
+            394
+          ]
+        }
+      ],
+      "stable": false,
+      "stableRetained": null,
+      "referenceIssue": false,
+      "predictedIssue": false,
+      "bestReferenceLoss": 0,
+      "heldoutNonSharedPosition": true
+    },
+    {
+      "id": "game-8dbfebe414dc9fb4",
+      "ply": 12,
+      "player": 1,
+      "tiles": 14,
+      "phase": "middle",
+      "budgets": [
+        12,
+        24,
+        96
+      ],
+      "ms": [
+        9629,
+        23398,
+        43312
+      ],
+      "runs": [
+        {
+          "status": "estimated",
+          "grade": null,
+          "displayGrade": "best",
+          "reason": "loss",
+          "lossPoints": 0,
+          "bestActions": [
+            353
+          ]
+        },
+        {
+          "status": "estimated",
+          "grade": null,
+          "displayGrade": "inaccuracy",
+          "reason": "loss",
+          "lossPoints": 12.652860349205564,
+          "bestActions": [
+            391
+          ]
+        },
+        {
+          "status": "estimated",
+          "grade": null,
+          "displayGrade": "good",
+          "reason": "loss",
+          "lossPoints": 4.702734591148728,
+          "bestActions": [
+            391
+          ]
+        }
+      ],
+      "stable": false,
+      "stableRetained": null,
+      "referenceIssue": false,
+      "predictedIssue": false,
+      "bestReferenceLoss": 4.702734591148728,
+      "heldoutNonSharedPosition": true
+    },
+    {
+      "id": "game-e36901b8c4b51c44",
+      "ply": 21,
+      "player": 1,
+      "tiles": 22,
+      "phase": "late",
+      "budgets": [
+        12,
+        24,
+        96
+      ],
+      "ms": [
+        14,
+        7,
+        8
+      ],
+      "runs": [
+        {
+          "status": "exact",
+          "grade": "best",
+          "displayGrade": "best",
+          "reason": "preservedWin",
+          "lossPoints": 0,
+          "bestActions": [
+            390,
+            531,
+            597,
+            601,
+            605,
+            627,
+            635,
+            639
+          ]
+        },
+        {
+          "status": "exact",
+          "grade": "best",
+          "displayGrade": "best",
+          "reason": "preservedWin",
+          "lossPoints": 0,
+          "bestActions": [
+            390,
+            531,
+            597,
+            601,
+            605,
+            627,
+            635,
+            639
+          ]
+        },
+        {
+          "status": "exact",
+          "grade": "best",
+          "displayGrade": "best",
+          "reason": "preservedWin",
+          "lossPoints": 0,
+          "bestActions": [
+            390,
+            531,
+            597,
+            601,
+            605,
+            627,
+            635,
+            639
+          ]
+        }
+      ],
+      "stable": false,
+      "stableRetained": null,
+      "referenceIssue": false,
+      "predictedIssue": false,
+      "bestReferenceLoss": 0,
+      "heldoutNonSharedPosition": true
+    },
+    {
+      "id": "game-fb345d826ed8df16",
+      "ply": 4,
+      "player": -1,
+      "tiles": 5,
+      "phase": "early",
+      "budgets": [
+        12,
+        24,
+        96
+      ],
+      "ms": [
+        7235,
+        15601,
+        61305
+      ],
+      "runs": [
+        {
+          "status": "estimated",
+          "grade": null,
+          "displayGrade": "fair",
+          "reason": "loss",
+          "lossPoints": 8.490094566451651,
+          "bestActions": [
+            513
+          ]
+        },
+        {
+          "status": "estimated",
+          "grade": null,
+          "displayGrade": "fair",
+          "reason": "loss",
+          "lossPoints": 7.853854028337063,
+          "bestActions": [
+            517
+          ]
+        },
+        {
+          "status": "estimated",
+          "grade": null,
+          "displayGrade": "best",
+          "reason": "loss",
+          "lossPoints": 0,
+          "bestActions": [
+            525
+          ]
+        }
+      ],
+      "stable": false,
+      "stableRetained": null,
+      "referenceIssue": false,
+      "predictedIssue": false,
+      "bestReferenceLoss": 9.088839486472239,
+      "heldoutNonSharedPosition": true
+    },
+    {
+      "id": "game-e36901b8c4b51c44",
+      "ply": 12,
+      "player": -1,
+      "tiles": 13,
+      "phase": "middle",
+      "budgets": [
+        12,
+        24,
+        96
+      ],
+      "ms": [
+        4539,
+        7317,
+        27611
+      ],
+      "runs": [
+        {
+          "status": "estimated",
+          "grade": null,
+          "displayGrade": "best",
+          "reason": "loss",
+          "lossPoints": 0,
+          "bestActions": [
+            530
+          ]
+        },
+        {
+          "status": "estimated",
+          "grade": null,
+          "displayGrade": "excellent",
+          "reason": "loss",
+          "lossPoints": 1.907940884477595,
+          "bestActions": [
+            245
+          ]
+        },
+        {
+          "status": "estimated",
+          "grade": null,
+          "displayGrade": "best",
+          "reason": "loss",
+          "lossPoints": 0,
+          "bestActions": [
+            530
+          ]
+        }
+      ],
+      "stable": false,
+      "stableRetained": null,
+      "referenceIssue": false,
+      "predictedIssue": false,
+      "bestReferenceLoss": 0,
+      "heldoutNonSharedPosition": true
+    },
+    {
+      "id": "game-fef35faa8e8ba7a3",
+      "ply": 21,
+      "player": -1,
+      "tiles": 23,
+      "phase": "late",
+      "budgets": [
+        12,
+        24,
+        96
+      ],
+      "ms": [
+        3,
+        2,
+        2
+      ],
+      "runs": [
+        {
+          "status": "exact",
+          "grade": "best",
+          "displayGrade": "best",
+          "reason": "preservedWin",
+          "lossPoints": 0,
+          "bestActions": [
+            406,
+            502,
+            506,
+            510,
+            531,
+            597,
+            601,
+            605,
+            627,
+            635,
+            639
+          ]
+        },
+        {
+          "status": "exact",
+          "grade": "best",
+          "displayGrade": "best",
+          "reason": "preservedWin",
+          "lossPoints": 0,
+          "bestActions": [
+            406,
+            502,
+            506,
+            510,
+            531,
+            597,
+            601,
+            605,
+            627,
+            635,
+            639
+          ]
+        },
+        {
+          "status": "exact",
+          "grade": "best",
+          "displayGrade": "best",
+          "reason": "preservedWin",
+          "lossPoints": 0,
+          "bestActions": [
+            406,
+            502,
+            506,
+            510,
+            531,
+            597,
+            601,
+            605,
+            627,
+            635,
+            639
+          ]
+        }
+      ],
+      "stable": false,
+      "stableRetained": null,
+      "referenceIssue": false,
+      "predictedIssue": false,
+      "bestReferenceLoss": 0,
+      "heldoutNonSharedPosition": true
+    },
+    {
+      "id": "game-fdc53651118b5807",
+      "ply": 4,
+      "player": 1,
+      "tiles": 6,
+      "phase": "early",
+      "budgets": [
+        12,
+        24,
+        96
+      ],
+      "ms": [
+        5843,
+        6669,
+        33295
+      ],
+      "runs": [
+        {
+          "status": "estimated",
+          "grade": null,
+          "displayGrade": "best",
+          "reason": "loss",
+          "lossPoints": 0,
+          "bestActions": [
+            255
+          ]
+        },
+        {
+          "status": "estimated",
+          "grade": null,
+          "displayGrade": "best",
+          "reason": "loss",
+          "lossPoints": 0,
+          "bestActions": [
+            255
+          ]
+        },
+        {
+          "status": "stable",
+          "grade": "best",
+          "displayGrade": "best",
+          "reason": "loss",
+          "lossPoints": 0,
+          "bestActions": [
+            255
+          ]
+        }
+      ],
+      "stable": false,
+      "stableRetained": null,
+      "referenceIssue": false,
+      "predictedIssue": false,
+      "bestReferenceLoss": 0,
+      "heldoutNonSharedPosition": true
+    },
+    {
+      "id": "game-fdc53651118b5807",
+      "ply": 12,
+      "player": 1,
+      "tiles": 14,
+      "phase": "middle",
+      "budgets": [
+        12,
+        24,
+        96
+      ],
+      "ms": [
+        4464,
+        7803,
+        28450
+      ],
+      "runs": [
+        {
+          "status": "estimated",
+          "grade": null,
+          "displayGrade": "best",
+          "reason": "loss",
+          "lossPoints": 0,
+          "bestActions": [
+            506
+          ]
+        },
+        {
+          "status": "estimated",
+          "grade": null,
+          "displayGrade": "best",
+          "reason": "loss",
+          "lossPoints": 0,
+          "bestActions": [
+            506,
+            510
+          ]
+        },
+        {
+          "status": "estimated",
+          "grade": null,
+          "displayGrade": "good",
+          "reason": "loss",
+          "lossPoints": 4.913844990833534,
+          "bestActions": [
+            502,
+            510
+          ]
+        }
+      ],
+      "stable": false,
+      "stableRetained": null,
+      "referenceIssue": false,
+      "predictedIssue": false,
+      "bestReferenceLoss": 4.913844990833534,
+      "heldoutNonSharedPosition": true
+    },
+    {
+      "id": "game-fb345d826ed8df16",
+      "ply": 21,
+      "player": 1,
+      "tiles": 22,
+      "phase": "late",
+      "budgets": [
+        12,
+        24,
+        96
+      ],
+      "ms": [
+        5,
+        5,
+        2
+      ],
+      "runs": [
+        {
+          "status": "exact",
+          "grade": "best",
+          "displayGrade": "best",
+          "reason": "allLose",
+          "lossPoints": 0,
+          "bestActions": [
+            147,
+            155,
+            159,
+            240,
+            248,
+            252,
+            514,
+            522,
+            526,
+            609,
+            613,
+            617
+          ]
+        },
+        {
+          "status": "exact",
+          "grade": "best",
+          "displayGrade": "best",
+          "reason": "allLose",
+          "lossPoints": 0,
+          "bestActions": [
+            147,
+            155,
+            159,
+            240,
+            248,
+            252,
+            514,
+            522,
+            526,
+            609,
+            613,
+            617
+          ]
+        },
+        {
+          "status": "exact",
+          "grade": "best",
+          "displayGrade": "best",
+          "reason": "allLose",
+          "lossPoints": 0,
+          "bestActions": [
+            147,
+            155,
+            159,
+            240,
+            248,
+            252,
+            514,
+            522,
+            526,
+            609,
+            613,
+            617
+          ]
+        }
+      ],
+      "stable": false,
+      "stableRetained": null,
+      "referenceIssue": false,
+      "predictedIssue": false,
+      "bestReferenceLoss": 0,
+      "heldoutNonSharedPosition": true
+    },
+    {
+      "id": "game-1048ceb2f03ebffd",
+      "ply": 4,
+      "player": -1,
+      "tiles": 5,
+      "phase": "early",
+      "budgets": [
+        12,
+        24,
+        96
+      ],
+      "ms": [
+        3071,
+        5837,
+        36857
+      ],
+      "runs": [
+        {
+          "status": "estimated",
+          "grade": null,
+          "displayGrade": "inaccuracy",
+          "reason": "loss",
+          "lossPoints": 11.899490684388853,
+          "bestActions": [
+            388
+          ]
+        },
+        {
+          "status": "estimated",
+          "grade": null,
+          "displayGrade": "inaccuracy",
+          "reason": "loss",
+          "lossPoints": 10.664093092507423,
+          "bestActions": [
+            384
+          ]
+        },
+        {
+          "status": "estimated",
+          "grade": null,
+          "displayGrade": "inaccuracy",
+          "reason": "loss",
+          "lossPoints": 10.986744409514904,
+          "bestActions": [
+            396
+          ]
+        }
+      ],
+      "stable": false,
+      "stableRetained": null,
+      "referenceIssue": false,
+      "predictedIssue": false,
+      "bestReferenceLoss": 2.637254003264582,
+      "heldoutNonSharedPosition": true
+    },
+    {
+      "id": "game-fb345d826ed8df16",
+      "ply": 12,
+      "player": -1,
+      "tiles": 13,
+      "phase": "middle",
+      "budgets": [
+        12,
+        24,
+        96
+      ],
+      "ms": [
+        8908,
+        15444,
+        33371
+      ],
+      "runs": [
+        {
+          "status": "estimated",
+          "grade": null,
+          "displayGrade": "inaccuracy",
+          "reason": "loss",
+          "lossPoints": 11.418615892173973,
+          "bestActions": [
+            254
+          ]
+        },
+        {
+          "status": "estimated",
+          "grade": null,
+          "displayGrade": "fair",
+          "reason": "loss",
+          "lossPoints": 9.852124802994034,
+          "bestActions": [
+            242
+          ]
+        },
+        {
+          "status": "estimated",
+          "grade": null,
+          "displayGrade": "inaccuracy",
+          "reason": "loss",
+          "lossPoints": 11.42584205990326,
+          "bestActions": [
+            242
+          ]
+        }
+      ],
+      "stable": false,
+      "stableRetained": null,
+      "referenceIssue": false,
+      "predictedIssue": false,
+      "bestReferenceLoss": 1.8956352927215119,
+      "heldoutNonSharedPosition": true
+    },
+    {
+      "id": "game-1048ceb2f03ebffd",
+      "ply": 21,
+      "player": 1,
+      "tiles": 22,
+      "phase": "late",
+      "budgets": [
+        12,
+        24,
+        96
+      ],
+      "ms": [
+        12,
+        6,
+        6
+      ],
+      "runs": [
+        {
+          "status": "exact",
+          "grade": "best",
+          "displayGrade": "best",
+          "reason": "preservedWin",
+          "lossPoints": 0,
+          "bestActions": [
+            177,
+            181,
+            189,
+            241,
+            249,
+            279,
+            283,
+            304,
+            308,
+            316,
+            372
+          ]
+        },
+        {
+          "status": "exact",
+          "grade": "best",
+          "displayGrade": "best",
+          "reason": "preservedWin",
+          "lossPoints": 0,
+          "bestActions": [
+            177,
+            181,
+            189,
+            241,
+            249,
+            279,
+            283,
+            304,
+            308,
+            316,
+            372
+          ]
+        },
+        {
+          "status": "exact",
+          "grade": "best",
+          "displayGrade": "best",
+          "reason": "preservedWin",
+          "lossPoints": 0,
+          "bestActions": [
+            177,
+            181,
+            189,
+            241,
+            249,
+            279,
+            283,
+            304,
+            308,
+            316,
+            372
+          ]
+        }
+      ],
+      "stable": false,
+      "stableRetained": null,
+      "referenceIssue": false,
+      "predictedIssue": false,
+      "bestReferenceLoss": 0,
+      "heldoutNonSharedPosition": true
+    }
+  ],
+  "sourceSha256": "8afc83b71be72ac6815a30a624ce2a518bd5b7f2a977bed98d7067c3ac0d2c89"
+}

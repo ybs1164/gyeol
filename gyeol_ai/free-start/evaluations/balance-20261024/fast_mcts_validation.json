@@ -1,0 +1,26 @@
+{
+  "boards": 18,
+  "simulations_per_board": 128,
+  "exact_edge_counts_and_q": true,
+  "seconds": 9.46942909999052,
+  "real_model_batch": {
+    "boards": 8,
+    "simulations": 100,
+    "exact_edge_counts_and_q": true,
+    "baseline_seconds": 4.162327700003516,
+    "vectorized_seconds": 3.2781958000268787,
+    "timing_note": "baseline used a cold transition cache; vectorized run reused transitions; timings are diagnostic, not a controlled benchmark",
+    "model_sha256": "f7fc6c1126ff8dec71793561ddc968eb22d0c3642e362a79f97be2fd2ee7590a",
+    "layout_ids": [
+      25,
+      17,
+      10,
+      16,
+      32,
+      11,
+      31,
+      103
+    ]
+  },
+  "implementation_sha256": "46f716d433bae87dffdbe3f648708f98ecaeeb772f90324b5222f9d83a0d510a"
+}

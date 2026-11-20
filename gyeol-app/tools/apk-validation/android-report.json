@@ -1,0 +1,70 @@
+{
+  "checkedAt": "2026-11-15T16:22:45.123Z",
+  "native": true,
+  "layouts": [
+    {
+      "name": "onboarding-device",
+      "height": 48,
+      "width": 360.727294921875,
+      "fontWeight": "400",
+      "outline": "none",
+      "border": "1.45455px",
+      "shadow": "rgb(138, 90, 55) 0px 0px 0px 0.5px",
+      "overflow": false,
+      "visible": true
+    },
+    {
+      "name": "rename-device",
+      "height": 48,
+      "width": 305.81817626953125,
+      "fontWeight": "400",
+      "outline": "none",
+      "border": "1.45455px",
+      "shadow": "rgb(138, 90, 55) 0px 0px 0px 0.5px",
+      "overflow": false,
+      "visible": true
+    }
+  ],
+  "connections": [
+    {
+      "id": "2256.64",
+      "url": "wss://gyeol.146.56.189.166.sslip.io/ws",
+      "welcome": true
+    },
+    {
+      "id": "2256.76",
+      "url": "wss://gyeol.146.56.189.166.sslip.io/ws",
+      "welcome": false
+    },
+    {
+      "id": "2256.77",
+      "url": "wss://gyeol.146.56.189.166.sslip.io/ws",
+      "welcome": false
+    },
+    {
+      "id": "2256.78",
+      "url": "wss://gyeol.146.56.189.166.sslip.io/ws",
+      "welcome": false
+    },
+    {
+      "id": "2256.80",
+      "url": "wss://gyeol.146.56.189.166.sslip.io/ws",
+      "welcome": false
+    },
+    {
+      "id": "2256.82",
+      "url": "wss://gyeol.146.56.189.166.sslip.io/ws",
+      "welcome": false
+    }
+  ],
+  "errors": [],
+  "platform": {
+    "native": true,
+    "origin": "https://localhost",
+    "server": ""
+  },
+  "savedName": "ApkCheck2",
+  "externalFetchWhileOffline": false,
+  "offlineAiFirstMove": true,
+  "offlinePuzzle": 22
+}

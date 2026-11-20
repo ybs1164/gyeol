@@ -1,0 +1,82 @@
+{
+  "fingerprint": "eea1d38f7b2acd7e146830c4140210e3ee97a1fa33dc591827390e8b6ae11339",
+  "scale": 1,
+  "profiles": [
+    {
+      "id": "anchor-01",
+      "name": "첫걸음",
+      "mistake": 0.99,
+      "sims": 0
+    },
+    {
+      "id": "anchor-02",
+      "name": "풀잎",
+      "mistake": 0.9,
+      "sims": 0
+    },
+    {
+      "id": "anchor-03",
+      "name": "아침",
+      "mistake": 0.75,
+      "sims": 0
+    },
+    {
+      "id": "anchor-04",
+      "name": "새싹",
+      "mistake": 0.55,
+      "sims": 0
+    },
+    {
+      "id": "anchor-05",
+      "name": "이슬",
+      "mistake": 0.35,
+      "sims": 0
+    },
+    {
+      "id": "anchor-06",
+      "name": "바람",
+      "mistake": 0.15,
+      "sims": 0
+    },
+    {
+      "id": "anchor-07",
+      "name": "돌담",
+      "mistake": 0.18,
+      "sims": 8
+    },
+    {
+      "id": "anchor-08",
+      "name": "솔숲",
+      "mistake": 0.1,
+      "sims": 16
+    },
+    {
+      "id": "anchor-09",
+      "name": "너울",
+      "mistake": 0.06,
+      "sims": 32
+    },
+    {
+      "id": "anchor-10",
+      "name": "노을",
+      "mistake": 0.03,
+      "sims": 64
+    },
+    {
+      "id": "anchor-11",
+      "name": "벼리",
+      "mistake": 0.01,
+      "sims": 128
+    },
+    {
+      "id": "anchor-12",
+      "name": "한결",
+      "mistake": 0,
+      "sims": 512
+    }
+  ],
+  "games": 1456,
+  "previousFingerprint": "5404fe511778f7c318f3eef49ba6887ed77d2fe90d8088d36cc850a6f22a85c1",
+  "migration": "Only roster spacing and documentation changed; calibrated anchor parameters, sampling and move policy verified byte-identical. Existing 10 bot identities were then distributed through the roster, again with identical calibrated anchor behavior.",
+  "identityMigrationFingerprint": "599b51de1d3dc309d921ca514e450cd38414ad7303496cb44ec6526c098f3aaa"
+}

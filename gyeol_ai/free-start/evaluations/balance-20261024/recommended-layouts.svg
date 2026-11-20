@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1050" height="400" viewBox="0 0 1050 400">
+<rect width="1050" height="400" fill="#f5f4f0"/>
+<g font-family="Segoe UI, Malgun Gothic, sans-serif">
+<text x="24" y="32" font-size="21" fill="#202821">Free-start 균형 후보 · 초록 선공 / 갈색 후공</text>
+<rect x="18" y="54" width="326" height="326" rx="14" fill="white" stroke="#dddcd4"/>
+<text x="36" y="88" font-size="20" font-weight="600">1. 배치 31</text>
+<text x="36" y="115" font-size="17">선공 16/32승 · 50.0%</text>
+<rect x="159.0" y="150.0" width="44" height="44" fill="#fafaf7" stroke="#dddcd4"/>
+<rect x="159.0" y="194.0" width="44" height="44" fill="#fafaf7" stroke="#dddcd4"/>
+<rect x="159.0" y="238.0" width="44" height="44" fill="#fafaf7" stroke="#dddcd4"/>
+<rect x="159.0" y="282.0" width="44" height="44" fill="#fafaf7" stroke="#dddcd4"/>
+<rect x="162.0" y="285.0" width="38" height="38" rx="7" fill="#2b825b"/>
+<text x="181.0" y="314.0" text-anchor="middle" font-size="32" fill="white">↑</text>
+<rect x="162.0" y="153.0" width="38" height="38" rx="7" fill="#956443"/>
+<text x="181.0" y="182.0" text-anchor="middle" font-size="32" fill="white">↓</text>
+<text x="36" y="355" font-size="14" fill="#596359">평균 타일 차 -0.25장 · 현재 AI 기준</text>
+<rect x="362" y="54" width="326" height="326" rx="14" fill="white" stroke="#dddcd4"/>
+<text x="380" y="88" font-size="20" font-weight="600">2. 배치 10</text>
+<text x="380" y="115" font-size="17">선공 16/32승 · 50.0%</text>
+<rect x="503.0" y="172.0" width="44" height="44" fill="#fafaf7" stroke="#dddcd4"/>
+<rect x="503.0" y="216.0" width="44" height="44" fill="#fafaf7" stroke="#dddcd4"/>
+<rect x="503.0" y="260.0" width="44" height="44" fill="#fafaf7" stroke="#dddcd4"/>
+<rect x="506.0" y="263.0" width="38" height="38" rx="7" fill="#2b825b"/>
+<text x="525.0" y="292.0" text-anchor="middle" font-size="32" fill="white">↑</text>
+<rect x="506.0" y="175.0" width="38" height="38" rx="7" fill="#956443"/>
+<text x="525.0" y="204.0" text-anchor="middle" font-size="32" fill="white">↑</text>
+<text x="380" y="355" font-size="14" fill="#596359">평균 타일 차 +0.50장 · 현재 AI 기준</text>
+<rect x="706" y="54" width="326" height="326" rx="14" fill="white" stroke="#dddcd4"/>
+<text x="724" y="88" font-size="20" font-weight="600">3. 배치 25</text>
+<text x="724" y="115" font-size="17">선공 19/32승 · 59.4%</text>
+<rect x="781.0" y="216.0" width="44" height="44" fill="#fafaf7" stroke="#dddcd4"/>
+<rect x="825.0" y="216.0" width="44" height="44" fill="#fafaf7" stroke="#dddcd4"/>
+<rect x="869.0" y="216.0" width="44" height="44" fill="#fafaf7" stroke="#dddcd4"/>
+<rect x="913.0" y="216.0" width="44" height="44" fill="#fafaf7" stroke="#dddcd4"/>
+<rect x="784.0" y="219.0" width="38" height="38" rx="7" fill="#2b825b"/>
+<text x="803.0" y="248.0" text-anchor="middle" font-size="32" fill="white">↑</text>
+<rect x="916.0" y="219.0" width="38" height="38" rx="7" fill="#956443"/>
+<text x="935.0" y="248.0" text-anchor="middle" font-size="32" fill="white">↓</text>
+<text x="724" y="355" font-size="14" fill="#596359">평균 타일 차 +1.00장 · 현재 AI 기준</text>
+</g></svg>

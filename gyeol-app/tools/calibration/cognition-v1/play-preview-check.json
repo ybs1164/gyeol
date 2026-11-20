@@ -1,0 +1,11 @@
+{
+  "checkedAt": "2026-11-15T00:17:52.081Z",
+  "http": 200,
+  "actualOnnx": true,
+  "actualClock": true,
+  "gameId": "mHpgA7sE2ryq",
+  "botName": "노을38",
+  "plies": 4,
+  "durationMs": 12120,
+  "result": "passed"
+}

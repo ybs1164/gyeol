@@ -1,0 +1,2540 @@
+{
+  "date": "2026-11-17T07:05:18.628Z",
+  "games": {
+    "total": 680,
+    "ai": 664,
+    "online": 16,
+    "fromDatabase": 16,
+    "invalid": 0
+  },
+  "moves": {
+    "total": 14984,
+    "passes": 144,
+    "baselineWinnerShare": 51.3
+  },
+  "act": {
+    "declined": {
+      "n": 6680,
+      "share": 44.6,
+      "winnerShare": 55.7,
+      "meanTiles": 10.8,
+      "ai": 6570,
+      "online": 110
+    },
+    "single": {
+      "n": 5507,
+      "share": 36.8,
+      "winnerShare": 43.9,
+      "meanTiles": 16.1,
+      "ai": 5410,
+      "online": 97
+    },
+    "quiet": {
+      "n": 1404,
+      "share": 9.4,
+      "winnerShare": 37.7,
+      "meanTiles": 9.5,
+      "ai": 1320,
+      "online": 84
+    },
+    "chain2": {
+      "n": 734,
+      "share": 4.9,
+      "winnerShare": 68.4,
+      "meanTiles": 18.9,
+      "ai": 698,
+      "online": 36
+    },
+    "chain3": {
+      "n": 659,
+      "share": 4.4,
+      "winnerShare": 78.5,
+      "meanTiles": 20,
+      "ai": 639,
+      "online": 20
+    }
+  },
+  "aftermath": {
+    "outtraded": {
+      "n": 9578,
+      "share": 63.9,
+      "winnerShare": 44.4,
+      "meanTiles": 11.6,
+      "ai": 9396,
+      "online": 182
+    },
+    "retakable": {
+      "n": 2009,
+      "share": 13.4,
+      "winnerShare": 64.8,
+      "meanTiles": 17.4,
+      "ai": 1969,
+      "online": 40
+    },
+    "elsewhere": {
+      "n": 1600,
+      "share": 10.7,
+      "winnerShare": 49.6,
+      "meanTiles": 15.3,
+      "ai": 1567,
+      "online": 33
+    },
+    "safe": {
+      "n": 974,
+      "share": 6.5,
+      "winnerShare": 72,
+      "meanTiles": 11.5,
+      "ai": 906,
+      "online": 68
+    },
+    "final": {
+      "n": 679,
+      "share": 4.5,
+      "winnerShare": 76.9,
+      "meanTiles": 24,
+      "ai": 664,
+      "online": 15
+    },
+    "lockout": {
+      "n": 144,
+      "share": 1,
+      "winnerShare": 79.2,
+      "meanTiles": 22.8,
+      "ai": 135,
+      "online": 9
+    }
+  },
+  "actByAftermath": {
+    "declined / outtraded": {
+      "n": 6220,
+      "share": 41.5,
+      "winnerShare": 54.5,
+      "meanTiles": 10.6,
+      "ai": 6136,
+      "online": 84
+    },
+    "single / outtraded": {
+      "n": 2192,
+      "share": 14.6,
+      "winnerShare": 23.2,
+      "meanTiles": 14.6,
+      "ai": 2149,
+      "online": 43
+    },
+    "single / retakable": {
+      "n": 1443,
+      "share": 9.6,
+      "winnerShare": 60.4,
+      "meanTiles": 17,
+      "ai": 1426,
+      "online": 17
+    },
+    "single / elsewhere": {
+      "n": 1286,
+      "share": 8.6,
+      "winnerShare": 44.8,
+      "meanTiles": 14.7,
+      "ai": 1264,
+      "online": 22
+    },
+    "quiet / outtraded": {
+      "n": 1004,
+      "share": 6.7,
+      "winnerShare": 29.9,
+      "meanTiles": 10.6,
+      "ai": 952,
+      "online": 52
+    },
+    "declined / safe": {
+      "n": 401,
+      "share": 2.7,
+      "winnerShare": 78.6,
+      "meanTiles": 13.5,
+      "ai": 384,
+      "online": 17
+    },
+    "single / final": {
+      "n": 366,
+      "share": 2.4,
+      "winnerShare": 77.9,
+      "meanTiles": 24,
+      "ai": 363,
+      "online": 3
+    },
+    "quiet / safe": {
+      "n": 349,
+      "share": 2.3,
+      "winnerShare": 59.5,
+      "meanTiles": 4.1,
+      "ai": 322,
+      "online": 27
+    },
+    "chain3 / retakable": {
+      "n": 299,
+      "share": 2,
+      "winnerShare": 79.3,
+      "meanTiles": 18.6,
+      "ai": 291,
+      "online": 8
+    },
+    "chain2 / retakable": {
+      "n": 267,
+      "share": 1.8,
+      "winnerShare": 72.3,
+      "meanTiles": 18.3,
+      "ai": 252,
+      "online": 15
+    },
+    "chain2 / elsewhere": {
+      "n": 198,
+      "share": 1.3,
+      "winnerShare": 65.7,
+      "meanTiles": 17.8,
+      "ai": 191,
+      "online": 7
+    },
+    "single / safe": {
+      "n": 160,
+      "share": 1.1,
+      "winnerShare": 79.4,
+      "meanTiles": 19.7,
+      "ai": 150,
+      "online": 10
+    },
+    "chain3 / final": {
+      "n": 136,
+      "share": 0.9,
+      "winnerShare": 96.3,
+      "meanTiles": 24,
+      "ai": 134,
+      "online": 2
+    },
+    "chain3 / elsewhere": {
+      "n": 116,
+      "share": 0.8,
+      "winnerShare": 75.9,
+      "meanTiles": 18.1,
+      "ai": 112,
+      "online": 4
+    },
+    "chain2 / outtraded": {
+      "n": 113,
+      "share": 0.8,
+      "winnerShare": 38.1,
+      "meanTiles": 17.5,
+      "ai": 110,
+      "online": 3
+    },
+    "chain2 / final": {
+      "n": 94,
+      "share": 0.6,
+      "winnerShare": 88.3,
+      "meanTiles": 24,
+      "ai": 91,
+      "online": 3
+    },
+    "single / lockout": {
+      "n": 60,
+      "share": 0.4,
+      "winnerShare": 78.3,
+      "meanTiles": 22.9,
+      "ai": 58,
+      "online": 2
+    },
+    "chain3 / outtraded": {
+      "n": 49,
+      "share": 0.3,
+      "winnerShare": 12.2,
+      "meanTiles": 19.7,
+      "ai": 49,
+      "online": 0
+    },
+    "quiet / final": {
+      "n": 44,
+      "share": 0.3,
+      "winnerShare": 43.2,
+      "meanTiles": 24,
+      "ai": 42,
+      "online": 2
+    },
+    "declined / final": {
+      "n": 39,
+      "share": 0.3,
+      "winnerShare": 10.3,
+      "meanTiles": 24,
+      "ai": 34,
+      "online": 5
+    },
+    "chain2 / safe": {
+      "n": 37,
+      "share": 0.2,
+      "winnerShare": 75.7,
+      "meanTiles": 18.8,
+      "ai": 29,
+      "online": 8
+    },
+    "chain3 / lockout": {
+      "n": 32,
+      "share": 0.2,
+      "winnerShare": 96.9,
+      "meanTiles": 22.9,
+      "ai": 32,
+      "online": 0
+    },
+    "chain3 / safe": {
+      "n": 27,
+      "share": 0.2,
+      "winnerShare": 88.9,
+      "meanTiles": 19.4,
+      "ai": 21,
+      "online": 6
+    },
+    "chain2 / lockout": {
+      "n": 25,
+      "share": 0.2,
+      "winnerShare": 100,
+      "meanTiles": 22.8,
+      "ai": 25,
+      "online": 0
+    },
+    "declined / lockout": {
+      "n": 20,
+      "share": 0.1,
+      "winnerShare": 40,
+      "meanTiles": 22.6,
+      "ai": 16,
+      "online": 4
+    },
+    "quiet / lockout": {
+      "n": 7,
+      "share": 0,
+      "winnerShare": 42.9,
+      "meanTiles": 22.3,
+      "ai": 4,
+      "online": 3
+    }
+  },
+  "quietPurpose": {
+    "threat": {
+      "n": 7238,
+      "share": 89.5,
+      "winnerShare": 54.3,
+      "meanTiles": 9.7,
+      "ai": 7102,
+      "online": 136
+    },
+    "positional": {
+      "n": 384,
+      "share": 4.8,
+      "winnerShare": 16.4,
+      "meanTiles": 20.1,
+      "ai": 365,
+      "online": 19
+    },
+    "threat-but-loosens": {
+      "n": 243,
+      "share": 3,
+      "winnerShare": 49,
+      "meanTiles": 16.2,
+      "ai": 217,
+      "online": 26
+    },
+    "defend+threat": {
+      "n": 149,
+      "share": 1.8,
+      "winnerShare": 75.8,
+      "meanTiles": 15,
+      "ai": 146,
+      "online": 3
+    },
+    "defend": {
+      "n": 39,
+      "share": 0.5,
+      "winnerShare": 43.6,
+      "meanTiles": 21.5,
+      "ai": 37,
+      "online": 2
+    },
+    "loosens": {
+      "n": 31,
+      "share": 0.4,
+      "winnerShare": 29,
+      "meanTiles": 20.5,
+      "ai": 23,
+      "online": 8
+    }
+  },
+  "quietRotation": {
+    "placed": {
+      "n": 4754,
+      "share": 58.8,
+      "winnerShare": 61.8,
+      "meanTiles": 11.2,
+      "ai": 4637,
+      "online": 117
+    },
+    "open": {
+      "n": 2543,
+      "share": 31.5,
+      "winnerShare": 45.8,
+      "meanTiles": 7.6,
+      "ai": 2508,
+      "online": 35
+    },
+    "dead": {
+      "n": 474,
+      "share": 5.9,
+      "winnerShare": 14.6,
+      "meanTiles": 15.9,
+      "ai": 466,
+      "online": 8
+    },
+    "opponent": {
+      "n": 313,
+      "share": 3.9,
+      "winnerShare": 24.9,
+      "meanTiles": 18.1,
+      "ai": 279,
+      "online": 34
+    }
+  },
+  "captureRotation": {
+    "own": {
+      "n": 6900,
+      "share": 100,
+      "winnerShare": 49.8,
+      "meanTiles": 16.8,
+      "ai": 6747,
+      "online": 153
+    }
+  },
+  "greedy": {
+    "declined": {
+      "n": 6680,
+      "share": 44.6,
+      "winnerShare": 55.7,
+      "meanTiles": 10.8,
+      "ai": 6570,
+      "online": 110
+    },
+    "took the largest": {
+      "n": 5515,
+      "share": 36.8,
+      "winnerShare": 43.1,
+      "meanTiles": 16.9,
+      "ai": 5379,
+      "online": 136
+    },
+    "no capture available": {
+      "n": 1404,
+      "share": 9.4,
+      "winnerShare": 37.7,
+      "meanTiles": 9.5,
+      "ai": 1320,
+      "online": 84
+    },
+    "took a smaller one": {
+      "n": 1385,
+      "share": 9.2,
+      "winnerShare": 76.5,
+      "meanTiles": 16.3,
+      "ai": 1368,
+      "online": 17
+    }
+  },
+  "shape": {
+    "fills / contact 2": {
+      "n": 4136,
+      "share": 27.6,
+      "winnerShare": 45.4,
+      "meanTiles": 16.1,
+      "ai": 4003,
+      "online": 133
+    },
+    "expands / contact 1": {
+      "n": 4120,
+      "share": 27.5,
+      "winnerShare": 53,
+      "meanTiles": 7.9,
+      "ai": 4013,
+      "online": 107
+    },
+    "fills / contact 1": {
+      "n": 3867,
+      "share": 25.8,
+      "winnerShare": 41.6,
+      "meanTiles": 13.2,
+      "ai": 3809,
+      "online": 58
+    },
+    "fills / contact 3+": {
+      "n": 2861,
+      "share": 19.1,
+      "winnerShare": 70.4,
+      "meanTiles": 17.9,
+      "ai": 2812,
+      "online": 49
+    }
+  },
+  "byPhase": {
+    "opening": {
+      "declined": {
+        "n": 3109,
+        "share": 64.8,
+        "winnerShare": 57.3,
+        "meanTiles": 6.3,
+        "ai": 3073,
+        "online": 36
+      },
+      "quiet": {
+        "n": 846,
+        "share": 17.6,
+        "winnerShare": 47.9,
+        "meanTiles": 3.2,
+        "ai": 806,
+        "online": 40
+      },
+      "single": {
+        "n": 832,
+        "share": 17.3,
+        "winnerShare": 26.4,
+        "meanTiles": 7.2,
+        "ai": 796,
+        "online": 36
+      },
+      "chain2": {
+        "n": 11,
+        "share": 0.2,
+        "winnerShare": 27.3,
+        "meanTiles": 7.5,
+        "ai": 2,
+        "online": 9
+      },
+      "chain3": {
+        "n": 1,
+        "share": 0,
+        "winnerShare": 100,
+        "meanTiles": 9,
+        "ai": 0,
+        "online": 1
+      }
+    },
+    "middle": {
+      "declined": {
+        "n": 2654,
+        "share": 48.9,
+        "winnerShare": 55.8,
+        "meanTiles": 13,
+        "ai": 2611,
+        "online": 43
+      },
+      "single": {
+        "n": 2200,
+        "share": 40.5,
+        "winnerShare": 42.5,
+        "meanTiles": 13.8,
+        "ai": 2167,
+        "online": 33
+      },
+      "chain2": {
+        "n": 239,
+        "share": 4.4,
+        "winnerShare": 61.9,
+        "meanTiles": 14.8,
+        "ai": 223,
+        "online": 16
+      },
+      "quiet": {
+        "n": 176,
+        "share": 3.2,
+        "winnerShare": 23.9,
+        "meanTiles": 14.5,
+        "ai": 155,
+        "online": 21
+      },
+      "chain3": {
+        "n": 163,
+        "share": 3,
+        "winnerShare": 68.1,
+        "meanTiles": 14.8,
+        "ai": 156,
+        "online": 7
+      }
+    },
+    "end": {
+      "single": {
+        "n": 2475,
+        "share": 52.1,
+        "winnerShare": 50.9,
+        "meanTiles": 21.2,
+        "ai": 2447,
+        "online": 28
+      },
+      "declined": {
+        "n": 917,
+        "share": 19.3,
+        "winnerShare": 49.8,
+        "meanTiles": 20,
+        "ai": 886,
+        "online": 31
+      },
+      "chain3": {
+        "n": 495,
+        "share": 10.4,
+        "winnerShare": 81.8,
+        "meanTiles": 21.7,
+        "ai": 483,
+        "online": 12
+      },
+      "chain2": {
+        "n": 484,
+        "share": 10.2,
+        "winnerShare": 72.5,
+        "meanTiles": 21.2,
+        "ai": 473,
+        "online": 11
+      },
+      "quiet": {
+        "n": 382,
+        "share": 8,
+        "winnerShare": 21.7,
+        "meanTiles": 21,
+        "ai": 359,
+        "online": 23
+      }
+    }
+  },
+  "byOrigin": {
+    "ai": {
+      "act": {
+        "declined": {
+          "n": 6570,
+          "share": 44.9,
+          "winnerShare": 56.2,
+          "meanTiles": 10.8,
+          "ai": 6570,
+          "online": 0
+        },
+        "single": {
+          "n": 5410,
+          "share": 37,
+          "winnerShare": 43.4,
+          "meanTiles": 16.2,
+          "ai": 5410,
+          "online": 0
+        },
+        "quiet": {
+          "n": 1320,
+          "share": 9,
+          "winnerShare": 36.5,
+          "meanTiles": 9.4,
+          "ai": 1320,
+          "online": 0
+        },
+        "chain2": {
+          "n": 698,
+          "share": 4.8,
+          "winnerShare": 69.1,
+          "meanTiles": 19.1,
+          "ai": 698,
+          "online": 0
+        },
+        "chain3": {
+          "n": 639,
+          "share": 4.4,
+          "winnerShare": 78.9,
+          "meanTiles": 20,
+          "ai": 639,
+          "online": 0
+        }
+      },
+      "aftermath": {
+        "outtraded": {
+          "n": 9396,
+          "share": 64.2,
+          "winnerShare": 44.3,
+          "meanTiles": 11.6,
+          "ai": 9396,
+          "online": 0
+        },
+        "retakable": {
+          "n": 1969,
+          "share": 13.5,
+          "winnerShare": 64.8,
+          "meanTiles": 17.5,
+          "ai": 1969,
+          "online": 0
+        },
+        "elsewhere": {
+          "n": 1567,
+          "share": 10.7,
+          "winnerShare": 49.1,
+          "meanTiles": 15.3,
+          "ai": 1567,
+          "online": 0
+        },
+        "safe": {
+          "n": 906,
+          "share": 6.2,
+          "winnerShare": 74.1,
+          "meanTiles": 11.5,
+          "ai": 906,
+          "online": 0
+        },
+        "final": {
+          "n": 664,
+          "share": 4.5,
+          "winnerShare": 77.9,
+          "meanTiles": 24,
+          "ai": 664,
+          "online": 0
+        },
+        "lockout": {
+          "n": 135,
+          "share": 0.9,
+          "winnerShare": 81.5,
+          "meanTiles": 22.9,
+          "ai": 135,
+          "online": 0
+        }
+      }
+    },
+    "online": {
+      "act": {
+        "declined": {
+          "n": 110,
+          "share": 31.7,
+          "winnerShare": 24.5,
+          "meanTiles": 13.4,
+          "ai": 0,
+          "online": 110
+        },
+        "single": {
+          "n": 97,
+          "share": 28,
+          "winnerShare": 67,
+          "meanTiles": 12.9,
+          "ai": 0,
+          "online": 97
+        },
+        "quiet": {
+          "n": 84,
+          "share": 24.2,
+          "winnerShare": 57.3,
+          "meanTiles": 10.5,
+          "ai": 0,
+          "online": 84
+        },
+        "chain2": {
+          "n": 36,
+          "share": 10.4,
+          "winnerShare": 55.6,
+          "meanTiles": 14.7,
+          "ai": 0,
+          "online": 36
+        },
+        "chain3": {
+          "n": 20,
+          "share": 5.8,
+          "winnerShare": 65,
+          "meanTiles": 17.9,
+          "ai": 0,
+          "online": 20
+        }
+      },
+      "aftermath": {
+        "outtraded": {
+          "n": 182,
+          "share": 52.4,
+          "winnerShare": 45.9,
+          "meanTiles": 11.9,
+          "ai": 0,
+          "online": 182
+        },
+        "safe": {
+          "n": 68,
+          "share": 19.6,
+          "winnerShare": 44.8,
+          "meanTiles": 11.5,
+          "ai": 0,
+          "online": 68
+        },
+        "retakable": {
+          "n": 40,
+          "share": 11.5,
+          "winnerShare": 65,
+          "meanTiles": 13,
+          "ai": 0,
+          "online": 40
+        },
+        "elsewhere": {
+          "n": 33,
+          "share": 9.5,
+          "winnerShare": 72.7,
+          "meanTiles": 14,
+          "ai": 0,
+          "online": 33
+        },
+        "final": {
+          "n": 15,
+          "share": 4.3,
+          "winnerShare": 33.3,
+          "meanTiles": 24,
+          "ai": 0,
+          "online": 15
+        },
+        "lockout": {
+          "n": 9,
+          "share": 2.6,
+          "winnerShare": 44.4,
+          "meanTiles": 22.1,
+          "ai": 0,
+          "online": 9
+        }
+      }
+    }
+  },
+  "exposure": {
+    "threat not increased": {
+      "n": 11556,
+      "share": 77.1,
+      "winnerShare": 48.7,
+      "meanTiles": 12.6,
+      "ai": 11372,
+      "online": 184
+    },
+    "opponent cannot capture": {
+      "n": 1797,
+      "share": 12,
+      "winnerShare": 74.4,
+      "meanTiles": 17.2,
+      "ai": 1705,
+      "online": 92
+    },
+    "threat increased": {
+      "n": 1631,
+      "share": 10.9,
+      "winnerShare": 44,
+      "meanTiles": 15.1,
+      "ai": 1560,
+      "online": 71
+    }
+  },
+  "options": {
+    "mean": 19
+  },
+  "captureExchange": {
+    "took 1 / reply 1": {
+      "n": 2729,
+      "share": 44.1,
+      "winnerShare": 53.1,
+      "meanTiles": 15.9,
+      "ai": 2690,
+      "online": 39
+    },
+    "took 1 / reply 3+": {
+      "n": 1175,
+      "share": 19,
+      "winnerShare": 21,
+      "meanTiles": 15.3,
+      "ai": 1154,
+      "online": 21
+    },
+    "took 1 / reply 2": {
+      "n": 1017,
+      "share": 16.4,
+      "winnerShare": 25.7,
+      "meanTiles": 13.8,
+      "ai": 995,
+      "online": 22
+    },
+    "took 2 / reply 1": {
+      "n": 358,
+      "share": 5.8,
+      "winnerShare": 72.3,
+      "meanTiles": 18.4,
+      "ai": 343,
+      "online": 15
+    },
+    "took 3+ / reply 1": {
+      "n": 330,
+      "share": 5.3,
+      "winnerShare": 86.4,
+      "meanTiles": 18.6,
+      "ai": 320,
+      "online": 10
+    },
+    "took 1 / reply 0": {
+      "n": 160,
+      "share": 2.6,
+      "winnerShare": 79.4,
+      "meanTiles": 19.7,
+      "ai": 150,
+      "online": 10
+    },
+    "took 2 / reply 3+": {
+      "n": 113,
+      "share": 1.8,
+      "winnerShare": 38.1,
+      "meanTiles": 17.5,
+      "ai": 110,
+      "online": 3
+    },
+    "took 2 / reply 2": {
+      "n": 107,
+      "share": 1.7,
+      "winnerShare": 59.8,
+      "meanTiles": 17,
+      "ai": 100,
+      "online": 7
+    },
+    "took 3+ / reply 3+": {
+      "n": 93,
+      "share": 1.5,
+      "winnerShare": 33.3,
+      "meanTiles": 19.1,
+      "ai": 93,
+      "online": 0
+    },
+    "took 3+ / reply 2": {
+      "n": 41,
+      "share": 0.7,
+      "winnerShare": 36.6,
+      "meanTiles": 17.4,
+      "ai": 39,
+      "online": 2
+    },
+    "took 2 / reply 0": {
+      "n": 37,
+      "share": 0.6,
+      "winnerShare": 75.7,
+      "meanTiles": 18.8,
+      "ai": 29,
+      "online": 8
+    },
+    "took 3+ / reply 0": {
+      "n": 27,
+      "share": 0.4,
+      "winnerShare": 88.9,
+      "meanTiles": 19.4,
+      "ai": 21,
+      "online": 6
+    }
+  },
+  "nonCapture": {
+    "declined 1 / reply 1 / follow 1": {
+      "n": 2882,
+      "share": 36.1,
+      "winnerShare": 54.1,
+      "meanTiles": 7.7,
+      "ai": 2853,
+      "online": 29
+    },
+    "declined 1 / reply 2 / follow 1": {
+      "n": 685,
+      "share": 8.6,
+      "winnerShare": 28.9,
+      "meanTiles": 12.3,
+      "ai": 682,
+      "online": 3
+    },
+    "declined 2 / reply 1 / follow 2": {
+      "n": 640,
+      "share": 8,
+      "winnerShare": 69.8,
+      "meanTiles": 11.2,
+      "ai": 632,
+      "online": 8
+    },
+    "none available / reply 1 / follow 1": {
+      "n": 500,
+      "share": 6.3,
+      "winnerShare": 43.3,
+      "meanTiles": 4.8,
+      "ai": 478,
+      "online": 22
+    },
+    "declined 3+ / reply 1 / follow 3+": {
+      "n": 465,
+      "share": 5.8,
+      "winnerShare": 84.5,
+      "meanTiles": 12.7,
+      "ai": 456,
+      "online": 9
+    },
+    "declined 1 / reply 3+ / follow 1": {
+      "n": 394,
+      "share": 4.9,
+      "winnerShare": 18.8,
+      "meanTiles": 13.8,
+      "ai": 390,
+      "online": 4
+    },
+    "none available / reply 0 / follow 1": {
+      "n": 310,
+      "share": 3.9,
+      "winnerShare": 61.5,
+      "meanTiles": 2.5,
+      "ai": 292,
+      "online": 18
+    },
+    "declined 1 / reply 1 / follow 3+": {
+      "n": 191,
+      "share": 2.4,
+      "winnerShare": 81.2,
+      "meanTiles": 15,
+      "ai": 190,
+      "online": 1
+    },
+    "declined 1 / reply 1 / follow 2": {
+      "n": 181,
+      "share": 2.3,
+      "winnerShare": 70.7,
+      "meanTiles": 9.9,
+      "ai": 172,
+      "online": 9
+    },
+    "declined 2 / reply 1 / follow 3+": {
+      "n": 134,
+      "share": 1.7,
+      "winnerShare": 84.3,
+      "meanTiles": 13.6,
+      "ai": 132,
+      "online": 2
+    },
+    "none available / reply 2 / follow 1": {
+      "n": 131,
+      "share": 1.6,
+      "winnerShare": 24.4,
+      "meanTiles": 10.2,
+      "ai": 123,
+      "online": 8
+    },
+    "declined 1 / reply 0 / follow 1": {
+      "n": 108,
+      "share": 1.4,
+      "winnerShare": 63.9,
+      "meanTiles": 16.3,
+      "ai": 101,
+      "online": 7
+    },
+    "none available / reply 3+ / follow 0": {
+      "n": 106,
+      "share": 1.3,
+      "winnerShare": 2.8,
+      "meanTiles": 19.8,
+      "ai": 103,
+      "online": 3
+    },
+    "declined 3+ / reply 0 / follow 3+": {
+      "n": 102,
+      "share": 1.3,
+      "winnerShare": 93.1,
+      "meanTiles": 15.1,
+      "ai": 98,
+      "online": 4
+    },
+    "declined 2 / reply 1 / follow 1": {
+      "n": 101,
+      "share": 1.3,
+      "winnerShare": 73.3,
+      "meanTiles": 13.7,
+      "ai": 101,
+      "online": 0
+    },
+    "none available / reply 1 / follow 0": {
+      "n": 100,
+      "share": 1.3,
+      "winnerShare": 20,
+      "meanTiles": 19.4,
+      "ai": 98,
+      "online": 2
+    },
+    "declined 2 / reply 0 / follow 2": {
+      "n": 98,
+      "share": 1.2,
+      "winnerShare": 72.4,
+      "meanTiles": 11,
+      "ai": 94,
+      "online": 4
+    },
+    "declined 2 / reply 3+ / follow 2": {
+      "n": 96,
+      "share": 1.2,
+      "winnerShare": 65.6,
+      "meanTiles": 15.3,
+      "ai": 94,
+      "online": 2
+    },
+    "declined 3+ / reply 2 / follow 3+": {
+      "n": 95,
+      "share": 1.2,
+      "winnerShare": 41.1,
+      "meanTiles": 15.6,
+      "ai": 92,
+      "online": 3
+    },
+    "none available / reply 3+ / follow 1": {
+      "n": 78,
+      "share": 1,
+      "winnerShare": 14.1,
+      "meanTiles": 15.2,
+      "ai": 70,
+      "online": 8
+    },
+    "declined 2 / reply 2 / follow 2": {
+      "n": 68,
+      "share": 0.9,
+      "winnerShare": 45.6,
+      "meanTiles": 15,
+      "ai": 67,
+      "online": 1
+    },
+    "none available / reply 2 / follow 0": {
+      "n": 59,
+      "share": 0.7,
+      "winnerShare": 15.3,
+      "meanTiles": 19.2,
+      "ai": 53,
+      "online": 6
+    },
+    "declined 1 / reply 0 / follow 2": {
+      "n": 47,
+      "share": 0.6,
+      "winnerShare": 87.2,
+      "meanTiles": 7.4,
+      "ai": 47,
+      "online": 0
+    },
+    "declined 1 / reply 2 / follow 3+": {
+      "n": 41,
+      "share": 0.5,
+      "winnerShare": 36.6,
+      "meanTiles": 15.7,
+      "ai": 39,
+      "online": 2
+    },
+    "declined 3+ / reply 3+ / follow 3+": {
+      "n": 38,
+      "share": 0.5,
+      "winnerShare": 44.7,
+      "meanTiles": 14.7,
+      "ai": 38,
+      "online": 0
+    },
+    "declined 1 / reply 1 / follow 0": {
+      "n": 34,
+      "share": 0.4,
+      "winnerShare": 20.6,
+      "meanTiles": 21.6,
+      "ai": 34,
+      "online": 0
+    },
+    "none available / reply 0 / follow 0": {
+      "n": 33,
+      "share": 0.4,
+      "winnerShare": 42.4,
+      "meanTiles": 17.1,
+      "ai": 26,
+      "online": 7
+    },
+    "declined 1 / reply 3+ / follow 3+": {
+      "n": 31,
+      "share": 0.4,
+      "winnerShare": 38.7,
+      "meanTiles": 16.7,
+      "ai": 30,
+      "online": 1
+    },
+    "declined 3+ / reply 1 / follow 1": {
+      "n": 25,
+      "share": 0.3,
+      "winnerShare": 72,
+      "meanTiles": 15,
+      "ai": 24,
+      "online": 1
+    },
+    "declined 3+ / reply 1 / follow 2": {
+      "n": 19,
+      "share": 0.2,
+      "winnerShare": 63.2,
+      "meanTiles": 12.6,
+      "ai": 18,
+      "online": 1
+    },
+    "declined 1 / reply 0 / follow 3+": {
+      "n": 16,
+      "share": 0.2,
+      "winnerShare": 81.3,
+      "meanTiles": 18.1,
+      "ai": 16,
+      "online": 0
+    },
+    "declined 1 / reply 2 / follow 2": {
+      "n": 16,
+      "share": 0.2,
+      "winnerShare": 12.5,
+      "meanTiles": 14.6,
+      "ai": 13,
+      "online": 3
+    },
+    "declined 1 / reply 2 / follow 0": {
+      "n": 15,
+      "share": 0.2,
+      "winnerShare": 33.3,
+      "meanTiles": 21.3,
+      "ai": 15,
+      "online": 0
+    },
+    "declined 1 / reply 3+ / follow 0": {
+      "n": 13,
+      "share": 0.2,
+      "winnerShare": 0,
+      "meanTiles": 18.8,
+      "ai": 11,
+      "online": 2
+    },
+    "none available / reply 1 / follow 3+": {
+      "n": 13,
+      "share": 0.2,
+      "winnerShare": 46.2,
+      "meanTiles": 18.1,
+      "ai": 13,
+      "online": 0
+    },
+    "none available / reply 2 / follow 3+": {
+      "n": 12,
+      "share": 0.2,
+      "winnerShare": 25,
+      "meanTiles": 16.9,
+      "ai": 10,
+      "online": 2
+    },
+    "declined 2 / reply 0 / follow 1": {
+      "n": 12,
+      "share": 0.2,
+      "winnerShare": 83.3,
+      "meanTiles": 12.8,
+      "ai": 11,
+      "online": 1
+    },
+    "declined 3+ / reply 3+ / follow 2": {
+      "n": 11,
+      "share": 0.1,
+      "winnerShare": 18.2,
+      "meanTiles": 15.2,
+      "ai": 10,
+      "online": 1
+    },
+    "declined 2 / reply 0 / follow 3+": {
+      "n": 10,
+      "share": 0.1,
+      "winnerShare": 90,
+      "meanTiles": 18.4,
+      "ai": 9,
+      "online": 1
+    },
+    "declined 1 / reply 3+ / follow 2": {
+      "n": 7,
+      "share": 0.1,
+      "winnerShare": 0,
+      "meanTiles": 15,
+      "ai": 7,
+      "online": 0
+    },
+    "declined 2 / reply 3+ / follow 3+": {
+      "n": 6,
+      "share": 0.1,
+      "winnerShare": 83.3,
+      "meanTiles": 16.3,
+      "ai": 6,
+      "online": 0
+    },
+    "declined 2 / reply 3+ / follow 1": {
+      "n": 6,
+      "share": 0.1,
+      "winnerShare": 83.3,
+      "meanTiles": 13.7,
+      "ai": 6,
+      "online": 0
+    },
+    "declined 2 / reply 2 / follow 1": {
+      "n": 6,
+      "share": 0.1,
+      "winnerShare": 50,
+      "meanTiles": 15.5,
+      "ai": 6,
+      "online": 0
+    },
+    "declined 2 / reply 0 / follow 0": {
+      "n": 6,
+      "share": 0.1,
+      "winnerShare": 83.3,
+      "meanTiles": 12,
+      "ai": 6,
+      "online": 0
+    },
+    "none available / reply 0 / follow 3+": {
+      "n": 5,
+      "share": 0.1,
+      "winnerShare": 60,
+      "meanTiles": 17,
+      "ai": 3,
+      "online": 2
+    },
+    "declined 2 / reply 2 / follow 3+": {
+      "n": 5,
+      "share": 0.1,
+      "winnerShare": 60,
+      "meanTiles": 15.2,
+      "ai": 5,
+      "online": 0
+    },
+    "declined 3+ / reply 3+ / follow 1": {
+      "n": 4,
+      "share": 0.1,
+      "winnerShare": 75,
+      "meanTiles": 15.5,
+      "ai": 4,
+      "online": 0
+    },
+    "declined 3+ / reply 2 / follow 2": {
+      "n": 4,
+      "share": 0.1,
+      "winnerShare": 75,
+      "meanTiles": 14,
+      "ai": 4,
+      "online": 0
+    },
+    "declined 3+ / reply 2 / follow 1": {
+      "n": 3,
+      "share": 0,
+      "winnerShare": 66.7,
+      "meanTiles": 13.7,
+      "ai": 3,
+      "online": 0
+    },
+    "none available / reply 3+ / follow 2": {
+      "n": 2,
+      "share": 0,
+      "winnerShare": 0,
+      "meanTiles": 18,
+      "ai": 2,
+      "online": 0
+    },
+    "declined 2 / reply 1 / follow 0": {
+      "n": 2,
+      "share": 0,
+      "winnerShare": 0,
+      "meanTiles": 22,
+      "ai": 1,
+      "online": 1
+    },
+    "none available / reply 1 / follow 2": {
+      "n": 2,
+      "share": 0,
+      "winnerShare": 0,
+      "meanTiles": 21,
+      "ai": 1,
+      "online": 1
+    },
+    "declined 3+ / reply 0 / follow 2": {
+      "n": 1,
+      "share": 0,
+      "winnerShare": 100,
+      "meanTiles": 6,
+      "ai": 1,
+      "online": 0
+    },
+    "none available / reply 2 / follow 2": {
+      "n": 1,
+      "share": 0,
+      "winnerShare": 0,
+      "meanTiles": 19,
+      "ai": 1,
+      "online": 0
+    },
+    "none available / reply 0 / follow 2": {
+      "n": 1,
+      "share": 0,
+      "winnerShare": 0,
+      "meanTiles": 23,
+      "ai": 1,
+      "online": 0
+    },
+    "declined 3+ / reply 1 / follow 0": {
+      "n": 1,
+      "share": 0,
+      "winnerShare": 100,
+      "meanTiles": 19,
+      "ai": 1,
+      "online": 0
+    },
+    "declined 3+ / reply 0 / follow 0": {
+      "n": 1,
+      "share": 0,
+      "winnerShare": 100,
+      "meanTiles": 11,
+      "ai": 1,
+      "online": 0
+    },
+    "declined 3+ / reply 2 / follow 0": {
+      "n": 1,
+      "share": 0,
+      "winnerShare": 100,
+      "meanTiles": 10,
+      "ai": 0,
+      "online": 1
+    }
+  },
+  "nonCaptureThreatChange": {
+    "declined / threat same (placed)": {
+      "n": 4019,
+      "share": 50.4,
+      "winnerShare": 64,
+      "meanTiles": 11,
+      "ai": 3970,
+      "online": 49
+    },
+    "declined / threat same (open)": {
+      "n": 1822,
+      "share": 22.8,
+      "winnerShare": 45,
+      "meanTiles": 8.3,
+      "ai": 1807,
+      "online": 15
+    },
+    "none / threat same (open)": {
+      "n": 639,
+      "share": 8,
+      "winnerShare": 47.6,
+      "meanTiles": 4.5,
+      "ai": 623,
+      "online": 16
+    },
+    "none / threat same (placed)": {
+      "n": 422,
+      "share": 5.3,
+      "winnerShare": 37.3,
+      "meanTiles": 9.3,
+      "ai": 380,
+      "online": 42
+    },
+    "declined / threat same (dead)": {
+      "n": 242,
+      "share": 3,
+      "winnerShare": 14.9,
+      "meanTiles": 14.1,
+      "ai": 241,
+      "online": 1
+    },
+    "none / threat same (dead)": {
+      "n": 189,
+      "share": 2.4,
+      "winnerShare": 10.1,
+      "meanTiles": 17.2,
+      "ai": 187,
+      "online": 2
+    },
+    "declined / threat same (opponent)": {
+      "n": 166,
+      "share": 2.1,
+      "winnerShare": 33.1,
+      "meanTiles": 15.4,
+      "ai": 150,
+      "online": 16
+    },
+    "declined / threat up (placed)": {
+      "n": 129,
+      "share": 1.6,
+      "winnerShare": 56.6,
+      "meanTiles": 16.4,
+      "ai": 120,
+      "online": 9
+    },
+    "declined / threat down (placed)": {
+      "n": 114,
+      "share": 1.4,
+      "winnerShare": 86.8,
+      "meanTiles": 14.9,
+      "ai": 113,
+      "online": 1
+    },
+    "declined / threat up (open)": {
+      "n": 46,
+      "share": 0.6,
+      "winnerShare": 47.8,
+      "meanTiles": 15.2,
+      "ai": 45,
+      "online": 1
+    },
+    "none / threat same (opponent)": {
+      "n": 44,
+      "share": 0.6,
+      "winnerShare": 6.8,
+      "meanTiles": 21.4,
+      "ai": 40,
+      "online": 4
+    },
+    "declined / threat up (opponent)": {
+      "n": 37,
+      "share": 0.5,
+      "winnerShare": 27,
+      "meanTiles": 17.7,
+      "ai": 30,
+      "online": 7
+    },
+    "none / threat up (placed)": {
+      "n": 26,
+      "share": 0.3,
+      "winnerShare": 53.8,
+      "meanTiles": 16.9,
+      "ai": 17,
+      "online": 9
+    },
+    "declined / threat down (open)": {
+      "n": 24,
+      "share": 0.3,
+      "winnerShare": 50,
+      "meanTiles": 12,
+      "ai": 24,
+      "online": 0
+    },
+    "declined / threat up (dead)": {
+      "n": 14,
+      "share": 0.2,
+      "winnerShare": 21.4,
+      "meanTiles": 17,
+      "ai": 12,
+      "online": 2
+    },
+    "none / threat up (opponent)": {
+      "n": 11,
+      "share": 0.1,
+      "winnerShare": 27.3,
+      "meanTiles": 20.4,
+      "ai": 8,
+      "online": 3
+    },
+    "none / threat up (open)": {
+      "n": 6,
+      "share": 0.1,
+      "winnerShare": 33.3,
+      "meanTiles": 16.2,
+      "ai": 4,
+      "online": 2
+    },
+    "declined / threat down (dead)": {
+      "n": 6,
+      "share": 0.1,
+      "winnerShare": 33.3,
+      "meanTiles": 16,
+      "ai": 6,
+      "online": 0
+    },
+    "none / threat up (dead)": {
+      "n": 5,
+      "share": 0.1,
+      "winnerShare": 20,
+      "meanTiles": 21.2,
+      "ai": 4,
+      "online": 1
+    },
+    "none / threat down (open)": {
+      "n": 4,
+      "share": 0.1,
+      "winnerShare": 75,
+      "meanTiles": 15.5,
+      "ai": 4,
+      "online": 0
+    },
+    "none / threat down (opponent)": {
+      "n": 3,
+      "share": 0,
+      "winnerShare": 0,
+      "meanTiles": 22.7,
+      "ai": 3,
+      "online": 0
+    },
+    "none / threat down (placed)": {
+      "n": 2,
+      "share": 0,
+      "winnerShare": 0,
+      "meanTiles": 22,
+      "ai": 2,
+      "online": 0
+    },
+    "declined / threat down (opponent)": {
+      "n": 2,
+      "share": 0,
+      "winnerShare": 50,
+      "meanTiles": 20,
+      "ai": 2,
+      "online": 0
+    },
+    "none / threat down (dead)": {
+      "n": 2,
+      "share": 0,
+      "winnerShare": 50,
+      "meanTiles": 21.5,
+      "ai": 2,
+      "online": 0
+    }
+  },
+  "kinds": {
+    "1 finish": {
+      "n": 679,
+      "share": 4.5,
+      "winnerShare": 76.9,
+      "meanTiles": 24,
+      "ai": 664,
+      "online": 15
+    },
+    "2 lockout": {
+      "n": 144,
+      "share": 1,
+      "winnerShare": 79.2,
+      "meanTiles": 22.8,
+      "ai": 135,
+      "online": 9
+    },
+    "3 clean capture": {
+      "n": 224,
+      "share": 1.5,
+      "winnerShare": 79.9,
+      "meanTiles": 19.5,
+      "ai": 200,
+      "online": 24
+    },
+    "4 big capture": {
+      "n": 742,
+      "share": 5,
+      "winnerShare": 76.4,
+      "meanTiles": 18.4,
+      "ai": 715,
+      "online": 27
+    },
+    "5 even trade": {
+      "n": 2867,
+      "share": 19.1,
+      "winnerShare": 53.3,
+      "meanTiles": 16,
+      "ai": 2821,
+      "online": 46
+    },
+    "6 losing capture": {
+      "n": 2354,
+      "share": 15.7,
+      "winnerShare": 23.7,
+      "meanTiles": 14.8,
+      "ai": 2308,
+      "online": 46
+    },
+    "7 seal": {
+      "n": 750,
+      "share": 5,
+      "winnerShare": 69.7,
+      "meanTiles": 9.2,
+      "ai": 706,
+      "online": 44
+    },
+    "8 loaded wait": {
+      "n": 1823,
+      "share": 12.2,
+      "winnerShare": 72.8,
+      "meanTiles": 12.5,
+      "ai": 1784,
+      "online": 39
+    },
+    "9 balanced wait": {
+      "n": 3629,
+      "share": 24.2,
+      "winnerShare": 52.9,
+      "meanTiles": 7.8,
+      "ai": 3573,
+      "online": 56
+    },
+    "10 loose": {
+      "n": 1772,
+      "share": 11.8,
+      "winnerShare": 25,
+      "meanTiles": 14.2,
+      "ai": 1731,
+      "online": 41
+    }
+  },
+  "kindsByPhase": {
+    "opening": {
+      "3 clean capture": {
+        "n": 5,
+        "share": 0.1,
+        "winnerShare": 20,
+        "meanTiles": 6.6,
+        "ai": 0,
+        "online": 5
+      },
+      "4 big capture": {
+        "n": 3,
+        "share": 0.1,
+        "winnerShare": 33.3,
+        "meanTiles": 8.3,
+        "ai": 0,
+        "online": 3
+      },
+      "5 even trade": {
+        "n": 413,
+        "share": 8.6,
+        "winnerShare": 27.4,
+        "meanTiles": 7.1,
+        "ai": 394,
+        "online": 19
+      },
+      "6 losing capture": {
+        "n": 423,
+        "share": 8.8,
+        "winnerShare": 25.8,
+        "meanTiles": 7.3,
+        "ai": 404,
+        "online": 19
+      },
+      "7 seal": {
+        "n": 417,
+        "share": 8.7,
+        "winnerShare": 65.1,
+        "meanTiles": 3.2,
+        "ai": 397,
+        "online": 20
+      },
+      "8 loaded wait": {
+        "n": 466,
+        "share": 9.7,
+        "winnerShare": 76.8,
+        "meanTiles": 7.9,
+        "ai": 453,
+        "online": 13
+      },
+      "9 balanced wait": {
+        "n": 2724,
+        "share": 56.8,
+        "winnerShare": 53.7,
+        "meanTiles": 5.3,
+        "ai": 2686,
+        "online": 38
+      },
+      "10 loose": {
+        "n": 348,
+        "share": 7.3,
+        "winnerShare": 27,
+        "meanTiles": 8.3,
+        "ai": 343,
+        "online": 5
+      }
+    },
+    "middle": {
+      "3 clean capture": {
+        "n": 47,
+        "share": 0.9,
+        "winnerShare": 66,
+        "meanTiles": 15.3,
+        "ai": 37,
+        "online": 10
+      },
+      "4 big capture": {
+        "n": 245,
+        "share": 4.5,
+        "winnerShare": 71.8,
+        "meanTiles": 14.7,
+        "ai": 233,
+        "online": 12
+      },
+      "5 even trade": {
+        "n": 1141,
+        "share": 21,
+        "winnerShare": 60.3,
+        "meanTiles": 13.9,
+        "ai": 1124,
+        "online": 17
+      },
+      "6 losing capture": {
+        "n": 1169,
+        "share": 21.5,
+        "winnerShare": 25.5,
+        "meanTiles": 13.7,
+        "ai": 1152,
+        "online": 17
+      },
+      "7 seal": {
+        "n": 182,
+        "share": 3.4,
+        "winnerShare": 83,
+        "meanTiles": 14.1,
+        "ai": 168,
+        "online": 14
+      },
+      "8 loaded wait": {
+        "n": 1057,
+        "share": 19.5,
+        "winnerShare": 71.2,
+        "meanTiles": 12.6,
+        "ai": 1040,
+        "online": 17
+      },
+      "9 balanced wait": {
+        "n": 666,
+        "share": 12.3,
+        "winnerShare": 55.1,
+        "meanTiles": 13.6,
+        "ai": 653,
+        "online": 13
+      },
+      "10 loose": {
+        "n": 925,
+        "share": 17,
+        "winnerShare": 27.2,
+        "meanTiles": 13.1,
+        "ai": 905,
+        "online": 20
+      }
+    },
+    "end": {
+      "1 finish": {
+        "n": 679,
+        "share": 14.3,
+        "winnerShare": 76.9,
+        "meanTiles": 24,
+        "ai": 664,
+        "online": 15
+      },
+      "2 lockout": {
+        "n": 144,
+        "share": 3,
+        "winnerShare": 79.2,
+        "meanTiles": 22.8,
+        "ai": 135,
+        "online": 9
+      },
+      "3 clean capture": {
+        "n": 172,
+        "share": 3.6,
+        "winnerShare": 85.5,
+        "meanTiles": 21.1,
+        "ai": 163,
+        "online": 9
+      },
+      "4 big capture": {
+        "n": 494,
+        "share": 10.4,
+        "winnerShare": 78.9,
+        "meanTiles": 20.4,
+        "ai": 482,
+        "online": 12
+      },
+      "5 even trade": {
+        "n": 1313,
+        "share": 27.6,
+        "winnerShare": 55.4,
+        "meanTiles": 20.6,
+        "ai": 1303,
+        "online": 10
+      },
+      "6 losing capture": {
+        "n": 762,
+        "share": 16,
+        "winnerShare": 19.7,
+        "meanTiles": 20.7,
+        "ai": 752,
+        "online": 10
+      },
+      "7 seal": {
+        "n": 151,
+        "share": 3.2,
+        "winnerShare": 66.2,
+        "meanTiles": 19.7,
+        "ai": 141,
+        "online": 10
+      },
+      "8 loaded wait": {
+        "n": 300,
+        "share": 6.3,
+        "winnerShare": 72,
+        "meanTiles": 19.8,
+        "ai": 291,
+        "online": 9
+      },
+      "9 balanced wait": {
+        "n": 239,
+        "share": 5,
+        "winnerShare": 38.9,
+        "meanTiles": 19.7,
+        "ai": 234,
+        "online": 5
+      },
+      "10 loose": {
+        "n": 499,
+        "share": 10.5,
+        "winnerShare": 19.4,
+        "meanTiles": 20.4,
+        "ai": 483,
+        "online": 16
+      }
+    }
+  },
+  "kindsByOrigin": {
+    "ai": {
+      "1 finish": {
+        "n": 664,
+        "share": 4.5,
+        "winnerShare": 77.9,
+        "meanTiles": 24,
+        "ai": 664,
+        "online": 0
+      },
+      "2 lockout": {
+        "n": 135,
+        "share": 0.9,
+        "winnerShare": 81.5,
+        "meanTiles": 22.9,
+        "ai": 135,
+        "online": 0
+      },
+      "3 clean capture": {
+        "n": 200,
+        "share": 1.4,
+        "winnerShare": 83,
+        "meanTiles": 20.1,
+        "ai": 200,
+        "online": 0
+      },
+      "4 big capture": {
+        "n": 715,
+        "share": 4.9,
+        "winnerShare": 76.8,
+        "meanTiles": 18.5,
+        "ai": 715,
+        "online": 0
+      },
+      "5 even trade": {
+        "n": 2821,
+        "share": 19.3,
+        "winnerShare": 53.1,
+        "meanTiles": 16,
+        "ai": 2821,
+        "online": 0
+      },
+      "6 losing capture": {
+        "n": 2308,
+        "share": 15.8,
+        "winnerShare": 22.9,
+        "meanTiles": 14.9,
+        "ai": 2308,
+        "online": 0
+      },
+      "7 seal": {
+        "n": 706,
+        "share": 4.8,
+        "winnerShare": 71.5,
+        "meanTiles": 9.1,
+        "ai": 706,
+        "online": 0
+      },
+      "8 loaded wait": {
+        "n": 1784,
+        "share": 12.2,
+        "winnerShare": 74,
+        "meanTiles": 12.5,
+        "ai": 1784,
+        "online": 0
+      },
+      "9 balanced wait": {
+        "n": 3573,
+        "share": 24.4,
+        "winnerShare": 53.2,
+        "meanTiles": 7.8,
+        "ai": 3573,
+        "online": 0
+      },
+      "10 loose": {
+        "n": 1731,
+        "share": 11.8,
+        "winnerShare": 24,
+        "meanTiles": 14.2,
+        "ai": 1731,
+        "online": 0
+      }
+    },
+    "online": {
+      "1 finish": {
+        "n": 15,
+        "share": 4.3,
+        "winnerShare": 33.3,
+        "meanTiles": 24,
+        "ai": 0,
+        "online": 15
+      },
+      "2 lockout": {
+        "n": 9,
+        "share": 2.6,
+        "winnerShare": 44.4,
+        "meanTiles": 22.1,
+        "ai": 0,
+        "online": 9
+      },
+      "3 clean capture": {
+        "n": 24,
+        "share": 6.9,
+        "winnerShare": 54.2,
+        "meanTiles": 14.8,
+        "ai": 0,
+        "online": 24
+      },
+      "4 big capture": {
+        "n": 27,
+        "share": 7.8,
+        "winnerShare": 66.7,
+        "meanTiles": 16,
+        "ai": 0,
+        "online": 27
+      },
+      "5 even trade": {
+        "n": 46,
+        "share": 13.3,
+        "winnerShare": 69.6,
+        "meanTiles": 11.9,
+        "ai": 0,
+        "online": 46
+      },
+      "6 losing capture": {
+        "n": 46,
+        "share": 13.3,
+        "winnerShare": 63,
+        "meanTiles": 12.2,
+        "ai": 0,
+        "online": 46
+      },
+      "7 seal": {
+        "n": 44,
+        "share": 12.7,
+        "winnerShare": 39.5,
+        "meanTiles": 9.7,
+        "ai": 0,
+        "online": 44
+      },
+      "8 loaded wait": {
+        "n": 39,
+        "share": 11.2,
+        "winnerShare": 15.4,
+        "meanTiles": 13.2,
+        "ai": 0,
+        "online": 39
+      },
+      "9 balanced wait": {
+        "n": 56,
+        "share": 16.1,
+        "winnerShare": 38.2,
+        "meanTiles": 7.9,
+        "ai": 0,
+        "online": 56
+      },
+      "10 loose": {
+        "n": 41,
+        "share": 11.8,
+        "winnerShare": 65.9,
+        "meanTiles": 15.8,
+        "ai": 0,
+        "online": 41
+      }
+    }
+  },
+  "kindsDeclined": {
+    "1 finish": {
+      "n": 44,
+      "share": 0.5,
+      "winnerShare": 43.2,
+      "meanTiles": 24,
+      "ai": 42,
+      "online": 2
+    },
+    "1 finish (declined a capture)": {
+      "n": 39,
+      "share": 0.5,
+      "winnerShare": 10.3,
+      "meanTiles": 24,
+      "ai": 34,
+      "online": 5
+    },
+    "2 lockout (declined a capture)": {
+      "n": 20,
+      "share": 0.2,
+      "winnerShare": 40,
+      "meanTiles": 22.6,
+      "ai": 16,
+      "online": 4
+    },
+    "2 lockout": {
+      "n": 7,
+      "share": 0.1,
+      "winnerShare": 42.9,
+      "meanTiles": 22.3,
+      "ai": 4,
+      "online": 3
+    },
+    "7 seal (declined a capture)": {
+      "n": 401,
+      "share": 5,
+      "winnerShare": 78.6,
+      "meanTiles": 13.5,
+      "ai": 384,
+      "online": 17
+    },
+    "7 seal": {
+      "n": 349,
+      "share": 4.3,
+      "winnerShare": 59.5,
+      "meanTiles": 4.1,
+      "ai": 322,
+      "online": 27
+    },
+    "8 loaded wait (declined a capture)": {
+      "n": 1796,
+      "share": 22.2,
+      "winnerShare": 73.4,
+      "meanTiles": 12.5,
+      "ai": 1760,
+      "online": 36
+    },
+    "8 loaded wait": {
+      "n": 27,
+      "share": 0.3,
+      "winnerShare": 33.3,
+      "meanTiles": 17.8,
+      "ai": 24,
+      "online": 3
+    },
+    "9 balanced wait (declined a capture)": {
+      "n": 3128,
+      "share": 38.7,
+      "winnerShare": 54.5,
+      "meanTiles": 8.2,
+      "ai": 3094,
+      "online": 34
+    },
+    "9 balanced wait": {
+      "n": 501,
+      "share": 6.2,
+      "winnerShare": 43.2,
+      "meanTiles": 4.9,
+      "ai": 479,
+      "online": 22
+    },
+    "10 loose (declined a capture)": {
+      "n": 1296,
+      "share": 16,
+      "winnerShare": 28.4,
+      "meanTiles": 13.5,
+      "ai": 1282,
+      "online": 14
+    },
+    "10 loose": {
+      "n": 476,
+      "share": 5.9,
+      "winnerShare": 15.8,
+      "meanTiles": 16.2,
+      "ai": 449,
+      "online": 27
+    }
+  },
+  "waitRotation": {
+    "9 balanced wait / placed": {
+      "n": 1892,
+      "share": 23.7,
+      "winnerShare": 59.3,
+      "meanTiles": 8.7,
+      "ai": 1862,
+      "online": 30
+    },
+    "9 balanced wait / open": {
+      "n": 1578,
+      "share": 19.8,
+      "winnerShare": 48.3,
+      "meanTiles": 6,
+      "ai": 1561,
+      "online": 17
+    },
+    "8 loaded wait / placed": {
+      "n": 1551,
+      "share": 19.5,
+      "winnerShare": 74.6,
+      "meanTiles": 12.7,
+      "ai": 1525,
+      "online": 26
+    },
+    "10 loose / placed": {
+      "n": 778,
+      "share": 9.8,
+      "winnerShare": 33.4,
+      "meanTiles": 14.1,
+      "ai": 749,
+      "online": 29
+    },
+    "10 loose / open": {
+      "n": 535,
+      "share": 6.7,
+      "winnerShare": 23.4,
+      "meanTiles": 12,
+      "ai": 533,
+      "online": 2
+    },
+    "7 seal / placed": {
+      "n": 491,
+      "share": 6.2,
+      "winnerShare": 77,
+      "meanTiles": 10.8,
+      "ai": 466,
+      "online": 25
+    },
+    "10 loose / dead": {
+      "n": 335,
+      "share": 4.2,
+      "winnerShare": 11.9,
+      "meanTiles": 15.9,
+      "ai": 332,
+      "online": 3
+    },
+    "7 seal / open": {
+      "n": 219,
+      "share": 2.7,
+      "winnerShare": 61.5,
+      "meanTiles": 3.9,
+      "ai": 206,
+      "online": 13
+    },
+    "8 loaded wait / open": {
+      "n": 209,
+      "share": 2.6,
+      "winnerShare": 67.9,
+      "meanTiles": 11.5,
+      "ai": 207,
+      "online": 2
+    },
+    "10 loose / opponent": {
+      "n": 124,
+      "share": 1.6,
+      "winnerShare": 14.5,
+      "meanTiles": 20.3,
+      "ai": 117,
+      "online": 7
+    },
+    "9 balanced wait / dead": {
+      "n": 89,
+      "share": 1.1,
+      "winnerShare": 20.2,
+      "meanTiles": 14.3,
+      "ai": 89,
+      "online": 0
+    },
+    "9 balanced wait / opponent": {
+      "n": 70,
+      "share": 0.9,
+      "winnerShare": 28.6,
+      "meanTiles": 14.8,
+      "ai": 61,
+      "online": 9
+    },
+    "8 loaded wait / opponent": {
+      "n": 42,
+      "share": 0.5,
+      "winnerShare": 61.9,
+      "meanTiles": 11.4,
+      "ai": 34,
+      "online": 8
+    },
+    "7 seal / opponent": {
+      "n": 27,
+      "share": 0.3,
+      "winnerShare": 29.6,
+      "meanTiles": 17.1,
+      "ai": 21,
+      "online": 6
+    },
+    "8 loaded wait / dead": {
+      "n": 21,
+      "share": 0.3,
+      "winnerShare": 9.5,
+      "meanTiles": 15.6,
+      "ai": 18,
+      "online": 3
+    },
+    "7 seal / dead": {
+      "n": 13,
+      "share": 0.2,
+      "winnerShare": 15.4,
+      "meanTiles": 17.2,
+      "ai": 13,
+      "online": 0
+    }
+  },
+  "evaluationTypes": {
+    "none": {
+      "n": 11608,
+      "share": 77.5,
+      "winnerShare": 49.4,
+      "meanTiles": 12.3,
+      "ai": 11392,
+      "online": 216
+    },
+    "attack (!)": {
+      "n": 1679,
+      "share": 11.2,
+      "winnerShare": 80.3,
+      "meanTiles": 20.9,
+      "ai": 1618,
+      "online": 61
+    },
+    "gift (?)": {
+      "n": 1184,
+      "share": 7.9,
+      "winnerShare": 31.3,
+      "meanTiles": 13.5,
+      "ai": 1127,
+      "online": 57
+    },
+    "defense": {
+      "n": 513,
+      "share": 3.4,
+      "winnerShare": 45,
+      "meanTiles": 15.3,
+      "ai": 500,
+      "online": 13
+    }
+  },
+  "evaluationTypesByPhase": {
+    "opening": {
+      "none": {
+        "n": 4366,
+        "share": 91,
+        "winnerShare": 52.4,
+        "meanTiles": 5.8,
+        "ai": 4273,
+        "online": 93
+      },
+      "gift (?)": {
+        "n": 376,
+        "share": 7.8,
+        "winnerShare": 28.5,
+        "meanTiles": 7.2,
+        "ai": 357,
+        "online": 19
+      },
+      "defense": {
+        "n": 49,
+        "share": 1,
+        "winnerShare": 22.4,
+        "meanTiles": 7.7,
+        "ai": 47,
+        "online": 2
+      },
+      "attack (!)": {
+        "n": 8,
+        "share": 0.2,
+        "winnerShare": 25,
+        "meanTiles": 7.3,
+        "ai": 0,
+        "online": 8
+      }
+    },
+    "middle": {
+      "none": {
+        "n": 4352,
+        "share": 80.1,
+        "winnerShare": 50,
+        "meanTiles": 13.4,
+        "ai": 4281,
+        "online": 71
+      },
+      "gift (?)": {
+        "n": 475,
+        "share": 8.7,
+        "winnerShare": 39.2,
+        "meanTiles": 13.5,
+        "ai": 453,
+        "online": 22
+      },
+      "defense": {
+        "n": 313,
+        "share": 5.8,
+        "winnerShare": 47.3,
+        "meanTiles": 13.8,
+        "ai": 308,
+        "online": 5
+      },
+      "attack (!)": {
+        "n": 292,
+        "share": 5.4,
+        "winnerShare": 70.9,
+        "meanTiles": 14.8,
+        "ai": 270,
+        "online": 22
+      }
+    },
+    "end": {
+      "none": {
+        "n": 2890,
+        "share": 60.8,
+        "winnerShare": 43.9,
+        "meanTiles": 20.4,
+        "ai": 2838,
+        "online": 52
+      },
+      "attack (!)": {
+        "n": 1379,
+        "share": 29,
+        "winnerShare": 82.6,
+        "meanTiles": 22.2,
+        "ai": 1348,
+        "online": 31
+      },
+      "gift (?)": {
+        "n": 333,
+        "share": 7,
+        "winnerShare": 23.1,
+        "meanTiles": 20.8,
+        "ai": 317,
+        "online": 16
+      },
+      "defense": {
+        "n": 151,
+        "share": 3.2,
+        "winnerShare": 47.7,
+        "meanTiles": 20.8,
+        "ai": 145,
+        "online": 6
+      }
+    }
+  },
+  "evaluationTypesByOrigin": {
+    "ai": {
+      "none": {
+        "n": 11392,
+        "share": 77.8,
+        "winnerShare": 49.4,
+        "meanTiles": 12.3,
+        "ai": 11392,
+        "online": 0
+      },
+      "attack (!)": {
+        "n": 1618,
+        "share": 11.1,
+        "winnerShare": 81,
+        "meanTiles": 21,
+        "ai": 1618,
+        "online": 0
+      },
+      "gift (?)": {
+        "n": 1127,
+        "share": 7.7,
+        "winnerShare": 30.4,
+        "meanTiles": 13.5,
+        "ai": 1127,
+        "online": 0
+      },
+      "defense": {
+        "n": 500,
+        "share": 3.4,
+        "winnerShare": 44.4,
+        "meanTiles": 15.2,
+        "ai": 500,
+        "online": 0
+      }
+    },
+    "online": {
+      "none": {
+        "n": 216,
+        "share": 62.2,
+        "winnerShare": 46.3,
+        "meanTiles": 11.5,
+        "ai": 0,
+        "online": 216
+      },
+      "attack (!)": {
+        "n": 61,
+        "share": 17.6,
+        "winnerShare": 60.7,
+        "meanTiles": 16.8,
+        "ai": 0,
+        "online": 61
+      },
+      "gift (?)": {
+        "n": 57,
+        "share": 16.4,
+        "winnerShare": 47.4,
+        "meanTiles": 13.5,
+        "ai": 0,
+        "online": 57
+      },
+      "defense": {
+        "n": 13,
+        "share": 3.7,
+        "winnerShare": 69.2,
+        "meanTiles": 16.8,
+        "ai": 0,
+        "online": 13
+      }
+    }
+  },
+  "evaluationVariants": {
+    "giftLoose": {
+      "x": {
+        "n": 11049,
+        "share": 73.7,
+        "winnerShare": 61.2,
+        "meanTiles": 13.1,
+        "ai": 10786,
+        "online": 263
+      },
+      "gift": {
+        "n": 3935,
+        "share": 26.3,
+        "winnerShare": 23.4,
+        "meanTiles": 14.6,
+        "ai": 3851,
+        "online": 84
+      }
+    },
+    "defenseSeal": {
+      "x": {
+        "n": 14718,
+        "share": 98.2,
+        "winnerShare": 50.8,
+        "meanTiles": 13.3,
+        "ai": 14393,
+        "online": 325
+      },
+      "seal": {
+        "n": 266,
+        "share": 1.8,
+        "winnerShare": 75.2,
+        "meanTiles": 19.2,
+        "ai": 244,
+        "online": 22
+      }
+    },
+    "defenseAny": {
+      "x": {
+        "n": 14231,
+        "share": 95,
+        "winnerShare": 51.2,
+        "meanTiles": 13.3,
+        "ai": 13919,
+        "online": 312
+      },
+      "down": {
+        "n": 753,
+        "share": 5,
+        "winnerShare": 53.4,
+        "meanTiles": 16.6,
+        "ai": 718,
+        "online": 35
+      }
+    }
+  }
+}

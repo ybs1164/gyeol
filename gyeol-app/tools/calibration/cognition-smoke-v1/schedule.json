@@ -1,0 +1,682 @@
+[
+  {
+    "n": 0,
+    "split": "train",
+    "mode": "blitz",
+    "green": 18,
+    "brown": 7,
+    "openingSeed": 2345295613,
+    "opening": [],
+    "pair": 0
+  },
+  {
+    "n": 1,
+    "split": "train",
+    "mode": "blitz",
+    "green": 7,
+    "brown": 18,
+    "openingSeed": 2345295613,
+    "opening": [],
+    "pair": 0
+  },
+  {
+    "n": 2,
+    "split": "train",
+    "mode": "blitz",
+    "green": 660,
+    "brown": 666,
+    "openingSeed": 1466466925,
+    "opening": [
+      389,
+      380
+    ],
+    "pair": 333
+  },
+  {
+    "n": 3,
+    "split": "train",
+    "mode": "blitz",
+    "green": 666,
+    "brown": 660,
+    "openingSeed": 1466466925,
+    "opening": [
+      389,
+      380
+    ],
+    "pair": 333
+  },
+  {
+    "n": 4,
+    "split": "train",
+    "mode": "blitz",
+    "green": 304,
+    "brown": 306,
+    "openingSeed": 762405309,
+    "opening": [
+      392,
+      272,
+      279,
+      258,
+      273,
+      397
+    ],
+    "pair": 666
+  },
+  {
+    "n": 5,
+    "split": "train",
+    "mode": "blitz",
+    "green": 306,
+    "brown": 304,
+    "openingSeed": 762405309,
+    "opening": [
+      392,
+      272,
+      279,
+      258,
+      273,
+      397
+    ],
+    "pair": 666
+  },
+  {
+    "n": 6,
+    "split": "train",
+    "mode": "blitz",
+    "green": 1,
+    "brown": 56,
+    "openingSeed": 1714582343,
+    "opening": [
+      392,
+      371,
+      376,
+      398
+    ],
+    "pair": 1000
+  },
+  {
+    "n": 7,
+    "split": "train",
+    "mode": "blitz",
+    "green": 56,
+    "brown": 1,
+    "openingSeed": 1714582343,
+    "opening": [
+      392,
+      371,
+      376,
+      398
+    ],
+    "pair": 1000
+  },
+  {
+    "n": 8,
+    "split": "train",
+    "mode": "blitz",
+    "green": 663,
+    "brown": 658,
+    "openingSeed": 834615892,
+    "opening": [
+      394,
+      259,
+      258,
+      286,
+      398,
+      413
+    ],
+    "pair": 1333
+  },
+  {
+    "n": 9,
+    "split": "train",
+    "mode": "blitz",
+    "green": 658,
+    "brown": 663,
+    "openingSeed": 834615892,
+    "opening": [
+      394,
+      259,
+      258,
+      286,
+      398,
+      413
+    ],
+    "pair": 1333
+  },
+  {
+    "n": 10,
+    "split": "train",
+    "mode": "blitz",
+    "green": 348,
+    "brown": 254,
+    "openingSeed": 626718854,
+    "opening": [
+      394,
+      389
+    ],
+    "pair": 1666
+  },
+  {
+    "n": 11,
+    "split": "train",
+    "mode": "blitz",
+    "green": 254,
+    "brown": 348,
+    "openingSeed": 626718854,
+    "opening": [
+      394,
+      389
+    ],
+    "pair": 1666
+  },
+  {
+    "n": 12,
+    "split": "train",
+    "mode": "blitz",
+    "green": 317,
+    "brown": 18,
+    "openingSeed": 2631410687,
+    "opening": [],
+    "pair": 2000
+  },
+  {
+    "n": 13,
+    "split": "train",
+    "mode": "blitz",
+    "green": 18,
+    "brown": 317,
+    "openingSeed": 2631410687,
+    "opening": [],
+    "pair": 2000
+  },
+  {
+    "n": 14,
+    "split": "train",
+    "mode": "blitz",
+    "green": 688,
+    "brown": 689,
+    "openingSeed": 3853517363,
+    "opening": [
+      392,
+      275
+    ],
+    "pair": 2333
+  },
+  {
+    "n": 15,
+    "split": "train",
+    "mode": "blitz",
+    "green": 689,
+    "brown": 688,
+    "openingSeed": 3853517363,
+    "opening": [
+      392,
+      275
+    ],
+    "pair": 2333
+  },
+  {
+    "n": 16,
+    "split": "train",
+    "mode": "blitz",
+    "green": 362,
+    "brown": 675,
+    "openingSeed": 1311087939,
+    "opening": [
+      390,
+      268,
+      269,
+      375,
+      283,
+      293
+    ],
+    "pair": 2666
+  },
+  {
+    "n": 17,
+    "split": "train",
+    "mode": "blitz",
+    "green": 675,
+    "brown": 362,
+    "openingSeed": 1311087939,
+    "opening": [
+      390,
+      268,
+      269,
+      375,
+      283,
+      293
+    ],
+    "pair": 2666
+  },
+  {
+    "n": 18,
+    "split": "validation",
+    "mode": "bullet",
+    "green": 403,
+    "brown": 362,
+    "openingSeed": 2849167112,
+    "opening": [
+      384,
+      371,
+      370,
+      301
+    ],
+    "pair": 3000
+  },
+  {
+    "n": 19,
+    "split": "validation",
+    "mode": "bullet",
+    "green": 362,
+    "brown": 403,
+    "openingSeed": 2849167112,
+    "opening": [
+      384,
+      371,
+      370,
+      301
+    ],
+    "pair": 3000
+  },
+  {
+    "n": 20,
+    "split": "validation",
+    "mode": "bullet",
+    "green": 798,
+    "brown": 659,
+    "openingSeed": 1673033715,
+    "opening": [
+      389,
+      379,
+      352,
+      245,
+      358,
+      370
+    ],
+    "pair": 3333
+  },
+  {
+    "n": 21,
+    "split": "validation",
+    "mode": "bullet",
+    "green": 659,
+    "brown": 798,
+    "openingSeed": 1673033715,
+    "opening": [
+      389,
+      379,
+      352,
+      245,
+      358,
+      370
+    ],
+    "pair": 3333
+  },
+  {
+    "n": 22,
+    "split": "validation",
+    "mode": "rapid",
+    "green": 152,
+    "brown": 51,
+    "openingSeed": 3041180818,
+    "opening": [
+      394,
+      259
+    ],
+    "pair": 3666
+  },
+  {
+    "n": 23,
+    "split": "validation",
+    "mode": "rapid",
+    "green": 51,
+    "brown": 152,
+    "openingSeed": 3041180818,
+    "opening": [
+      394,
+      259
+    ],
+    "pair": 3666
+  },
+  {
+    "n": 24,
+    "split": "validation",
+    "mode": "blitz",
+    "green": 156,
+    "brown": 189,
+    "openingSeed": 3655638388,
+    "opening": [],
+    "pair": 4000
+  },
+  {
+    "n": 25,
+    "split": "validation",
+    "mode": "blitz",
+    "green": 189,
+    "brown": 156,
+    "openingSeed": 3655638388,
+    "opening": [],
+    "pair": 4000
+  },
+  {
+    "n": 26,
+    "split": "validation",
+    "mode": "blitz",
+    "green": 646,
+    "brown": 740,
+    "openingSeed": 3916082895,
+    "opening": [
+      386,
+      256
+    ],
+    "pair": 4333
+  },
+  {
+    "n": 27,
+    "split": "validation",
+    "mode": "blitz",
+    "green": 740,
+    "brown": 646,
+    "openingSeed": 3916082895,
+    "opening": [
+      386,
+      256
+    ],
+    "pair": 4333
+  },
+  {
+    "n": 28,
+    "split": "validation",
+    "mode": "blitz",
+    "green": 3,
+    "brown": 729,
+    "openingSeed": 3800832112,
+    "opening": [
+      384,
+      279,
+      267,
+      300,
+      396,
+      272
+    ],
+    "pair": 4666
+  },
+  {
+    "n": 29,
+    "split": "validation",
+    "mode": "blitz",
+    "green": 729,
+    "brown": 3,
+    "openingSeed": 3800832112,
+    "opening": [
+      384,
+      279,
+      267,
+      300,
+      396,
+      272
+    ],
+    "pair": 4666
+  },
+  {
+    "n": 30,
+    "split": "validation",
+    "mode": "blitz",
+    "green": 76,
+    "brown": 35,
+    "openingSeed": 242071397,
+    "opening": [
+      392,
+      277,
+      293,
+      292
+    ],
+    "pair": 5000
+  },
+  {
+    "n": 31,
+    "split": "validation",
+    "mode": "blitz",
+    "green": 35,
+    "brown": 76,
+    "openingSeed": 242071397,
+    "opening": [
+      392,
+      277,
+      293,
+      292
+    ],
+    "pair": 5000
+  },
+  {
+    "n": 32,
+    "split": "validation",
+    "mode": "blitz",
+    "green": 664,
+    "brown": 673,
+    "openingSeed": 2606618047,
+    "opening": [
+      393,
+      380,
+      261,
+      281,
+      272,
+      275
+    ],
+    "pair": 5333
+  },
+  {
+    "n": 33,
+    "split": "validation",
+    "mode": "blitz",
+    "green": 673,
+    "brown": 664,
+    "openingSeed": 2606618047,
+    "opening": [
+      393,
+      380,
+      261,
+      281,
+      272,
+      275
+    ],
+    "pair": 5333
+  },
+  {
+    "n": 34,
+    "split": "validation",
+    "mode": "bullet",
+    "green": 563,
+    "brown": 990,
+    "openingSeed": 1050543488,
+    "opening": [
+      386,
+      271
+    ],
+    "pair": 5666
+  },
+  {
+    "n": 35,
+    "split": "validation",
+    "mode": "bullet",
+    "green": 990,
+    "brown": 563,
+    "openingSeed": 1050543488,
+    "opening": [
+      386,
+      271
+    ],
+    "pair": 5666
+  },
+  {
+    "n": 36,
+    "split": "validation",
+    "mode": "rapid",
+    "green": 473,
+    "brown": 714,
+    "openingSeed": 3468658686,
+    "opening": [],
+    "pair": 6000
+  },
+  {
+    "n": 37,
+    "split": "validation",
+    "mode": "rapid",
+    "green": 714,
+    "brown": 473,
+    "openingSeed": 3468658686,
+    "opening": [],
+    "pair": 6000
+  },
+  {
+    "n": 38,
+    "split": "validation",
+    "mode": "rapid",
+    "green": 190,
+    "brown": 137,
+    "openingSeed": 1889038614,
+    "opening": [
+      394,
+      264
+    ],
+    "pair": 6333
+  },
+  {
+    "n": 39,
+    "split": "validation",
+    "mode": "rapid",
+    "green": 137,
+    "brown": 190,
+    "openingSeed": 1889038614,
+    "opening": [
+      394,
+      264
+    ],
+    "pair": 6333
+  },
+  {
+    "n": 40,
+    "split": "validation",
+    "mode": "blitz",
+    "green": 107,
+    "brown": 234,
+    "openingSeed": 3585367591,
+    "opening": [
+      393,
+      368,
+      260,
+      261,
+      502,
+      156
+    ],
+    "pair": 6666
+  },
+  {
+    "n": 41,
+    "split": "validation",
+    "mode": "blitz",
+    "green": 234,
+    "brown": 107,
+    "openingSeed": 3585367591,
+    "opening": [
+      393,
+      368,
+      260,
+      261,
+      502,
+      156
+    ],
+    "pair": 6666
+  },
+  {
+    "n": 42,
+    "split": "validation",
+    "mode": "blitz",
+    "green": 40,
+    "brown": 31,
+    "openingSeed": 2115793355,
+    "opening": [
+      392,
+      272,
+      284,
+      167
+    ],
+    "pair": 7000
+  },
+  {
+    "n": 43,
+    "split": "validation",
+    "mode": "blitz",
+    "green": 31,
+    "brown": 40,
+    "openingSeed": 2115793355,
+    "opening": [
+      392,
+      272,
+      284,
+      167
+    ],
+    "pair": 7000
+  },
+  {
+    "n": 44,
+    "split": "validation",
+    "mode": "blitz",
+    "green": 643,
+    "brown": 683,
+    "openingSeed": 1557415190,
+    "opening": [
+      386,
+      391,
+      284,
+      272,
+      165,
+      379
+    ],
+    "pair": 7333
+  },
+  {
+    "n": 45,
+    "split": "validation",
+    "mode": "blitz",
+    "green": 683,
+    "brown": 643,
+    "openingSeed": 1557415190,
+    "opening": [
+      386,
+      391,
+      284,
+      272,
+      165,
+      379
+    ],
+    "pair": 7333
+  },
+  {
+    "n": 46,
+    "split": "validation",
+    "mode": "blitz",
+    "green": 29,
+    "brown": 521,
+    "openingSeed": 405778729,
+    "opening": [
+      394,
+      390
+    ],
+    "pair": 7666
+  },
+  {
+    "n": 47,
+    "split": "validation",
+    "mode": "blitz",
+    "green": 521,
+    "brown": 29,
+    "openingSeed": 405778729,
+    "opening": [
+      394,
+      390
+    ],
+    "pair": 7666
+  }
+]

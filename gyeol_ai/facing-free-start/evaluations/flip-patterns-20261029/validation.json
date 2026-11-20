@@ -1,0 +1,12 @@
+{
+  "reference_files": [
+    "evaluations/intuitive-20261026/confirm.json",
+    "evaluations/intuitive-20261026/capture-confirm.json"
+  ],
+  "games": 128,
+  "turns": 3001,
+  "exact_capture_sequences": true,
+  "exact_longest_streak": true,
+  "all_turns_route_verified": true,
+  "all_turns_legal_and_final_verified": true
+}
