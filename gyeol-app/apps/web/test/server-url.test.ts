@@ -36,8 +36,8 @@ test('a whitespace-only build default falls back to Oracle on Android', () => {
 });
 
 test('invite and share links use GitHub Pages except for local or custom servers', () => {
-  expect(PUBLIC_WEB).toBe('https://ybs1164.github.io/gyeol');
-  vi.stubGlobal('location', { protocol: 'https:', host: 'ybs1164.github.io', hostname: 'ybs1164.github.io', href: 'https://ybs1164.github.io/gyeol/' });
+  expect(PUBLIC_WEB).toBe('https://ybs1164.github.io/gyeol/app');
+  vi.stubGlobal('location', { protocol: 'https:', host: 'ybs1164.github.io', hostname: 'ybs1164.github.io', href: 'https://ybs1164.github.io/gyeol/app/' });
   expect(webUrl()).toBe(PUBLIC_WEB);
   vi.stubGlobal('window', { Capacitor: { isNativePlatform: () => true } });
   vi.stubGlobal('location', { protocol: 'https:', host: 'localhost', hostname: 'localhost', href: 'https://localhost/' });

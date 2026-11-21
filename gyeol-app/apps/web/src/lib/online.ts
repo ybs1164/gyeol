@@ -45,8 +45,8 @@ export function serverUrl(input = settings.get().server): string {
   return `${proto}://${url.host}/ws`;
 }
 
-/** 공개 웹 앱 주소(GitHub Pages). 게임 서버(WebSocket·퍼즐 API)는 NATIVE_SERVER 에 따로 있다. */
-export const PUBLIC_WEB = 'https://ybs1164.github.io/gyeol';
+/** 공개 웹 앱 주소(GitHub Pages, ybs1164.github.io 저장소의 gyeol/app). 게임 서버(WebSocket·퍼즐 API)는 NATIVE_SERVER 에 따로 있다. */
+export const PUBLIC_WEB = 'https://ybs1164.github.io/gyeol/app';
 const PRIVATE_HOST = /^(localhost|127\.|10\.|192\.168\.|172\.(1[6-9]|2\d|3[01])\.|\[::1\])/;
 
 /**

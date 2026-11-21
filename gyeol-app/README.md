@@ -4,7 +4,7 @@
 
 ## 바로 플레이하기
 
-**웹:** https://ybs1164.github.io/gyeol/ — `main`에 push하면 GitHub Actions(`.github/workflows/pages.yml`)가 GitHub Pages에 올립니다. Pages에는 정적 웹 앱만 있고, 온라인 대국(WebSocket)과 퍼즐 API는 Oracle 게임 서버를 씁니다.
+**웹:** https://ybs1164.github.io/gyeol/app/ — `ybs1164.github.io` 저장소의 `deploy-gyeol-app` 워크플로가 매시간 이 저장소의 `main`을 확인해, 바뀌었으면 빌드해서 `gyeol/app/`에 올립니다(즉시 올리려면 그 워크플로를 수동 실행). Pages에는 정적 웹 앱만 있고, 온라인 대국(WebSocket)과 퍼즐 API는 Oracle 게임 서버를 씁니다.
 
 로컬에서 직접 실행하려면:
 
