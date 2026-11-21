@@ -1,5 +1,5 @@
 {
-  "fingerprint": "eea1d38f7b2acd7e146830c4140210e3ee97a1fa33dc591827390e8b6ae11339",
+  "fingerprint": "2c2abc4a45c5252765f3c349478163ec03199f189de1998b02f368d394f3c345",
   "scale": 1,
   "profiles": [
     {
@@ -75,8 +75,5 @@
       "sims": 512
     }
   ],
-  "games": 1456,
-  "previousFingerprint": "5404fe511778f7c318f3eef49ba6887ed77d2fe90d8088d36cc850a6f22a85c1",
-  "migration": "Only roster spacing and documentation changed; calibrated anchor parameters, sampling and move policy verified byte-identical. Existing 10 bot identities were then distributed through the roster, again with identical calibrated anchor behavior.",
-  "identityMigrationFingerprint": "599b51de1d3dc309d921ca514e450cd38414ad7303496cb44ec6526c098f3aaa"
+  "games": 1456
 }

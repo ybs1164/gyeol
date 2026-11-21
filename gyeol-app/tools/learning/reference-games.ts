@@ -13,8 +13,8 @@ export function referenceGameList(): RefGame[] {
   ];
 }
 
-/** 저장된 정밀 분석 기준(기본: 현재 배포 모델로 만든 tools/analysis/standard-vs-deep). */
-export function referenceGames(dir = 'tools/analysis/standard-vs-deep'): { game: RefGame; deep: GameAnalysis }[] {
+/** 저장된 정밀 분석 기준(기본: 현재 배포 모델 26e68559로 만든 tools/analysis/standard-vs-deep-5bcbf837. 이전 모델 9ec913ce 기준은 standard-vs-deep). */
+export function referenceGames(dir = 'tools/analysis/standard-vs-deep-5bcbf837'): { game: RefGame; deep: GameAnalysis }[] {
   const games = referenceGameList();
   return games.map(game => {
     const file = `${dir}/deep-${game.id}.json`;

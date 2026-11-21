@@ -78,12 +78,12 @@ export function smoothWinCurve<T extends Pick<WinPoint, 'green' | 'status'>>(poi
 }
 
 /**
- * 그래프 승률 1%p 를 최종 타일 차이로 바꾸는 계수. 승률이 1(=AI 값 +1)이면 약 +8장.
- * tools/analysis/fit_margin_from_win.ts 로 calibration-pilot 128판(64회 탐색, 1:2:1 평균)에서 골랐다.
- * 남은 타일 수별 계수, 정규분포 역함수, 현재 타일 차이를 더한 식은 별도 대국 검증에서 더 낫지 않았다.
- * 시험 대국 평균 절대 오차는 약 4.6장이다(RMSE 5.7, 항상 0으로 추정하면 6.0).
+ * 그래프 승률을 최종 타일 차이로 바꾸는 계수. 승률이 1(=AI 값 +1)이면 약 +3.7장.
+ * tools/analysis/fit_margin_from_win.ts 로 calibration-pilot-5bcbf837 128판(모델 5bcbf837, 64회 탐색, 1:2:1 평균)에서
+ * 앱이 쓰는 1차식(MODEL='linear v, k=a')으로 맞췄다. 정규분포 역함수 식은 선택 구간 RMSE 4.53으로 1차식(4.58)과 거의 같았다.
+ * 시험 대국 평균 절대 오차 3.2장(RMSE 4.5, 항상 0으로 추정하면 5.0). 새 모델은 대국이 접전이라 이전 모델(8.27)보다 작다.
  */
-export const MARGIN_PER_VALUE = 8.27;
+export const MARGIN_PER_VALUE = 3.75;
 /** 초록 승률 → 예상 최종 타일 차이(초록 − 갈색, 소수). 화면에서는 반올림해 쓴다. */
 export const expectedMargin = (green: number) => MARGIN_PER_VALUE * (2 * Math.max(0, Math.min(1, green)) - 1);
 

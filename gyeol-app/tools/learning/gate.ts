@@ -19,7 +19,7 @@ import { fastVsDeep, referenceGames } from './reference-games';
  */
 export const GATE_VERSION = 2;
 /** 정밀 분석 기준(tools/analysis/standard-vs-deep/deep-*.json)을 만든 모델. 기준 모델이 바뀌면 기준을 다시 만든다. */
-const REFERENCE_MODEL = '9ec913ce7828de12';
+const REFERENCE_MODEL = '26e68559dd6a1631';
 const CRITERIA = {
   /** 신경망 단독: 시험 세트 Brier 가 기준 모델보다 낮다 */
   networkBrier: 'candidate < baseline',

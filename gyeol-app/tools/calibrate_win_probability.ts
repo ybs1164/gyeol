@@ -7,7 +7,7 @@ import { loadBrain } from '../packages/server/src/brain';
 
 const count = Number(process.argv[2] ?? 128);
 if (!Number.isInteger(count) || count < 20) throw new Error('At least 20 games required for a pilot');
-const out = 'tools/analysis/calibration-pilot';
+const out = process.argv[3] ?? 'tools/analysis/calibration-pilot'; // 모델을 바꾸면 새 폴더(예: calibration-pilot-<모델>)
 mkdirSync(out, { recursive: true });
 const model = JSON.parse(readFileSync('apps/web/public/model/model-info.json', 'utf8')).sha256 as string;
 const manifest = {

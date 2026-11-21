@@ -2,14 +2,14 @@
  * 승률 그래프 값(p)과 남은 타일 수(r)로 최종 타일 차이를 추정하는 식을 고른다.
  * 표본: calibration-pilot 128판(64회 탐색 root-mean). 화면과 같게 1:2:1 이웃 평균을 적용한 p를 쓴다.
  * 분할: 대국 번호 mod 5 → 0/1/2 적합, 3 선택, 4 최종 시험(manifest와 같음).
- *   npx tsx tools/analysis/fit_margin_from_win.ts
+ *   npx tsx tools/analysis/fit_margin_from_win.ts [표본 폴더]
  */
 import { readFileSync } from 'node:fs';
 import { apply, initial, margin, type Player } from '../../packages/core/src/index';
 
 interface Sample { player: Player; remaining: number; mean: number }
 interface Game { index: number; moves: number[]; samples: Sample[] }
-const games = readFileSync('tools/analysis/calibration-pilot/games.jsonl', 'utf8').split('\n').filter(Boolean).map(s => JSON.parse(s) as Game);
+const games = readFileSync(`${process.argv[2] ?? 'tools/analysis/calibration-pilot'}/games.jsonl`, 'utf8').split('\n').filter(Boolean).map(s => JSON.parse(s) as Game);
 
 /** 표준 정규분포 누적분포의 역함수(Acklam 근사). */
 function probit(p: number): number {
@@ -77,7 +77,8 @@ const baseline = { rmse: Math.sqrt(select.reduce((s, x) => s + x.m * x.m, 0) / s
 console.log(`rows: fit ${fit.length}, select ${select.length}, test ${test.length}; baseline(0) select rmse ${baseline.rmse.toFixed(2)} mae ${baseline.mae.toFixed(2)}`);
 const results = models.map(model => { const w = solve(model, fit); return { model, w, sel: err(model, w, select) }; }).sort((a, b) => a.sel.rmse - b.sel.rmse);
 for (const r of results) console.log(`${r.model.name.padEnd(24)} w=${r.w.map(v => v.toFixed(4)).join(',').padEnd(18)} select rmse ${r.sel.rmse.toFixed(2)} mae ${r.sel.mae.toFixed(2)} sign ${(100 * r.sel.sign).toFixed(0)}%`);
-const best = results[0];
+// MODEL=<이름>으로 앱이 쓰는 식을 고정할 수 있다(예: MODEL='linear v, k=a')
+const best = (process.env.MODEL && results.find(r => r.model.name === process.env.MODEL)) || results[0];
 const refit = solve(best.model, [...fit, ...select]);
 const final = err(best.model, refit, test);
 console.log(`\nselected: ${best.model.name}; refit on fit+select w=${refit.map(v => v.toFixed(4)).join(',')}`);

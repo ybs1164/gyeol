@@ -1,0 +1,59 @@
+[
+  {
+    "version": "9a718deffe7e-network",
+    "model": "5bcbf837499f7eb9",
+    "rule": "facing-25-v1",
+    "evaluator": "network",
+    "simulations": 0,
+    "reference": "9a718deffe7e752643ccd6ddeac05ae5db45171ae1864df13c349e6c879ade3a",
+    "accepted": false,
+    "coefficients": [
+      0.6646558645797204,
+      -0.10113568620032497,
+      0.002415144831100557
+    ],
+    "validationGames": 25,
+    "remainingRange": [
+      4,
+      23
+    ]
+  },
+  {
+    "version": "9a718deffe7e-q",
+    "model": "5bcbf837499f7eb9",
+    "rule": "facing-25-v1",
+    "evaluator": "root-q",
+    "simulations": 64,
+    "reference": "9a718deffe7e752643ccd6ddeac05ae5db45171ae1864df13c349e6c879ade3a",
+    "accepted": false,
+    "coefficients": [
+      0.6842110230907683,
+      -0.11279188893851107,
+      0.0865206273440238
+    ],
+    "validationGames": 25,
+    "remainingRange": [
+      4,
+      23
+    ]
+  },
+  {
+    "version": "9a718deffe7e-mean",
+    "model": "5bcbf837499f7eb9",
+    "rule": "facing-25-v1",
+    "evaluator": "root-mean",
+    "simulations": 64,
+    "reference": "9a718deffe7e752643ccd6ddeac05ae5db45171ae1864df13c349e6c879ade3a",
+    "accepted": false,
+    "coefficients": [
+      0.6779591212133684,
+      0.006281685260198253,
+      -0.04075091117598518
+    ],
+    "validationGames": 25,
+    "remainingRange": [
+      4,
+      23
+    ]
+  }
+]

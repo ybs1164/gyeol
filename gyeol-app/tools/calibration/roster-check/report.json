@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-11T12:59:04.099Z",
+  "checkedAt": "2026-11-21T09:50:56.973Z",
   "games": 1000,
   "distinctBots": 1000,
   "perBotGames": 2,
@@ -12,10 +12,10 @@
       ],
       "higherBy": 200,
       "games": 200,
-      "wins": 164,
+      "wins": 172,
       "draws": 0,
-      "score": 0.82,
-      "lower95": 0.7608840628376158,
+      "score": 0.86,
+      "lower95": 0.8051000619915238,
       "passed": true
     },
     {
@@ -25,10 +25,10 @@
       ],
       "higherBy": 200,
       "games": 200,
-      "wins": 162,
+      "wins": 170,
       "draws": 0,
-      "score": 0.81,
-      "lower95": 0.7499864142552061,
+      "score": 0.85,
+      "lower95": 0.7939430617334484,
       "passed": true
     },
     {
@@ -38,10 +38,10 @@
       ],
       "higherBy": 200,
       "games": 200,
-      "wins": 164,
+      "wins": 171,
       "draws": 0,
-      "score": 0.82,
-      "lower95": 0.7608840628376158,
+      "score": 0.855,
+      "lower95": 0.7995121871510563,
       "passed": true
     },
     {
@@ -51,10 +51,10 @@
       ],
       "higherBy": 200,
       "games": 200,
-      "wins": 149,
+      "wins": 147,
       "draws": 0,
-      "score": 0.745,
-      "lower95": 0.6803694869280502,
+      "score": 0.735,
+      "lower95": 0.6698229773344889,
       "passed": true
     }
   ],
