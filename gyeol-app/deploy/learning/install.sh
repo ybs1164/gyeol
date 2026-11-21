@@ -79,5 +79,5 @@ log "systemd"
 install -m 0644 "$ROOT/repo/gyeol-app/deploy/learning/gyeol-learning.service" /etc/systemd/system/
 install -m 0644 "$ROOT/repo/gyeol-app/deploy/learning/gyeol-learning.timer" /etc/systemd/system/
 systemctl daemon-reload
-if [[ $timer == 1 ]]; then systemctl enable --now gyeol-learning.timer; systemctl list-timers gyeol-learning.timer --no-pager | head -2; fi
+if [[ $timer == 1 ]]; then systemctl enable --now gyeol-learning.timer; systemctl list-timers gyeol-learning.timer --no-pager | head -2 || true; fi
 log "done. Run once now: sudo systemctl start gyeol-learning.service; follow: journalctl -u gyeol-learning -f"
