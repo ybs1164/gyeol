@@ -44,7 +44,9 @@ if ! python3 -c 'import ensurepip' 2>/dev/null; then
 fi
 [[ -x $ROOT/venv/bin/python ]] || python3 -m venv "$ROOT/venv"
 "$ROOT/venv/bin/pip" install --quiet --upgrade pip
-"$ROOT/venv/bin/pip" install --quiet torch numpy onnx onnxruntime tqdm
+# CPU 전용 torch(ARM64 휠이 CUDA 의존성을 끌어오지 않게)
+"$ROOT/venv/bin/pip" install --quiet torch --index-url https://download.pytorch.org/whl/cpu
+"$ROOT/venv/bin/pip" install --quiet numpy onnx onnxruntime tqdm
 "$ROOT/venv/bin/python" -c "import torch, numpy, onnx, onnxruntime; print('   torch', torch.__version__, 'numpy', numpy.__version__, 'onnx', onnx.__version__, 'onnxruntime', onnxruntime.__version__)"
 
 if [[ -n $seed ]]; then
@@ -64,6 +66,11 @@ if [[ -f $DATA/model/best.pth.tar && $(sha256sum "$DATA/model/best.pth.tar" | cu
 else
   echo "   WARNING: $DATA/model/best.pth.tar missing or not the deployed model ($expected); cycles will stop until it is copied"
 fi
+
+# 기준 모델 채점 결과(저장소에 있음)를 보고서 캐시로 복사해 첫 관문 시간을 줄인다
+for f in "$ROOT/repo/gyeol-app/tools/learning/reports/"*.json; do
+  [[ -f $DATA/reports/$(basename "$f") ]] || install -o gyeol-train -g gyeol-train -m 0600 "$f" "$DATA/reports/"
+done
 
 log "python tests"
 (cd "$ROOT/repo/gyeol_ai" && PYTHONDONTWRITEBYTECODE=1 "$ROOT/venv/bin/python" -m unittest facing.test_distill 2>&1 | tail -3)
