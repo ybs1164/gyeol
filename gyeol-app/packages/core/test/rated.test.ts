@@ -1,28 +1,34 @@
 import { describe, expect, test } from 'vitest';
 import { readFileSync } from 'node:fs';
-import { createHash } from 'node:crypto';
 import {
-  PUZZLE_STAGES, RECORD_BANK_VERIFICATION, apply, bestReply, captureCounts, correctMoves, legal,
-  pickRated, ratedBank, ratedPuzzle, puzzleValues, ratingDelta, result, stageBand, stageOf,
-  migratePuzzleRating, recommendedPuzzleRating, PUZZLE_SCALE, puzzleStartForGame, type Board, type Player,
+  PUZZLE_STAGES, apply, bestReply, captureCounts, correctMoves, distinctWinningBoards, legal, loadPuzzleBank, loadedPuzzles,
+  pickRated, ratedBank, ratedPuzzle, puzzleValues, ratingDelta, result, stageBand, stageOf, uniqueProofProblem, bruteForceProblem,
+  migratePuzzleRating, recommendedPuzzleRating, PUZZLE_SCALE, puzzleStartForGame, type Board, type Player, type PuzzleBankFile,
 } from '../src';
-import { RECORD_PUZZLES } from '../src/record-puzzle-bank';
 
-describe('검증된 실전 퍼즐', () => {
+/** 서버 생성기(db-cli mine-puzzles)가 보관 기보에서 만든 은행 일부. 실제 운영 은행은 서버가 내려준다. */
+const fixture = JSON.parse(readFileSync(new URL('./puzzle-bank.fixture.json', import.meta.url), 'utf8')) as PuzzleBankFile;
+loadPuzzleBank(fixture);
+
+describe('서버가 내려주는 정답 하나짜리 퍼즐', () => {
   const bank = ratedBank();
-  test('장수 목표·임의 생성 문제가 없고 배포 은행은 검증한 데이터다', () => {
-    expect(bank.length).toBeGreaterThanOrEqual(64);
+  test('받은 은행만 쓰고, 정답이 하나라는 조건을 어긴 문제는 버린다', () => {
+    expect(bank.length).toBe(fixture.puzzles.length);
     expect(new Set(bank.map((p) => p.id)).size).toBe(bank.length);
     expect(bank.every((p) => p.id.startsWith('rp-') && ['advantage', 'turnaround', 'win'].includes(p.kind))).toBe(true);
-    expect(RECORD_BANK_VERIFICATION.verified).toBe(true);
-    expect(RECORD_BANK_VERIFICATION.puzzles).toBe(bank.length);
-    expect(createHash('sha256').update(JSON.stringify(RECORD_PUZZLES)).digest('hex')).toBe(RECORD_BANK_VERIFICATION.sha256);
     expect(ratedPuzzle('f-1')).toBeNull();
+    const broken = structuredClone(fixture);
+    for (const v of broken.puzzles[0].proof[0][1]) v[1] = 3;
+    expect(uniqueProofProblem(broken.puzzles[0])).toBe('not-unique');
+    expect(loadPuzzleBank(broken)).toBe(fixture.puzzles.length - 1);
+    expect(() => loadPuzzleBank({ ...fixture, schema: 2 as 1 })).toThrow();
+    loadPuzzleBank(fixture);
+    expect(loadedPuzzles().length).toBe(fixture.puzzles.length);
   });
-  test('모든 단계에 실제 검증 문제가 있고 선택한 단계 밖으로 새지 않는다', () => {
+  test('모든 단계에 문제가 있고 선택한 단계 밖으로 새지 않는다', () => {
     for (const stage of PUZZLE_STAGES) {
       const [lo, hi] = stageBand(stage);
-      expect(bank.filter((p) => p.rating >= lo && p.rating < hi).length).toBeGreaterThanOrEqual(8);
+      expect(bank.filter((p) => p.rating >= lo && p.rating < hi).length).toBeGreaterThanOrEqual(1);
       for (const seen of [new Set<string>(), new Set(bank.map((p) => p.id))]) {
         for (const target of [-10000, 1500, 10000]) {
           const p = pickRated(target, seen, () => 0.5, stage.n);
@@ -32,7 +38,7 @@ describe('검증된 실전 퍼즐', () => {
       }
     }
   });
-  test('전 문제의 판·차례·실제 수가 보관된 원본 기보의 해당 수순과 일치한다', () => {
+  test('보관 기보에서 나온 문제는 판·차례·실제 수가 원본 수순과 일치하고, 실제로 둔 수가 유일한 정답이다', () => {
     const sources = JSON.parse(readFileSync(new URL('../../../tools/record-puzzles/source-games.json', import.meta.url), 'utf8')) as {
       games: { id: string; initial: Board; initialPlayer: Player; moves: number[] }[];
     };
@@ -45,30 +51,45 @@ describe('검증된 실전 퍼즐', () => {
       expect(b, p.id).toEqual(p.board);
       expect(turn).toBe(p.player);
       expect(game.moves[p.source.ply]).toBe(p.source.playedMove);
-      expect(correctMoves(p.kind, puzzleValues(p, b, turn))).toContain(p.source.playedMove);
+      const wins = correctMoves(p.kind, puzzleValues(p, b, turn));
+      expect(new Set(wins.map((a) => apply(b, turn, a).board.join(','))).size).toBe(1);
+      expect(wins).toContain(p.source.playedMove);
     }
   });
-  test('모든 정답 분기를 최선 응수와 끝까지 두면 실제 승리하고 한 수짜리 문제는 없다', () => {
+  test('어느 최선 응수 뒤에서도 이기는 수는 하나뿐이고, 끝까지 두면 실제 승리하며 한 수짜리 문제는 없다', () => {
     for (const e of bank) {
       const p = ratedPuzzle(e.id)!;
       const root = puzzleValues(p, p.board, p.player);
       const wins = correctMoves(p.kind, root);
-      expect(wins.length, p.id).toBeGreaterThan(0);
-      expect(wins.length).toBeLessThan(root.size);
+      expect(distinctWinningBoards(p.board, p.player, root), p.id).toBe(1);
+      expect(new Set(legal(p.board, p.player).map((a) => apply(p.board, p.player, a).board.join(','))).size).toBeGreaterThanOrEqual(3);
       for (const a of wins) expect(result(apply(p.board, p.player, a).board, -p.player as Player), p.id).toBe(0);
       const visited = new Set<string>();
+      let lines = 0;
       const walk = (b: Board, turn: Player, depth: number) => {
         expect(depth).toBeLessThanOrEqual(2 * (25 - p.board.filter(Boolean).length) + 1);
-        if (result(b, turn)) { expect(result(b, p.player), p.id).toBe(1); return; }
+        if (result(b, turn)) { expect(result(b, p.player), p.id).toBe(1); lines++; return; }
         const key = `${turn}:${b.join(',')}`;
         if (visited.has(key)) return;
         visited.add(key);
-        const actions = turn === p.player ? correctMoves(p.kind, puzzleValues(p, b, turn)) : [bestReply(p, b, turn)];
-        expect(actions.length, p.id).toBeGreaterThan(0);
+        const values = puzzleValues(p, b, turn);
+        let actions: number[];
+        if (turn === p.player) {
+          expect(distinctWinningBoards(b, turn, values), p.id).toBe(1);
+          actions = correctMoves(p.kind, values).slice(0, 1);
+        } else {
+          const best = Math.max(...values.values());
+          actions = [...values].filter(([, v]) => v === best).map(([a]) => a);
+          expect(actions).toContain(bestReply(p, b, turn));
+        }
         for (const a of actions) { expect(legal(b, turn)).toContain(a); walk(apply(b, turn, a).board, -turn as Player, depth + 1); }
       };
       walk(p.board, p.player, 0);
+      expect(lines).toBeGreaterThan(0);
     }
+  });
+  test('저장된 값은 가지치기 없는 전수 탐색과 같다', () => {
+    for (const p of [...loadedPuzzles()].sort((a, b) => a.solverNodes - b.solverNodes).slice(0, 4)) expect(bruteForceProblem(p), p.id).toBeNull();
   });
   test('모든 오답에도 실제로 막는 응수가 준비돼 있다', () => {
     for (const e of bank) {

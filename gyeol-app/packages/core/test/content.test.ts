@@ -1,10 +1,14 @@
 import { describe, expect, test } from 'vitest';
+import { readFileSync } from 'node:fs';
 import {
-  LESSONS, PASS, apply, correctMoves, puzzleValues, ratedBank, dailyPuzzle, dateKey, decode, legal, puzzleNumber, result,
+  LESSONS, PASS, apply, correctMoves, puzzleValues, ratedBank, dailyPuzzle, dateKey, decode, legal, loadPuzzleBank, puzzleNumber, result,
+  type PuzzleBankFile,
 } from '../src';
 
+loadPuzzleBank(JSON.parse(readFileSync(new URL('./puzzle-bank.fixture.json', import.meta.url), 'utf8')) as PuzzleBankFile);
+
 describe('오늘의 퍼즐', () => {
-  test('daily puzzles use only verified recorded wins and cycle without repeats', () => {
+  test('daily puzzles use only the server bank and cycle without repeats', () => {
     expect(puzzleNumber('2026-11-10')).toBe(1);
     expect(puzzleNumber('2027-11-10')).toBe(366);
     expect(dateKey(new Date(2026, 0, 5))).toBe('2026-01-05');

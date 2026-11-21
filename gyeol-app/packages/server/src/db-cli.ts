@@ -3,6 +3,7 @@ import { dirname, resolve } from 'node:path';
 import { DatabaseEngine } from './database';
 import { backupDatabase, importJson, readSource, restoreCheck, verifyDatabase } from './db-tools';
 import { exportTrainingPositions } from './training-export';
+import { minePuzzles } from './puzzle-miner';
 
 const [command, ...args] = process.argv.slice(2);
 function option(name: string, required = true) {
@@ -22,6 +23,16 @@ try {
     db: resolve(option('db')!), out: resolve(option('out')!), exclude: many('exclude'),
     playerCap: count('player-cap'), minPlies: count('min-plies'), maxGames: count('max-games'),
   });
+  // 기보에서 정답이 하나뿐인 퍼즐을 발췌해 서버가 내려줄 은행을 만든다(운영 DB는 읽기 전용)
+  else if (command === 'mine-puzzles') {
+    const db = option('db', false), archive = option('archive', false);
+    if (!db && !archive) throw new Error('--db or --archive is required');
+    report = minePuzzles({
+      db: db && resolve(db), archive: archive && resolve(archive), state: resolve(option('state')!),
+      out: option('out', false) && resolve(option('out', false)!), budgetMinutes: count('budget-minutes'), maxRemaining: count('max-remaining'),
+      log: (line) => console.error(line),
+    });
+  }
   else {
     const file = resolve(option('db')!);
     if (command === 'migrate' && !existsSync(file)) {
@@ -37,7 +48,7 @@ try {
         const destination = await backupDatabase(engine, option('output')!);
         report = { ...restoreCheck(destination), destination }; break;
       }
-      default: throw new Error('Use migrate, import-json, verify, backup, restore-check, or export-training');
+      default: throw new Error('Use migrate, import-json, verify, backup, restore-check, export-training, or mine-puzzles');
     }
   }
   const reportFile = option('report', false);

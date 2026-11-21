@@ -1,6 +1,9 @@
 import { afterEach, beforeEach, expect, test, vi } from 'vitest';
-import { PUZZLE_SCALE, migratePuzzleRating, ratedBank } from '@gyeol/core';
+import { readFileSync } from 'node:fs';
+import { PUZZLE_SCALE, loadPuzzleBank, migratePuzzleRating, ratedBank, type PuzzleBankFile } from '@gyeol/core';
 import { puzzleLog, puzzleRating } from '../src/lib/storage';
+
+loadPuzzleBank(JSON.parse(readFileSync(new URL('../../../packages/core/test/puzzle-bank.fixture.json', import.meta.url), 'utf8')) as PuzzleBankFile);
 
 let saved: Map<string, string>;
 beforeEach(() => {
@@ -59,7 +62,7 @@ test('이전 장수 목표는 퇴역시키되 이미 변환한 점수·전적은
   expect(next.seen).toEqual(old.seen);
   expect(next.current).toBeNull();
   expect(next.retiredCurrent).toBe('f123');
-  expect(next.bankVersion).toBe(3);
+  expect(next.bankVersion).toBe(4);
   expect(JSON.parse(saved.get('gyeol:puzzle-rating-v2-bank-backup')!)).toEqual(old);
   expect(puzzleRating.get()).toEqual(next);
 });

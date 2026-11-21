@@ -1,5 +1,5 @@
 import { apply, legal, PASS, type Board, type Player } from './rules';
-import { RECORD_PUZZLES } from './record-puzzle-bank';
+import { loadedPuzzles } from './rated';
 import type { RecordPuzzleData } from './record-types';
 
 export interface Puzzle extends RecordPuzzleData { key: string; number: number }
@@ -15,9 +15,9 @@ export function puzzleNumber(key: string): number {
 export function captureCounts(b: Board, p: Player): Map<number, number> {
   return new Map(legal(b, p).filter((a) => a !== PASS).map((a) => [a, apply(b, p, a).last.flipped?.length ?? 0]));
 }
-/** 실제 검증 기보를 한 번씩 순환한다. 풀기 시작한 ID는 저장소에서 고정한다. */
+/** 서버에서 받은 은행을 한 번씩 순환한다. 풀기 시작한 ID는 저장소에서 고정한다. */
 export function dailyPuzzle(key: string = dateKey(), pinnedId?: string): Puzzle {
-  const sorted = [...RECORD_PUZZLES].sort((a, b) => a.id.localeCompare(b.id));
+  const sorted = [...loadedPuzzles()].sort((a, b) => a.id.localeCompare(b.id));
   if (!sorted.length) throw new Error('검증된 실전 퍼즐이 없습니다');
   const number = puzzleNumber(key);
   const puzzle = sorted.find((p) => p.id === pinnedId) ?? sorted[((number - 1) % sorted.length + sorted.length) % sorted.length];

@@ -1,0 +1,24 @@
+[Unit]
+Description=GYEOL puzzle miner (unique-solution puzzles from recorded games; read-only DB)
+After=gyeol.service
+
+[Service]
+Type=oneshot
+User=gyeol
+Group=gyeol
+EnvironmentFile=/etc/gyeol/server.env
+WorkingDirectory=/opt/gyeol/current
+# 새로 끝난 대국만 본다. 처음 실행은 보관 기보 전체를 보고, 시간 예산을 넘기면 다음 실행이 이어 간다.
+ExecStart=/opt/gyeol/runtime/bin/node --max-old-space-size=1024 /opt/gyeol/current/db-cli.mjs mine-puzzles --db ${DB_PATH} --archive /opt/gyeol/current/puzzle-sources.json --state /var/lib/gyeol/puzzles --budget-minutes 50
+# 게임 서버가 항상 먼저 CPU를 쓴다
+Nice=19
+CPUWeight=1
+IOSchedulingClass=idle
+MemoryMax=1536M
+TimeoutStartSec=70min
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/gyeol

@@ -14,6 +14,7 @@ import { calibratedOpponent, effectiveRating } from './rating-policy';
 import type { Change } from './database';
 import { hasModel, loadBrain } from './brain';
 import botRatings from './bot-ratings.json';
+import { puzzleBankRoute } from './puzzle-route';
 
 export interface ServerOptions {
   port?: number;
@@ -25,6 +26,8 @@ export interface ServerOptions {
   maintenance?: () => boolean;
   /** 빌드된 웹 앱 폴더 (있으면 같은 주소로 제공) */
   staticDir?: string | null;
+  /** 퍼즐 생성기가 만든 은행 파일 (GET /api/puzzles). 없으면 503 */
+  puzzleBank?: string | null;
   /** 시간 모드별 시간 바꾸기 (테스트용). 1분·3분·5분은 한 판 시간, 1일은 한 수 시간 */
   modeMs?: Partial<Record<TimeMode, number>>;
   /** 시간 초과 검사 주기 */
@@ -401,7 +404,9 @@ export function createServer(opts: ServerOptions = {}) {
 
   // ---------- HTTP (정적 파일) ----------
   const root = opts.staticDir ? resolve(opts.staticDir) : null;
+  const puzzles = puzzleBankRoute(opts.puzzleBank ?? null);
   async function serveStatic(req: IncomingMessage, res: ServerResponse) {
+    if (puzzles(req, res)) return;
     if (req.url === '/health') {
       try {
         await ready; const health = await store.call('health');

@@ -1,10 +1,11 @@
 /**
  * 결 온라인 서버 실행:
  *   npm start               → http://0.0.0.0:8787 (웹 앱 + /ws)
- * 환경 변수: PORT, HOST, DB_PATH(SQLite), STATIC(웹 앱 폴더)
+ * 환경 변수: PORT, HOST, DB_PATH(SQLite), STATIC(웹 앱 폴더), PUZZLE_BANK(퍼즐 은행, 기본 DB 폴더/puzzles/bank.json)
  */
 import { existsSync } from 'node:fs';
 import { networkInterfaces } from 'node:os';
+import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createServer } from './server';
 
@@ -17,10 +18,13 @@ const aiDir =
     : process.env.AI_DIR ?? [staticDir, `${here}../../../apps/web/public`].find((d) => existsSync(`${d}/model/model.onnx`)) ?? null;
 if (process.env.STORAGE && process.env.STORAGE !== 'sqlite') throw new Error('Only STORAGE=sqlite is supported. Import legacy JSON before starting.');
 if (process.env.DATA && !process.env.DB_PATH) throw new Error('Legacy DATA is set. Import JSON with db:import-json and set DB_PATH.');
+const dbPath = process.env.DB_PATH ?? `${here}../data/gyeol.sqlite`;
 const server = createServer({
   port: Number(process.env.PORT ?? 8787),
   host: process.env.HOST ?? '0.0.0.0',
-  dbPath: process.env.DB_PATH ?? `${here}../data/gyeol.sqlite`,
+  dbPath,
+  // db-cli mine-puzzles --state <DB 폴더>/puzzles 가 만든 은행
+  puzzleBank: process.env.PUZZLE_BANK ?? join(dirname(dbPath), 'puzzles', 'bank.json'),
   maintenance: () => existsSync(process.env.MAINTENANCE_FILE ?? `${here}../data/maintenance`),
   staticDir,
   aiDir,

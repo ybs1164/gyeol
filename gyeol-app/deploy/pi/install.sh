@@ -47,7 +47,7 @@ install -d -m 0700 -o gyeol -g gyeol /var/backups/gyeol
 install -d -m 0755 /etc/gyeol
 if [[ ! -f /etc/gyeol/server.env ]]; then install -m 0644 server.env.example /etc/gyeol/server.env; fi
 release_dir=$(mktemp -d /opt/gyeol/releases/release-XXXXXXXX)
-cp -a server.mjs database.worker.mjs db-cli.mjs smoke.mjs validate-package.mjs migrations node_modules public "$release_dir/"
+cp -a server.mjs database.worker.mjs db-cli.mjs smoke.mjs validate-package.mjs puzzle-sources.json migrations node_modules public "$release_dir/"
 chown -R root:root "$release_dir"
 chmod -R a+rX "$release_dir"
 new_node="/opt/gyeol/$node_dir/bin/node"
@@ -79,7 +79,7 @@ stamp=$(date -u +%Y%m%dT%H%M%S)-$$
 env_backup="/var/backups/gyeol/server-env-$stamp"
 cp /etc/gyeol/server.env "$env_backup"
 chmod 0600 "$env_backup"
-for unit in gyeol.service gyeol-backup.service gyeol-backup.timer; do
+for unit in gyeol.service gyeol-backup.service gyeol-backup.timer gyeol-puzzles.service gyeol-puzzles.timer; do
   if [[ -f /etc/systemd/system/$unit ]]; then cp "/etc/systemd/system/$unit" "$work_dir/$unit.previous"; fi
 done
 if [[ -f /usr/local/sbin/gyeol-backup ]]; then cp /usr/local/sbin/gyeol-backup "$work_dir/backup.previous"; fi
@@ -95,7 +95,7 @@ rollback_before_open() {
     systemctl stop gyeol.service 2>/dev/null || true
     cp "$env_backup" /etc/gyeol/server.env
     chmod 0644 /etc/gyeol/server.env
-    for unit in gyeol.service gyeol-backup.service gyeol-backup.timer; do
+    for unit in gyeol.service gyeol-backup.service gyeol-backup.timer gyeol-puzzles.service gyeol-puzzles.timer; do
       if [[ -f $work_dir/$unit.previous ]]; then cp "$work_dir/$unit.previous" "/etc/systemd/system/$unit"; fi
     done
     if [[ -f $work_dir/backup.previous ]]; then install -m 0755 "$work_dir/backup.previous" /usr/local/sbin/gyeol-backup; fi
@@ -125,6 +125,9 @@ trap rollback_before_open EXIT
 # Stop background backups too, so no stale backup process races the transition.
 if systemctl is-active --quiet gyeol-backup.timer; then systemctl stop gyeol-backup.timer; fi
 if systemctl is-active --quiet gyeol-backup.service; then systemctl stop gyeol-backup.service; fi
+# The puzzle miner keeps progress per game, so stopping it mid-run loses at most one game.
+if systemctl is-active --quiet gyeol-puzzles.timer; then systemctl stop gyeol-puzzles.timer; fi
+if systemctl is-active --quiet gyeol-puzzles.service; then systemctl stop gyeol-puzzles.service; fi
 # Stop normally so the previous JSON server flushes its final state.
 if systemctl is-active --quiet gyeol.service; then systemctl stop gyeol.service; fi
 # Keep clients gated until data and startup checks pass. Internal recovery may run.
@@ -154,10 +157,10 @@ runuser -u gyeol -- "$new_node" "$release_dir/db-cli.mjs" verify --db "$target_d
 printf '\nSTORAGE=sqlite\nDB_PATH=%s\nMAINTENANCE_FILE=%s\n' "$target_db" "$maintenance_file" >> /etc/gyeol/server.env
 ln -sfn "$release_dir" /opt/gyeol/current
 ln -sfn "/opt/gyeol/$node_dir" /opt/gyeol/runtime
-install -m 0644 gyeol.service gyeol-backup.service gyeol-backup.timer /etc/systemd/system/
+install -m 0644 gyeol.service gyeol-backup.service gyeol-backup.timer gyeol-puzzles.service gyeol-puzzles.timer /etc/systemd/system/
 install -m 0755 backup.sh /usr/local/sbin/gyeol-backup
 systemctl daemon-reload
-systemctl enable gyeol.service gyeol-backup.timer
+systemctl enable gyeol.service gyeol-backup.timer gyeol-puzzles.timer
 systemctl restart gyeol.service
 healthy=0
 for attempt in $(seq 1 30); do
@@ -167,6 +170,9 @@ done
 if [[ $healthy != 1 ]]; then journalctl -u gyeol -n 40 --no-pager; exit 1; fi
 systemctl restart gyeol-backup.timer
 systemctl start gyeol-backup.service
+# Puzzles are served from /var/lib/gyeol/puzzles/bank.json; build/refresh it in the background.
+systemctl restart gyeol-puzzles.timer
+systemctl start --no-block gyeol-puzzles.service
 # Client traffic can now create new state: automatic rollback to legacy JSON ends here.
 rm -f -- "$maintenance_file"
 trap 'rm -rf -- "$work_dir"' EXIT

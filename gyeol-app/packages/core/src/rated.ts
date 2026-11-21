@@ -1,9 +1,9 @@
-import { RECORD_PUZZLES, RECORD_BANK_VERIFICATION } from './record-puzzle-bank';
 import { positionKey } from './endgame';
 import { PUZZLE_SCALE } from './puzzle-scale';
 import { pick } from './random';
 import { result, type Board, type Player } from './rules';
 import type { RecordKind, RecordPuzzleData } from './record-types';
+import { uniqueProofProblem } from './unique-puzzle';
 
 export type RatedKind = RecordKind;
 export type RatedPuzzle = RecordPuzzleData;
@@ -14,16 +14,45 @@ export const KIND_RANGE: Record<RatedKind, [number, number]> = {
   win: [PUZZLE_SCALE.puzzleMin, PUZZLE_SCALE.puzzleMax],
 };
 export interface BankEntry { id: string; kind: RatedKind; rating: number }
-let byId: Map<string, RatedPuzzle> | null = null;
-let bank: BankEntry[] | null = null;
+/** 서버가 내려주는 퍼즐 은행 파일(GET /api/puzzles). */
+export interface PuzzleBankFile {
+  schema: 1;
+  rule: string;
+  version: string;
+  generatedAt: string;
+  criteria: Record<string, unknown>;
+  sources: Record<string, number>;
+  puzzles: RatedPuzzle[];
+}
+export const PUZZLE_BANK_SCHEMA = 1;
+let loaded: RatedPuzzle[] = [];
+let loadedVersion: string | null = null;
+let byId = new Map<string, RatedPuzzle>();
+let bank: BankEntry[] = [];
 const proofs = new WeakMap<RatedPuzzle, Map<string, [number, number][]>>();
 
+/**
+ * 서버에서 받은 은행을 쓴다. 정답이 하나뿐이라는 조건을 저장된 풀이로 다시 확인하고, 어긋난 문제는 버린다.
+ * 받아들인 문제 수를 돌려준다.
+ */
+export function loadPuzzleBank(file: PuzzleBankFile): number {
+  if (file?.schema !== PUZZLE_BANK_SCHEMA || !Array.isArray(file.puzzles)) throw new Error('알 수 없는 퍼즐 은행 형식');
+  const accepted = file.puzzles.filter((p) => p && typeof p.id === 'string' && p.id.startsWith('rp-') && RATED_KINDS.includes(p.kind) && !uniqueProofProblem(p));
+  if (!accepted.length) throw new Error('검증된 퍼즐이 없습니다');
+  loaded = accepted;
+  loadedVersion = file.version;
+  byId = new Map(accepted.map((p) => [p.id, p]));
+  bank = accepted.map(({ id, kind, rating }) => ({ id, kind, rating })).sort((a, b) => a.rating - b.rating || a.id.localeCompare(b.id));
+  return accepted.length;
+}
+export const puzzleBankVersion = (): string | null => loadedVersion;
+export const loadedPuzzles = (): readonly RatedPuzzle[] => loaded;
+
 export function ratedBank(): BankEntry[] {
-  if (!RECORD_BANK_VERIFICATION.verified) throw new Error('기보 검증이 완료되지 않았습니다');
-  return bank ??= RECORD_PUZZLES.map(({ id, kind, rating }) => ({ id, kind, rating })).sort((a, b) => a.rating - b.rating || a.id.localeCompare(b.id));
+  if (!bank.length) throw new Error('퍼즐 은행을 아직 받지 않았습니다');
+  return bank;
 }
 export function ratedPuzzle(id: string): RatedPuzzle | null {
-  byId ??= new Map(RECORD_PUZZLES.map((p) => [p.id, p]));
   return byId.get(id) ?? null;
 }
 
@@ -65,7 +94,8 @@ export function pickRated(target: number, seen: ReadonlySet<string>, random: () 
 }
 
 export const PUZZLE_START = PUZZLE_SCALE.start;
-export const PUZZLE_BANK_VERSION = 3;
+/** 4: 서버가 내려주는 정답 하나짜리 은행 */
+export const PUZZLE_BANK_VERSION = 4;
 export function recommendedPuzzleRating(rating: number, random: () => number = Math.random): number {
   const offset = 400 * Math.log10(PUZZLE_SCALE.targetAccuracy / (1 - PUZZLE_SCALE.targetAccuracy));
   return Math.round(Math.max(PUZZLE_SCALE.puzzleMin, Math.min(PUZZLE_SCALE.puzzleMax - 1, rating - offset + (random() - 0.5) * 60)));

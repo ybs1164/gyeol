@@ -7,7 +7,7 @@ export * from './puzzle';
 export * from './rated';
 export * from './puzzle-scale';
 export * from './record-types';
-export { RECORD_BANK_VERIFICATION } from './record-puzzle-bank';
+export * from './unique-puzzle';
 export * from './lessons';
 export * from './protocol';
 export * from './symmetry';

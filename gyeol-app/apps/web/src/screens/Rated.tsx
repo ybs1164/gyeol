@@ -18,6 +18,7 @@ import { shareText } from '../lib/platform';
 import { t } from '../i18n';
 import { connect, useOnline, webUrl } from '../lib/online';
 import { streak, solvedCount } from '../lib/puzzle-stats';
+import { usePuzzleBank } from '../lib/puzzle-bank';
 import type { Go } from '../App';
 
 const stageName = (n: number) => t(`stage.${n}`);
@@ -172,10 +173,26 @@ function nextPuzzle(stageN: number | null): RatedPuzzle {
   return ratedPuzzle(e.id)!;
 }
 
+type SolveProps = { go: Go; stage: string; daily?: { key: string; onHome: () => void; onMore: () => void } };
+
+/** 퍼즐은 서버가 만든 은행에서 낸다. 받기 전(처음 실행)에는 기다리거나 다시 받는다. */
+export function RatedSolve(props: SolveProps) {
+  const bank = usePuzzleBank();
+  if (bank.status === 'ready') return <RatedSolveReady {...props} />;
+  const { go, daily } = props;
+  return (
+    <div className="screen">
+      <TopBar onBack={daily ? daily.onHome : () => go('puzzles')} title={daily ? t('puzzle.title', { n: puzzleNumber(daily.key) }) : t('rated.title')} />
+      <div className="spacer" />
+      <p className="status" role="status">{bank.status === 'loading' ? <><span className="spin" /> {t('puzzle.bankLoading')}</> : t('puzzle.bankError')}</p>
+      <div className="spacer" />
+      {bank.status === 'error' && <button className="btn primary play" onClick={bank.retry}>{t('puzzle.bankRetry')}</button>}
+    </div>
+  );
+}
+
 /** 레이팅 퍼즐 풀기: 한 문제씩 끝없이 */
-export function RatedSolve({ go, stage: stageParam, daily }: {
-  go: Go; stage: string; daily?: { key: string; onHome: () => void; onMore: () => void };
-}) {
+function RatedSolveReady({ go, stage: stageParam, daily }: SolveProps) {
   const online = useOnline();
   const [day, setDay] = useState<PuzzleDay>(() => daily ? puzzleLog.get(daily.key) : { attempts: [], solved: false });
   const stageN = /^[1-8]$/.test(stageParam) ? Number(stageParam) : null;

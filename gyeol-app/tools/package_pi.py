@@ -35,6 +35,8 @@ with tempfile.TemporaryDirectory(prefix='gyeol-pi-') as temp:
     for filename in ('server.mjs', 'database.worker.mjs', 'db-cli.mjs'):
         shutil.copy2(ROOT / 'packages/server/dist' / filename, stage / filename)
     shutil.copytree(ROOT / 'packages/server/dist/migrations', stage / 'migrations')
+    # Recorded games the server mines for unique-solution puzzles (no player data).
+    shutil.copy2(ROOT / 'tools/record-puzzles/source-games.json', stage / 'puzzle-sources.json')
     # Ship the driver's JS and Linux ARM64 N-API binary, never the Windows addon.
     driver = ROOT / 'node_modules/better-sqlite3'
     runtime_driver = stage / 'node_modules/better-sqlite3'

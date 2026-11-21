@@ -1,0 +1,10 @@
+[Unit]
+Description=Refresh GYEOL unique-solution puzzle bank hourly
+
+[Timer]
+OnCalendar=*-*-* *:30:00
+RandomizedDelaySec=5min
+Persistent=true
+
+[Install]
+WantedBy=timers.target

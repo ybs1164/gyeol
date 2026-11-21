@@ -43,6 +43,6 @@ export default defineConfig({
     }),
   ],
   worker: { format: 'es' },
-  server: { port: 5180, proxy: { '/ws': { target: 'ws://localhost:8787', ws: true } } },
-  preview: { port: 5181, proxy: { '/ws': { target: 'ws://localhost:8787', ws: true } } },
+  server: { port: 5180, proxy: { '/ws': { target: 'ws://localhost:8787', ws: true }, '/api': { target: 'http://localhost:8787' } } },
+  preview: { port: 5181, proxy: { '/ws': { target: 'ws://localhost:8787', ws: true }, '/api': { target: 'http://localhost:8787' } } },
 });
