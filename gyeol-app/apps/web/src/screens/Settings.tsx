@@ -10,7 +10,7 @@ import { Arrow } from '../components/Board';
 import { AppShell } from '../components/AppShell';
 import type { Go, Route } from '../App';
 
-export const APP_VERSION = '0.4.1';
+export const APP_VERSION = '1.0.0';
 
 const LICENSES: [string, string][] = [
   ['React', 'MIT'],
