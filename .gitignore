@@ -6,6 +6,7 @@
 !/README.md
 !/gyeol-app/
 !/gyeol_ai/
+!/.github/
 
 # 학습 산출물: 체크포인트·리플레이·캐시는 서버에서 따로 옮긴다
 gyeol_ai/**/temp/

@@ -45,11 +45,20 @@ export function serverUrl(input = settings.get().server): string {
   return `${proto}://${url.host}/ws`;
 }
 
-/** 초대 링크에 쓸 웹 주소 (서버가 웹 앱도 함께 제공) */
+/** 공개 웹 앱 주소(GitHub Pages). 게임 서버(WebSocket·퍼즐 API)는 NATIVE_SERVER 에 따로 있다. */
+export const PUBLIC_WEB = 'https://ybs1164.github.io/gyeol';
+const PRIVATE_HOST = /^(localhost|127\.|10\.|192\.168\.|172\.(1[6-9]|2\d|3[01])\.|\[::1\])/;
+
+/**
+ * 초대·공유 링크에 쓸 웹 주소.
+ * - 설정에서 서버를 직접 적었으면 그 서버(웹 앱도 함께 제공: 같은 와이파이 대국 등)
+ * - 이 PC·같은 와이파이에서 연 웹이면 연 주소 그대로
+ * - 그 밖(안드로이드 앱, 공개 웹)은 GitHub Pages
+ */
 export function webUrl(): string {
-  const ws = state.url || serverUrl();
-  if (!ws) return location.origin;
-  return ws.replace(/^ws/, 'http').replace(/\/ws$/, '');
+  if (settings.get().server.trim()) return (state.url || serverUrl()).replace(/^ws/, 'http').replace(/\/ws$/, '');
+  if (!isNative() && PRIVATE_HOST.test(location.hostname)) return new URL(import.meta.env.BASE_URL, location.href).href.replace(/\/$/, '');
+  return PUBLIC_WEB;
 }
 
 let state: OnlineState = {

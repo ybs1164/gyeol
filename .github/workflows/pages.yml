@@ -1,0 +1,49 @@
+# 웹 앱을 GitHub Pages(https://ybs1164.github.io/gyeol/)에 올린다.
+# 정적 파일만 Pages에 있고, 온라인 대국(WebSocket)과 퍼즐 API는 Oracle 게임 서버를 쓴다.
+name: Deploy web to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'gyeol-app/apps/web/**'
+      - 'gyeol-app/packages/core/**'
+      - 'gyeol-app/packages/ai/**'
+      - 'gyeol-app/package-lock.json'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: gyeol-app
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: gyeol-app/package-lock.json
+      - run: npm ci
+      - run: npx tsc -p apps/web --noEmit
+      - name: Build web app
+        run: npm run build -w @gyeol/web
+        env:
+          BASE: /gyeol/
+          VITE_SERVER: https://gyeol.146.56.189.166.sslip.io
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: gyeol-app/apps/web/dist
+          publish_branch: gh-pages
+          force_orphan: true
+          commit_message: Deploy web app

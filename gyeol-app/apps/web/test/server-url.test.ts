@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, expect, test, vi } from 'vitest';
-import { serverUrl } from '../src/lib/online';
+import { PUBLIC_WEB, serverUrl, webUrl } from '../src/lib/online';
 
 beforeEach(() => {
   vi.stubGlobal('window', { Capacitor: { isNativePlatform: () => false } });
@@ -33,4 +33,18 @@ test('a whitespace-only build default falls back to Oracle on Android', () => {
   vi.stubGlobal('window', { Capacitor: { isNativePlatform: () => true } });
   vi.stubEnv('VITE_SERVER', '   ');
   expect(serverUrl('')).toBe('wss://gyeol.146.56.189.166.sslip.io/ws');
+});
+
+test('invite and share links use GitHub Pages except for local or custom servers', () => {
+  expect(PUBLIC_WEB).toBe('https://ybs1164.github.io/gyeol');
+  vi.stubGlobal('location', { protocol: 'https:', host: 'ybs1164.github.io', hostname: 'ybs1164.github.io', href: 'https://ybs1164.github.io/gyeol/' });
+  expect(webUrl()).toBe(PUBLIC_WEB);
+  vi.stubGlobal('window', { Capacitor: { isNativePlatform: () => true } });
+  vi.stubGlobal('location', { protocol: 'https:', host: 'localhost', hostname: 'localhost', href: 'https://localhost/' });
+  expect(webUrl()).toBe(PUBLIC_WEB);
+  vi.stubGlobal('window', { Capacitor: { isNativePlatform: () => false } });
+  vi.stubGlobal('location', { protocol: 'http:', host: '192.168.0.7:8787', hostname: '192.168.0.7', href: 'http://192.168.0.7:8787/' });
+  expect(webUrl()).toBe('http://192.168.0.7:8787');
+  vi.stubGlobal('localStorage', { getItem: (k: string) => k === 'gyeol:settings' ? JSON.stringify({ server: '192.168.0.9:8787' }) : null });
+  expect(webUrl()).toBe('http://192.168.0.9:8787');
 });
