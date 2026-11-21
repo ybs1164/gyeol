@@ -1,0 +1,22 @@
+[Unit]
+Description=GYEOL continuous learning cycle (export, relabel, train, gate; never deploys a model)
+After=gyeol.service
+
+[Service]
+Type=oneshot
+User=gyeol-train
+Group=gyeol-train
+# root 로 최신 시간별 백업만 풀어 놓는다(운영 DB는 열지 않는다)
+ExecStartPre=+/opt/gyeol-training/repo/gyeol-app/deploy/learning/snapshot.sh
+ExecStart=/opt/gyeol-training/repo/gyeol-app/deploy/learning/cycle.sh
+# 게임 서버(CPUWeight 기본 100)가 항상 먼저 CPU를 쓴다
+Nice=19
+CPUWeight=1
+IOSchedulingClass=idle
+MemoryMax=2560M
+TimeoutStartSec=20h
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+NoNewPrivileges=yes
+ReadWritePaths=/var/lib/gyeol-training
