@@ -31,7 +31,7 @@ install -d -o gyeol-train -g gyeol-train -m 0700 "$DATA"
 for d in model export labels seed-labels candidates reports snapshot; do install -d -o gyeol-train -g gyeol-train -m 0700 "$DATA/$d"; done
 
 log "repository"
-if [[ -d $ROOT/repo/.git ]]; then git -C "$ROOT/repo" pull --ff-only --quiet; else git clone --quiet "$REPO_URL" "$ROOT/repo"; fi
+if [[ -d $ROOT/repo/.git ]]; then git -C "$ROOT/repo" config core.fileMode false; git -C "$ROOT/repo" pull --ff-only --quiet; else git clone --quiet "$REPO_URL" "$ROOT/repo"; fi
 git -C "$ROOT/repo" log -1 --format='   %h %s'
 chmod 0755 "$ROOT/repo/gyeol-app/deploy/learning/"*.sh
 
