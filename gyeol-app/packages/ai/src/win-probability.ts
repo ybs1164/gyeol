@@ -1,9 +1,9 @@
-import { ExactEndgame, PASS, TOTAL_TILES, canonical, initial, legal, result, tileCount, type Player, type Winner } from '@gyeol/core';
+import { ExactEndgame, TOTAL_TILES, canonical, initial, result, tileCount, type Player, type Winner } from '@gyeol/core';
 import { replayAnalysis, terminalValue, greenValue, type AnalysisMode, type AnalysisPosition } from './analysis';
 import { search, type Predict } from './mcts';
 import { PROBABILITY_RULE, calibratedProbability, type ProbabilityCalibration } from './probability-calibration';
 
-export const WIN_ANALYSIS_VERSION = 5;
+export const WIN_ANALYSIS_VERSION = 6;
 /**
  * 그래프 정확 증명을 시도하는 남은 타일 수의 상한. 실제로 어디까지 증명할지는 아래 노드·시간 예산이 정한다.
  * 승패만 (-1, 1) 창으로 찾으므로 타일 차이 전체를 찾을 때보다 10~200배 적은 노드로 증명된다.
@@ -23,7 +23,7 @@ export interface WinPoint {
   simulations: number;
   calibrated: boolean;
   provenOutcome?: Winner;
-  /** 승리 측이 올바르게 둘 때의 보장 상한. 상대 착수와 강제 패스도 각각 1수다. */
+  /** 승리 측이 올바르게 둘 때의 보장 상한. 양쪽 착수를 각각 1수로 세고, 패스는 세지 않는다. */
   forcedWinPlies?: number;
   winDistanceKind?: 'exact' | 'upper-bound';
 }
@@ -142,12 +142,12 @@ export async function analyzeWinProbability(moves: number[], predict: Predict, o
       break;
     }
   }
-  // 25장까지 매 배치 사이 패스는 최대 한 번이다. 증명된 승리에는 항상 안전한 상한을 제공한다.
+  // 착수마다 타일이 한 장 늘어나므로 남은 타일 수가 패스를 뺀 수의 안전한 상한이다.
   for (let i = positions.length - 1; i >= 0; i--) {
     const point = analysis.positions[i]!;
     if (point.source !== 'proven' || !point.provenOutcome || point.forcedWinPlies !== undefined) continue;
     const remaining = TOTAL_TILES - tileCount(positions[i].board);
-    point.forcedWinPlies = 2 * remaining - (legal(positions[i].board, positions[i].player)[0] === PASS ? 0 : 1);
+    point.forcedWinPlies = remaining;
     point.winDistanceKind = 'upper-bound';
   }
   // 승패 증명을 우선하고, 같은 시간·노드 예산의 남은 몫으로 승리 수 상한을 좁힌다.

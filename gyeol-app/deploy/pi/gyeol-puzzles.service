@@ -9,12 +9,14 @@ Group=gyeol
 EnvironmentFile=/etc/gyeol/server.env
 WorkingDirectory=/opt/gyeol/current
 # 새로 끝난 대국만 본다. 처음 실행은 보관 기보 전체를 보고, 시간 예산을 넘기면 다음 실행이 이어 간다.
-ExecStart=/opt/gyeol/runtime/bin/node --max-old-space-size=1024 /opt/gyeol/current/db-cli.mjs mine-puzzles --db ${DB_PATH} --archive /opt/gyeol/current/puzzle-sources.json --state /var/lib/gyeol/puzzles --budget-minutes 50
+# --ai-judge: 종국 계산이 닿지 않는 오프닝·중반(남은 10~22장)의 실수 응징 문제를 AI 탐색으로 판정한다(대국당 수십 초 더 쓴다).
+ExecStart=/opt/gyeol/runtime/bin/node --max-old-space-size=1024 /opt/gyeol/current/db-cli.mjs mine-puzzles --db ${DB_PATH} --archive /opt/gyeol/current/puzzle-sources.json --state /var/lib/gyeol/puzzles --ai-dir /opt/gyeol/current/public --ai-judge --budget-minutes 50
 # 게임 서버가 항상 먼저 CPU를 쓴다
 Nice=19
 CPUWeight=1
 IOSchedulingClass=idle
 MemoryMax=1536M
+MemoryHigh=1200M
 TimeoutStartSec=70min
 UMask=0077
 NoNewPrivileges=true

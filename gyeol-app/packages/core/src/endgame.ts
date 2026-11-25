@@ -1,4 +1,4 @@
-import { LIMIT, TOTAL_TILES, apply, bounds, legal, margin, result, tileCount, type Board, type Player } from './rules';
+import { LIMIT, PASS, TOTAL_TILES, apply, bounds, legal, margin, result, tileCount, type Board, type Player } from './rules';
 
 /** 둘 차례를 +1로 바꾼 좌표 키. 행동 번호는 원래 좌표와 같다. */
 export function positionKey(board: Board, player: Player): string {
@@ -65,7 +65,7 @@ export class ExactEndgame {
     return Math.sign(step.value) as -1 | 0 | 1;
   }
 
-  /** 승자는 승리를 유지하며 가장 빨리 끝내고, 패자는 모든 합법 응수로 최대한 지연한다. 양쪽 착수·패스를 각각 1수로 센다. */
+  /** 승자는 승리를 유지하며 가장 빨리 끝내고, 패자는 모든 합법 응수로 최대한 지연한다. 양쪽 착수를 각각 1수로 세고, 패스는 세지 않는다. */
   private *distance(board: Board, player: Player, winningPlayer: Player): Generator<void, number | null> {
     if (++this.nodes > this.limit) throw new Error('Exact endgame node limit exceeded');
     if (this.nodes % 256 === 0) yield;
@@ -88,12 +88,13 @@ export class ExactEndgame {
     const minimum = tileCount(board) > 0 && r1 - r0 < LIMIT && c1 - c0 < LIMIT ? remaining : 1;
     for (const action of legal(board, player)) {
       const child = yield* this.distance(apply(board, player, action).board, -player as Player, winningPlayer);
+      const step = action === PASS ? 0 : 1;
       if (winningTurn) {
-        if (child !== null) distance = Math.min(distance, child + 1);
+        if (child !== null) distance = Math.min(distance, child + step);
         if (distance === minimum) break;
       } else {
         if (child === null) { this.winDistances.set(key, null); return null; }
-        distance = Math.max(distance, child + 1);
+        distance = Math.max(distance, child + step);
       }
     }
     const value = Number.isFinite(distance) ? distance : null;
@@ -101,7 +102,7 @@ export class ExactEndgame {
     return value;
   }
 
-  /** 상대가 최대한 버텨도 이기는 최소 ply 수. 승리를 강제할 수 없으면 null. */
+  /** 상대가 최대한 버텨도 이기는 최소 착수 수(패스 제외). 승리를 강제할 수 없으면 null. */
   async winDistanceAsync(board: Board, player: Player, winningPlayer: Player, checkpoint: () => Promise<void>): Promise<number | null> {
     await checkpoint();
     const work = this.distance(board, player, winningPlayer);

@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState, type ReactNode } from 'react';
 import type { Level } from '@gyeol/ai';
-import { PASS, canonical, counts, formatMove, initial, legal, winner, type Player } from '@gyeol/core';
+import { PASS, canonical, counts, formatMove, initial, legal, moveNumbers, winner, type Player } from '@gyeol/core';
 import { MovePreview } from '../components/MovePreview';
 import { Board } from '../components/Board';
 import { ResultPopup } from '../components/ResultPopup';
@@ -243,7 +243,7 @@ export function GameScreen({ config, onHome, onReview }: Props) {
       }
       overlay={
         <>
-          {preview !== null && history[preview + 1] && <MovePreview key={preview} before={history[preview]} action={history[preview + 1].action!} ply={Math.floor(preview / 2) + 1} onClose={() => setPreview(null)} />}
+          {preview !== null && history[preview + 1] && <MovePreview key={preview} before={history[preview]} action={history[preview + 1].action!} number={moveNumbers(moveLog.map(m => m.action))[preview]} onClose={() => setPreview(null)} />}
           {end !== null && showResult && (
             <ResultPopup
               title={title}

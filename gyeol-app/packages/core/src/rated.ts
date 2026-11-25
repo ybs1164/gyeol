@@ -7,11 +7,12 @@ import { uniqueProofProblem } from './unique-puzzle';
 
 export type RatedKind = RecordKind;
 export type RatedPuzzle = RecordPuzzleData;
-export const RATED_KINDS: RatedKind[] = ['advantage', 'turnaround', 'win'];
+export const RATED_KINDS: RatedKind[] = ['advantage', 'turnaround', 'win', 'keep'];
 export const KIND_RANGE: Record<RatedKind, [number, number]> = {
   advantage: [PUZZLE_SCALE.puzzleMin, PUZZLE_SCALE.puzzleMax],
   turnaround: [PUZZLE_SCALE.puzzleMin, PUZZLE_SCALE.puzzleMax],
   win: [PUZZLE_SCALE.puzzleMin, PUZZLE_SCALE.puzzleMax],
+  keep: [PUZZLE_SCALE.puzzleMin, PUZZLE_SCALE.puzzleMax],
 };
 export interface BankEntry { id: string; kind: RatedKind; rating: number }
 /** 서버가 내려주는 퍼즐 은행 파일(GET /api/puzzles). */

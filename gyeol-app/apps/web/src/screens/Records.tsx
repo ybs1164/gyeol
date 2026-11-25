@@ -1,12 +1,11 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { emptyWinAnalysis, gameReport, replayAnalysis, smoothWinCurve, type AnalysisMode, type GameAnalysis, type WinAnalysis } from '@gyeol/ai';
-import { PASS, apply, result, decode, idx, initial, moveType, type Player } from '@gyeol/core';
+import { PASS, apply, result, decode, idx, initial, moveType, movesPlayed, type Player } from '@gyeol/core';
 import { MoveList, movesFromActions } from '../components/GameLayout';
 import { MoveTypeBadge } from '../components/MoveTypeBadge';
 import { Board } from '../components/Board';
 import { Score } from '../components/Score';
 import { AnalysisGraph } from '../components/AnalysisGraph';
-import { MoveReview } from '../components/MoveReview';
 import { GameReport } from '../components/GameReport';
 import { ScoreDiffBar } from '../components/ScoreDiffBar';
 import { Popup } from '../components/ui';
@@ -61,6 +60,7 @@ function ReplayGame({ id, go }: { id: string; go: Go }) {
   const [overview, setOverview] = useState(true);
   const [perspective, setPerspective] = useState<Player>(record?.me ?? 1);
   const [line, setLine] = useState<{ ply: number; kind: 'actual' | 'best'; step: number } | null>(null);
+  const [lineGraphs, setLineGraphs] = useState<Record<string, WinAnalysis>>({});
   const job = useRef<{ cancel: () => void } | null>(null);
   const client = useMemo(() => new WinAnalysisClient(), []);
   const generation = useRef(0);
@@ -140,6 +140,23 @@ function ReplayGame({ id, go }: { id: string; go: Go }) {
   const cancel = () => { autoPaused.current = true; generation.current++; job.current?.cancel(); job.current = null; setAnalyzing(false); setMoveBusy(false); };
   const jump = (i: number) => { reviewSelection.current++; setAt(Math.max(0, Math.min(n, i))); setLine(null); setPendingPly(null); };
   const selectMove = (ply: number) => { jump(ply - 1); setPendingPly(ply); };
+  const selected = analysis?.moves[(line?.ply ?? pendingPly ?? at) - 1] ?? null;
+  const candidate = line && selected ? [...selected.candidates].sort((a, b) => b.value - a.value || (b.margin ?? 0) - (a.margin ?? 0)).find(c => line.kind === 'actual' ? c.action === selected.played : selected.bestActions.includes(c.action)) : null;
+  const pv = candidate?.pv ?? [];
+  // 추천 수 · 실제 수 양상도 국면마다 승률을 매겨 왼쪽 막대에 보여 준다. 수순 시작 국면부터 그래프와 같은 방식으로 평가한다.
+  const lineKey = line && pv.length ? `${mode}:${line.ply}:${pv.join(',')}` : '';
+  const lineRequested = useRef(new Set<string>());
+  useEffect(() => {
+    if (!lineKey || !line || lineRequested.current.has(lineKey)) return;
+    lineRequested.current.add(lineKey);
+    const parent = positions[line.ply - 1];
+    const save = (graph: WinAnalysis) => setLineGraphs(g => ({ ...g, [lineKey]: graph }));
+    const active = client.graph({ task: 'graph', moves: pv, mode, start: { board: parent.board, player: parent.player } }, save);
+    // 다른 분석을 취소하느라 작업자가 닫히면 다음에 다시 열 때 이어서 평가한다.
+    active.result.then(save, () => { lineRequested.current.delete(lineKey); });
+  }, [lineKey]);
+  const lineGraph = lineKey ? lineGraphs[lineKey] : undefined;
+  const lineCurve = useMemo(() => lineGraph ? smoothWinCurve(lineGraph.positions) : null, [lineGraph]);
   // 단축키: ← → 한 수, Home · End 처음 · 끝 (그래프와 슬라이더에 포커스가 있으면 그쪽이 처리)
   useShortcuts({
     ArrowLeft: () => jump(at - 1),
@@ -151,9 +168,6 @@ function ReplayGame({ id, go }: { id: string; go: Go }) {
   if (!record || replay.invalid) return <div className="screen"><div className="topbar"><button className="icon-btn" onClick={() => go('me')} aria-label={t('nav.back')}><Icon name="back" /></button></div><p className="muted">{t(replay.invalid ? 'review.invalid' : 'err.not_found')}</p></div>;
 
   const o = outcome(record);
-  const selected = analysis?.moves[(line?.ply ?? pendingPly ?? at) - 1] ?? null;
-  const candidate = line && selected ? [...selected.candidates].sort((a, b) => b.value - a.value || (b.margin ?? 0) - (a.margin ?? 0)).find(c => line.kind === 'actual' ? c.action === selected.played : selected.bestActions.includes(c.action)) : null;
-  const pv = candidate?.pv ?? [];
   let pos = positions[at];
   if (line) {
     pos = positions[line.ply - 1];
@@ -162,12 +176,11 @@ function ReplayGame({ id, go }: { id: string; go: Go }) {
   const nextAction = line ? pv[line.step] : pendingPly ? record.moves[pendingPly - 1] : undefined;
   const sm = nextAction !== undefined && nextAction !== PASS ? decode(nextAction) : null;
   const point = curve?.[at];
+  // 수순 첫 국면은 기보 그래프 값과 같게 두고, 이후 국면은 수순 평가 값을 쓴다.
+  const barPoint = line ? (line.step === 0 ? point : null) ?? lineCurve?.[line.step] : point;
   const forcedLabel = forcedWinLabel(point, perspective);
   const complete = win?.complete;
-  const issues = typed.map((move, i) => ({ ply: i + 1, type: move.type })).filter(move => move.type === 'gift');
   const reviewPly = line?.ply ?? pendingPly ?? at;
-  const previous = [...issues].reverse().find(m => m.ply < reviewPly);
-  const next = issues.find(m => m.ply > reviewPly);
   const startLine = async (kind: 'actual' | 'best') => {
     if (!selected || !analysis || analyzing || moveBusy) return;
     const selectionToken = reviewSelection.current;
@@ -199,9 +212,9 @@ function ReplayGame({ id, go }: { id: string; go: Go }) {
   const head = <div className="topbar"><button className="icon-btn" onClick={() => go('me')} aria-label={t('nav.back')}><Icon name="back" /></button><h2>{t('rp.title')}</h2><span className={`small ${o.cls}`}>{o.text}</span></div>;
   const boardView = <>
     <Score board={pos.board} turn={at < n || line ? pos.player : null} />
-    <p className="status">{t('rp.move', { i: at, n })}{!line && at > 0 && record.moves[at - 1] === PASS && ` · ${t('rp.pass')}`}</p>
+    <p className="status">{t('rp.move', { i: movesPlayed(record.moves, at), n: movesPlayed(record.moves) })}{!line && at > 0 && record.moves[at - 1] === PASS && ` · ${t('rp.pass')}`}</p>
     <div className="rp-board-row">
-      <ScoreDiffBar point={line ? null : point} board={pos.board} perspective={perspective} />
+      <ScoreDiffBar point={barPoint} board={pos.board} perspective={perspective} />
       <Board pos={{ ...pos, animate: false }} interactive={false} showLast={nextAction === undefined} showCoordinates
         moveType={!line && reviewPly > 0 ? typed[reviewPly - 1]?.type : null}
         marks={sm ? [idx(sm.r, sm.c)] : []}
@@ -223,47 +236,45 @@ function ReplayGame({ id, go }: { id: string; go: Go }) {
       <button className="btn" onClick={() => jump(n)} disabled={at === n && !line} aria-label={t('review.last')}>⏭</button>
     </div>
     <input className="range" aria-label={t('rp.title')} type="range" min={0} max={n} value={at} onChange={e => jump(Number(e.target.value))} />
-    <button className="btn overview-open" onClick={() => setOverview(true)}>{t('rp.overview')}</button>
   </>;
+  const overviewButton = <button className="btn overview-open" onClick={() => setOverview(true)}>{t('rp.overview')}</button>;
   const busy = loading || analyzing || (!error && !autoPaused.current && (!win?.complete || !analysis?.complete));
   const loadingView = <section className="analysis-loading" aria-busy="true" aria-label={t('win.analyze')}>
     <div role="status" aria-label={t('win.analyze')}><span className="spin" aria-hidden="true" /></div>
     {analyzing && <button className="text-btn" onClick={cancel}>{t('review.cancel')}</button>}
   </section>;
-  // 팝업: 대국 요약 → 승률 추정 → 모든 수. 수를 고르면 팝업을 닫고 판에서 그 수를 보여 준다.
+  // 팝업: 대국 요약 → 모든 수 → 분석 방식. 수를 고르면 팝업을 닫고 판에서 그 수를 보여 준다.
   const overviewView = busy ? loadingView : <>
     <GameReport analysis={analysis} typed={typed} me={record.me} />
+    <section className="move-overview" aria-label={t('review.all')}>
+      <div className="review-row"><strong>{t('review.all')}</strong><span className="small muted">{analysis?.moves.filter((m, i) => m && record.moves[i] !== PASS).length ?? 0} / {movesPlayed(record.moves)}</span></div>
+      <div className="move-list"><MoveList moves={movesFromActions(record.moves, record.initialPlayer ?? 1, record.initialBoard ?? initial())}
+        selectedIndex={(pendingPly ?? at) - 1} onSelect={i => { selectMove(i + 1); setOverview(false); }}
+        renderDetail={i => <MoveTypeBadge type={typed[i]?.type} iconOnly />} /></div>
+    </section>
+    <div className="actions analysis-modes">{(['standard', 'deep'] as const).map(m => <button className="btn" key={m} aria-pressed={mode === m} disabled={analyzing || loading || moveBusy} onClick={() => setMode(m)}>{t(`review.${m}`)}</button>)}</div>
+  </>;
+  const overviewPopup = overview && <Popup className="review-popup" onClose={() => setOverview(false)}>
+    <div className="review-popup-head"><h3>{t('rp.overview')}</h3><button className="text-btn" onClick={() => setOverview(false)}>{t('rp.closeOverview')}</button></div>
+    {overviewView}
+  </Popup>;
+  // 판 아래: 추천 수 · 실제 수 보기 → 승률 추정 그래프. 대국 분석 버튼은 맨 아래에 둔다.
+  const analysisView = busy ? loadingView : <>
+    {selected && <div className="actions review-lines">
+      {!selected.forced && <button className="btn primary" disabled={moveBusy} onClick={() => void startLine('best')}>{t('review.recommend')}</button>}
+      <button className="btn" disabled={moveBusy} onClick={() => void startLine('actual')}>{t('review.actual')}</button>
+    </div>}
+    {moveBusy && <button className="text-btn" onClick={cancel}>{t('review.cancel')}</button>}
     <section className="win-panel" aria-label={t('win.title')}>
       <div className="review-row"><strong>{t('win.title')}</strong><div className="perspective-picker">{([1, -1] as const).map(p => <button className="text-btn" key={p} aria-pressed={perspective === p} onClick={() => setPerspective(p)}>{sideName(p)}</button>)}</div></div>
       <div className="win-reading" aria-live="polite">
         {(forcedLabel || point?.status === 'exact') && <span className="win-number">{forcedLabel ?? (point!.provenOutcome ? t('rec.sideWin', { color: sideName(point!.provenOutcome) }) : t('rec.draw'))}</span>}
         <span className="win-state">{!point ? t('review.notAnalyzed') : point.status === 'exact' ? t(point.source === 'terminal' ? 'win.finished' : 'win.proven') : t('win.estimated')}</span>
       </div>
-      {win ? <AnalysisGraph label={t('win.title')} analysis={{ positions: curve!, marks: typed }} at={at} perspective={perspective} jump={jump} /> : <div className="win-placeholder">{t('win.empty')}</div>}
+      {win ? <AnalysisGraph label={t('win.title')} analysis={{ positions: curve!, marks: typed }} actions={record.moves} at={at} perspective={perspective} jump={jump} /> : <div className="win-placeholder">{t('win.empty')}</div>}
       <div className="win-actions"><button className="text-btn" disabled={moveBusy} onClick={() => void analyze(!!complete && !!analysis?.complete)}>{t(complete && analysis?.complete ? 'win.refresh' : win?.positions.some(Boolean) ? 'review.resume' : 'win.analyze')}</button></div>
       {error && <p className="feedback no" role="alert">{t('review.error')}</p>}
     </section>
-    <section className="move-overview" aria-label={t('review.all')}>
-      <div className="review-row"><strong>{t('review.all')}</strong><span className="small muted">{analysis?.moves.filter(Boolean).length ?? 0} / {n}</span></div>
-      <div className="move-list"><MoveList moves={movesFromActions(record.moves, record.initialPlayer ?? 1, record.initialBoard ?? initial())}
-        selectedIndex={(pendingPly ?? at) - 1} onSelect={i => { selectMove(i + 1); setOverview(false); }}
-        renderDetail={i => <MoveTypeBadge type={typed[i]?.type} iconOnly />} /></div>
-    </section>
-  </>;
-  const overviewPopup = overview && <Popup className="review-popup" onClose={() => setOverview(false)}>
-    <div className="review-popup-head"><h3>{t('rp.overview')}</h3><button className="text-btn" onClick={() => setOverview(false)}>{t('rp.closeOverview')}</button></div>
-    {overviewView}
-  </Popup>;
-  const analysisView = busy ? loadingView : <>
-    {reviewPly > 0 && <section className="win-selected">
-      {selected ? <MoveReview move={selected} type={typed[selected.ply - 1]?.type ?? null} byOutcome={typed[selected.ply - 1]?.cause === 'outcome'} onLine={kind => void startLine(kind)} busy={moveBusy} /> : <p className="small muted">{t('review.notAnalyzed')}</p>}
-      {moveBusy && <button className="text-btn" onClick={cancel}>{t('review.cancel')}</button>}
-      {issues.length > 0 && <div className="actions issue-navigation"><button className="text-btn" disabled={!previous} onClick={() => previous && jump(previous.ply)}>{t('review.previousIssue')}</button><button className="text-btn" disabled={!next} onClick={() => next && jump(next.ply)}>{t('review.nextIssue')}</button></div>}
-    </section>}
-    {error && !overview && <p className="feedback no" role="alert">{t('review.error')}</p>}
-    <details className="win-details"><summary><span>{t('win.details')}</span><Icon name="chevron" /></summary>
-      <div className="actions analysis-modes">{(['standard', 'deep'] as const).map(m => <button className="btn" key={m} aria-pressed={mode === m} disabled={analyzing || loading || moveBusy} onClick={() => setMode(m)}>{t(`review.${m}`)}</button>)}</div>
-    </details>
   </>;
 
   // 넓은 창: 판과 이동 버튼은 왼쪽에 고정, 수순 비교 · 분석은 오른쪽 패널에서만 스크롤
@@ -271,7 +282,7 @@ function ReplayGame({ id, go }: { id: string; go: Go }) {
     {head}
     <div className="gw-body">
       <div className="gw-board rp-board">{boardView}{controls}<p className="kbd-hint">{t('keys.replay')}</p></div>
-      <div className="gw-side">{lineView}{analysisView}</div>
+      <div className="gw-side">{lineView}{analysisView}{overviewButton}</div>
     </div>
     {overviewPopup}
   </div>;
@@ -282,6 +293,7 @@ function ReplayGame({ id, go }: { id: string; go: Go }) {
     {lineView}
     {controls}
     {analysisView}
+    {overviewButton}
     {overviewPopup}
   </div>;
 }

@@ -59,7 +59,7 @@ describe('번역', () => {
       ...['place', 'bronze', 'silver', 'gold', 'plat', 'dia', 'master'].map((x) => `tier.${x}`),
       ...['auto', 'light', 'dark'].map((x) => `set.theme.${x}`),
       ...[1, 2, 3, 4, 5, 6, 7, 8].map((n) => `stage.${n}`),
-      ...RATED_KINDS.flatMap((k) => [`kind.${k}`, `rated.goal.${k}`]),
+      ...RATED_KINDS.map((k) => `kind.${k}`),
       ...['ai', 'online'].map((k) => `rated.source.${k}`),
     ];
     expect(keys.filter((k) => !(k in ko))).toEqual([]);

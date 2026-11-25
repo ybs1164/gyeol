@@ -8,11 +8,13 @@ export const outcomeLabel = (value: number) => t(value > 0 ? 'grading.win' : val
 export const moveReason = (move: MoveAnalysis) => t(`grading.reason.${move.reasonCode}`, { n: move.lossPoints.toFixed(1) });
 
 /** 선택한 수: 평가 타입과 그 이유, 종국까지 확인된 경우의 승·무·패 비교, 추천 수 보기. */
-export function MoveReview({ move, type, byOutcome = false, onLine, busy = false }: { move: MoveAnalysis; type: ReviewType | null; byOutcome?: boolean; onLine: (kind: 'actual' | 'best') => void; busy?: boolean }) {
+/** number: 패스를 세지 않는 수 번호(이 수까지 둔 착수 수). 패스면 직전 번호에 패스를 붙인다. */
+export function MoveReview({ move, number = move.ply, type, byOutcome = false, onLine, busy = false }: { move: MoveAnalysis; number?: number; type: ReviewType | null; byOutcome?: boolean; onLine: (kind: 'actual' | 'best') => void; busy?: boolean }) {
   const solved = !move.forced && move.status === 'exact';
   const fact = move.badges.find(b => ['onlyWin', 'onlyDefense', 'missedDefense'].includes(b));
-  return <section className="move-review" aria-label={t('grading.moveNumber', { n: move.ply })}>
-    <div className="review-row"><strong>{t('grading.moveNumber', { n: move.ply })}</strong><div className="move-verdict">
+  const title = move.played === PASS ? `${t('grading.moveNumber', { n: number })} · ${t('rp.pass')}` : t('grading.moveNumber', { n: number });
+  return <section className="move-review" aria-label={title}>
+    <div className="review-row"><strong>{title}</strong><div className="move-verdict">
       {move.forced ? <span className="small muted">{t(move.played === PASS ? 'review.forcedPass' : 'review.forced')}</span> : <MoveTypeBadge type={type} />}
       {solved && <span className="small muted" data-review-status>{t('review.exact')}</span>}
     </div></div>

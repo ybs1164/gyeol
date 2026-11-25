@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { PASS, counts, initial, legal, replay, type OnlineGame as Game, type Player } from '@gyeol/core';
+import { PASS, counts, initial, legal, moveNumbers, replay, type OnlineGame as Game, type Player } from '@gyeol/core';
 import { Board } from '../components/Board';
 import { MovePreview } from '../components/MovePreview';
 import { ResultPopup } from '../components/ResultPopup';
@@ -281,5 +281,5 @@ function OnlineMoves({ moves }: { moves: number[] }) {
   let before = startPosition(initial(), 1);
   if (preview !== null) for (const a of moves.slice(0, preview)) before = advance(before, a);
   return <><MoveList moves={list} onSelect={setPreview} />
-    {preview !== null && moves[preview] !== undefined && <MovePreview key={preview} before={before} action={moves[preview]} ply={Math.floor(preview / 2) + 1} onClose={() => setPreview(null)} />}</>;
+    {preview !== null && moves[preview] !== undefined && <MovePreview key={preview} before={before} action={moves[preview]} number={moveNumbers(moves)[preview]} onClose={() => setPreview(null)} />}</>;
 }

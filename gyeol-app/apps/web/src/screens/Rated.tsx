@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import {
   PUZZLE_STAGES, PASS, bestReply, correctMoves, dailyPuzzle, legal, puzzleNumber, puzzleValues, pickRated, ratedPuzzle, ratingDelta, result, stageBand,
-  stageOf, recommendedPuzzleRating, type RatedPuzzle,
+  stageOf, recommendedPuzzleRating, type Player, type RatedPuzzle,
 } from '@gyeol/core';
 import { Board, type Stage } from '../components/Board';
 import { Score } from '../components/Score';
@@ -22,6 +22,10 @@ import { usePuzzleBank } from '../lib/puzzle-bank';
 import type { Go } from '../App';
 
 const stageName = (n: number) => t(`stage.${n}`);
+
+/** 문제는 상대의 직전 실수를 판 위에 두고(마지막 수 표시) 시작한다. 실수 기록이 없는 이전 은행은 퍼즐 판에서 바로 시작한다. */
+const startOf = (p: RatedPuzzle): Position =>
+  p.mistake ? advance(startPosition(p.mistake.board, -p.player as Player), p.mistake.action) : startPosition(p.board, p.player);
 
 /** 단계 n을 고를 수 있나: 지금 단계의 바로 위까지 */
 const unlocked = (n: number, rating: number) => n <= stageOf(rating).n + 1;
@@ -150,6 +154,19 @@ interface Outcome {
   after: PuzzleRating | null;
   /** 상대가 최선으로 막았을 때의 종국 결과. 양수만 승리다. */
   got?: number;
+  /** 한 수 문제: 둔 수와 정답의 평가(exact 는 1/0/-1, ai 는 승률) */
+  keep?: { played: number; best: number };
+}
+
+/** 한 수 문제의 결과 설명 한 줄 */
+function keepExplain(puzzle: RatedPuzzle, o: Outcome): string {
+  if (!o.keep) return '';
+  const pct = (v: number) => Math.round(v * 100);
+  if (puzzle.judge === 'exact') {
+    if (o.solved) return t('rated.keep.exactOk');
+    return t(o.keep.played === 0 ? 'rated.keep.exactDraw' : 'rated.keep.exactLoss');
+  }
+  return o.solved ? t('rated.keep.aiOk', { p: pct(o.keep.best) }) : t('rated.keep.aiNo', { p: pct(o.keep.played), best: pct(o.keep.best) });
 }
 
 /** 목표 레이팅: 단계를 골랐으면 그 구간 안 무작위, 아니면 내 레이팅 근처 */
@@ -201,7 +218,7 @@ function RatedSolveReady({ go, stage: stageParam, daily }: SolveProps) {
     puzzleRating.seedFromGame(online.me?.rating, online.me?.rated ?? online.me?.ranked);
     return nextPuzzle(stageN);
   });
-  const [pos, setPos] = useState<Position>(() => startPosition(puzzle.board, puzzle.player));
+  const [pos, setPos] = useState<Position>(() => startOf(puzzle));
   const [ownMoves, setOwnMoves] = useState(0);
   const [phase, setPhase] = useState<Phase>(daily && day.solved ? 'done' : 'solve');
   const [stage, setStage] = useState<Stage>('tile');
@@ -273,6 +290,13 @@ function RatedSolveReady({ go, stage: stageParam, daily }: SolveProps) {
     }
     setPos(next);
     setOwnMoves((n) => n + 1);
+    if (puzzle.format === 'move') {
+      // 한 수 문제: 상대 응수 없이 이 수가 유리함을 지키는지로 바로 판정한다
+      const evals = new Map(puzzle.evals);
+      const best = Math.max(...[...values].filter(([, v]) => v > 0).map(([x]) => evals.get(x)!));
+      show({ ...settle(ok), keep: { played: evals.get(a)!, best } });
+      return;
+    }
     const over = result(next.board, next.player) !== 0;
 
     if (!ok) {
@@ -296,7 +320,7 @@ function RatedSolveReady({ go, stage: stageParam, daily }: SolveProps) {
 
   const reset = () => {
     clearTimeout(timer.current);
-    setPos(startPosition(puzzle.board, puzzle.player));
+    setPos(startOf(puzzle));
     setOwnMoves(0);
     dailyAttemptFinished.current = false;
     setPhase('solve');
@@ -306,13 +330,13 @@ function RatedSolveReady({ go, stage: stageParam, daily }: SolveProps) {
   /** 정답 수순을 처음부터 차례로 보여준다 (상대는 최선 응수). 레이팅과 무관 */
   const showSolution = () => {
     clearTimeout(timer.current);
-    let p = startPosition(puzzle.board, puzzle.player);
+    let p = startOf(puzzle);
     let steps = 0;
     setPos(p);
     setOutcome(null);
     setPhase('demo');
     const step = () => {
-      if (result(p.board, p.player) !== 0) {
+      if (result(p.board, p.player) !== 0 || (puzzle.format === 'move' && steps > 0)) {
         setPhase('done');
         return;
       }
@@ -335,7 +359,7 @@ function RatedSolveReady({ go, stage: stageParam, daily }: SolveProps) {
     const p = nextPuzzle(stageN);
     rated.current = !puzzleRating.get().seen.includes(p.id);
     setPuzzle(p);
-    setPos(startPosition(p.board, p.player));
+    setPos(startOf(p));
     setOwnMoves(0);
     setPhase('solve');
     setOutcome(null);
@@ -380,11 +404,12 @@ function RatedSolveReady({ go, stage: stageParam, daily }: SolveProps) {
       }
       above={
         <>
-      <div className="rated-meta">
-        <span className="muted small">{t('rated.difficulty', { n: puzzle.rating })}</span>
-        {stageN && <span className="muted small">· {t('rated.stage', { n: stageN })}</span>}
-        {rec.streak > 1 && <span className="pill go streak">{t('rated.streakN', { n: rec.streak })}</span>}
-      </div>
+      {(stageN || rec.streak > 1) && (
+        <div className="rated-meta">
+          {stageN && <span className="muted small">{t('rated.stage', { n: stageN })}</span>}
+          {rec.streak > 1 && <span className="pill go streak">{t('rated.streakN', { n: rec.streak })}</span>}
+        </div>
+      )}
 
       <Score board={pos.board} turn={phase === 'done' ? null : pos.player} />
         </>
@@ -418,6 +443,7 @@ function RatedSolveReady({ go, stage: stageParam, daily }: SolveProps) {
               </span>
             )}
           </div>
+          {outcome.keep && <p className="small">{keepExplain(puzzle, outcome)}</p>}
           {stageUp && outcome.after && (
             <p className="stage-up">
               <StageBadge n={stageOf(outcome.after.rating).n} size={26} />

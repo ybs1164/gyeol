@@ -49,14 +49,16 @@ function reading(point: BarPoint, board: Board): { lead: Winner; text: string; l
       ? { lead: winner, text: t('rp.barWinShort'), label: `${t('win.proven')} · ${t('rec.sideWin', { color: sideName(winner) })}` }
       : { lead: winner, text: t('rp.barPlies', { n: plies }), label: t('rp.barWinIn', { color: sideName(winner), n: plies }) };
   }
-  const estimate = Math.round(expectedMargin(point.green));
+  // 예상 차이는 소수점 한 자리까지 보여 준다.
+  const estimate = Math.round(expectedMargin(point.green) * 10) / 10;
   const lead: Winner = estimate > 0 ? 1 : estimate < 0 ? -1 : 0;
   const winPct = Math.round((lead === -1 ? 1 - point.green : point.green) * 100);
+  const n = Math.abs(estimate).toFixed(1);
   return {
     lead,
-    text: lead ? `+${Math.abs(estimate)}` : '0',
+    text: lead ? `+${n}` : '0.0',
     label: lead
-      ? t('rp.barEstimate', { color: sideName(lead), n: Math.abs(estimate), p: winPct })
+      ? t('rp.barEstimate', { color: sideName(lead), n, p: winPct })
       : t('rp.barEven', { p: Math.round(point.green * 100) }),
   };
 }

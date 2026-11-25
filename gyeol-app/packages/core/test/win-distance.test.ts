@@ -10,10 +10,11 @@ function oracle(board: Board, player: Player, winningPlayer: Player, memo = new 
   if (memo.has(key)) return memo.get(key)!;
   const end = result(board, player);
   if (end) return Math.abs(end) > 0.5 && Math.sign(end) * player === winningPlayer ? 0 : null;
-  const replies = legal(board, player).map(a => oracle(apply(board, player, a).board, -player as Player, winningPlayer, memo));
+  // 패스는 수로 세지 않는다
+  const replies = legal(board, player).map(a => { const n = oracle(apply(board, player, a).board, -player as Player, winningPlayer, memo); return n === null ? null : n + (a === PASS ? 0 : 1); });
   const value = player === winningPlayer
-    ? replies.some(n => n !== null) ? Math.min(...replies.filter((n): n is number => n !== null)) + 1 : null
-    : replies.every((n): n is number => n !== null) ? Math.max(...replies) + 1 : null;
+    ? replies.some(n => n !== null) ? Math.min(...replies.filter((n): n is number => n !== null)) : null
+    : replies.every((n): n is number => n !== null) ? Math.max(...replies) : null;
   memo.set(key, value);
   return value;
 }
@@ -26,23 +27,23 @@ describe('증명된 승리까지의 수', () => {
       const expected = oracle(p.board, p.player, winningPlayer);
       const found = await solver.winDistanceAsync(p.board, p.player, winningPlayer, async () => {});
       expect(found).toBe(expected);
-      expect(found).toBeGreaterThanOrEqual(25 - tileCount(p.board));
-      expect(found).toBeLessThanOrEqual(2 * (25 - tileCount(p.board)));
+      expect(found).toBeGreaterThanOrEqual(1);
+      expect(found).toBeLessThanOrEqual(25 - tileCount(p.board));
       expect(await solver.winDistanceAsync(p.board, p.player, -winningPlayer as Player, async () => {})).toBeNull();
     }
   });
 
-  test('강제 패스도 한 수로 세고 색을 바꾸어도 같은 거리를 반환한다', async () => {
+  test('강제 패스는 수로 세지 않고 색을 바꾸어도 같은 거리를 반환한다', async () => {
     const [key] = puzzles.flatMap(p => p.proof).find(([, values]) => values.length === 1 && values[0][0] === PASS)!;
     const board = [...key].map(v => Number(v) - 5);
     const solver = new ExactEndgame();
     const winningPlayer = Math.sign(solver.value(board, 1)) as Player;
     const expected = oracle(board, 1, winningPlayer);
     expect(await solver.winDistanceAsync(board, 1, winningPlayer, async () => {})).toBe(expected);
-    expect(expected).toBeGreaterThan(25 - tileCount(board));
+    expect(expected).toBeLessThanOrEqual(25 - tileCount(board));
     const after = apply(board, 1, PASS).board;
     const next = await solver.winDistanceAsync(after, -1, winningPlayer, async () => {});
-    expect(expected).toBe(next! + 1);
+    expect(expected).toBe(next);
     expect(await solver.winDistanceAsync(board.map(v => -v), -1, -winningPlayer as Player, async () => {})).toBe(expected);
   });
 

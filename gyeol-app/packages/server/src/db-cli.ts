@@ -3,7 +3,11 @@ import { dirname, resolve } from 'node:path';
 import { DatabaseEngine } from './database';
 import { backupDatabase, importJson, readSource, restoreCheck, verifyDatabase } from './db-tools';
 import { exportTrainingPositions } from './training-export';
-import { minePuzzles } from './puzzle-miner';
+import { minePuzzles, type KeepAi } from './puzzle-miner';
+import { loadBrain } from './brain';
+import { createHash } from 'node:crypto';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
 
 const [command, ...args] = process.argv.slice(2);
 function option(name: string, required = true) {
@@ -25,12 +29,20 @@ try {
   });
   // 기보에서 정답이 하나뿐인 퍼즐을 발췌해 서버가 내려줄 은행을 만든다(운영 DB는 읽기 전용)
   else if (command === 'mine-puzzles') {
-    const db = option('db', false), archive = option('archive', false);
+    const db = option('db', false), archive = option('archive', false), aiDir = option('ai-dir', false);
     if (!db && !archive) throw new Error('--db or --archive is required');
-    report = minePuzzles({
+    let ai: KeepAi | undefined;
+    if (aiDir) {
+      // 한 수 문제의 난이도 추정(기본)과 실험용 AI 판정(--ai-judge): 웹 앱과 같은 model.onnx
+      const info = join(aiDir, 'model', 'model-info.json');
+      const model = existsSync(info) ? String(JSON.parse(readFileSync(info, 'utf8')).sha256).slice(0, 16)
+        : createHash('sha256').update(readFileSync(join(aiDir, 'model', 'model.onnx'))).digest('hex').slice(0, 16);
+      ai = { predict: await loadBrain(aiDir, 4000), model, judge: args.includes('--ai-judge'), sims: count('sims'), confirmSims: count('confirm-sims') };
+    }
+    report = await minePuzzles({
       db: db && resolve(db), archive: archive && resolve(archive), state: resolve(option('state')!),
       out: option('out', false) && resolve(option('out', false)!), budgetMinutes: count('budget-minutes'), maxRemaining: count('max-remaining'),
-      log: (line) => console.error(line),
+      keep: !args.includes('--no-keep'), ai, log: (line) => console.error(line),
     });
   }
   else {

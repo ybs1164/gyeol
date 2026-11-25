@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs';
 import { describe, expect, test } from 'vitest';
 import {
   LESSONS, PASS, NotationError, apply, formatCell, formatMove, formatPosition, formatRecord, initial,
-  legal, parseCell, parsePosition, parseRecord, recenter, resolveMoveCandidates, result, type Board, type Player,
+  legal, moveNumbers, movesPlayed, parseCell, parsePosition, parseRecord, recenter, resolveMoveCandidates, result, type Board, type Player,
 } from '../src';
 
 const start = 'GYEOL-P/1;rules=facing-25-v1;turn=lower;board=......./......./......./..rL.../......./......./.......';
@@ -113,5 +113,15 @@ describe('short moves and lossless records', () => {
       rejects(() => resolveMoveCandidates(board, player, player === 1 ? 'pass' : 'PASS'), 'terminal');
       rejects(() => formatRecord({ initialPlayer, moves: [...moves, PASS] }), 'terminal', moves.length + 1);
     }
+  });
+});
+
+describe('수 번호', () => {
+  test('양쪽 착수를 이어서 세고 패스는 세지 않는다', () => {
+    const actions = [10, 20, 30, PASS, 40, PASS, 50];
+    expect(moveNumbers(actions)).toEqual([1, 2, 3, null, 4, null, 5]);
+    expect([0, 3, 4, 5, 6, 7].map(at => movesPlayed(actions, at))).toEqual([0, 3, 3, 4, 4, 5]);
+    expect(movesPlayed(actions)).toBe(5);
+    expect(moveNumbers([])).toEqual([]);
   });
 });

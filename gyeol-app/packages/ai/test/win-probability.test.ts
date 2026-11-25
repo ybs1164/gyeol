@@ -45,7 +45,7 @@ describe('실제 국면의 승률 분석', () => {
     expect(graph.positions[0]!.provenOutcome).toBe(Math.sign(value) * p.player);
     expect(graph.positions[0]!.calibrated).toBe(false);
     expect(graph.positions[0]!.winDistanceKind).toBe('exact');
-    expect(graph.positions[0]!.forcedWinPlies).toBeGreaterThanOrEqual(25 - tileCount(p.board));
+    expect(graph.positions[0]!.forcedWinPlies).toBeLessThanOrEqual(25 - tileCount(p.board));
     expect(graph.metrics.simulations).toBe(0);
   });
 
@@ -56,7 +56,7 @@ describe('실제 국면의 승률 분석', () => {
       const graph = await analyzeWinProbability([], uniform, { start: p, exactMs: 10000 });
       expect(graph.positions[0]!.status).toBe('exact');
       expect(graph.positions[0]!.winDistanceKind).toBe('upper-bound');
-      expect(graph.positions[0]!.forcedWinPlies).toBe(3);
+      expect(graph.positions[0]!.forcedWinPlies).toBe(2);
       expect(graph.metrics.simulations).toBe(0);
     } finally { distance.mockRestore(); }
   });

@@ -50,7 +50,7 @@ type ReviewDict = Record<keyof typeof reviewKo, string>;
 export const reviewEn: ReviewDict = {
   ...gradingEn,
   'review.autoGrades': 'All moves are evaluated automatically.',
-  'win.inMoves': 'Win within {n} plies', 'win.lossInMoves': 'Loss within {n} plies',
+  'win.inMoves': 'Win within {n} moves', 'win.lossInMoves': 'Loss within {n} moves',
   'win.moveCountHelp': 'With best play · counts both sides’ moves and forced passes',
   'review.evidence': 'Evaluation details',
   'win.refining': 'Full graph ready · refining evaluation',

@@ -63,6 +63,6 @@ describe('복기 캐시', () => {
     const key = JSON.parse(analysisKey(record, 'standard'));
     expect(key.slice(0, 2)).toEqual([ANALYSIS_VERSION, GRADING_VERSION]);
     // Changing grade schema must not invalidate the independent graph cache.
-    expect(JSON.parse(winAnalysisKey(record, 'standard')).slice(0, 2)).toEqual(['win', 5]);
+    expect(JSON.parse(winAnalysisKey(record, 'standard')).slice(0, 2)).toEqual(['win', 6]);
   });
 });

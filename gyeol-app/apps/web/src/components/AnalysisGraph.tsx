@@ -1,12 +1,14 @@
 import type { GameAnalysis } from '@gyeol/ai';
-import type { Player } from '@gyeol/core';
+import { movesPlayed, type Player } from '@gyeol/core';
 import type { ReviewType } from '../lib/move-types';
 import { t } from '../i18n';
 import { forcedWinLabel, type WinDistancePoint } from '../lib/win-label';
 import { sideName } from '../lib/skins';
 
-export function AnalysisGraph({ analysis, at, perspective, jump, label = t('review.title') }: { analysis: { positions: ((NonNullable<GameAnalysis['positions'][number]> & WinDistancePoint) | null)[]; marks?: readonly ({ type: ReviewType | null; player: Player } | null)[] }; at: number; perspective: Player; jump: (at: number) => void; label?: string }) {
+/** actions 를 주면 축과 읽기 문구의 수 번호에서 패스를 뺀다. 그래프의 점은 그대로 국면마다 하나다. */
+export function AnalysisGraph({ analysis, actions, at, perspective, jump, label = t('review.title') }: { analysis: { positions: ((NonNullable<GameAnalysis['positions'][number]> & WinDistancePoint) | null)[]; marks?: readonly ({ type: ReviewType | null; player: Player } | null)[] }; actions?: readonly number[]; at: number; perspective: Player; jump: (at: number) => void; label?: string }) {
   const n = analysis.positions.length - 1;
+  const shown = (i: number) => actions ? movesPlayed(actions, i) : i;
   const W = 360, H = 160, L = 30, R = 12, T = 12, B = 25;
   const x = (i: number) => L + i / Math.max(1, n) * (W - L - R);
   const y = (green: number) => T + (perspective === 1 ? 1 - green : green) * (H - T - B);
@@ -26,7 +28,7 @@ export function AnalysisGraph({ analysis, at, perspective, jump, label = t('revi
   return (
     <svg className={`analysis-graph ${perspective === 1 ? 'g' : 'b'}`} viewBox={`0 0 ${W} ${H}`}
       role="slider" tabIndex={0} aria-label={label} aria-valuemin={0} aria-valuemax={n} aria-valuenow={at}
-      aria-valuetext={forcedLabel ? `${t('rp.move', { i: at, n })} · ${forcedLabel}` : t('rp.move', { i: at, n })}
+      aria-valuetext={forcedLabel ? `${t('rp.move', { i: shown(at), n: shown(n) })} · ${forcedLabel}` : t('rp.move', { i: shown(at), n: shown(n) })}
       onPointerDown={e => { e.currentTarget.setPointerCapture(e.pointerId); select(e.clientX, e.currentTarget); }}
       onPointerMove={e => { if (e.currentTarget.hasPointerCapture(e.pointerId)) select(e.clientX, e.currentTarget); }}
       onKeyDown={e => {
@@ -34,7 +36,7 @@ export function AnalysisGraph({ analysis, at, perspective, jump, label = t('revi
         if (next !== null) { e.preventDefault(); jump(Math.max(0, Math.min(n, next))); }
       }}>
       {[0, 50, 100].map(v => <line key={v} x1={L} y1={T + (1 - v / 100) * (H - T - B)} x2={W - R} y2={T + (1 - v / 100) * (H - T - B)} className={v === 50 ? 'mid' : 'grid'} />)}
-      {[...new Set([0, Math.round(n / 2), n])].map(i => <text key={i} x={x(i)} y={H - 6} textAnchor="middle">{i}</text>)}
+      {[...new Set([0, Math.round(n / 2), n])].map(i => <text key={i} x={x(i)} y={H - 6} textAnchor="middle">{shown(i)}</text>)}
       {segments.map((points, i) => <polyline key={i} points={points} className="curve" />)}
       {analysis.marks?.map((mark, i) => {
         const p = analysis.positions[i + 1];

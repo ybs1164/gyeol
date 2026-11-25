@@ -73,6 +73,21 @@ export function formatMove(board: Board, player: Player, action: number): string
   return formatCell(m.r, m.c) + (player === 1 ? direction : direction.toUpperCase());
 }
 
+/**
+ * 화면에 쓰는 수 번호. 양쪽 착수를 1부터 이어서 세고 패스는 세지 않는다(바둑식 통번호).
+ * i번째 행동이 착수면 그 번호, 패스면 null. 저장하는 기보에는 번호가 없다.
+ */
+export function moveNumbers(actions: readonly number[]): (number | null)[] {
+  let n = 0;
+  return actions.map(a => a === PASS ? null : ++n);
+}
+/** 처음 at개의 행동 가운데 패스를 뺀 착수 수. */
+export function movesPlayed(actions: readonly number[], at = actions.length): number {
+  let n = 0;
+  for (let i = 0; i < Math.min(at, actions.length); i++) if (actions[i] !== PASS) n++;
+  return n;
+}
+
 /** Never choose an arbitrary rotation when a short label matches several actions. */
 export function resolveMoveCandidates(board: Board, player: Player, text: string): number[] {
   checkPlayer(player);
